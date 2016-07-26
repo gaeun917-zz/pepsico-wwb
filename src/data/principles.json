@@ -1,0 +1,26 @@
+{
+    "0": {
+        "icon": "customers",
+        "copy": "Care for our customers <br />and the world we live in."
+    },
+    "1": {
+        "icon": "truth",
+        "copy": "Speak with truth and <br />candor at all times."
+    },
+    "2": {
+        "icon": "respect",
+        "copy": "Respect others and <br />succeed together."
+    },
+    "3": {
+        "icon": "products",
+        "copy": "Sell only products we <br />can be proud of."
+    },
+    "4": {
+        "icon": "diversity",
+        "copy": "Win with diversity <br />and inclusion."
+    },
+    "5": {
+        "icon": "clock",
+        "copy": "Balance short-term <br />and long-term."
+    }
+}

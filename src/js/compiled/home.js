@@ -9,8 +9,15 @@
       $((function(_this) {
         return function() {
           if (_this.isMobile) {
-            return FastClick.attach(document.body);
+            FastClick.attach(document.body);
           }
+          return _this.principlesSwiper = new Swiper(_this.principles_swiper, {
+            spaceBetween: 0,
+            speed: 600,
+            loop: true,
+            autoplayDisableOnInteraction: false,
+            effect: 'slide'
+          });
         };
       })(this));
     }
@@ -19,7 +26,9 @@
       return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
     };
 
-    Homepage.prototype.initDom = function() {};
+    Homepage.prototype.initDom = function() {
+      return this.principles_swiper = $('#principles--mobile');
+    };
 
     return Homepage;
 

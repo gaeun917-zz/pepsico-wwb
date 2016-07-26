@@ -80,3 +80,80 @@ small
     line-height: 29px
     margin-top: 0
 
+// ::::: PAGE: HOME :::::
+.misvis
+    padding: 8% 0
+    background-color: $light_grey
+
+.misvis__item
+    +prdib
+    +box-sizing
+    vertical-align: top
+    width: 50%
+
+    &:first-child 
+        border-right: 1px solid #bcbbb8
+        padding-right: 4%
+
+    &:last-child
+        padding-left: 4%
+
+
+.principles
+    padding: 4% 0
+
+    .principles__header em
+        font-size: 3.3rem
+        line-height: 3rem
+
+        &::after
+            height: 3px
+            margin: 1rem auto 2rem auto
+
+.principles--desktop
+    +prdb
+    +box-sizing
+    width: 100%
+    max-width: 950px
+
+
+.principles--mobile
+    +dn
+
+.principles--desktop__item
+    +prdib
+    width: 18%
+    margin: 4% 23% 0 0
+    text-align: center
+
+
+    &:nth-child(3n+3)
+        margin-right: 0
+
+    img
+        +prdb
+        width: 100%
+
+.explore
+    text-align: left
+
+.explore-item
+    width: 16.8%
+    padding-top: 16.8%
+    margin-bottom: 0
+    margin-right: 4%
+
+    &:nth-child(odd)
+        margin-right: 4%
+    &:last-child
+        margin: 0
+
+    .colour-overlay
+        transition: 0.3s ease opacity
+
+    &:active .colour-overlay
+        transition: none
+
+.explore-item__heading
+    font-size: 1rem
+    

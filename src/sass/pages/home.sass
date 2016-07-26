@@ -1,2 +1,125 @@
 .hero--home
     background-image: url(../img/hero-home--mo.jpg)
+
+.misvis
+    +prdb
+    padding-top: 8%
+    background-color: $extralight_grey
+    overflow: hidden
+    margin: 0 auto
+
+.misvis__item img 
+    +prdb
+    width: 100%
+
+.principles
+    +prdb
+    overflow: hidden
+    background-image: url(../img/principles-table--dt.jpg)
+    background-size: cover
+    background-position: center
+    padding: 4% 0
+    color: white
+
+    .principles__header
+        color: white
+
+        em
+            +prdb
+            font-size: 2rem
+            line-height: 2rem
+
+        &::after
+            +prdb
+            width: 100%
+            content: ""
+            height: 2px
+            background-color: $wwb_blue
+            margin: 1rem auto 2rem auto
+
+.principles--desktop
+    +dn
+
+.principles--mobile .swiper-slide
+
+    p
+        color: white
+        text-align: center
+    img
+        +prdb
+        width: 60%
+        max-width: 230px
+        margin: auto
+
+.principles--mobile__swipe-cta
+    +prdb
+    margin: 1rem auto 0 auto
+    width: 80px
+    +opacityz(0.6)
+
+
+.explore
+    +prdb
+    padding: 8% 0
+    text-align: center
+    color: white
+
+.explore-item
+    +prdib
+    width: 46%
+    padding-top: 46%
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    margin-bottom: 8%
+    overflow: hidden
+
+    &:nth-child(odd)
+        margin-right: 8%
+    &:last-child
+        margin: 0
+
+    .colour-overlay
+        +cover
+        +opacityz(0)
+
+    &:hover .colour-overlay
+        +opacityz(0.3)
+
+    &:active .colour-overlay
+        +opacityz(0.7)
+
+.explore__heading-wrap
+    +padb
+    +box-sizing
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +no-pointer-events
+    
+.explore__heading-wrap2
+    +prdt
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    vertical-align: middle
+    text-align: center
+
+
+.explore-item__heading
+    +prdtc
+    +title-font-regular
+    font-size: 1.3rem
+    text-transform: uppercase
+    height: 100%
+    width: 100%
+    vertical-align: middle
+    text-align: center
+    margin: 0
+    padding: 0 10%
+    outline: 0
+    border: 0

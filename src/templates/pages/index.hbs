@@ -8,5 +8,71 @@ description:    "We believe some stuff."
 
     {{>hero-static heros.home}}
     
+    <!-- START OUR MISSION/VISION -->
+    <section class="misvis">
+        <div class="container">
+            <div class="misvis__item">
+                <img src="img/our-mission.jpg" alt="Our Mission">
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor.</p>
+            </div><!--
+            --><div class="misvis__item">
+                <img src="img/our-vision.jpg" alt="Our Vision">
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </section>
+    <!-- END OUR MISSION/VISION -->
+
+    <!-- START PRINCIPLES -->
+    <section class="principles">
+
+        <div class="container">
+            <h2 class="principles__header">Our guiding <em>principles</em></h2>
+            <div class="principles--desktop swiper-container">
+                {{#each principles ~}}
+                <div class="principles--desktop__item">
+                    <img src="img/icon-{{this.icon}}.png" alt="{{this.copy}}">
+                    <p>{{{this.copy}}}</p>
+                </div>
+                {{~/each}}
+            </div>
+        </div>
+
+        <div class="principles--mobile swiper-container" id="principles--mobile">
+            <div class="swiper-wrapper">
+                {{#each principles ~}}
+                <div class="swiper-slide">
+                    <img src="img/icon-{{this.icon}}.png" alt="{{this.copy}}">
+                    <p>{{{this.copy}}}</p>
+                </div>
+                {{~/each}}
+            </div>
+
+            <img class="principles--mobile__swipe-cta" src="img/icon-swipe.png" alt="Swipe left and right">
+        </div>
+    </section>
+    <!-- END PRINCIPLES -->
+    
+    <!-- START EXPLORE LINKS -->
+    <section class="container explore">
+
+        {{#each explore ~}}
+        <div class="explore-item lazyload" data-bg="img/{{this.image-filename}}">
+            <div class="colour-overlay" style="background-color: {{this.overlay-colour}}"></div>
+            <a class="block-link" href="{{this.link}}"{{#is this.external true}} target="_blank"{{/is}}></a>
+            <div class="explore__heading-wrap">
+                <div class="explore__heading-wrap2">
+                    <span class="explore-item__heading">{{this.heading}}</span>    
+                </div>
+                
+            </div>
+            
+        </div>
+        {{~/each}}
+
+    </section>
+    <!-- END EXPLORE LINKS -->
+
 </div>
 <!-- END MAIN CONTENT -->
