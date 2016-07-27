@@ -1,0 +1,24 @@
+<section class="highlight">
+
+    <div class="container">
+        <div class="highlight__section highlight__section--copy">
+            <h2 class="highlight__header underline">{{{this.header}}}</h2>
+            {{#each this.copy}}
+            <p class="copy highlight__desktop-copy">{{{this}}}</p>
+            {{/each}}
+        </div><!--
+        --><div class="highlight__section highlight__section--media">
+            {{#isnt this.video undefined}}
+            <div class="highlight__video-wrap">
+                <iframe class="highlight__media" src="{{this.video}}?modestbranding=1&autohide=1&showinfo=0&controls=1&autoplay=0&rel=0&theme=light" frameborder="0"></iframe>
+            </div>
+            {{else}}
+            <img class="highlight__media" src="{{this.image}}">
+            {{/isnt}}
+            {{#each this.copy}}
+            <p class="copy highlight__mobile-copy">{{{this}}}</p>
+            {{/each}}
+        </div>
+    </div>
+    
+</section>

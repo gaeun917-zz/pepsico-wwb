@@ -8,6 +8,20 @@ h1
 h2, h3
     font-size: 1rem
 
+h2
+    em
+        +prdb
+        font-size: 2rem
+        line-height: 2rem
+
+    &.underline::after
+        +prdb
+        width: 100%
+        content: ""
+        height: 2px
+        background-color: $wwb_blue
+        margin: 1rem auto 2rem auto
+
 h4
     font-size: 0.8rem
     text-transform: uppercase
@@ -164,7 +178,33 @@ small
     vertical-align: top
 
 
+// ::::: HIGHLIGHT :::::
+.highlight
+    +prdb
+    background-color: $extralight_grey
+    overflow: hidden
+    padding: 8% 0
 
+.highlight__header
+    margin-top: 0
+
+.highlight__desktop-copy
+    +dn
+
+.highlight__desktop-copy, .highlight__mobile-copy
+    margin-bottom: 0
+
+.highlight__media
+    +prdb
+    width: 100%
+
+.highlight__video-wrap
+    +prdb
+    padding-bottom: 56.25% /* 16:9 */
+    height: 0
+
+    .highlight__media
+        +cover
 
 
 

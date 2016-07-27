@@ -1,0 +1,17 @@
+<!-- START EXPLORE LINKS -->
+<section class="container explore">
+    {{#each this ~}}
+    <div class="explore-item lazyload" data-bg="img/{{this.image-filename}}">
+        <div class="colour-overlay" style="background-color: {{this.overlay-colour}}"></div>
+        <a class="block-link" href="{{this.link}}"{{#is this.external true}} target="_blank"{{/is}}></a>
+        <div class="explore__heading-wrap">
+            <div class="explore__heading-wrap2">
+                <span class="explore-item__heading">{{this.heading}}</span>    
+            </div>
+            
+        </div>
+        
+    </div>
+    {{~/each}}
+</section>
+<!-- END EXPLORE LINKS -->

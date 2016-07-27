@@ -11,6 +11,14 @@ h2, h3
 h2 
     font-size: 1.35rem
 
+    em
+        font-size: 3.3rem
+        line-height: 3rem
+
+    &::after
+        height: 3px
+        margin: 1rem auto 2rem auto
+
 h3 
     font-size: 1.2rem
 
@@ -33,6 +41,10 @@ small
 .hero--home
     background-image: url(../img/hero-home--dt.jpg)
     background-position: center bottom
+.hero--pwp
+    background-image: url(../img/hero-pwp--dt.jpg)
+
+
 
 .hero
     padding: 6% 0
@@ -102,14 +114,6 @@ small
 .principles
     padding: 4% 0
 
-    .principles__header em
-        font-size: 3.3rem
-        line-height: 3rem
-
-        &::after
-            height: 3px
-            margin: 1rem auto 2rem auto
-
 .principles--desktop
     +prdb
     +box-sizing
@@ -156,4 +160,37 @@ small
 
 .explore-item__heading
     font-size: 1rem
+
+
+// ::::: HIGHLIGHT :::::
+
+.highlight__section
+    +prdib
+    vertical-align: top
+
+.highlight__section--copy
+    width: 46%
+    margin-right: 4%
+
+.highlight__mobile-copy
+    +dn
+.highlight__desktop-copy
+    +prdb
+
+
+.highlight__section--media
+    width: 50%
+
+.highlight__media
+    width: 100%
+
+.highlight__video-wrap
+    +prdb
+    padding-bottom: 56.25% /* 16:9 */
+    height: 0
+
+    .highlight__media
+        +cover
+
+
     
