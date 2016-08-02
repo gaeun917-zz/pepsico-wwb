@@ -7,7 +7,7 @@ class Homepage
         # It's business time
         $ =>
 
-            TweenMax.defaultEase = Expo.easeOut
+            # TweenMax.defaultEase = Expo.easeOut
 
             if @isMobile() then FastClick.attach(document.body)
 
@@ -40,8 +40,6 @@ class Homepage
                 @principles.on('click', @showPrinciples)
 
                 @closeBtn.on('click', @hidePrinciples)
-
-
 
     showPrinciples: (e) =>
         # @tl.play()

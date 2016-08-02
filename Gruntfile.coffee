@@ -23,9 +23,24 @@ module.exports = (grunt) ->
         ext: '.js'
 
     concat:
-      dist:
+      main:
         src: ['src/js/compiled/*.js']
         dest: 'pub/js/script.js'
+      vendor_js:
+        src: [
+          'bower_components/jquery/dist/jquery.min.js',
+          'bower_components/lazysizes/lazysizes.min.js',
+          'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
+          'bower_components/Swiper/dist/js/swiper.min.js',
+          'bower_components/fastclick/lib/fastclick.js',
+          'bower_components/tweenlite/TweenLite.min.js'
+        ]
+        dest: 'pub/js/vendor.js'
+      vendor_css:
+        src: [
+          'bower_components/Swiper/dist/css/swiper.min.css',
+        ]
+        dest: 'pub/css/vendor.css'
 
     # Copies images from src/img to pub/img
     copy:
@@ -72,7 +87,7 @@ module.exports = (grunt) ->
         tasks: ['sass']
       scripts:
         files: 'src/**/*.coffee'
-        tasks: ['coffee', 'concat']
+        tasks: ['coffee', 'concat:main']
       html:
         files: ['src/**/*.hbs']
         tasks: ['assemble']
@@ -115,6 +130,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
   grunt.loadNpmTasks 'grunt-contrib-sass'  
   grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-bower-concat'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   # Default task(s).

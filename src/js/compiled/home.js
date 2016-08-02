@@ -10,7 +10,6 @@
       this.initDom();
       $((function(_this) {
         return function() {
-          TweenMax.defaultEase = Expo.easeOut;
           if (_this.isMobile()) {
             FastClick.attach(document.body);
           }

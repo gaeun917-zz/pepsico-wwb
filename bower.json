@@ -1,0 +1,22 @@
+{
+  "name": "pepsico-wwb",
+  "description": "Pepsico What We Believe section of pepsico.com",
+  "main": "",
+  "authors": [
+    "Joe Tuson <joe@tuson.co>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "lazysizes": "^2.0.0",
+    "jquery": "^3.1.0",
+    "Swiper": "swiper#^3.3.1",
+    "tweenlite": "^1.11.5"
+  }
+}

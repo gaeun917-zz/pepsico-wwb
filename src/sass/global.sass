@@ -1,5 +1,12 @@
 // Colours
 $wwb_blue: #077fbd
+$wwb_darkblue: #077fbd
+
+$wwb_green: #70a238
+$wwb_darkgreen: #28753a
+
+$wwb_yellow: #d5a237
+$wwb_darkyellow: #d5a237
 
 $extralight_grey: #f3f2ef
 $light_grey: #d7d7d7
@@ -67,6 +74,40 @@ ul, li
     border: 0
 
 .btn
+    +prdib
+    +box-sizing
+    +unstyled-anchor
+    +title-font
+    $height: 30px
+    height: $height
+    clear: both
+    text-transform: uppercase
+    padding: 0 22px
+    line-height: ($height - 2px)
+    font-size: 1.2rem
+    vertical-align: top
+    color: white
+    border: 1px solid white
+    border-radius: $height
+    margin-top: 2rem
+    text-align: center
+    background-color: rgba(0,0,0,0.5)
+    transition: 0.1s ease background-color
+
+    &:hover
+
+        background-color: rgba(0,0,0,0.8)
+
+    &:active
+        transition: none
+        background-color: rgba(255,255,255,0.8)
+        color: black
+
+.btn__icon
+    +prdib
+    height: 10px
+    margin: 9px -4px 0 5px
+    vertical-align: top
 
 .hero-gradient
     +cover

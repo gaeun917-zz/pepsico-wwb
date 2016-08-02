@@ -5,22 +5,29 @@
         <img class="wangotron__arms" src="img/focus-arms--mo.png">
         <img class="wangotron__pwp" src="img/focus-pwp.png">
 
-        <div class="wangotron__area wangotron__area--products">
-            <img class="wangotron__button wangotron__button--products" src="img/focus--icon-products.png">
+        {{#eachProperty pillars ~}}
+        <div class="wangotron__area wangotron__area--{{key}}">
+            <img class="wangotron__button wangotron__button--{{key}}" src="img/focus--icon-{{key}}.png">
+        </div>
+        {{~/eachProperty}}
+        
+        <div class="wangotron__details-modal planet">
+            <div class="wangotron__details-modal__close"></div>
+            
+            {{#eachProperty pillars ~}}
+            <div class="wangotron__details-modal__container {{key}}">
+                <div class="wangotron__details-modal__icon"></div>
+                <div class="wangotron__details-modal__header">{{key}}</div>
+                <div class="wangotron__details-modal__copy">{{{value.short-copy}}}</div>
+                <a class="btn wangotron__details-modal__cta" href="{{value.link}}">
+                    Discover more
+                    <img class="btn__icon" src="img/icon-arrow-right.png" />
+                </a>
+            </div>
+            {{~/eachProperty}}
+
         </div>
 
-        <div class="wangotron__area wangotron__area--planet">
-            <img class="wangotron__button wangotron__button--planet" src="img/focus--icon-planet.png">
-        </div>
-
-        <div class="wangotron__area wangotron__area--people">
-            <img class="wangotron__button wangotron__button--people" src="img/focus--icon-people.png">
-        </div>
-
-    </div>
-
-    <div class="wangotron__mobile-modal">
-        <div class="wangotron__mobile-modal__surround"></div>
     </div>
 
 </div>

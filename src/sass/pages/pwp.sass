@@ -19,10 +19,6 @@
     padding-bottom: 100%
     margin-top: 10%
 
-
-    // &:hover .wangotron__arms
-        // transform: rotate(120deg)
-
 .wangotron__arms
     +padb
     width: 100%
@@ -85,3 +81,73 @@
     transform: translateZ(0)
     transition: 0.1s ease transform
 
+
+.wangotron__details-modal
+    +padb
+    +ontop
+    height: 91.4%
+    width: 91.4%
+    top: -3%
+    left: 4.3%
+
+    &.products
+
+        .wangotron__details-modal__container
+            background-color: $wwb_darkyellow
+
+        .wangotron__details-modal__close
+            background-image: url(../img/icon-close--yellow.png)
+
+        .wangotron__details-modal__icon
+            background-image: url(../img/icon-heart.png)
+
+    &.planet
+
+        .wangotron__details-modal__container
+            background-color: $wwb_darkgreen
+
+        .wangotron__details-modal__close
+            background-image: url(../img/icon-close--green.png)
+
+        .wangotron__details-modal__icon
+            background-image: url(../img/icon-leaf.png)
+
+    &.people
+
+        .wangotron__details-modal__container
+            background-color: $wwb_darkblue
+
+        .wangotron__details-modal__close
+            background-image: url(../img/icon-close--blue.png)
+
+.wangotron__details-modal__container
+    +cover
+    +border-radius(100%)
+    +opacityz(0.9)
+    background-color: $wwb_darkgreen
+
+.wangotron__details-modal__close
+    +padb
+    top: 8%
+    right: 8%
+    +square(50px)
+    +ontop
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    cursor: pointer
+
+.wangotron__details-modal__icon
+    +prdb
+    width: 25%
+    padding-bottom: 22%
+    margin: 8% auto 4% auto
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+
+
+
+// <div class="wangotron__details-modal__header"></div>
+// <div class="wangotron__details-modal__copy"></div>

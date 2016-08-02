@@ -1,0 +1,29 @@
+{
+    "products": {
+        "short-copy": ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis."],
+        "long-copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis.",
+            "Quibusdam exercitationem consequatur numquam repellendus ratione sunt earum porro, incidunt quo sequi ut illum."
+        ],
+        "image-filename": "pillar-products.jpg",
+        "link": "/products"
+    },
+    "people": {
+        "short-copy": ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis."],
+        "long-copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis.",
+            "Quibusdam exercitationem consequatur numquam repellendus ratione sunt earum porro, incidunt quo sequi ut illum."
+        ],
+        "image-filename": "pillar-people.jpg",
+        "link": "/people"
+    },
+    "planet": {
+        "short-copy": ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis."],
+        "long-copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis.",
+            "Quibusdam exercitationem consequatur numquam repellendus ratione sunt earum porro, incidunt quo sequi ut illum."
+        ],
+        "image-filename": "pillar-planet.jpg",
+        "link": "/planet"
+    }
+}
