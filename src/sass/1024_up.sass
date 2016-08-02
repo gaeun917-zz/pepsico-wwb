@@ -123,10 +123,12 @@ small
 
 .principles__coloured-overlay
     +dn
+    +opacityz(0)
     background-color: rgba(30,41,44,0.8)
 
 .principles--mobile
     +padn
+    +opacityz(0)
     top: 32%
     left: 5%
     +ontop
@@ -140,6 +142,28 @@ small
         width: 60%
         margin-left: auto
         margin-right: auto
+
+.principles--desktop, .principles--mobile, .principles__coloured-overlay
+    -webkit-transition: 0.3s linear -webkit-opacity
+    -moz-transition: 0.3s linear -moz-opacity
+    -ms-transition: 0.3s linear -ms-opacity
+    -o-transition: 0.3s linear -o-opacity
+    transition: 0.3s linear opacity
+
+.principles.unhide
+    .principles--mobile
+        +db
+    .principles__coloured-overlay
+        +db
+
+.principles.visible
+
+    .principles--desktop
+        +opacityz(0)
+    .principles--mobile
+        +opacityz(1)
+    .principles__coloured-overlay
+        +opacityz(0.8)
 
 .principles__btn-close
     content: ""

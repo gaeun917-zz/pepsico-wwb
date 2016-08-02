@@ -28,32 +28,42 @@ class Homepage
 
             if !@isMobile()
 
-                @tl = new TimelineMax({delay: 0}).pause()
+            #     @tl = new TimelineMax({delay: 0}).pause()
 
-                @tl.set @principles_swiper, {display: 'block'}
-                    .set @overlay, {display: 'block'}
-                    .from @principles_swiper, 0.2, {autoAlpha: 0}
-                    .from @overlay, 0.2, {autoAlpha: 0}, "-=0.2"
-                    .to @principlesDt, 0.2, {opacity: 0}, "-=0.2"
+            #     @tl.set @principles_swiper, {display: 'block'}
+            #         .set @overlay, {display: 'block'}
+            #         .from @principles_swiper, 0.2, {autoAlpha: 0}
+            #         .from @overlay, 0.2, {autoAlpha: 0}, "-=0.2"
+            #         .to @principlesDt, 0.2, {opacity: 0}, "-=0.2"
 
-                # Show the desktop overlay swiper on click
+            #     # Show the desktop overlay swiper on click
                 @principles.on('click', @showPrinciples)
 
                 @closeBtn.on('click', @hidePrinciples)
 
+
+
     showPrinciples: (e) =>
-        @tl.play()
-        @principles_swiper.addClass 'visible'
+        # @tl.play()
         slide = parseInt $(e.currentTarget).attr('data-principle-index')
         @principlesSwiper.slideTo(slide + 1, 0)
+        @principles_wrap.addClass 'unhide'
+        setTimeout( =>
+            @principles_wrap.addClass 'visible'
+        , 1)
 
     hidePrinciples: =>
-        @tl.tweenTo(0).duration(0.4)
+        @principles_wrap.removeClass 'visible'
+        setTimeout( =>
+            @principles_wrap.removeClass 'unhide'
+        , 500)
+        # @tl.tweenTo(0).duration(0.4)
 
     isMobile: ->
         (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( navigator.userAgent.toLowerCase() ))
 
     initDom: =>
+        @principles_wrap = $('#principles')
         @principles_swiper = $('#principles--mobile')
         @prevBtn = $('#principles__prev-btn')
         @nextBtn = $('#principles__next-btn')
