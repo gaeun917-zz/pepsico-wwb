@@ -5,7 +5,7 @@ html
 h1
     font-size: 1.5rem
 
-h2, h3
+h2
     font-size: 1rem
 
 h2
@@ -14,6 +14,7 @@ h2
         font-size: 2rem
         line-height: 2rem
 
+h2, h3
     &.underline::after
         +prdb
         width: 100%
@@ -21,6 +22,10 @@ h2
         height: 2px
         background-color: $wwb_blue
         margin: 1rem auto 2rem auto
+
+h3
+    +title-font-bold
+    font-size: 2rem 
 
 h4
     font-size: 0.8rem
@@ -207,6 +212,70 @@ small
         +cover
 
 
+// ::::: EXPLORE :::::
+.explore
+    +prdb
+    padding: 8% 0
+    text-align: center
+    color: white
 
+.explore-item
+    +prdib
+    width: 46%
+    padding-top: 46%
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    margin-bottom: 8%
+    overflow: hidden
+
+    &:nth-child(odd)
+        margin-right: 8%
+    &:last-child
+        margin: 0
+
+    .colour-overlay
+        +cover
+        +opacityz(0)
+
+    &:hover .colour-overlay
+        +opacityz(0.3)
+
+    &:active .colour-overlay
+        +opacityz(0.7)
+
+.explore__heading-wrap
+    +padb
+    +box-sizing
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +no-pointer-events
+    
+.explore__heading-wrap2
+    +prdt
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    vertical-align: middle
+    text-align: center
+
+.explore-item__heading
+    +prdtc
+    +title-font-regular
+    font-size: 1.3rem
+    text-transform: uppercase
+    height: 100%
+    width: 100%
+    vertical-align: middle
+    text-align: center
+    margin: 0
+    padding: 0 10%
+    outline: 0
+    border: 0
 
 

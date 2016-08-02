@@ -1,26 +1,50 @@
 {
     "0": {
         "icon": "customers",
-        "copy": "Care for our customers <br />and the world we live in."
+        "sub-header": "Care for our customers <br />and the world we live in.",
+        "copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ducimus tenetur distinctio quidem et esse saepe placeat impedit veritatis, quaerat ab debitis minus consectetur, dicta unde adipisci. Sint, doloremque, dolore?",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi adipisci rerum repudiandae perspiciatis eum ipsum corporis asperiores iure iste, numquam possimus debitis facere suscipit minima neque cum ad excepturi."
+        ]
     },
     "1": {
         "icon": "truth",
-        "copy": "Speak with truth and <br />candor at all times."
+        "sub-header": "Speak with truth and <br />candor at all times.",
+        "copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta non facere, ad sequi officia aut error totam officiis velit fugiat debitis dignissimos exercitationem illo deleniti in est, fuga, distinctio laborum!",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sit ut iste placeat repellendus nihil accusamus. Ea quas cum ducimus necessitatibus ipsam, expedita perspiciatis vitae minus, earum dolores aliquam amet!"
+        ]
     },
     "2": {
         "icon": "respect",
-        "copy": "Respect others and <br />succeed together."
+        "sub-header": "Respect others and <br />succeed together.",
+        "copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a culpa possimus officiis, quas tempore similique mollitia nesciunt voluptatibus! Aut doloremque sint doloribus perferendis excepturi nobis nisi odit eveniet quasi.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum animi necessitatibus praesentium quam iste dolore, tempore voluptates vel quibusdam temporibus. Ratione fuga ea, fugit. Illo, rerum, repellat. Sit, aperiam suscipit."
+        ]
     },
     "3": {
         "icon": "products",
-        "copy": "Sell only products we <br />can be proud of."
+        "sub-header": "Sell only products we <br />can be proud of.",
+        "copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magnam expedita veniam nemo cupiditate perferendis sunt pariatur minus, reprehenderit architecto! Mollitia ducimus illum libero, natus vero maxime, modi dolorum perspiciatis.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem saepe, nulla! Dolor beatae culpa deleniti, ullam doloribus alias ab minus iusto modi nulla explicabo quia molestias sed, quisquam vel consequuntur!"
+        ]
     },
     "4": {
         "icon": "diversity",
-        "copy": "Win with diversity <br />and inclusion."
+        "sub-header": "Win with diversity <br />and inclusion.",
+        "copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis rem expedita, illum doloribus culpa facere veritatis provident distinctio voluptatem, magni laborum cum, quos rerum, error praesentium eos quia ad hic.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, distinctio, rem. Harum, pariatur, deleniti! Numquam, excepturi illum iusto nam illo perferendis neque labore architecto pariatur ut optio esse, voluptatem adipisci."
+        ]
     },
     "5": {
         "icon": "clock",
-        "copy": "Balance short-term <br />and long-term."
+        "sub-header": "Balance short-term <br />and long-term.",
+        "copy": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, vero. Consequuntur accusantium, provident aliquam! Dolorem quia nesciunt provident veniam reiciendis itaque aliquid explicabo, voluptate cupiditate! Velit impedit, dolores minima quisquam.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aut commodi sunt harum at, labore aspernatur numquam repellendus voluptatum quidem? Earum natus qui nobis quasi nihil minima dolores. Dolor, pariatur!"
+        ]
     }
 }

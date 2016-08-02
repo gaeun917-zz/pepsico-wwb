@@ -18,25 +18,32 @@
     background-image: url(../img/principles-table--dt.jpg)
     background-size: cover
     background-position: center
-    padding: 4% 0
+    padding: 8% 0
     color: white
 
+    .principles__header-wrap
+        +ontop
+
     .principles__header
+        margin-top: 0
         color: white
 
 .principles--desktop
     +dn
 
-.principles--mobile .swiper-slide
+.principles--mobile
+    +ontop
 
-    p
-        color: white
-        text-align: center
-    img
-        +prdb
-        width: 60%
-        max-width: 230px
-        margin: auto
+    .swiper-slide
+
+        p
+            color: white
+            text-align: center
+        img
+            +prdb
+            width: 40%
+            max-width: 230px
+            margin: auto
 
 .principles--mobile__swipe-cta
     +prdb
@@ -45,68 +52,27 @@
     +opacityz(0.6)
 
 
-.explore
-    +prdb
-    padding: 8% 0
-    text-align: center
-    color: white
-
-.explore-item
-    +prdib
-    width: 46%
-    padding-top: 46%
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
-    margin-bottom: 8%
-    overflow: hidden
-
-    &:nth-child(odd)
-        margin-right: 8%
-    &:last-child
-        margin: 0
-
-    .colour-overlay
-        +cover
-        +opacityz(0)
-
-    &:hover .colour-overlay
-        +opacityz(0.3)
-
-    &:active .colour-overlay
-        +opacityz(0.7)
-
-.explore__heading-wrap
+.principles__modal
     +padb
-    +box-sizing
+    padding: 4% 0 0 0
     top: 0
     left: 0
     width: 100%
     height: 100%
-    +no-pointer-events
-    
-.explore__heading-wrap2
-    +prdt
-    width: 100%
-    height: 100%
-    margin: 0
-    padding: 0
-    outline: 0
-    border: 0
-    vertical-align: middle
-    text-align: center
 
+    .swiper-slide
+        width: 100%
 
-.explore-item__heading
-    +prdtc
-    +title-font-regular
-    font-size: 1.3rem
-    text-transform: uppercase
-    height: 100%
-    width: 100%
-    vertical-align: middle
-    text-align: center
-    margin: 0
-    padding: 0 10%
-    outline: 0
-    border: 0
+        img
+            +prdb
+            width: 40%
+            margin: auto
+
+        .principles__modal-item__sub-header
+            font-size: 1rem
+
+.principles__coloured-overlay
+    +cover
+    +highness
+    background-color: rgba(30,41,44,0.4)
+

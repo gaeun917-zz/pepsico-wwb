@@ -1,3 +1,87 @@
 .hero--pwp
     background-image: url(../img/hero-pwp--mo.jpg)
     background-position: center top
+
+.focus-areas
+    +prdb
+    overflow: hidden
+    background-color: $extralight_grey
+
+.wangotron-wrap
+    +prdb
+    width: 100%
+    max-width: 500px
+    margin: auto
+
+.wangotron
+    +prdb
+    width: 100%
+    padding-bottom: 100%
+    margin-top: 10%
+
+
+    // &:hover .wangotron__arms
+        // transform: rotate(120deg)
+
+.wangotron__arms
+    +padb
+    width: 100%
+    top: 0
+    left: 0
+    transition: 3s ease transform
+    transform-origin: 50% 39.8%
+    transform: translateZ(0)
+
+.wangotron__pwp
+    +padb
+    width: 35.5%
+    top: 18.5%
+    left: 32.1%
+
+.wangotron__area
+    +padb
+    +square(25%)
+    +highness
+
+    &::before
+        +padb
+        content: ""
+        +box-sizing
+        +border-radius(100%)
+        top: 1%
+        left: 1%
+        +square(98%)
+        border: 2px solid white
+        z-index: 1
+
+    &:active
+
+        .wangotron__button
+            transform: scale(1.2)
+
+        &::before
+            transition: 0.2s ease transform, 0.2s ease opacity
+            transform: scale(2)
+            +opacityz(0)
+
+    &.wangotron__area--products
+        top: 5%
+        left: 5%
+
+    &.wangotron__area--planet
+        top: 5%
+        left: 70%
+
+    &.wangotron__area--people
+        top: 62%
+        left: 37.5%
+
+.wangotron__button
+    +padb
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 10
+    transform: translateZ(0)
+    transition: 0.1s ease transform
+
