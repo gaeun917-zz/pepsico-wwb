@@ -18,6 +18,25 @@ class Pwp
                 @resetWangotron()
                 clearTimeout @showWangTimeout
                 @showWangotron()
+
+
+            @initTimelineSwiper()
+
+    initTimelineSwiper: =>
+
+        @timelineSwiper = new Swiper @prog_tl_swiper_container, {
+            spaceBetween: 0
+            speed: 600 # Duration of transition between slides
+            loop: true
+            autoplay: if @isMobile() then 3800 else false # Delay between transitions
+            autoplayDisableOnInteraction: false
+            effect: 'slide'
+            observer: true
+            observeParents: true
+            pagination: '#progress-timeline__pagination'
+            # nextButton: @nextBtn
+            # prevButton: @prevBtn
+        }
                     
     resetWangotron: =>
         TweenLite.set @wangotron, {x: "0%", opacity: 0}
@@ -40,7 +59,7 @@ class Pwp
 
         return if @modal.hasClass pillarName
 
-        if @isMobile() or window.innerWidth < 1024
+        if window.innerWidth < 1024
             TweenMax.set @modal, {display: 'block'}
             @modal.addClass pillarName
             TweenMax.to @modal, 0.5, {opacity: 1}
@@ -79,7 +98,7 @@ class Pwp
                 TweenLite.set @modal, {display: 'block'}
                 TweenLite.to @wang_grad, spd, {opacity: 1, rotation: -360, transformOrigin: '20% 50%'}
                 TweenLite.to @wangotron, spd, {x: "-60%"}
-                TweenLite.to @modal, spd, {x: "120%"}
+                TweenLite.to @modal, spd, {x: "110%"}
                 @opening_throttle = true
 
             setTimeout( =>
@@ -89,7 +108,7 @@ class Pwp
             , 1000)
 
     hidePillarDetails: =>
-        if @isMobile() or window.innerWidth < 1024
+        if window.innerWidth < 1024
             TweenMax.to @modal, 0.2, {opacity: 0}
             setTimeout( =>
                 TweenMax.set @modal, {display: 'none'}
@@ -100,14 +119,12 @@ class Pwp
         (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( navigator.userAgent.toLowerCase() ))
 
     initDom: =>
-        @pillars    = $('.wangotron__pillar')
-        @modal      = $('#wangotron__details-modal')
-        @modalClose = $('#wangotron__details-modal__close')
-
-        @wang_arms  = $('#wangotron__arms')
-
+        # Wangotron
+        @pillars        = $('.wangotron__pillar')
+        @modal          = $('#wangotron__details-modal')
+        @modalClose     = $('#wangotron__details-modal__close')
+        @wang_arms      = $('#wangotron__arms')
         @wangotron      = $('#wangotron')
-
         @wang_items     = $('#wangotron__items')
         @wang_products  = $('#wangotron__button--products')
         @wang_people    = $('#wangotron__button--people')
@@ -115,6 +132,9 @@ class Pwp
         @wang_pwp       = $('#wangotron__pwp')
         @wang_grad      = $('#wangotron__gradient')
         @wang_spin      = $('#wangotron__spinner')
+
+        # Progress Timeline
+        @prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper')
 
 
 @Pwp = new Pwp

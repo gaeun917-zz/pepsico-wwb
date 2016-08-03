@@ -8,6 +8,7 @@
       this.hidePillarDetails = bind(this.hidePillarDetails, this);
       this.showPillarDetails = bind(this.showPillarDetails, this);
       this.resetWangotron = bind(this.resetWangotron, this);
+      this.initTimelineSwiper = bind(this.initTimelineSwiper, this);
       this.initDom();
       $(document).ready((function(_this) {
         return function() {
@@ -20,14 +21,29 @@
               });
             }, 700);
           };
-          return $(window).resize(function() {
+          $(window).resize(function() {
             _this.resetWangotron();
             clearTimeout(_this.showWangTimeout);
             return _this.showWangotron();
           });
+          return _this.initTimelineSwiper();
         };
       })(this));
     }
+
+    Pwp.prototype.initTimelineSwiper = function() {
+      return this.timelineSwiper = new Swiper(this.prog_tl_swiper_container, {
+        spaceBetween: 0,
+        speed: 600,
+        loop: true,
+        autoplay: this.isMobile() ? 3800 : false,
+        autoplayDisableOnInteraction: false,
+        effect: 'slide',
+        observer: true,
+        observeParents: true,
+        pagination: '#progress-timeline__pagination'
+      });
+    };
 
     Pwp.prototype.resetWangotron = function() {
       TweenLite.set(this.wangotron, {
@@ -74,7 +90,7 @@
       if (this.modal.hasClass(pillarName)) {
         return;
       }
-      if (this.isMobile() || window.innerWidth < 1024) {
+      if (window.innerWidth < 1024) {
         TweenMax.set(this.modal, {
           display: 'block'
         });
@@ -171,7 +187,7 @@
             x: "-60%"
           });
           TweenLite.to(this.modal, spd, {
-            x: "120%"
+            x: "110%"
           });
           this.opening_throttle = true;
         }
@@ -188,7 +204,7 @@
     };
 
     Pwp.prototype.hidePillarDetails = function() {
-      if (this.isMobile() || window.innerWidth < 1024) {
+      if (window.innerWidth < 1024) {
         TweenMax.to(this.modal, 0.2, {
           opacity: 0
         });
@@ -219,7 +235,8 @@
       this.wang_planet = $('#wangotron__button--planet');
       this.wang_pwp = $('#wangotron__pwp');
       this.wang_grad = $('#wangotron__gradient');
-      return this.wang_spin = $('#wangotron__spinner');
+      this.wang_spin = $('#wangotron__spinner');
+      return this.prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper');
     };
 
     return Pwp;
