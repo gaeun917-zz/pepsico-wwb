@@ -20,7 +20,10 @@ h2
         margin: 1rem auto 2rem auto
 
 h3 
-    font-size: 1.2rem
+    font-size: 2.2rem
+
+h4 
+    font-size: 1.8rem
 
 h5
     font-size: 0.72rem
@@ -271,5 +274,70 @@ small
     .highlight__media
         +cover
 
+.focus-areas
+    background-color: $light_grey
 
-    
+.focus-areas__copy
+    text-align: center
+    width: 40%
+    margin-left: auto
+    margin-right: auto
+
+.wangotron
+    margin-top: 15%
+
+.wangotron__items
+    +cover
+
+.wangotron__gradient
+    +padb
+    +square(100%)
+    +opacityz(0)
+    top: -13.5%
+    left: 32%
+
+.wangotron__details-modal
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    margin-top: 0
+
+.wangotron__details-modal__container
+    +padn
+    top: -3%
+    left: 0
+    +square(100%)
+    +border-radius(0)
+    +box-sizing
+    color: $dark_grey
+    text-align: left
+    padding: 0 8% 8% 8%
+
+.wangotron__details-modal__icon, .wangotron__details-modal__close, .wangotron__tap-cta
+    +dn
+
+.wangotron__details-modal__header
+    margin: 0 auto
+
+    &::after
+        background-color: #bcbbb8
+        width: 100%
+        margin: 3% auto 0 auto
+
+.wangotron__details-modal__copy
+    margin: 4% auto
+
+.wangotron__details-modal__image
+    +prdb
+    width: 100%
+    +box-sizing
+    border: 1px solid white
+    +border-radius(3px)
+
+.wangotron__details-modal__cta
+    margin-top: 4%
+
+.wangotron__details-modal .wangotron__details-modal__container
+    background-color: transparent !important
+ 

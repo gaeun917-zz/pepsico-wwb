@@ -1,24 +1,30 @@
 <div class="wangotron-wrap">
 
-    <div class="wangotron">
+    <div class="wangotron" id="wangotron">
 
-        <img class="wangotron__arms" src="img/focus-arms--mo.png">
-        <img class="wangotron__pwp" src="img/focus-pwp.png">
+        <img class="wangotron__gradient" src="img/gradient-mask.png" id="wangotron__gradient">
 
-        {{#eachProperty pillars ~}}
-        <div class="wangotron__area wangotron__area--{{key}}">
-            <img class="wangotron__button wangotron__button--{{key}}" src="img/focus--icon-{{key}}.png">
+        <div class="wangotron__items" id="wangotron__items">
+            <img class="wangotron__arms" src="img/focus-arms--mo.png" id="wangotron__arms">
+            <img class="wangotron__pwp" src="img/focus-pwp.png" id="wangotron__pwp">
+            <img class="wangotron__spinner" src="img/pillar-spinner.png" id="wangotron__spinner">
+            {{#eachProperty pillars ~}}
+            <div class="wangotron__pillar wangotron__pillar--{{key}}" data-pillar="{{key}}" id="wangotron__button--{{key}}">
+                <img class="wangotron__button wangotron__button--{{key}}" src="img/focus--icon-{{key}}.png">
+            </div>
+
+            {{~/eachProperty}}
         </div>
-        {{~/eachProperty}}
         
-        <div class="wangotron__details-modal planet">
-            <div class="wangotron__details-modal__close"></div>
+        <div class="wangotron__details-modal" id="wangotron__details-modal">
+            <div class="wangotron__details-modal__close" id="wangotron__details-modal__close"></div>
             
             {{#eachProperty pillars ~}}
-            <div class="wangotron__details-modal__container {{key}}">
+            <div class="wangotron__details-modal__container wangotron__details-modal__container--{{key}}">
                 <div class="wangotron__details-modal__icon"></div>
-                <div class="wangotron__details-modal__header">{{key}}</div>
+                <h4 class="wangotron__details-modal__header">{{key}}</h4>
                 <div class="wangotron__details-modal__copy">{{{value.short-copy}}}</div>
+                <img class="wangotron__details-modal__image" src="../img/{{value.image-filename}}" alt="{{key}}">
                 <a class="btn wangotron__details-modal__cta" href="{{value.link}}">
                     Discover more
                     <img class="btn__icon" src="img/icon-arrow-right.png" />

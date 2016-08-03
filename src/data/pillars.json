@@ -14,7 +14,7 @@
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis.",
             "Quibusdam exercitationem consequatur numquam repellendus ratione sunt earum porro, incidunt quo sequi ut illum."
         ],
-        "image-filename": "pillar-people.jpg",
+        "image-filename": "pillar-products.jpg",
         "link": "/people"
     },
     "planet": {
@@ -23,7 +23,7 @@
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut vero totam nam nemo eius, praesentium! Tenetur sint illo non in officia fuga velit officiis.",
             "Quibusdam exercitationem consequatur numquam repellendus ratione sunt earum porro, incidunt quo sequi ut illum."
         ],
-        "image-filename": "pillar-planet.jpg",
+        "image-filename": "pillar-products.jpg",
         "link": "/planet"
     }
 }

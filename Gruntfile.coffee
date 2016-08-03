@@ -33,12 +33,12 @@ module.exports = (grunt) ->
           'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
           'bower_components/Swiper/dist/js/swiper.min.js',
           'bower_components/fastclick/lib/fastclick.js',
-          'bower_components/tweenlite/TweenLite.min.js'
+          'bower_components/gsap/src/minified/TweenMax.min.js'
         ]
         dest: 'pub/js/vendor.js'
       vendor_css:
         src: [
-          'bower_components/Swiper/dist/css/swiper.min.css',
+          'bower_components/Swiper/dist/css/swiper.min.css'
         ]
         dest: 'pub/css/vendor.css'
 

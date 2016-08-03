@@ -7,24 +7,34 @@
     overflow: hidden
     background-color: $extralight_grey
 
-.wangotron-wrap
-    +prdb
-    width: 100%
-    max-width: 500px
-    margin: auto
-
 .wangotron
     +prdb
     width: 100%
     padding-bottom: 100%
     margin-top: 10%
 
+.wangotron__gradient, .wangotron__details-modal__image
+    +dn
+
+.wangotron__spinner
+    +padb
+    width: 54%
+    height: 55%
+    +nearly-ontop
+    top: 9%
+    left: 23%
+
+.wangotron-wrap
+    +prdb
+    width: 100%
+    max-width: 500px
+    margin: auto
+
 .wangotron__arms
     +padb
     width: 100%
     top: 0
     left: 0
-    transition: 3s ease transform
     transform-origin: 50% 39.8%
     transform: translateZ(0)
 
@@ -34,10 +44,10 @@
     top: 18.5%
     left: 32.1%
 
-.wangotron__area
+.wangotron__pillar
     +padb
     +square(25%)
-    +highness
+    +ontop
 
     &::before
         +padb
@@ -60,15 +70,15 @@
             transform: scale(2)
             +opacityz(0)
 
-    &.wangotron__area--products
+    &.wangotron__pillar--products
         top: 5%
         left: 5%
 
-    &.wangotron__area--planet
+    &.wangotron__pillar--planet
         top: 5%
         left: 70%
 
-    &.wangotron__area--people
+    &.wangotron__pillar--people
         top: 62%
         left: 37.5%
 
@@ -81,50 +91,25 @@
     transform: translateZ(0)
     transition: 0.1s ease transform
 
-
 .wangotron__details-modal
-    +padb
+    +padn
     +ontop
-    height: 91.4%
-    width: 91.4%
-    top: -3%
-    left: 4.3%
-
-    &.products
-
-        .wangotron__details-modal__container
-            background-color: $wwb_darkyellow
-
-        .wangotron__details-modal__close
-            background-image: url(../img/icon-close--yellow.png)
-
-        .wangotron__details-modal__icon
-            background-image: url(../img/icon-heart.png)
-
-    &.planet
-
-        .wangotron__details-modal__container
-            background-color: $wwb_darkgreen
-
-        .wangotron__details-modal__close
-            background-image: url(../img/icon-close--green.png)
-
-        .wangotron__details-modal__icon
-            background-image: url(../img/icon-leaf.png)
-
-    &.people
-
-        .wangotron__details-modal__container
-            background-color: $wwb_darkblue
-
-        .wangotron__details-modal__close
-            background-image: url(../img/icon-close--blue.png)
+    +opacityz(0)
+    height: 102%
+    width: 102%
+    top: -6%
+    left: -1%
 
 .wangotron__details-modal__container
-    +cover
+    +padn
+    top: 0
+    left: 0
+    +square(100%)
     +border-radius(100%)
-    +opacityz(0.9)
-    background-color: $wwb_darkgreen
+    +box-sizing
+    color: white
+    text-align: center
+    padding: 8%
 
 .wangotron__details-modal__close
     +padb
@@ -139,15 +124,64 @@
 
 .wangotron__details-modal__icon
     +prdb
-    width: 25%
-    padding-bottom: 22%
-    margin: 8% auto 4% auto
+    width: 20%
+    padding-bottom: 16%
+    margin: 0 auto 4% auto
     background-size: contain
     background-position: center
     background-repeat: no-repeat
 
+.wangotron__details-modal__header
+    margin: 0 auto
 
+    &::after
+        content: ""
+        +prdb
+        height: 2px
+        background-color: white
+        width: 50%
+        margin: 3% auto 0 auto
 
+.wangotron__details-modal__copy
+    margin: 8% auto
 
-// <div class="wangotron__details-modal__header"></div>
-// <div class="wangotron__details-modal__copy"></div>
+.wangotron__details-modal__cta
+    margin-top: 0
+
+.wangotron__details-modal
+
+    &.products
+
+        .wangotron__details-modal__container--products
+            +db
+            background-color: $wwb_darkyellow
+
+        .wangotron__details-modal__close
+            background-image: url(../img/icon-close--yellow.png)
+
+        .wangotron__details-modal__icon
+            background-image: url(../img/icon-heart.png)
+
+    &.planet
+
+        .wangotron__details-modal__container--planet
+            +db
+            background-color: rgba(40, 117, 58, 0.9)
+
+        .wangotron__details-modal__close
+            background-image: url(../img/icon-close--green.png)
+
+        .wangotron__details-modal__icon
+            background-image: url(../img/icon-leaf.png)
+
+    &.people
+
+        .wangotron__details-modal__container--people
+            +db
+            background-color: $wwb_darkblue
+
+        .wangotron__details-modal__close
+            background-image: url(../img/icon-close--blue.png)
+
+        .wangotron__details-modal__icon
+            background-image: url(../img/icon-hand.png)
