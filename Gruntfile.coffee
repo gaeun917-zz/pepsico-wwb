@@ -28,12 +28,13 @@ module.exports = (grunt) ->
         dest: 'pub/js/script.js'
       vendor_js:
         src: [
-          'bower_components/jquery/dist/jquery.min.js',
-          'bower_components/lazysizes/lazysizes.min.js',
-          'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
-          'bower_components/Swiper/dist/js/swiper.min.js',
-          'bower_components/fastclick/lib/fastclick.js',
+          'bower_components/jquery/dist/jquery.min.js'
+          'bower_components/lazysizes/lazysizes.min.js'
+          'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js'
+          'bower_components/Swiper/dist/js/swiper.min.js'
+          'bower_components/fastclick/lib/fastclick.js'
           'bower_components/gsap/src/minified/TweenMax.min.js'
+          'bower_components/jquery-ui/jquery-ui.min.js'
         ]
         dest: 'pub/js/vendor.js'
       vendor_css:

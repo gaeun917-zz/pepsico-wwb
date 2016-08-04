@@ -21,11 +21,12 @@ h2, h3
         content: ""
         height: 2px
         background-color: $wwb_blue
-        margin: 1rem auto 2rem auto
+        margin: 1rem auto 0 auto
 
 h3
     +title-font-bold
-    font-size: 2rem 
+    font-size: 2rem
+    line-height: 2rem
 
 h4
     +title-font-regular
@@ -40,11 +41,17 @@ small
 
 
 // ::::: GLOBAL :::::
+
+$global_spacing: 8%
+
 .container
     +prdb
     width: 84%
-    margin: 0 8%
+    margin: 0 $global_spacing
     +box-sizing
+
+.contained-copy h3 
+    margin: 0
 
 
 // ::::: HEADER :::::
@@ -189,16 +196,20 @@ small
     +prdb
     background-color: $extralight_grey
     overflow: hidden
-    padding: 8% 0
+    padding: $global_spacing 0
 
 .highlight__header
     margin-top: 0
+    margin-bottom: 0
 
 .highlight__desktop-copy
     +dn
 
 .highlight__desktop-copy, .highlight__mobile-copy
     margin-bottom: 0
+
+.highlight__section--media
+    margin-top: $global_spacing
 
 .highlight__media
     +prdb
@@ -216,22 +227,22 @@ small
 // ::::: EXPLORE :::::
 .explore
     +prdb
-    padding: 8% 0
+    padding: $global_spacing 0
     text-align: center
     color: white
 
 .explore-item
     +prdib
-    width: 46%
-    padding-top: 46%
+    width: 50% - $global_spacing / 2
+    padding-top: (100% - $global_spacing * 2) / 2
     background-size: cover
     background-position: center
     background-repeat: no-repeat
-    margin-bottom: 8%
+    margin-bottom: $global_spacing
     overflow: hidden
 
     &:nth-child(odd)
-        margin-right: 8%
+        margin-right: $global_spacing
     &:last-child
         margin: 0
 

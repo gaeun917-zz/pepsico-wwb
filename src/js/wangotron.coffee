@@ -1,4 +1,4 @@
-class Pwp
+class Wangotron
 
     constructor: ->
 
@@ -18,25 +18,6 @@ class Pwp
                 @resetWangotron()
                 clearTimeout @showWangTimeout
                 @showWangotron()
-
-
-            @initTimelineSwiper()
-
-    initTimelineSwiper: =>
-
-        @timelineSwiper = new Swiper @prog_tl_swiper_container, {
-            spaceBetween: 0
-            speed: 600 # Duration of transition between slides
-            loop: true
-            autoplay: if @isMobile() then 3800 else false # Delay between transitions
-            autoplayDisableOnInteraction: false
-            effect: 'slide'
-            observer: true
-            observeParents: true
-            pagination: '#progress-timeline__pagination'
-            # nextButton: @nextBtn
-            # prevButton: @prevBtn
-        }
                     
     resetWangotron: =>
         TweenLite.set @wangotron, {x: "0%", opacity: 0}
@@ -51,7 +32,6 @@ class Pwp
         @modal.removeClass 'products people planet'
         TweenLite.set @wang_grad, {opacity: 0, rotation: 0,}
         @opening_throttle = false
-
 
     showPillarDetails: (e) =>
 
@@ -119,7 +99,6 @@ class Pwp
         (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( navigator.userAgent.toLowerCase() ))
 
     initDom: =>
-        # Wangotron
         @pillars        = $('.wangotron__pillar')
         @modal          = $('#wangotron__details-modal')
         @modalClose     = $('#wangotron__details-modal__close')
@@ -133,8 +112,4 @@ class Pwp
         @wang_grad      = $('#wangotron__gradient')
         @wang_spin      = $('#wangotron__spinner')
 
-        # Progress Timeline
-        @prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper')
-
-
-@Pwp = new Pwp
+@Wangotron = new Wangotron

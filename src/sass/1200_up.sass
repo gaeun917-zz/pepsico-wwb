@@ -14,9 +14,16 @@ h5
 
 // ::::: GLOBAL :::::
 
+$global_spacing: 5%
+
 .container
-    width: 90%
+    width: 100% - $global_spacing * 2
     max-width: 1372px
+    margin: 0 auto
+
+.copy
+    margin-top: $global_spacing
+    margin-bottom: $global_spacing
 
 // ::::: HEADER :::::
 
@@ -26,6 +33,16 @@ h5
 .hero
     padding: 5% 0
 
+.misvis
+    padding: $global_spacing 0
+
 // ::::: HIGHLIGHT :::::
 .highlight
-    padding: 4% 0
+    padding: 5% 0
+
+
+.focus-areas, .our-progress
+    padding-top: $global_spacing
+
+.explore
+    padding: $global_spacing 0

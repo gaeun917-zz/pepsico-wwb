@@ -1,14 +1,13 @@
 (function() {
-  var Pwp,
+  var Wangotron,
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  Pwp = (function() {
-    function Pwp() {
+  Wangotron = (function() {
+    function Wangotron() {
       this.initDom = bind(this.initDom, this);
       this.hidePillarDetails = bind(this.hidePillarDetails, this);
       this.showPillarDetails = bind(this.showPillarDetails, this);
       this.resetWangotron = bind(this.resetWangotron, this);
-      this.initTimelineSwiper = bind(this.initTimelineSwiper, this);
       this.initDom();
       $(document).ready((function(_this) {
         return function() {
@@ -21,31 +20,16 @@
               });
             }, 700);
           };
-          $(window).resize(function() {
+          return $(window).resize(function() {
             _this.resetWangotron();
             clearTimeout(_this.showWangTimeout);
             return _this.showWangotron();
           });
-          return _this.initTimelineSwiper();
         };
       })(this));
     }
 
-    Pwp.prototype.initTimelineSwiper = function() {
-      return this.timelineSwiper = new Swiper(this.prog_tl_swiper_container, {
-        spaceBetween: 0,
-        speed: 600,
-        loop: true,
-        autoplay: this.isMobile() ? 3800 : false,
-        autoplayDisableOnInteraction: false,
-        effect: 'slide',
-        observer: true,
-        observeParents: true,
-        pagination: '#progress-timeline__pagination'
-      });
-    };
-
-    Pwp.prototype.resetWangotron = function() {
+    Wangotron.prototype.resetWangotron = function() {
       TweenLite.set(this.wangotron, {
         x: "0%",
         opacity: 0
@@ -84,7 +68,7 @@
       return this.opening_throttle = false;
     };
 
-    Pwp.prototype.showPillarDetails = function(e) {
+    Wangotron.prototype.showPillarDetails = function(e) {
       var pillarName, spd;
       pillarName = $(e.currentTarget).attr('data-pillar');
       if (this.modal.hasClass(pillarName)) {
@@ -203,7 +187,7 @@
       }
     };
 
-    Pwp.prototype.hidePillarDetails = function() {
+    Wangotron.prototype.hidePillarDetails = function() {
       if (window.innerWidth < 1024) {
         TweenMax.to(this.modal, 0.2, {
           opacity: 0
@@ -219,11 +203,11 @@
       }
     };
 
-    Pwp.prototype.isMobile = function() {
+    Wangotron.prototype.isMobile = function() {
       return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
     };
 
-    Pwp.prototype.initDom = function() {
+    Wangotron.prototype.initDom = function() {
       this.pillars = $('.wangotron__pillar');
       this.modal = $('#wangotron__details-modal');
       this.modalClose = $('#wangotron__details-modal__close');
@@ -235,14 +219,13 @@
       this.wang_planet = $('#wangotron__button--planet');
       this.wang_pwp = $('#wangotron__pwp');
       this.wang_grad = $('#wangotron__gradient');
-      this.wang_spin = $('#wangotron__spinner');
-      return this.prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper');
+      return this.wang_spin = $('#wangotron__spinner');
     };
 
-    return Pwp;
+    return Wangotron;
 
   })();
 
-  this.Pwp = new Pwp;
+  this.Wangotron = new Wangotron;
 
 }).call(this);

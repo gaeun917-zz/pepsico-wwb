@@ -5,7 +5,10 @@
 .focus-areas
     +prdb
     overflow: hidden
-    background-color: $extralight_grey
+    background-color: $light_grey
+
+.focus-areas, .our-progress
+    padding-top: $global_spacing
 
 .wangotron
     +prdb
@@ -109,12 +112,12 @@
     +box-sizing
     color: white
     text-align: center
-    padding: 8%
+    padding: $global_spacing
 
 .wangotron__details-modal__close
     +padb
-    top: 8%
-    right: 8%
+    top: $global_spacing
+    right: $global_spacing
     +square(50px)
     +ontop
     background-size: contain
@@ -143,7 +146,7 @@
         margin: 3% auto 0 auto
 
 .wangotron__details-modal__copy
-    margin: 8% auto
+    margin: $global_spacing auto
 
 .wangotron__details-modal__cta
     margin-top: 0
@@ -191,22 +194,23 @@
 .progress-timeline__carousel-wrapper
     +prdb
     width: 100%
-    margin-bottom: 8%
+    margin-bottom: $global_spacing
 
 .progress-timeline__pagination
     +padb
     top: auto !important
     bottom: auto !important
-    width: 84% !important
+    width: 100% - $global_spacing * 2 !important
     height: 14px
-    margin-top: 53%
+    margin-top: 56%
+    margin-left: $global_spacing
     +border-radius(9px)
     background-color: $light_grey
     text-align: center
 
 .progress-timeline__pagination .swiper-pagination-bullet
     background-color: white !important
-    margin: 0 5% 0 0 !important
+    margin: 0 6% 0 0 !important
     +opacityz(1)
 
     &:last-child
@@ -220,6 +224,28 @@
     -o-transform: scale(2.2)
     transform: scale(2.2)
 
+.progress-timeline__arrows
+    +padb
+    width: 84%
+    height: 17px
+    margin: calc(64% + 50px) 0 0 $global_spacing
+
+.progress-timeline__arrow
+    +padb
+    width: 10px
+    top: 0
+    height: 100%
+    background-size: contain
+    background-repeat: no-repeat
+    +no-pointer-events
+
+    &.progress-timeline__arrow--prev
+        left: 0
+        background-image: url(../img/icon-arrow-left--blue.png)
+
+    &.progress-timeline__arrow--next
+        right: 0
+        background-image: url(../img/icon-arrow-right--blue.png)
 
 
 .progress-timeline__slide
@@ -227,13 +253,13 @@
 
 .progress-timeline__image
     +prdb
-    width: 80%
+    width: 100% - $global_spacing * 2
     margin: auto
 
 .progress-timeline__copy-container
     +prdb
     width: 84%
-    margin: 15% auto 0 auto
+    margin: 18% auto 0 auto
 
 .progress-timeline__title
     +title-font
@@ -250,6 +276,13 @@
 
 .progress-timeline__swipe-icon
     +prdb
-    margin: 8% auto 0 auto
+    margin: $global_spacing auto 0 auto
     width: 80px
     +opacityz(0.6)
+
+.progress-timeline--desktop
+    +dn
+
+.progress-timeline--desktop__image
+    width: 400px
+
