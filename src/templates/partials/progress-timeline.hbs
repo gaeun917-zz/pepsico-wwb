@@ -28,6 +28,14 @@
             <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
             {{~/eachProperty}}
         </div>
+        <div class="container progress-timeline--desktop__copy-container">
+            {{#eachProperty progress ~}}
+            <div class="progress-timeline--desktop__copy-item progress-timeline--desktop__copy-{{key}}">
+                <p class="progress-timeline__title">{{{value.title}}}</p>
+                <p class="copy progress-timeline__copy">{{{value.copy}}}</p>
+            </div>
+            {{~/eachProperty}}
+        </div>
         
         <div class="container progress-timeline--desktop__slider-container" id="progress-timeline--desktop__slider-container">
             <div class="progress-timeline--desktop__slider" id="progress-timeline--desktop__slider"></div>

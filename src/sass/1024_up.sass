@@ -360,25 +360,24 @@ $global_spacing: 4%
 
 .progress-timeline--desktop__image
     +padb
-    left: 85%
+    left: 80%
     margin-left: -200px
     width: 400px
-    top: 0
+    top: 4%
     +opacityz(0)
     transform: scale(0.8)
 
-    &.active, &:first-child
+    &:first-child
+        top: 0
         left: 50%
         z-index: 1000
         transform: scale(1)
         +opacityz(1)
 
-    &.next, &:nth-child(2)
+    &:nth-child(2)
         +opacityz(0.3)
-
-    &.next, &:nth-child(2)
         z-index: 995
-        left: 80%
+        left: 75%
 
     // &.prev, &:last-child
     //     left: 20%
@@ -399,10 +398,36 @@ $global_spacing: 4%
     top: -7px
     background-color: $wwb_blue
     +border-radius(30px)
+    cursor: -webkit-grab
+    cursor: -moz-grab
+    cursor: -ms-grab
+    cursor: -o-grab
     cursor: grab
 
     &:active
+        cursor: -webkit-grabbing
+        cursor: -moz-grabbing
+        cursor: -ms-grabbing
+        cursor: -o-grabbing
         cursor: grabbing
+
+.progress-timeline--desktop__copy-container
+    height: 140px
+
+.progress-timeline--desktop__copy-item
+    +padb
+    top: 0
+    left: 50%
+    width: 400px
+    height: 100%
+    margin: $global_spacing 0 0 -200px
+
+.progress-timeline__title, .progress-timeline__copy
+    +prdb
+    width: 100%
+    height: auto
+    text-align: center
+    margin: 0
 
 .explore
     padding: $global_spacing 0

@@ -7,11 +7,14 @@
       this.initDom = bind(this.initDom, this);
       this.initMobileTimelineSwiper = bind(this.initMobileTimelineSwiper, this);
       this.updateTimeline = bind(this.updateTimeline, this);
+      this.animateStop = bind(this.animateStop, this);
+      this.setWidth = bind(this.setWidth, this);
       this.initSlider = bind(this.initSlider, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
       this.initDom();
       $(document).ready((function(_this) {
         return function() {
+          _this.setWidth();
           _this.initMobileTimelineSwiper();
           _this.initDesktopTimeline();
           return _this.initSlider();
@@ -20,7 +23,7 @@
     }
 
     ProgressTimeline.prototype.initDesktopTimeline = function() {
-      var easez, hilef, i, j, len, lolef, lopac, loscl, lospd, nmspd, nolef, ref, results, s, spd;
+      var easez, hilef, i, j, len, lolef, lopac, loscl, lospd, lotop, nmspd, nolef, ref, results, s, spd;
       this.tml = new TimelineMax({
         delay: 0,
         paused: true
@@ -29,10 +32,11 @@
       nmspd = 0.4;
       lospd = 0.04;
       lopac = 0.3;
-      lolef = '20%';
-      nolef = '15%';
+      lolef = '25%';
+      nolef = '20%';
+      lotop = "4%";
       loscl = 0.8;
-      hilef = '80%';
+      hilef = '75%';
       easez = Power0.easeNone;
       ref = this.slides;
       results = [];
@@ -43,6 +47,7 @@
             this.tml.addLabel("step" + i);
             this.tml.add(TweenLite.to($("#prog-tl-" + i), nmspd, {
               opacity: lopac,
+              top: lotop,
               left: lolef,
               scale: loscl,
               ease: easez
@@ -62,13 +67,12 @@
             }));
           }
           this.tml.add(TweenLite.set($("#prog-tl-" + i), {
-            zIndex: 995
-          }));
-          this.tml.add(TweenLite.set($("#prog-tl-" + (i + 1)), {
-            zIndex: 1000
+            clearProps: 'z-index'
           }));
           this.tml.add(TweenLite.to($("#prog-tl-" + (i + 1)), nmspd, {
+            zIndex: 1000,
             opacity: 1,
+            top: '0%',
             left: "50%",
             scale: 1,
             ease: easez,
@@ -76,6 +80,7 @@
           }));
           if (i < this.slides.length - 2) {
             this.tml.add(TweenLite.to($("#prog-tl-" + (i + 2)), lospd, {
+              clearProps: 'z-index',
               opacity: lopac,
               left: hilef,
               ease: easez,
@@ -98,14 +103,39 @@
           return function(e) {
             return _this.updateTimeline(e.target.offsetLeft);
           };
+        })(this),
+        stop: (function(_this) {
+          return function(e) {
+            return _this.animateStop(e.target.offsetLeft);
+          };
         })(this)
       });
     };
 
+    ProgressTimeline.prototype.setWidth = function() {
+      this.rangeWidth = this.prog_dt_slider_container.width() - 30;
+      return this.d10 = this.rangeWidth / (this.slides.length - 1);
+    };
+
+    ProgressTimeline.prototype.animateStop = function(delta) {
+      var slidesNum, snapFigure, stepNum;
+      stepNum = Math.round(delta / (this.rangeWidth / this.slides.length));
+      if (stepNum > 9) {
+        stepNum = 9;
+      }
+      slidesNum = this.slides.length;
+      snapFigure = stepNum * this.d10;
+      TweenLite.to(this.prog_dt_slider, 0.5, {
+        left: snapFigure,
+        ease: Expo.easeOut
+      });
+      return this.tml.tweenTo("step" + stepNum, 0.3);
+    };
+
     ProgressTimeline.prototype.updateTimeline = function(delta) {
-      var dist;
-      dist = this.prog_dt_slider_container.width() - 30;
-      return this.tml.progress(delta / dist);
+      var prog;
+      prog = delta / this.rangeWidth;
+      return this.tml.progress(prog);
     };
 
     ProgressTimeline.prototype.initMobileTimelineSwiper = function() {
