@@ -15,6 +15,7 @@
           _this.modalClose.on('click', _this.hidePillarDetails);
           _this.showWangotron = function() {
             return _this.showWangTimeout = setTimeout(function() {
+              _this.wangResetThrottle = false;
               return TweenLite.to(_this.wangotron, 1, {
                 opacity: 1
               });
@@ -30,42 +31,45 @@
     }
 
     Wangotron.prototype.resetWangotron = function() {
-      TweenLite.set(this.wangotron, {
-        x: "0%",
-        opacity: 0
-      });
-      TweenLite.set(this.wang_items, {
-        rotation: 0,
-        clearProps: "all"
-      });
-      TweenLite.set(this.wang_products, {
-        rotation: 0
-      });
-      TweenLite.set(this.wang_planet, {
-        rotation: 0
-      });
-      TweenLite.set(this.wang_people, {
-        rotation: 0
-      });
-      TweenLite.set(this.wang_pwp, {
-        rotation: 0
-      });
-      TweenLite.set(this.wang_spin, {
-        rotation: 0
-      });
-      TweenLite.set(this.wangotron, {
-        x: "0%"
-      });
-      TweenLite.set(this.modal, {
-        x: "0%",
-        display: 'none'
-      });
-      this.modal.removeClass('products people planet');
-      TweenLite.set(this.wang_grad, {
-        opacity: 0,
-        rotation: 0
-      });
-      return this.opening_throttle = false;
+      if (!this.wangResetThrottle) {
+        this.wangResetThrottle = true;
+        TweenLite.set(this.wangotron, {
+          x: "0%",
+          opacity: 0
+        });
+        TweenLite.set(this.wang_items, {
+          rotation: 0,
+          clearProps: "all"
+        });
+        TweenLite.set(this.wang_products, {
+          rotation: 0
+        });
+        TweenLite.set(this.wang_planet, {
+          rotation: 0
+        });
+        TweenLite.set(this.wang_people, {
+          rotation: 0
+        });
+        TweenLite.set(this.wang_pwp, {
+          rotation: 0
+        });
+        TweenLite.set(this.wang_spin, {
+          rotation: 0
+        });
+        TweenLite.set(this.wangotron, {
+          x: "0%"
+        });
+        TweenLite.set(this.modal, {
+          x: "0%",
+          display: 'none'
+        });
+        this.modal.removeClass('products people planet');
+        TweenLite.set(this.wang_grad, {
+          opacity: 0,
+          rotation: 0
+        });
+        return this.opening_throttle = false;
+      }
     };
 
     Wangotron.prototype.showPillarDetails = function(e) {

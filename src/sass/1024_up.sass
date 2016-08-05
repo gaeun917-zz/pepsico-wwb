@@ -353,6 +353,7 @@ $global_spacing: 4%
 
 .progress-timeline--desktop
     +db
+    margin-top: $global_spacing
 
 .progress-timeline--desktop__image-carousel
     +prdb
@@ -366,6 +367,7 @@ $global_spacing: 4%
     top: 4%
     +opacityz(0)
     transform: scale(0.8)
+    +border-radius(3px)
 
     &:first-child
         top: 0
@@ -378,9 +380,6 @@ $global_spacing: 4%
         +opacityz(0.3)
         z-index: 995
         left: 75%
-
-    // &.prev, &:last-child
-    //     left: 20%
 
 
 .progress-timeline--desktop__slider-container
@@ -416,11 +415,15 @@ $global_spacing: 4%
 
 .progress-timeline--desktop__copy-item
     +padb
+    +opacityz(0)
     top: 0
     left: 50%
     width: 400px
     height: 100%
     margin: $global_spacing 0 0 -200px
+
+    &:first-child
+        +opacityz(1)
 
 .progress-timeline__title, .progress-timeline__copy
     +prdb

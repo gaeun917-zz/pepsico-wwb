@@ -11,27 +11,29 @@ class Wangotron
 
             @showWangotron = =>
                 @showWangTimeout = setTimeout( =>
+                    @wangResetThrottle = false
                     TweenLite.to @wangotron, 1, {opacity: 1}
                 , 700)
-
             $(window).resize =>
                 @resetWangotron()
                 clearTimeout @showWangTimeout
                 @showWangotron()
                     
     resetWangotron: =>
-        TweenLite.set @wangotron, {x: "0%", opacity: 0}
-        TweenLite.set @wang_items, {rotation: 0, clearProps:"all"}
-        TweenLite.set @wang_products, {rotation: 0}
-        TweenLite.set @wang_planet, {rotation: 0}
-        TweenLite.set @wang_people, {rotation: 0}
-        TweenLite.set @wang_pwp, {rotation: 0}
-        TweenLite.set @wang_spin, {rotation: 0}
-        TweenLite.set @wangotron, {x: "0%"}
-        TweenLite.set @modal, {x: "0%", display: 'none'}
-        @modal.removeClass 'products people planet'
-        TweenLite.set @wang_grad, {opacity: 0, rotation: 0,}
-        @opening_throttle = false
+        if !@wangResetThrottle
+            @wangResetThrottle = true
+            TweenLite.set @wangotron, {x: "0%", opacity: 0}
+            TweenLite.set @wang_items, {rotation: 0, clearProps:"all"}
+            TweenLite.set @wang_products, {rotation: 0}
+            TweenLite.set @wang_planet, {rotation: 0}
+            TweenLite.set @wang_people, {rotation: 0}
+            TweenLite.set @wang_pwp, {rotation: 0}
+            TweenLite.set @wang_spin, {rotation: 0}
+            TweenLite.set @wangotron, {x: "0%"}
+            TweenLite.set @modal, {x: "0%", display: 'none'}
+            @modal.removeClass 'products people planet'
+            TweenLite.set @wang_grad, {opacity: 0, rotation: 0,}
+            @opening_throttle = false
 
     showPillarDetails: (e) =>
 

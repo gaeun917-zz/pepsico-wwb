@@ -79,14 +79,25 @@ class ProgressTimeline
 
         @tml.tweenTo("step#{stepNum}", 0.3)
 
+        @revealCopy(stepNum)
+
+    revealCopy: (n) =>
+        @copyTimeout = setTimeout( =>
+            TweenLite.to $("#progress-timeline--desktop__copy-#{n}"), 0.2, {opacity: 1}
+            @copyHideThrottle = false
+        , 400)
+
 
     updateTimeline: (delta) =>
+
+        if !@copyHideThrottle
+            @copyHideThrottle = true
+            TweenLite.to @slidesCopy, 0.2, {opacity: 0}
+        
+        clearTimeout @copyTimeout
+
         prog = delta/@rangeWidth
         @tml.progress(prog)
-
-        # console.log prog
-
-
 
 
     initMobileTimelineSwiper: =>
@@ -98,8 +109,8 @@ class ProgressTimeline
             autoplay: if @isMobile() then 3800 else false # Delay between transitions
             autoplayDisableOnInteraction: false
             effect: 'slide'
-            # observer: true
-            # observeParents: true
+            observer: true
+            observeParents: true
             pagination: '#progress-timeline__pagination'
         }
 
@@ -116,19 +127,8 @@ class ProgressTimeline
         @prog_dt_slider = $('#progress-timeline--desktop__slider')
         @prog_dt_slider_container = $('#progress-timeline--desktop__slider-container')
         
-
         @slides = $('.progress-timeline--desktop__image')
-
-        @s1     = $('#prog-tl-0')
-        @s2     = $('#prog-tl-1')
-        @s3     = $('#prog-tl-2')
-        @s4     = $('#prog-tl-3')
-        @s5     = $('#prog-tl-4')
-        @s6     = $('#prog-tl-5')
-        @s7     = $('#prog-tl-6')
-        @s8     = $('#prog-tl-7')
-        @s9     = $('#prog-tl-8')
-        @s10    = $('#prog-tl-9')
+        @slidesCopy = $('.progress-timeline--desktop__copy-item')
 
 
 

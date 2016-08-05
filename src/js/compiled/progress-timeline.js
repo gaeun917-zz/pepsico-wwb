@@ -7,6 +7,7 @@
       this.initDom = bind(this.initDom, this);
       this.initMobileTimelineSwiper = bind(this.initMobileTimelineSwiper, this);
       this.updateTimeline = bind(this.updateTimeline, this);
+      this.revealCopy = bind(this.revealCopy, this);
       this.animateStop = bind(this.animateStop, this);
       this.setWidth = bind(this.setWidth, this);
       this.initSlider = bind(this.initSlider, this);
@@ -129,11 +130,30 @@
         left: snapFigure,
         ease: Expo.easeOut
       });
-      return this.tml.tweenTo("step" + stepNum, 0.3);
+      this.tml.tweenTo("step" + stepNum, 0.3);
+      return this.revealCopy(stepNum);
+    };
+
+    ProgressTimeline.prototype.revealCopy = function(n) {
+      return this.copyTimeout = setTimeout((function(_this) {
+        return function() {
+          TweenLite.to($("#progress-timeline--desktop__copy-" + n), 0.2, {
+            opacity: 1
+          });
+          return _this.copyHideThrottle = false;
+        };
+      })(this), 400);
     };
 
     ProgressTimeline.prototype.updateTimeline = function(delta) {
       var prog;
+      if (!this.copyHideThrottle) {
+        this.copyHideThrottle = true;
+        TweenLite.to(this.slidesCopy, 0.2, {
+          opacity: 0
+        });
+      }
+      clearTimeout(this.copyTimeout);
       prog = delta / this.rangeWidth;
       return this.tml.progress(prog);
     };
@@ -146,6 +166,8 @@
         autoplay: this.isMobile() ? 3800 : false,
         autoplayDisableOnInteraction: false,
         effect: 'slide',
+        observer: true,
+        observeParents: true,
         pagination: '#progress-timeline__pagination'
       });
     };
@@ -159,16 +181,7 @@
       this.prog_dt_slider = $('#progress-timeline--desktop__slider');
       this.prog_dt_slider_container = $('#progress-timeline--desktop__slider-container');
       this.slides = $('.progress-timeline--desktop__image');
-      this.s1 = $('#prog-tl-0');
-      this.s2 = $('#prog-tl-1');
-      this.s3 = $('#prog-tl-2');
-      this.s4 = $('#prog-tl-3');
-      this.s5 = $('#prog-tl-4');
-      this.s6 = $('#prog-tl-5');
-      this.s7 = $('#prog-tl-6');
-      this.s8 = $('#prog-tl-7');
-      this.s9 = $('#prog-tl-8');
-      return this.s10 = $('#prog-tl-9');
+      return this.slidesCopy = $('.progress-timeline--desktop__copy-item');
     };
 
     return ProgressTimeline;
