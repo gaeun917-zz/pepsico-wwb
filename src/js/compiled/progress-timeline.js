@@ -20,198 +20,74 @@
     }
 
     ProgressTimeline.prototype.initDesktopTimeline = function() {
-      var spd;
+      var easez, hilef, i, j, len, lolef, lopac, loscl, lospd, nmspd, nolef, ref, results, s, spd;
       this.tml = new TimelineMax({
         delay: 0,
         paused: true
       });
       spd = 0.4;
-      return this.tml.addLabel('step0').to(this.s1, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }).set(this.s1, {
-        zIndex: 995
-      }).set(this.s2, {
-        zIndex: 1000
-      }).to(this.s2, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s3, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%",
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).addLabel('step1').to(this.s1, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s2, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s2, {
-        zIndex: 995
-      }).set(this.s3, {
-        zIndex: 1000
-      }).to(this.s3, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s4, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%",
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).addLabel('step2').to(this.s2, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s3, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s3, {
-        zIndex: 995
-      }).set(this.s4, {
-        zIndex: 1000
-      }).to(this.s4, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s5, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%",
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).addLabel('step3').to(this.s3, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s4, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s4, {
-        zIndex: 995
-      }).set(this.s5, {
-        zIndex: 1000
-      }).to(this.s5, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s6, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%"
-      }, "-=" + (spd * 0.1)).addLabel('step4').to(this.s4, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s5, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s5, {
-        zIndex: 995
-      }).set(this.s6, {
-        zIndex: 1000
-      }).to(this.s6, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s7, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%"
-      }, "-=" + (spd * 0.1)).addLabel('step5').to(this.s5, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s6, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s6, {
-        zIndex: 995
-      }).set(this.s7, {
-        zIndex: 1000
-      }).to(this.s7, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s8, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%"
-      }, "-=" + (spd * 0.1)).addLabel('step6').to(this.s6, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s7, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s7, {
-        zIndex: 995
-      }).set(this.s8, {
-        zIndex: 1000
-      }).to(this.s8, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s9, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%"
-      }, "-=" + (spd * 0.1)).addLabel('step7').to(this.s7, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s8, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s8, {
-        zIndex: 995
-      }).set(this.s9, {
-        zIndex: 1000
-      }).to(this.s9, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).to(this.s10, spd * 0.1, {
-        opacity: 0.3,
-        left: "80%"
-      }, "-=" + (spd * 0.1)).addLabel('step8').to(this.s8, spd * 0.1, {
-        opacity: 0,
-        left: "15%",
-        ease: Power0.easeNone
-      }).to(this.s9, spd, {
-        opacity: 0.3,
-        left: "20%",
-        scale: 0.8,
-        ease: Power0.easeNone
-      }, "-=" + (spd * 0.1)).set(this.s9, {
-        zIndex: 995
-      }).set(this.s10, {
-        zIndex: 1000
-      }).to(this.s10, spd, {
-        opacity: 1,
-        left: "50%",
-        scale: 1,
-        ease: Power0.easeNone
-      }, "-=" + spd).addLabel('step9');
+      nmspd = 0.4;
+      lospd = 0.04;
+      lopac = 0.3;
+      lolef = '20%';
+      nolef = '15%';
+      loscl = 0.8;
+      hilef = '80%';
+      easez = Power0.easeNone;
+      ref = this.slides;
+      results = [];
+      for (i = j = 0, len = ref.length; j < len; i = ++j) {
+        s = ref[i];
+        if (i < this.slides.length - 1) {
+          if (i === 0) {
+            this.tml.addLabel("step" + i);
+            this.tml.add(TweenLite.to($("#prog-tl-" + i), nmspd, {
+              opacity: lopac,
+              left: lolef,
+              scale: loscl,
+              ease: easez
+            }));
+          } else {
+            this.tml.add(TweenLite.to($("#prog-tl-" + (i - 1)), lospd, {
+              opacity: 0,
+              left: nolef,
+              ease: easez
+            }));
+            this.tml.add(TweenLite.to($("#prog-tl-" + i), nmspd, {
+              opacity: lopac,
+              left: lolef,
+              scale: loscl,
+              ease: easez,
+              delay: -lospd
+            }));
+          }
+          this.tml.add(TweenLite.set($("#prog-tl-" + i), {
+            zIndex: 995
+          }));
+          this.tml.add(TweenLite.set($("#prog-tl-" + (i + 1)), {
+            zIndex: 1000
+          }));
+          this.tml.add(TweenLite.to($("#prog-tl-" + (i + 1)), nmspd, {
+            opacity: 1,
+            left: "50%",
+            scale: 1,
+            ease: easez,
+            delay: -nmspd
+          }));
+          if (i < this.slides.length - 2) {
+            this.tml.add(TweenLite.to($("#prog-tl-" + (i + 2)), lospd, {
+              opacity: lopac,
+              left: hilef,
+              ease: easez,
+              delay: -lospd
+            }));
+          }
+          results.push(this.tml.addLabel("step" + (i + 1)));
+        } else {
+          results.push(void 0);
+        }
+      }
+      return results;
     };
 
     ProgressTimeline.prototype.initSlider = function() {
