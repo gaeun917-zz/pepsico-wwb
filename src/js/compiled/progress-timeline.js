@@ -102,7 +102,9 @@
       var delta, step;
       step = $(e.currentTarget).attr('data-index');
       delta = step * this.d10;
-      this.updateTimeline(delta);
+      TweenLite.to(this.slidesCopy, 0.2, {
+        opacity: 0
+      });
       return this.animateStop(delta);
     };
 
@@ -131,6 +133,8 @@
     ProgressTimeline.prototype.animateStop = function(delta) {
       var slidesNum, snapFigure, stepNum;
       stepNum = Math.round(delta / this.d10);
+      $('.progress-timeline--desktop__year').removeClass('selected');
+      $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
       if (stepNum > 9) {
         stepNum = 9;
       }
@@ -142,7 +146,7 @@
       });
       this.tml.tweenTo("step" + stepNum, {
         ease: Expo.easeOut
-      });
+      }).duration(0.5);
       return this.revealCopy(stepNum);
     };
 

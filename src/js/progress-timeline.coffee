@@ -54,9 +54,8 @@ class ProgressTimeline
 
     goToYear: (e) =>
         step = $(e.currentTarget).attr('data-index')
-
         delta = step * @d10
-        @updateTimeline delta
+        TweenLite.to @slidesCopy, 0.2, {opacity: 0}
         @animateStop delta
 
 
@@ -82,6 +81,10 @@ class ProgressTimeline
 
         stepNum = Math.round(delta / @d10)
 
+        $('.progress-timeline--desktop__year').removeClass 'selected'
+
+        $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
+
         stepNum = 9 if stepNum > 9
 
         slidesNum = @slides.length
@@ -90,7 +93,7 @@ class ProgressTimeline
 
         TweenLite.to @prog_dt_slider, 0.5, {left: snapFigure, ease: Expo.easeOut}
 
-        @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut})
+        @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut}).duration(0.5)
 
         @revealCopy(stepNum)
 
