@@ -14,6 +14,8 @@ class ProgressTimeline
 
             @initSlider()
 
+            @years.on('click', @goToYear)
+
     initDesktopTimeline: =>
 
         @tml = new TimelineMax({delay: 0, paused: true})
@@ -49,6 +51,17 @@ class ProgressTimeline
                 
                 @tml.addLabel("step#{i+1}")
 
+
+    goToYear: (e) =>
+        step = $(e.currentTarget).attr('data-index')
+
+        delta = step * @d10
+        @updateTimeline delta
+        @animateStop delta
+
+
+
+
     initSlider: =>
 
         @prog_dt_slider.draggable
@@ -56,10 +69,10 @@ class ProgressTimeline
             containment: 'parent'
             ,
             drag: (e) =>
-              @updateTimeline e.target.offsetLeft
+                @updateTimeline e.target.offsetLeft
             ,
             stop: (e) =>
-              @animateStop e.target.offsetLeft
+                @animateStop e.target.offsetLeft
 
     setWidth: =>
         @rangeWidth = @prog_dt_slider_container.width()-30
@@ -67,7 +80,7 @@ class ProgressTimeline
 
     animateStop: (delta) =>
 
-        stepNum = Math.round(delta / (@rangeWidth / @slides.length))
+        stepNum = Math.round(delta / @d10)
 
         stepNum = 9 if stepNum > 9
 
@@ -77,7 +90,7 @@ class ProgressTimeline
 
         TweenLite.to @prog_dt_slider, 0.5, {left: snapFigure, ease: Expo.easeOut}
 
-        @tml.tweenTo("step#{stepNum}", 0.3)
+        @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut})
 
         @revealCopy(stepNum)
 
@@ -89,6 +102,12 @@ class ProgressTimeline
 
 
     updateTimeline: (delta) =>
+
+        stepNum = Math.round(delta / @d10)
+
+        $('.progress-timeline--desktop__year').removeClass 'selected'
+
+        $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
 
         if !@copyHideThrottle
             @copyHideThrottle = true
@@ -129,6 +148,8 @@ class ProgressTimeline
         
         @slides = $('.progress-timeline--desktop__image')
         @slidesCopy = $('.progress-timeline--desktop__copy-item')
+
+        @years = $('.progress-timeline--desktop__year')
 
 
 

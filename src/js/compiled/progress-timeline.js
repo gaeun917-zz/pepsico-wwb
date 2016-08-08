@@ -11,6 +11,7 @@
       this.animateStop = bind(this.animateStop, this);
       this.setWidth = bind(this.setWidth, this);
       this.initSlider = bind(this.initSlider, this);
+      this.goToYear = bind(this.goToYear, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
       this.initDom();
       $(document).ready((function(_this) {
@@ -18,7 +19,8 @@
           _this.setWidth();
           _this.initMobileTimelineSwiper();
           _this.initDesktopTimeline();
-          return _this.initSlider();
+          _this.initSlider();
+          return _this.years.on('click', _this.goToYear);
         };
       })(this));
     }
@@ -96,6 +98,14 @@
       return results;
     };
 
+    ProgressTimeline.prototype.goToYear = function(e) {
+      var delta, step;
+      step = $(e.currentTarget).attr('data-index');
+      delta = step * this.d10;
+      this.updateTimeline(delta);
+      return this.animateStop(delta);
+    };
+
     ProgressTimeline.prototype.initSlider = function() {
       return this.prog_dt_slider.draggable({
         axis: 'x',
@@ -120,7 +130,7 @@
 
     ProgressTimeline.prototype.animateStop = function(delta) {
       var slidesNum, snapFigure, stepNum;
-      stepNum = Math.round(delta / (this.rangeWidth / this.slides.length));
+      stepNum = Math.round(delta / this.d10);
       if (stepNum > 9) {
         stepNum = 9;
       }
@@ -130,7 +140,9 @@
         left: snapFigure,
         ease: Expo.easeOut
       });
-      this.tml.tweenTo("step" + stepNum, 0.3);
+      this.tml.tweenTo("step" + stepNum, {
+        ease: Expo.easeOut
+      });
       return this.revealCopy(stepNum);
     };
 
@@ -146,7 +158,10 @@
     };
 
     ProgressTimeline.prototype.updateTimeline = function(delta) {
-      var prog;
+      var prog, stepNum;
+      stepNum = Math.round(delta / this.d10);
+      $('.progress-timeline--desktop__year').removeClass('selected');
+      $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
       if (!this.copyHideThrottle) {
         this.copyHideThrottle = true;
         TweenLite.to(this.slidesCopy, 0.2, {
@@ -181,7 +196,8 @@
       this.prog_dt_slider = $('#progress-timeline--desktop__slider');
       this.prog_dt_slider_container = $('#progress-timeline--desktop__slider-container');
       this.slides = $('.progress-timeline--desktop__image');
-      return this.slidesCopy = $('.progress-timeline--desktop__copy-item');
+      this.slidesCopy = $('.progress-timeline--desktop__copy-item');
+      return this.years = $('.progress-timeline--desktop__year');
     };
 
     return ProgressTimeline;

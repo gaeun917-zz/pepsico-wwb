@@ -80,6 +80,10 @@ $global_spacing: 8%
     padding: 0
     font-size: 0
 
+    -webkit-transition: 0.1s ease -webkit-transform
+    -moz-transition: 0.1s ease -moz-transform
+    -ms-transition: 0.1s ease -ms-transform
+    -o-transition: 0.1s ease -o-transform
     transition: 0.1s ease transform
 
     &.hero__social-item--facebook
@@ -101,10 +105,22 @@ $global_spacing: 8%
         border: 1px solid white
 
     &:active
+        -webkit-transform: scale(2)
+        -moz-transform: scale(2)
+        -ms-transform: scale(2)
+        -o-transform: scale(2)
         transform: scale(2)
 
         span
+            -webkit-transform: scale(2)
+            -moz-transform: scale(2)
+            -ms-transform: scale(2)
+            -o-transform: scale(2)
             transform: scale(2)
+            -webkit-transition: 0.1s ease -webkit-transform, 0.1s ease opacity
+            -moz-transition: 0.1s ease -moz-transform, 0.1s ease opacity
+            -ms-transition: 0.1s ease -ms-transform, 0.1s ease opacity
+            -o-transition: 0.1s ease -o-transform, 0.1s ease opacity
             transition: 0.1s ease transform, 0.1s ease opacity
             +opacityz(0)
 
@@ -173,6 +189,11 @@ $global_spacing: 8%
     margin-top: 2rem
     text-align: center
     background-color: rgba(0,0,0,0.5)
+
+    -webkit-transition: 0.1s ease background-color
+    -moz-transition: 0.1s ease background-color
+    -ms-transition: 0.1s ease background-color
+    -o-transition: 0.1s ease background-color
     transition: 0.1s ease background-color
 
     &:hover
@@ -180,6 +201,10 @@ $global_spacing: 8%
         background-color: rgba(0,0,0,0.8)
 
     &:active
+        -webkit-transition: none
+        -moz-transition: none
+        -ms-transition: none
+        -o-transition: none
         transition: none
         background-color: rgba(255,255,255,0.8)
         color: black

@@ -38,7 +38,17 @@
     width: 100%
     top: 0
     left: 0
+
+    -webkit-transform-origin: 50% 39.8%
+    -moz-transform-origin: 50% 39.8%
+    -ms-transform-origin: 50% 39.8%
+    -o-transform-origin: 50% 39.8%
     transform-origin: 50% 39.8%
+
+    -webkit-transform: translateZ(0)
+    -moz-transform: translateZ(0)
+    -ms-transform: translateZ(0)
+    -o-transform: translateZ(0)
     transform: translateZ(0)
 
 .wangotron__pwp
@@ -66,10 +76,22 @@
     &:active
 
         .wangotron__button
+            -webkit-transform: scale(1.2)
+            -moz-transform: scale(1.2)
+            -ms-transform: scale(1.2)
+            -o-transform: scale(1.2)
             transform: scale(1.2)
 
         &::before
+            -webkit-transition: 0.2s ease -webkit-transform, 0.2s ease -webkit-opacity
+            -moz-transition: 0.2s ease -moz-transform, 0.2s ease -moz-opacity
+            -ms-transition: 0.2s ease -ms-transform, 0.2s ease -ms-opacity
+            -o-transition: 0.2s ease -o-transform, 0.2s ease -o-opacity
             transition: 0.2s ease transform, 0.2s ease opacity
+            -webkit-transform: scale(2)
+            -moz-transform: scale(2)
+            -ms-transform: scale(2)
+            -o-transform: scale(2)
             transform: scale(2)
             +opacityz(0)
 
@@ -91,7 +113,15 @@
     left: 0
     width: 100%
     z-index: 10
+    -webkit-transform: translateZ(0)
+    -moz-transform: translateZ(0)
+    -ms-transform: translateZ(0)
+    -o-transform: translateZ(0)
     transform: translateZ(0)
+    -webkit-transition: 0.1s ease -webkit-transform
+    -moz-transition: 0.1s ease -moz-transform
+    -ms-transition: 0.1s ease -ms-transform
+    -o-transition: 0.1s ease -o-transform
     transition: 0.1s ease transform
 
 .wangotron__details-modal
@@ -189,7 +219,8 @@
         .wangotron__details-modal__icon
             background-image: url(../img/icon-hand.png)
 
-
+.our-progress
+    background-color: $extralight_grey
 
 .progress-timeline__carousel-wrapper
     +prdb
