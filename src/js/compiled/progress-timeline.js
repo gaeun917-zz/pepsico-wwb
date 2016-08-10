@@ -19,6 +19,7 @@
           _this.setWidth();
           _this.initMobileTimelineSwiper();
           _this.initDesktopTimeline();
+          _this.sliderPos = 0;
           _this.initSlider();
           return _this.years.on('click', _this.goToYear);
         };
@@ -140,6 +141,7 @@
       }
       slidesNum = this.slides.length;
       snapFigure = stepNum * this.d10;
+      this.sliderPos = snapFigure;
       TweenLite.to(this.prog_dt_slider, 0.5, {
         left: snapFigure,
         ease: Expo.easeOut
@@ -173,7 +175,13 @@
         });
       }
       clearTimeout(this.copyTimeout);
-      prog = delta / this.rangeWidth;
+      if ((delta / this.rangeWidth) >= 1) {
+        prog = 1;
+      } else if (delta / this.rangeWidth <= 0) {
+        prog = 0;
+      } else {
+        prog = delta / this.rangeWidth;
+      }
       return this.tml.progress(prog);
     };
 
@@ -182,17 +190,13 @@
         spaceBetween: 0,
         speed: 600,
         loop: true,
-        autoplay: this.isMobile() ? 3800 : false,
+        autoplay: _isMobile ? 3800 : false,
         autoplayDisableOnInteraction: false,
         effect: 'slide',
         observer: true,
         observeParents: true,
         pagination: '#progress-timeline__pagination'
       });
-    };
-
-    ProgressTimeline.prototype.isMobile = function() {
-      return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
     };
 
     ProgressTimeline.prototype.initDom = function() {

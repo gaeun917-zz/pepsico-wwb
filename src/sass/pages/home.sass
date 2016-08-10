@@ -3,10 +3,13 @@
 
 .misvis
     +prdb
-    padding-top: $global_spacing
+    padding: $global_spacing 0
     background-color: $extralight_grey
     overflow: hidden
     margin: 0 auto
+
+.misvis__item:first-child
+    margin-bottom: $global_spacing
 
 .misvis__item img 
     +prdb
@@ -44,6 +47,15 @@
             width: 40%
             max-width: 230px
             margin: auto
+
+.principles__pagination
+    +prdb
+    text-align: center
+
+.principles__pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)
+    background-color: white !important
+    +opacityz(1)
+
 
 .principles--mobile__swipe-cta
     +prdb

@@ -23,7 +23,7 @@
 
     {{!-- Desktop carousel --}}
     <div class="container progress-timeline--desktop">
-        <div class="progress-timeline--desktop__image-carousel">
+        <div class="progress-timeline--desktop__image-carousel" id="progress-timeline--desktop__image-carousel">
             {{#eachProperty progress ~}}
             <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
             {{~/eachProperty}}

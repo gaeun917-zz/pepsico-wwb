@@ -10,25 +10,23 @@
       this.initDom();
       $((function(_this) {
         return function() {
-          if (_this.isMobile()) {
-            FastClick.attach(document.body);
-          }
           _this.principlesSwiper = new Swiper(_this.principles_swiper, {
             spaceBetween: 0,
             speed: 600,
-            loop: true,
-            autoplay: _this.isMobile() ? 3800 : false,
+            loop: _isMobile ? false : true,
+            autoplay: _isMobile ? 3800 : false,
             autoplayDisableOnInteraction: false,
-            effect: _this.isMobile() ? 'slide' : 'fade',
+            effect: _isMobile ? 'slide' : 'fade',
             fade: {
               crossFade: true
             },
             observer: true,
             observeParents: true,
             nextButton: _this.nextBtn,
-            prevButton: _this.prevBtn
+            prevButton: _this.prevBtn,
+            pagination: '#principles__pagination'
           });
-          if (!_this.isMobile()) {
+          if (!_isMobile) {
             _this.principles.on('click', _this.showPrinciples);
             return _this.closeBtn.on('click', _this.hidePrinciples);
           }
@@ -55,10 +53,6 @@
           return _this.principles_wrap.removeClass('unhide');
         };
       })(this), 500);
-    };
-
-    Homepage.prototype.isMobile = function() {
-      return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
     };
 
     Homepage.prototype.initDom = function() {

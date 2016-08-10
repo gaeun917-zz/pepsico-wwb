@@ -35,6 +35,7 @@ module.exports = (grunt) ->
           'bower_components/fastclick/lib/fastclick.js'
           'bower_components/gsap/src/minified/TweenMax.min.js'
           'bower_components/jquery-ui/jquery-ui.min.js'
+          'bower_components/hammerjs/hammer.min.js'
         ]
         dest: 'pub/js/vendor.js'
       vendor_css:

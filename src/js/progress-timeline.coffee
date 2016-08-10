@@ -12,9 +12,24 @@ class ProgressTimeline
 
             @initDesktopTimeline()
 
+            @sliderPos = 0
+
             @initSlider()
 
             @years.on('click', @goToYear)
+
+            # el = document.getElementById('progress-timeline--desktop__image-carousel')
+
+            # hammer = new Hammer(el)
+
+            # mtply = 0.7
+
+            # hammer.on 'pan', (ev) =>
+            #     return if (@sliderPos + (ev.deltaX*-1)*mtply) < 0 or (@sliderPos + (ev.deltaX*-1)*mtply) > @rangeWidth
+            #     @updateTimeline @sliderPos + (ev.deltaX*-1)*mtply
+            # hammer.on 'panend', (ev) =>
+            #     return if (@sliderPos + (ev.deltaX*-1)*mtply) < 0
+            #     @animateStop @sliderPos + (ev.deltaX*-1)*mtply
 
     initDesktopTimeline: =>
 
@@ -91,6 +106,8 @@ class ProgressTimeline
 
         snapFigure = stepNum * @d10
 
+        @sliderPos = snapFigure
+
         TweenLite.to @prog_dt_slider, 0.5, {left: snapFigure, ease: Expo.easeOut}
 
         @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut}).duration(0.5)
@@ -118,7 +135,13 @@ class ProgressTimeline
         
         clearTimeout @copyTimeout
 
-        prog = delta/@rangeWidth
+        if (delta/@rangeWidth) >= 1
+            prog = 1
+        else if delta/@rangeWidth <= 0
+            prog = 0
+        else
+            prog = delta/@rangeWidth
+
         @tml.progress(prog)
 
 
@@ -128,17 +151,13 @@ class ProgressTimeline
             spaceBetween: 0
             speed: 600 # Duration of transition between slides
             loop: true
-            autoplay: if @isMobile() then 3800 else false # Delay between transitions
+            autoplay: if _isMobile then 3800 else false # Delay between transitions
             autoplayDisableOnInteraction: false
             effect: 'slide'
             observer: true
             observeParents: true
             pagination: '#progress-timeline__pagination'
         }
-
-            
-    isMobile: ->
-        (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( navigator.userAgent.toLowerCase() ))
 
     initDom: =>
 

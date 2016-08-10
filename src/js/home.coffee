@@ -7,26 +7,23 @@ class Homepage
         # It's business time
         $ =>
 
-            # TweenMax.defaultEase = Expo.easeOut
-
-            if @isMobile() then FastClick.attach(document.body)
-
             @principlesSwiper = new Swiper @principles_swiper, {
                 spaceBetween: 0
                 speed: 600 # Duration of transition between slides
-                loop: true
-                autoplay: if @isMobile() then 3800 else false # Delay between transitions
+                loop: if _isMobile then false else true
+                autoplay: if _isMobile then 3800 else false # Delay between transitions
                 autoplayDisableOnInteraction: false
-                effect: if @isMobile() then 'slide' else 'fade'
+                effect: if _isMobile then 'slide' else 'fade'
                 fade:
                     crossFade: true
                 observer: true
                 observeParents: true
                 nextButton: @nextBtn
                 prevButton: @prevBtn
+                pagination: '#principles__pagination'
             }
 
-            if !@isMobile()
+            if !_isMobile
 
             #     @tl = new TimelineMax({delay: 0}).pause()
 
@@ -56,9 +53,6 @@ class Homepage
             @principles_wrap.removeClass 'unhide'
         , 500)
         # @tl.tweenTo(0).duration(0.4)
-
-    isMobile: ->
-        (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( navigator.userAgent.toLowerCase() ))
 
     initDom: =>
         @principles_wrap = $('#principles')

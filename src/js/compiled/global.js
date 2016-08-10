@@ -5,13 +5,32 @@
   Global = (function() {
     function Global() {
       this.initDom = bind(this.initDom, this);
+      this.toggleReadMore = bind(this.toggleReadMore, this);
       this.initDom();
-      window.lazySizesConfig = {
-        addClasses: true
-      };
+      $((function(_this) {
+        return function() {
+          if (_isMobile) {
+            FastClick.attach(document.body);
+          }
+          window.lazySizesConfig = {
+            addClasses: true
+          };
+          $('body').addClass(_isMobile ? 'mobile' : 'desktop');
+          return _this.readz.on('click', _this.toggleReadMore);
+        };
+      })(this));
     }
 
-    Global.prototype.initDom = function() {};
+    Global.prototype.toggleReadMore = function(e) {
+      var parent;
+      parent = $(e.currentTarget).parent();
+      return parent.toggleClass('open');
+    };
+
+    Global.prototype.initDom = function() {
+      this.truncated = $('.truncated');
+      return this.readz = $('.readz');
+    };
 
     return Global;
 

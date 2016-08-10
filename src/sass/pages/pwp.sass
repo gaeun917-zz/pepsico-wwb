@@ -10,11 +10,16 @@
 .focus-areas, .our-progress
     padding-top: $global_spacing
 
+.wangotron-wrap
+    +prdb
+    width: 100%
+    max-width: 500px
+    margin: $global_spacing auto 0 auto
+
 .wangotron
     +prdb
     width: 100%
     padding-bottom: 100%
-    margin-top: 10%
 
 .wangotron__gradient, .wangotron__details-modal__image
     +dn
@@ -26,12 +31,6 @@
     +nearly-ontop
     top: 9%
     left: 23%
-
-.wangotron-wrap
-    +prdb
-    width: 100%
-    max-width: 500px
-    margin: auto
 
 .wangotron__arms
     +padb
@@ -187,7 +186,7 @@
 
         .wangotron__details-modal__container--products
             +db
-            background-color: $wwb_darkyellow
+            background-color: rgba(213, 162, 55, 0.9)
 
         .wangotron__details-modal__close
             background-image: url(../img/icon-close--yellow.png)
@@ -211,7 +210,7 @@
 
         .wangotron__details-modal__container--people
             +db
-            background-color: $wwb_darkblue
+            background-color: rgba(7, 127, 189, 0.9)
 
         .wangotron__details-modal__close
             background-image: url(../img/icon-close--blue.png)

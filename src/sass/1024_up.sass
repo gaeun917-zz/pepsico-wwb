@@ -54,12 +54,20 @@ $global_spacing: 4%
 .hero--home
     background-image: url(../img/hero-home--dt.jpg)
     background-position: center bottom
+
 .hero--pwp
     background-image: url(../img/hero-pwp--dt.jpg)
 
+.hero--commitments
+    background-image: url(../img/hero-commitments--dt.jpg)
+
+.hero--products
+    background-image: url(../img/hero-products--dt.jpg)
+
+
 .hero
     padding: $global_spacing 0
-    background-attachment: fixed
+    // background-attachment: fixed
 
 .hero__social-item
     margin-bottom: 1rem
@@ -122,9 +130,12 @@ $global_spacing: 4%
     &:first-child 
         border-right: 1px solid #bcbbb8
         padding-right: $global_spacing
+        margin-bottom: 0
 
     &:last-child
+        border-left: 1px solid #bcbbb8
         padding-left: $global_spacing
+        left: -1px
 
 
 .principles
@@ -239,6 +250,23 @@ $global_spacing: 4%
     img
         +prdb
         width: 100%
+        -webkit-transform: scale(0.89)
+        -moz-transform: scale(0.89)
+        -ms-transform: scale(0.89)
+        -o-transform: scale(0.89)
+        transform: scale(0.89)
+        -webkit-transition: 0.1s ease -webkit-transform
+        -moz-transition: 0.1s ease -moz-transform
+        -ms-transition: 0.1s ease -ms-transform
+        -o-transition: 0.1s ease -o-transform
+        transition: 0.1s ease transform
+
+    &:hover img
+        -webkit-transform: scale(1)
+        -moz-transform: scale(1)
+        -ms-transform: scale(1)
+        -o-transform: scale(1)
+        transform: scale(1)
 
 .explore
     text-align: left
@@ -305,8 +333,8 @@ $global_spacing: 4%
     .highlight__media
         +cover
 
-.wangotron
-    margin-top: 15%
+.wangotron-wrap
+    margin-top: 10%
 
 .wangotron__items
     +cover
@@ -371,6 +399,9 @@ $global_spacing: 4%
     padding-top: $global_spacing
     overflow: hidden
 
+    *
+        +no-select
+
 .progress-timeline--desktop
     +db
     margin-top: $global_spacing
@@ -378,6 +409,9 @@ $global_spacing: 4%
 .progress-timeline--desktop__image-carousel
     +prdb
     height: 230px
+
+    *
+        +no-pointer-events
 
 .progress-timeline--desktop__image
     +padb
