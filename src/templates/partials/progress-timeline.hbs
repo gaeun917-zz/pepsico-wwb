@@ -21,13 +21,17 @@
         <img src="img/icon-swipe--grey.png" alt="Swipe to view more" class="progress-timeline__swipe-icon">
     </div>
 
-    {{!-- Desktop carousel --}}
+    {{!-- DESKTOP CAROUSEL --}}
     <div class="container progress-timeline--desktop">
+
+        {{!-- THE CAROUSEL --}}
         <div class="progress-timeline--desktop__image-carousel" id="progress-timeline--desktop__image-carousel">
             {{#eachProperty progress ~}}
             <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
             {{~/eachProperty}}
         </div>
+
+        {{!-- THE COPY --}}
         <div class="container progress-timeline--desktop__copy-container">
             {{#eachProperty progress ~}}
             <div class="progress-timeline--desktop__copy-item" id="progress-timeline--desktop__copy-{{key}}">
@@ -37,11 +41,13 @@
             {{~/eachProperty}}
         </div>
         
+        {{!-- THE SLIDER MECHANISM --}}
         <div class="container progress-timeline--desktop__slider-container" id="progress-timeline--desktop__slider-container">
             <div class="progress-timeline--desktop__slider" id="progress-timeline--desktop__slider"></div>
             <img class="progress-timeline--desktop__dots" src="img/prog-tl--dots.png">
         </div>
-
+        
+        {{!-- THE YEARS PAGINATION --}}
         <div class="container progress-timeline--desktop__years-container">
             <div class="progress-timeline--desktop__years-container">
                 {{#eachProperty progress ~}}

@@ -4,6 +4,12 @@ class ProgressTimeline
 
         @initDom()
 
+        # shim layer with setTimeout fallback
+        window.requestAnimFrame = do ->
+          window.requestAnimationFrame or window.webkitRequestAnimationFrame or window.mozRequestAnimationFrame or (callback) ->
+            window.setTimeout callback, 1000 / 60
+            return
+
         $(document).ready =>
 
             @setWidth()
@@ -12,24 +18,21 @@ class ProgressTimeline
 
             @initDesktopTimeline()
 
-            @sliderPos = 0
-
             @initSlider()
 
             @years.on('click', @goToYear)
 
-            # el = document.getElementById('progress-timeline--desktop__image-carousel')
+            @sliderPos = 0
 
-            # hammer = new Hammer(el)
+            @HM = new Hammer document.getElementById('progress-timeline--desktop__image-carousel'),
+                recognizers: [[Hammer.Pan]]
+            @HM.on 'pan', (ev) =>
+                # window.requestAnimFrame =>
+                @updateTimeline @sliderPos + (ev.deltaX*-0.3)
+            @HM.on 'panend', (ev) =>
+                dist = @sliderPos + (ev.deltaX*-0.3)
+                @animateStop(dist)
 
-            # mtply = 0.7
-
-            # hammer.on 'pan', (ev) =>
-            #     return if (@sliderPos + (ev.deltaX*-1)*mtply) < 0 or (@sliderPos + (ev.deltaX*-1)*mtply) > @rangeWidth
-            #     @updateTimeline @sliderPos + (ev.deltaX*-1)*mtply
-            # hammer.on 'panend', (ev) =>
-            #     return if (@sliderPos + (ev.deltaX*-1)*mtply) < 0
-            #     @animateStop @sliderPos + (ev.deltaX*-1)*mtply
 
     initDesktopTimeline: =>
 
@@ -58,23 +61,19 @@ class ProgressTimeline
                     @tml.add TweenLite.to $("#prog-tl-#{i-1}"), lospd, {opacity: 0, left: nolef, ease: easez}
                     @tml.add TweenLite.to $("#prog-tl-#{i}"), nmspd, {opacity: lopac, left: lolef, scale: loscl, ease: easez, delay: -lospd}
 
-                @tml.add TweenLite.set $("#prog-tl-#{i}"), {clearProps: 'z-index'}
-                @tml.add TweenLite.to $("#prog-tl-#{i+1}"), nmspd, {zIndex: 1000, opacity: 1, top: '0%', left: "50%", scale: 1, ease: easez, delay: -nmspd}
+                # @tml.add TweenLite.set $("#prog-tl-#{i}"), {clearProps: 'z-index'}
+                @tml.add TweenLite.to $("#prog-tl-#{i+1}"), nmspd, {opacity: 1, top: '0%', left: "50%", scale: 1, ease: easez, delay: -nmspd}
                 
                 if i < @slides.length-2
                     @tml.add TweenLite.to $("#prog-tl-#{i+2}"), lospd, {clearProps: 'z-index', opacity: lopac, left: hilef, ease: easez, delay: -lospd}
                 
                 @tml.addLabel("step#{i+1}")
 
-
     goToYear: (e) =>
         step = $(e.currentTarget).attr('data-index')
         delta = step * @d10
         TweenLite.to @slidesCopy, 0.2, {opacity: 0}
         @animateStop delta
-
-
-
 
     initSlider: =>
 
@@ -94,6 +93,8 @@ class ProgressTimeline
 
     animateStop: (delta) =>
 
+        delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
+
         stepNum = Math.round(delta / @d10)
 
         $('.progress-timeline--desktop__year').removeClass 'selected'
@@ -110,7 +111,7 @@ class ProgressTimeline
 
         TweenLite.to @prog_dt_slider, 0.5, {left: snapFigure, ease: Expo.easeOut}
 
-        @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut}).duration(0.5)
+        @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut}).duration(1)
 
         @revealCopy(stepNum)
 
@@ -122,6 +123,8 @@ class ProgressTimeline
 
 
     updateTimeline: (delta) =>
+
+        delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
 
         stepNum = Math.round(delta / @d10)
 
@@ -135,13 +138,7 @@ class ProgressTimeline
         
         clearTimeout @copyTimeout
 
-        if (delta/@rangeWidth) >= 1
-            prog = 1
-        else if delta/@rangeWidth <= 0
-            prog = 0
-        else
-            prog = delta/@rangeWidth
-
+        prog = delta/@rangeWidth
         @tml.progress(prog)
 
 
@@ -172,6 +169,8 @@ class ProgressTimeline
         @slidesCopy = $('.progress-timeline--desktop__copy-item')
 
         @years = $('.progress-timeline--desktop__year')
+
+        @image_carousel = $('#progress-timeline--desktop__image-carousel')
 
 
 

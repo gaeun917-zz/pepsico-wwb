@@ -78,9 +78,9 @@ class Wangotron
 
             if !@opening_throttle
                 TweenLite.set @modal, {display: 'block'}
-                TweenLite.to @wang_grad, spd, {opacity: 1, rotation: -360, transformOrigin: '20% 50%'}
-                TweenLite.to @wangotron, spd, {x: "-60%"}
-                TweenLite.to @modal, spd, {x: "110%"}
+                TweenLite.to @wang_grad, spd, {opacity: 1, force3D:false, rotation: -360, transformOrigin: '20% 50%'}
+                TweenLite.to @wangotron, spd, {x: "-60%", force3D:false}
+                TweenLite.to @modal, spd, {x: "110%", force3D:false}
                 @opening_throttle = true
 
             setTimeout( =>

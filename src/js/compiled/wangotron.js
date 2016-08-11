@@ -168,14 +168,17 @@
           });
           TweenLite.to(this.wang_grad, spd, {
             opacity: 1,
+            force3D: false,
             rotation: -360,
             transformOrigin: '20% 50%'
           });
           TweenLite.to(this.wangotron, spd, {
-            x: "-60%"
+            x: "-60%",
+            force3D: false
           });
           TweenLite.to(this.modal, spd, {
-            x: "110%"
+            x: "110%",
+            force3D: false
           });
           this.opening_throttle = true;
         }

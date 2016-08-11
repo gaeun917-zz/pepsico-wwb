@@ -14,14 +14,30 @@
       this.goToYear = bind(this.goToYear, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
       this.initDom();
+      window.requestAnimFrame = (function() {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
       $(document).ready((function(_this) {
         return function() {
           _this.setWidth();
           _this.initMobileTimelineSwiper();
           _this.initDesktopTimeline();
-          _this.sliderPos = 0;
           _this.initSlider();
-          return _this.years.on('click', _this.goToYear);
+          _this.years.on('click', _this.goToYear);
+          _this.sliderPos = 0;
+          _this.HM = new Hammer(document.getElementById('progress-timeline--desktop__image-carousel'), {
+            recognizers: [[Hammer.Pan]]
+          });
+          _this.HM.on('pan', function(ev) {
+            return _this.updateTimeline(_this.sliderPos + (ev.deltaX * -0.3));
+          });
+          return _this.HM.on('panend', function(ev) {
+            var dist;
+            dist = _this.sliderPos + (ev.deltaX * -0.3);
+            return _this.animateStop(dist);
+          });
         };
       })(this));
     }
@@ -70,11 +86,7 @@
               delay: -lospd
             }));
           }
-          this.tml.add(TweenLite.set($("#prog-tl-" + i), {
-            clearProps: 'z-index'
-          }));
           this.tml.add(TweenLite.to($("#prog-tl-" + (i + 1)), nmspd, {
-            zIndex: 1000,
             opacity: 1,
             top: '0%',
             left: "50%",
@@ -133,6 +145,7 @@
 
     ProgressTimeline.prototype.animateStop = function(delta) {
       var slidesNum, snapFigure, stepNum;
+      delta = delta >= this.rangeWidth ? this.rangeWidth : delta <= 0 ? 0 : delta;
       stepNum = Math.round(delta / this.d10);
       $('.progress-timeline--desktop__year').removeClass('selected');
       $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
@@ -148,7 +161,7 @@
       });
       this.tml.tweenTo("step" + stepNum, {
         ease: Expo.easeOut
-      }).duration(0.5);
+      }).duration(1);
       return this.revealCopy(stepNum);
     };
 
@@ -165,6 +178,7 @@
 
     ProgressTimeline.prototype.updateTimeline = function(delta) {
       var prog, stepNum;
+      delta = delta >= this.rangeWidth ? this.rangeWidth : delta <= 0 ? 0 : delta;
       stepNum = Math.round(delta / this.d10);
       $('.progress-timeline--desktop__year').removeClass('selected');
       $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
@@ -175,13 +189,7 @@
         });
       }
       clearTimeout(this.copyTimeout);
-      if ((delta / this.rangeWidth) >= 1) {
-        prog = 1;
-      } else if (delta / this.rangeWidth <= 0) {
-        prog = 0;
-      } else {
-        prog = delta / this.rangeWidth;
-      }
+      prog = delta / this.rangeWidth;
       return this.tml.progress(prog);
     };
 
@@ -205,7 +213,8 @@
       this.prog_dt_slider_container = $('#progress-timeline--desktop__slider-container');
       this.slides = $('.progress-timeline--desktop__image');
       this.slidesCopy = $('.progress-timeline--desktop__copy-item');
-      return this.years = $('.progress-timeline--desktop__year');
+      this.years = $('.progress-timeline--desktop__year');
+      return this.image_carousel = $('#progress-timeline--desktop__image-carousel');
     };
 
     return ProgressTimeline;

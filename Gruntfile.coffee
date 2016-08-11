@@ -31,10 +31,11 @@ module.exports = (grunt) ->
           'bower_components/jquery/dist/jquery.min.js'
           'bower_components/lazysizes/lazysizes.min.js'
           'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js'
-          'bower_components/Swiper/dist/js/swiper.min.js'
+          'bower_components/Swiper/dist/js/swiper.js'
           'bower_components/fastclick/lib/fastclick.js'
           'bower_components/gsap/src/minified/TweenMax.min.js'
           'bower_components/jquery-ui/jquery-ui.min.js'
+          'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.min.js'
           'bower_components/hammerjs/hammer.min.js'
         ]
         dest: 'pub/js/vendor.js'
@@ -102,6 +103,9 @@ module.exports = (grunt) ->
       fonts:
         files: ['src/fonts/**/*.{ttf,eot,svg,woff,woff2}']
         tasks: ['copy:fonts']
+      vendor_js:
+        files: ['bower_components/**/*.js']
+        tasks: ['concat:vendor_js']
 
 
     # Deploy specific tasks
