@@ -11,15 +11,42 @@ page_id:        "commitments"
     
     {{>media-highlight highlights.commitments}}
 
-    <section class="focus-areas">
+    <section class="pwp-breakdown">
 
         <div class="container">
             
-            <div class="contained-copy">
-                <h3 class="underline">Performance with purpose in action</h3>
+            <div class="pwp-breakdown-copy">
+                <h2 class="pwp-breakdown__header underline">Performance with purpose <em>in action</em></h2>
                 <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptatibus quae facere unde! Tenetur non nihil officiis, illo, quos ad, fugit voluptatum veniam et.</p>
             </div>
-        
+
+            <img class="mobile-pwp-breakdown-icon" src="../img/comm--pwp-motb.png" alt="Performance with Purpose">
+            <img class="desktop-pwp-breakdown-icon" src="../img/comm--pwp-dt.png" alt="Performance with Purpose">
+
+            {{#each commitments ~}}
+                <div class="pillar-container pillar--{{this.pillar-name}}">
+                    <div class="pillar-header">
+                        <h4>{{this.pillar-name}}</h4>
+                        <p>{{this.pillar-copy}}</p>
+                    </div>
+                
+                    {{#each this.items}}
+                        <div class="pillar-item">
+                            <div class="pillar-item__pill">
+                                <h4>{{this.item-header}}</h4>
+                            </div>
+                            <div class="pillar-item__content closed">
+                                <img src="../img/{{this.item-image-filename}}" alt="{{this.item-header}}">
+                                {{#each this.item-copy}}
+                                    <p class="copy">{{this}}</p>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{~/each}}
+                </div>
+
+            {{~/each}}
+
         </div>
 
     </section>

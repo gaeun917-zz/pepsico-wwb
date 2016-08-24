@@ -1,0 +1,140 @@
+{
+    "0": {
+        "pillar-name": "products",
+        "pillar-copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel, quibusdam doloribus voluptatum ratione possimus odio ab dicta necessitatibus nihil repudiandae.",
+        "items": [
+            {
+                "item-header": "Added sugar",
+                "item-image-filename": "icon-comm--nutrition.png",
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Saturated fat",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Salt",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Positive nutrition",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Labelling",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Marketing to children",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            }
+        ]
+    },
+    "1": {
+        "pillar-name": "planet",
+        "pillar-copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel, quibusdam doloribus voluptatum ratione possimus odio ab dicta necessitatibus nihil repudiandae.",
+        "items": [
+            {
+                "item-header": "Sustainable sourcing",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Waste",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Water & climate",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            }
+        ]
+    },
+    "2": {
+        "pillar-name": "people",
+        "pillar-copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel, quibusdam doloribus voluptatum ratione possimus odio ab dicta necessitatibus nihil repudiandae.",
+        "items": [
+            {
+                "item-header": "Talent",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Human rights",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            },
+            {
+                "item-header": "Sustainable communities/women",
+                "item-image-filename": "icon-comm--nutrition.png", 
+                "item-copy": [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
+                ]
+            }
+        ]
+    }
+}
