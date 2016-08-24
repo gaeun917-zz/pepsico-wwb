@@ -4,6 +4,12 @@ class Global
 
         @initDom()
 
+        # shim layer with setTimeout fallback
+        window.requestAnimFrame = do ->
+          window.requestAnimationFrame or window.webkitRequestAnimationFrame or window.mozRequestAnimationFrame or (callback) ->
+            window.setTimeout callback, 1000 / 60
+            return
+
         $ =>
 
             if _isMobile then FastClick.attach(document.body)

@@ -26,9 +26,11 @@
 
         {{!-- THE CAROUSEL --}}
         <div class="progress-timeline--desktop__image-carousel" id="progress-timeline--desktop__image-carousel">
-            {{#eachProperty progress ~}}
-            <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
-            {{~/eachProperty}}
+            <div class="progress-timeline--desktop--image-wrapper" id="progress-timeline--desktop--image-wrapper">
+                {{#eachProperty progress ~}}
+                <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
+                {{~/eachProperty}}
+            </div>
         </div>
 
         {{!-- THE COPY --}}

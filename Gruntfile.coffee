@@ -57,6 +57,11 @@ module.exports = (grunt) ->
         cwd: 'src/fonts/'
         src: ['**/*']
         dest: 'pub/fonts'
+      videos:
+        expand: true
+        cwd: 'src/vid/'
+        src: ['**/*.{mp4,webm,ogg}']
+        dest: 'pub/vid'
 
 
     # Compiles .html files using Assemble.io
@@ -103,6 +108,9 @@ module.exports = (grunt) ->
       fonts:
         files: ['src/fonts/**/*.{ttf,eot,svg,woff,woff2}']
         tasks: ['copy:fonts']
+      videos:
+        files: ['src/vid/**/*.{mp4,webm,ogg}']
+        tasks: ['copy:videos']
       vendor_js:
         files: ['bower_components/**/*.js']
         tasks: ['concat:vendor_js']

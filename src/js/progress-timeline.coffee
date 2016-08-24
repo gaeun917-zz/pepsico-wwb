@@ -2,13 +2,9 @@ class ProgressTimeline
 
     constructor: ->
 
-        @initDom()
+        return false unless _pageID is "pwp"
 
-        # shim layer with setTimeout fallback
-        window.requestAnimFrame = do ->
-          window.requestAnimationFrame or window.webkitRequestAnimationFrame or window.mozRequestAnimationFrame or (callback) ->
-            window.setTimeout callback, 1000 / 60
-            return
+        @initDom()
 
         $(document).ready =>
 
@@ -26,10 +22,11 @@ class ProgressTimeline
 
             @HM = new Hammer document.getElementById('progress-timeline--desktop__image-carousel'),
                 recognizers: [[Hammer.Pan]]
-            @HM.on 'pan', (ev) =>
-                # window.requestAnimFrame =>
+            @HM.add(new Hammer.Pan({ threshold: 0 }))
+            @HM.add(new Hammer.Swipe({ threshold: 0 }))
+            @HM.on 'pan swipe', (ev) =>
                 @updateTimeline @sliderPos + (ev.deltaX*-0.3)
-            @HM.on 'panend', (ev) =>
+            @HM.on 'panend swipeend', (ev) =>
                 dist = @sliderPos + (ev.deltaX*-0.3)
                 @animateStop(dist)
 
@@ -48,24 +45,30 @@ class ProgressTimeline
         loscl = 0.8
         hilef = '75%'
         easez = Power0.easeNone
-        # easez = Expo.easeOut
+        offst = 380
 
         for s, i in @slides
+
+            wdth = @image_carousel.width()
+
+
+            TweenLite.set $(s), {left: offst*i}
+            TweenLite.set @image_wrapper, {left: (wdth/2)-(offst/2)}
 
             if i < @slides.length-1
 
                 if i is 0
                     @tml.addLabel("step#{i}")
-                    @tml.add TweenLite.to $("#prog-tl-#{i}"), nmspd, {opacity: lopac, top: lotop, left: lolef, scale: loscl, ease: easez}
+                    @tml.add TweenLite.to $("#prog-tl-#{i}"), nmspd, {opacity: lopac, scale: loscl, ease: easez}
                 else
-                    @tml.add TweenLite.to $("#prog-tl-#{i-1}"), lospd, {opacity: 0, left: nolef, ease: easez}
-                    @tml.add TweenLite.to $("#prog-tl-#{i}"), nmspd, {opacity: lopac, left: lolef, scale: loscl, ease: easez, delay: -lospd}
+                    @tml.add TweenLite.to $("#prog-tl-#{i-1}"), lospd, {opacity: 0, ease: easez}
+                    @tml.add TweenLite.to $("#prog-tl-#{i}"), nmspd, {opacity: lopac, scale: loscl, ease: easez, delay: -lospd}
 
-                # @tml.add TweenLite.set $("#prog-tl-#{i}"), {clearProps: 'z-index'}
-                @tml.add TweenLite.to $("#prog-tl-#{i+1}"), nmspd, {opacity: 1, top: '0%', left: "50%", scale: 1, ease: easez, delay: -nmspd}
+                @tml.add TweenLite.to @image_wrapper, nmspd, {x: -offst*(i+1), ease: easez, delay: -nmspd}
+                @tml.add TweenLite.to $("#prog-tl-#{i+1}"), nmspd, {opacity: 1, scale: 1, ease: easez, delay: -nmspd}
                 
                 if i < @slides.length-2
-                    @tml.add TweenLite.to $("#prog-tl-#{i+2}"), lospd, {clearProps: 'z-index', opacity: lopac, left: hilef, ease: easez, delay: -lospd}
+                    @tml.add TweenLite.to $("#prog-tl-#{i+2}"), lospd, {clearProps: 'z-index', opacity: lopac, ease: easez, delay: -lospd}
                 
                 @tml.addLabel("step#{i+1}")
 
@@ -93,15 +96,27 @@ class ProgressTimeline
 
     animateStop: (delta) =>
 
-        delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
+        # delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
 
-        stepNum = Math.round(delta / @d10)
+
+        if delta <= 0
+            @tml.tweenTo("step0", {ease: Expo.easeOut}).duration(1)
+            @sliderPos = 0
+            TweenLite.to @prog_dt_slider, 0.5, {left: 0, ease: Expo.easeOut}
+            return TweenLite.to @image_wrapper, 0.3, {x: 0}
+        if delta >= @rangeWidth
+            @sliderPos = @d10*(@slides.length-1)
+            @tml.tweenTo("step#{@slides.length-1}", {ease: Expo.easeOut}).duration(1)
+            TweenLite.to @prog_dt_slider, 0.5, {left: @d10*(@slides.length-1), ease: Expo.easeOut}
+            return TweenLite.to @image_carousel, 0.3, {x: 0}
+
+        stepNum = if delta <= 0 then 0 else if delta >= @rangeWidth then 9 else Math.round(delta / @d10)
 
         $('.progress-timeline--desktop__year').removeClass 'selected'
 
         $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
 
-        stepNum = 9 if stepNum > 9
+        # stepNum = 9 if stepNum > 9
 
         slidesNum = @slides.length
 
@@ -123,20 +138,24 @@ class ProgressTimeline
 
 
     updateTimeline: (delta) =>
+        # delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
 
-        delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
-
-        stepNum = Math.round(delta / @d10)
+        stepNum = if delta <= 0 then 0 else if delta >= @rangeWidth then 9 else Math.round(delta / @d10)
 
         $('.progress-timeline--desktop__year').removeClass 'selected'
 
         $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
 
-        if !@copyHideThrottle
+        if !@copyHideThrottle and delta >= 0 and delta <= @rangeWidth
             @copyHideThrottle = true
             TweenLite.to @slidesCopy, 0.2, {opacity: 0}
         
         clearTimeout @copyTimeout
+
+        if delta <= 0
+            return TweenLite.set @image_wrapper, {x: -delta*0.4}
+        else if delta >= @rangeWidth
+            return TweenLite.set @image_carousel, {x: (@rangeWidth - delta)*0.4}
 
         prog = delta/@rangeWidth
         @tml.progress(prog)
@@ -171,6 +190,7 @@ class ProgressTimeline
         @years = $('.progress-timeline--desktop__year')
 
         @image_carousel = $('#progress-timeline--desktop__image-carousel')
+        @image_wrapper  = $('#progress-timeline--desktop--image-wrapper')
 
 
 

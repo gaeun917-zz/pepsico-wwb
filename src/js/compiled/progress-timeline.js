@@ -13,12 +13,10 @@
       this.initSlider = bind(this.initSlider, this);
       this.goToYear = bind(this.goToYear, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
+      if (_pageID !== "pwp") {
+        return false;
+      }
       this.initDom();
-      window.requestAnimFrame = (function() {
-        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
-          window.setTimeout(callback, 1000 / 60);
-        };
-      })();
       $(document).ready((function(_this) {
         return function() {
           _this.setWidth();
@@ -30,10 +28,16 @@
           _this.HM = new Hammer(document.getElementById('progress-timeline--desktop__image-carousel'), {
             recognizers: [[Hammer.Pan]]
           });
-          _this.HM.on('pan', function(ev) {
+          _this.HM.add(new Hammer.Pan({
+            threshold: 0
+          }));
+          _this.HM.add(new Hammer.Swipe({
+            threshold: 0
+          }));
+          _this.HM.on('pan swipe', function(ev) {
             return _this.updateTimeline(_this.sliderPos + (ev.deltaX * -0.3));
           });
-          return _this.HM.on('panend', function(ev) {
+          return _this.HM.on('panend swipeend', function(ev) {
             var dist;
             dist = _this.sliderPos + (ev.deltaX * -0.3);
             return _this.animateStop(dist);
@@ -43,7 +47,7 @@
     }
 
     ProgressTimeline.prototype.initDesktopTimeline = function() {
-      var easez, hilef, i, j, len, lolef, lopac, loscl, lospd, lotop, nmspd, nolef, ref, results, s, spd;
+      var easez, hilef, i, j, len, lolef, lopac, loscl, lospd, lotop, nmspd, nolef, offst, ref, results, s, spd, wdth;
       this.tml = new TimelineMax({
         delay: 0,
         paused: true
@@ -58,38 +62,45 @@
       loscl = 0.8;
       hilef = '75%';
       easez = Power0.easeNone;
+      offst = 380;
       ref = this.slides;
       results = [];
       for (i = j = 0, len = ref.length; j < len; i = ++j) {
         s = ref[i];
+        wdth = this.image_carousel.width();
+        TweenLite.set($(s), {
+          left: offst * i
+        });
+        TweenLite.set(this.image_wrapper, {
+          left: (wdth / 2) - (offst / 2)
+        });
         if (i < this.slides.length - 1) {
           if (i === 0) {
             this.tml.addLabel("step" + i);
             this.tml.add(TweenLite.to($("#prog-tl-" + i), nmspd, {
               opacity: lopac,
-              top: lotop,
-              left: lolef,
               scale: loscl,
               ease: easez
             }));
           } else {
             this.tml.add(TweenLite.to($("#prog-tl-" + (i - 1)), lospd, {
               opacity: 0,
-              left: nolef,
               ease: easez
             }));
             this.tml.add(TweenLite.to($("#prog-tl-" + i), nmspd, {
               opacity: lopac,
-              left: lolef,
               scale: loscl,
               ease: easez,
               delay: -lospd
             }));
           }
+          this.tml.add(TweenLite.to(this.image_wrapper, nmspd, {
+            x: -offst * (i + 1),
+            ease: easez,
+            delay: -nmspd
+          }));
           this.tml.add(TweenLite.to($("#prog-tl-" + (i + 1)), nmspd, {
             opacity: 1,
-            top: '0%',
-            left: "50%",
             scale: 1,
             ease: easez,
             delay: -nmspd
@@ -98,7 +109,6 @@
             this.tml.add(TweenLite.to($("#prog-tl-" + (i + 2)), lospd, {
               clearProps: 'z-index',
               opacity: lopac,
-              left: hilef,
               ease: easez,
               delay: -lospd
             }));
@@ -145,13 +155,35 @@
 
     ProgressTimeline.prototype.animateStop = function(delta) {
       var slidesNum, snapFigure, stepNum;
-      delta = delta >= this.rangeWidth ? this.rangeWidth : delta <= 0 ? 0 : delta;
-      stepNum = Math.round(delta / this.d10);
+      if (delta <= 0) {
+        this.tml.tweenTo("step0", {
+          ease: Expo.easeOut
+        }).duration(1);
+        this.sliderPos = 0;
+        TweenLite.to(this.prog_dt_slider, 0.5, {
+          left: 0,
+          ease: Expo.easeOut
+        });
+        return TweenLite.to(this.image_wrapper, 0.3, {
+          x: 0
+        });
+      }
+      if (delta >= this.rangeWidth) {
+        this.sliderPos = this.d10 * (this.slides.length - 1);
+        this.tml.tweenTo("step" + (this.slides.length - 1), {
+          ease: Expo.easeOut
+        }).duration(1);
+        TweenLite.to(this.prog_dt_slider, 0.5, {
+          left: this.d10 * (this.slides.length - 1),
+          ease: Expo.easeOut
+        });
+        return TweenLite.to(this.image_carousel, 0.3, {
+          x: 0
+        });
+      }
+      stepNum = delta <= 0 ? 0 : delta >= this.rangeWidth ? 9 : Math.round(delta / this.d10);
       $('.progress-timeline--desktop__year').removeClass('selected');
       $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
-      if (stepNum > 9) {
-        stepNum = 9;
-      }
       slidesNum = this.slides.length;
       snapFigure = stepNum * this.d10;
       this.sliderPos = snapFigure;
@@ -178,17 +210,25 @@
 
     ProgressTimeline.prototype.updateTimeline = function(delta) {
       var prog, stepNum;
-      delta = delta >= this.rangeWidth ? this.rangeWidth : delta <= 0 ? 0 : delta;
-      stepNum = Math.round(delta / this.d10);
+      stepNum = delta <= 0 ? 0 : delta >= this.rangeWidth ? 9 : Math.round(delta / this.d10);
       $('.progress-timeline--desktop__year').removeClass('selected');
       $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
-      if (!this.copyHideThrottle) {
+      if (!this.copyHideThrottle && delta >= 0 && delta <= this.rangeWidth) {
         this.copyHideThrottle = true;
         TweenLite.to(this.slidesCopy, 0.2, {
           opacity: 0
         });
       }
       clearTimeout(this.copyTimeout);
+      if (delta <= 0) {
+        return TweenLite.set(this.image_wrapper, {
+          x: -delta * 0.4
+        });
+      } else if (delta >= this.rangeWidth) {
+        return TweenLite.set(this.image_carousel, {
+          x: (this.rangeWidth - delta) * 0.4
+        });
+      }
       prog = delta / this.rangeWidth;
       return this.tml.progress(prog);
     };
@@ -214,7 +254,8 @@
       this.slides = $('.progress-timeline--desktop__image');
       this.slidesCopy = $('.progress-timeline--desktop__copy-item');
       this.years = $('.progress-timeline--desktop__year');
-      return this.image_carousel = $('#progress-timeline--desktop__image-carousel');
+      this.image_carousel = $('#progress-timeline--desktop__image-carousel');
+      return this.image_wrapper = $('#progress-timeline--desktop--image-wrapper');
     };
 
     return ProgressTimeline;

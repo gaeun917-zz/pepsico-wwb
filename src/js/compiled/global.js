@@ -7,6 +7,11 @@
       this.initDom = bind(this.initDom, this);
       this.toggleReadMore = bind(this.toggleReadMore, this);
       this.initDom();
+      window.requestAnimFrame = (function() {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
       $((function(_this) {
         return function() {
           if (_isMobile) {

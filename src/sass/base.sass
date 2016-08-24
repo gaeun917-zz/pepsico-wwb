@@ -69,6 +69,21 @@ $global_spacing: 8%
     background-position: 23% center
     text-align: center
 
+.hero--pillar
+    padding: 0 0 56.25% 0
+    background-position: cover
+
+.hero__initial-frame
+    +prdb
+    width: 100%
+
+.hero--cinemagraph__video-container
+    +dn
+
+.hero--cinemagraph__copy
+    z-index: 10
+    text-align: center
+
 .hero__social-item
     +prdib
     +square(30px)
@@ -123,6 +138,13 @@ $global_spacing: 8%
             -o-transition: 0.1s ease -o-transform, 0.1s ease opacity
             transition: 0.1s ease transform, 0.1s ease opacity
             +opacityz(0)
+
+.hero--cinemagraph__copy
+    +padb
+    width: 100%
+    top: 50%
+    left: 0
+    margin-top: -3.5rem
 
 .hero__title
     +prdb
