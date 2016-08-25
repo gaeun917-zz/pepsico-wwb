@@ -102,6 +102,8 @@ class ProgressTimeline
 
         $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
 
+        @revealCopy(stepNum)
+
         if delta <= 0
             @tml.tweenTo("step0", {ease: Expo.easeOut}).duration(1)
             @sliderPos = 0
@@ -123,7 +125,7 @@ class ProgressTimeline
 
         @tml.tweenTo("step#{stepNum}", {ease: Expo.easeOut}).duration(1)
 
-        @revealCopy(stepNum)
+        
 
     revealCopy: (n) =>
         @copyTimeout = setTimeout( =>

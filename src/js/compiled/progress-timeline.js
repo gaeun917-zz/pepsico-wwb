@@ -158,6 +158,7 @@
       stepNum = delta <= 0 ? 0 : delta >= this.rangeWidth ? 9 : Math.round(delta / this.d10);
       $('.progress-timeline--desktop__year').removeClass('selected');
       $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
+      this.revealCopy(stepNum);
       if (delta <= 0) {
         this.tml.tweenTo("step0", {
           ease: Expo.easeOut
@@ -191,10 +192,9 @@
         left: snapFigure,
         ease: Expo.easeOut
       });
-      this.tml.tweenTo("step" + stepNum, {
+      return this.tml.tweenTo("step" + stepNum, {
         ease: Expo.easeOut
       }).duration(1);
-      return this.revealCopy(stepNum);
     };
 
     ProgressTimeline.prototype.revealCopy = function(n) {
