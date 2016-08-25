@@ -422,7 +422,7 @@ $global_spacing: 4%
  
 
 .focus-areas, .our-progress
-    padding-top: $global_spacing
+    padding: $global_spacing 0
     overflow: hidden
 
     *
@@ -476,8 +476,11 @@ $global_spacing: 4%
 
 .progress-timeline--desktop__slider-container
     +prdb
+    width: calc(90% + 30px)
     margin-top: $global_spacing !important
-    margin-bottom: 4.5% !important
+    margin-bottom: 2.5% !important
+    margin-left: auto
+    margin-right: auto
     height: 15px
     +border-radius(15px)
     background-color: $light_grey
@@ -524,29 +527,36 @@ $global_spacing: 4%
     text-align: center
     margin: 0
 
-.progress-timeline--desktop__years-container
-
-.progress-timeline--desktop__dots
-    +prdb
-    width: calc(100% - 12px)
-    top: 40px
-    margin: auto
+// .progress-timeline--desktop__dots
+//     +prdb
+//     width: calc(100% - 12px)
+//     top: 40px
+//     margin: auto
 
 .progress-timeline--desktop__years-container
     +prdb
-    margin: 0 auto $global_spacing auto
+    width: 100%
+    margin: 0 auto
 
-.progress-timeline--desktop__year 
+.progress-timeline--desktop__year
     +prdib
     +title-font-bold
     font-size: 1.3rem
-    width: 10.76%
+    width: 10%
     text-align: center
 
-    &:first-child
-        margin-left: -3.8%
-    &:last-child
-        margin-right: -3.8%
+
+    &::before
+        content: ""
+        +prdb
+        +box-sizing
+        +square(30px)
+        +border-radius(100%)
+        margin: auto
+        border: 5px solid $extralight_grey
+        background-color: $light_grey
+
+
 
     &::after
         content: ""
@@ -571,6 +581,9 @@ $global_spacing: 4%
     &:hover
         color: $wwb_blue
         cursor: pointer
+
+        &::before
+            background-color: darken($light_grey, 5%)
 
 
 .pwp-breakdown

@@ -96,8 +96,11 @@ class ProgressTimeline
 
     animateStop: (delta) =>
 
-        # delta = if delta >= @rangeWidth then @rangeWidth else if delta <= 0 then 0 else delta
+        stepNum = if delta <= 0 then 0 else if delta >= @rangeWidth then 9 else Math.round(delta / @d10)
 
+        $('.progress-timeline--desktop__year').removeClass 'selected'
+
+        $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
 
         if delta <= 0
             @tml.tweenTo("step0", {ease: Expo.easeOut}).duration(1)
@@ -109,14 +112,6 @@ class ProgressTimeline
             @tml.tweenTo("step#{@slides.length-1}", {ease: Expo.easeOut}).duration(1)
             TweenLite.to @prog_dt_slider, 0.5, {left: @d10*(@slides.length-1), ease: Expo.easeOut}
             return TweenLite.to @image_carousel, 0.3, {x: 0}
-
-        stepNum = if delta <= 0 then 0 else if delta >= @rangeWidth then 9 else Math.round(delta / @d10)
-
-        $('.progress-timeline--desktop__year').removeClass 'selected'
-
-        $("#progress-timeline--desktop__year-#{stepNum}").addClass 'selected'
-
-        # stepNum = 9 if stepNum > 9
 
         slidesNum = @slides.length
 

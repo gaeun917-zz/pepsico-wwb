@@ -155,6 +155,9 @@
 
     ProgressTimeline.prototype.animateStop = function(delta) {
       var slidesNum, snapFigure, stepNum;
+      stepNum = delta <= 0 ? 0 : delta >= this.rangeWidth ? 9 : Math.round(delta / this.d10);
+      $('.progress-timeline--desktop__year').removeClass('selected');
+      $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
       if (delta <= 0) {
         this.tml.tweenTo("step0", {
           ease: Expo.easeOut
@@ -181,9 +184,6 @@
           x: 0
         });
       }
-      stepNum = delta <= 0 ? 0 : delta >= this.rangeWidth ? 9 : Math.round(delta / this.d10);
-      $('.progress-timeline--desktop__year').removeClass('selected');
-      $("#progress-timeline--desktop__year-" + stepNum).addClass('selected');
       slidesNum = this.slides.length;
       snapFigure = stepNum * this.d10;
       this.sliderPos = snapFigure;

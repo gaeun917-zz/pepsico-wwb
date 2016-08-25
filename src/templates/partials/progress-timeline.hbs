@@ -44,17 +44,19 @@
         </div>
         
         {{!-- THE SLIDER MECHANISM --}}
-        <div class="container progress-timeline--desktop__slider-container" id="progress-timeline--desktop__slider-container">
-            <div class="progress-timeline--desktop__slider" id="progress-timeline--desktop__slider"></div>
-            <img class="progress-timeline--desktop__dots" src="img/prog-tl--dots.png">
-        </div>
-        
-        {{!-- THE YEARS PAGINATION --}}
-        <div class="container progress-timeline--desktop__years-container">
+        <div class="container">
+            <div class="progress-timeline--desktop__slider-container" id="progress-timeline--desktop__slider-container">
+                <div class="progress-timeline--desktop__slider" id="progress-timeline--desktop__slider"></div>
+                {{!-- <img class="progress-timeline--desktop__dots" src="img/prog-tl--dots.png"> --}}
+            </div>
+            
+            {{!-- THE YEARS PAGINATION --}}
             <div class="progress-timeline--desktop__years-container">
-                {{#eachProperty progress ~}}
-                <span class="progress-timeline--desktop__year {{#is key '0'}} selected {{/is}}" id="progress-timeline--desktop__year-{{key}}" data-index="{{key}}">{{value.year}}</span>
-                {{~/eachProperty}}
+                <div class="progress-timeline--desktop__years-container">
+                    {{#eachProperty progress ~}}
+                    <span class="progress-timeline--desktop__year {{#is key '0'}} selected {{/is}}" id="progress-timeline--desktop__year-{{key}}" data-index="{{key}}">{{value.year}}</span>
+                    {{~/eachProperty}}
+                </div>
             </div>
         </div>
 
