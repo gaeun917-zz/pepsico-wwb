@@ -6,6 +6,7 @@
     function Global() {
       this.initDom = bind(this.initDom, this);
       this.toggleReadMore = bind(this.toggleReadMore, this);
+      this.doHeroLoad = bind(this.doHeroLoad, this);
       this.initDom();
       window.requestAnimFrame = (function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
@@ -14,6 +15,7 @@
       })();
       $((function(_this) {
         return function() {
+          _this.doHeroLoad();
           if (_isMobile) {
             FastClick.attach(document.body);
           }
@@ -25,6 +27,8 @@
         };
       })(this));
     }
+
+    Global.prototype.doHeroLoad = function() {};
 
     Global.prototype.toggleReadMore = function(e) {
       var parent;

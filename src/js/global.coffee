@@ -12,6 +12,8 @@ class Global
 
         $ =>
 
+            @doHeroLoad()
+
             if _isMobile then FastClick.attach(document.body)
 
             window.lazySizesConfig =
@@ -19,7 +21,13 @@ class Global
 
             $('body').addClass if _isMobile then 'mobile' else 'desktop'
 
+
             @readz.on('click', @toggleReadMore)
+
+
+    doHeroLoad: =>
+
+        
 
 
 

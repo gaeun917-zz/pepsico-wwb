@@ -4,34 +4,71 @@
         "image-filename": "explore-pwp.jpg",
         "link": "/performance-with-purpose.html",
         "external": false,
-        "overlay-colour": "#005d91"
+        "overlay-colour": "#005d91",
+        "pages": "home products people planet commitments"
     },
     "1": {
         "heading": "Reporting",
         "image-filename": "explore-reporting.jpg",
-        "link": "http://howwillwe.com",
+        "link": "http://www.pepsico.com/Purpose/Performance-with-Purpose/Sustainability-Reporting",
         "external": true,
-        "overlay-colour": "#005d91"
+        "overlay-colour": "#005d91",
+        "pages": "home"
     },
     "2": {
         "heading": "Our policies",
         "image-filename": "explore-policies.jpg",
-        "link": "http://howwillwe.com",
-        "external": false,
-        "overlay-colour": "#005d91"
+        "link": "http://www.pepsico.com/Purpose/Performance-with-Purpose/policies",
+        "external": true,
+        "overlay-colour": "#005d91",
+        "pages": "home"
     },
     "3": {
         "heading": "Pepsico foundation",
         "image-filename": "explore-foundation.jpg",
-        "link": "http://howwillwe.com",
+        "link": "http://www.pepsico.com/Purpose/Global-Citizenship",
         "external": true,
-        "overlay-colour": "#005d91"
+        "overlay-colour": "#005d91",
+        "pages": "home"
     },
     "4": {
+        "heading": "Our commitments",
+        "image-filename": "explore-commitments.jpg",
+        "link": "/commitments.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "pwp products people planet"
+    },
+    "5": {
+        "heading": "Products",
+        "image-filename": "explore-products.jpg",
+        "link": "/products.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "pwp commitments people planet"
+    },
+    "6": {
+        "heading": "Planet",
+        "image-filename": "explore-planet.jpg",
+        "link": "/planet.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "pwp commitments products people"
+    },
+    "7": {
+        "heading": "People",
+        "image-filename": "explore-people.jpg",
+        "link": "/people.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "pwp commitments products planet"
+    },
+    "8": {
         "heading": "#HOWWILLWE",
         "image-filename": "explore-hww.jpg",
         "link": "http://howwillwe.com",
         "external": true,
-        "overlay-colour": "#005d91"
+        "overlay-colour": "#005d91",
+        "pages": "home pwp products people planet commitments"
     }
 }

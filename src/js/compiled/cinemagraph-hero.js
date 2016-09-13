@@ -32,9 +32,9 @@
       video_filename = (function() {
         switch (_pageID) {
           case 'products':
-            return 'lime';
-          case 'people':
             return 'soda';
+          case 'people':
+            return 'orange';
           case 'planet':
             return 'nature';
         }

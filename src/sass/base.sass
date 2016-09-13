@@ -19,7 +19,7 @@ h2, h3
         +prdb
         width: 100%
         content: ""
-        height: 2px
+        height: 3px
         background-color: $wwb_blue
         margin: 1rem auto 0 auto
 
@@ -151,13 +151,14 @@ $global_spacing: 8%
     width: 100%
     color: white
     text-align: center
-    letter-spacing: 2px
+    letter-spacing: 3px
     margin: 0 auto
 
     em
         +prdb
         font-size: 3.8rem
         line-height: 4rem
+        letter-spacing: 7px
 
 .title-lines
     
@@ -165,16 +166,16 @@ $global_spacing: 8%
         content: ""
         margin-left: auto
         margin-right: auto
-        height: 2px
+        height: 3px
         width: 70%
         max-width: 280px
-        background-color: white
+        background-color: $wwb_blue
 
     &::before
         margin-bottom: 1.5rem
 
     &::after
-        margin-top: 1.5rem
+        margin-top: 1.9rem
 
 @media screen and (max-width: 1023px)
     .title-lines-medium-down::before, .title-lines-medium-down::after
@@ -282,9 +283,6 @@ $global_spacing: 8%
     +prdib
     width: 50% - $global_spacing / 2
     padding-top: (100% - $global_spacing * 2) / 2
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
     margin-bottom: $global_spacing
     overflow: hidden
 
@@ -293,15 +291,40 @@ $global_spacing: 8%
     &:last-child
         margin: 0
 
+    &:before, &:after
+        content: ""
+        +padn
+        left: 50%
+        height: 3px
+        width: 60px
+        margin-left: -30px
+        background-color: white
+        z-index: 10
+
+    &:before
+        top: 20%
+    &:after
+        bottom: 20%
+
+    &:active:before, &:active:after
+        +padb
+
     .colour-overlay
         +cover
         +opacityz(0)
 
     &:hover .colour-overlay
-        +opacityz(0.3)
+        +opacityz(0.5)
 
     &:active .colour-overlay
         +opacityz(0.7)
+
+    .explore-item__image
+        +cover
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
 
 .explore__heading-wrap
     +padb

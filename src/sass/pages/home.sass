@@ -9,10 +9,13 @@
     margin: 0 auto
 
 .misvis__item:first-child
-    margin-bottom: $global_spacing
+    margin-bottom: $global_spacing*2
 
-.misvis__item:last-child p:last-child
-    margin-bottom: 0
+.misvis__item:last-child
+    margin-top: $global_spacing
+    
+    p:last-child
+        margin-bottom: 0
 
 .misvis__item img 
     +prdb

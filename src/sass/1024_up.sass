@@ -19,6 +19,8 @@ h2
         height: 3px
         margin: 1rem auto 2rem auto
 
+    &.underline::after
+        height: 4px
 
 h3
     font-size: 2.2rem
@@ -58,6 +60,9 @@ $global_spacing: 4%
 .hero--pwp
     background-image: url(../img/hero-pwp--dt.jpg)
 
+    .hero__desktop-copy:before, .hero__desktop-copy:after
+        width: 400px
+
 .hero--commitments
     background-image: url(../img/hero-commitments--dt.jpg)
 
@@ -72,7 +77,7 @@ $global_spacing: 4%
 
 
 .hero--static
-    padding: $global_spacing 0
+    padding: 6% 0
 
 .hero--cinemagraph__copy
     margin-top: -8rem
@@ -94,12 +99,13 @@ $global_spacing: 4%
 
 .hero__social-item
     margin-bottom: 1rem
+    +square(25px)
 
     span 
         +dn
 
     &:nth-child(-n+2)
-        margin-right: 1rem
+        margin-right: 0.5rem
 
     &:hover
         +opacityz(0.8)
@@ -120,9 +126,9 @@ $global_spacing: 4%
 
 
 .title-lines::before, .title-lines::after
-    height: 3px
-    width: 300px
-    max-width: auto
+    height: 4px
+    width: 350px
+    max-width: none
     margin: 2rem auto
 
 .hero__desktop-copy
@@ -150,7 +156,7 @@ $global_spacing: 4%
     vertical-align: top
     width: 50%
 
-    &:first-child 
+    &:first-child
         border-right: 1px solid #bcbbb8
         padding-right: $global_spacing
         margin-bottom: 0
@@ -159,6 +165,7 @@ $global_spacing: 4%
         border-left: 1px solid #bcbbb8
         padding-left: $global_spacing
         left: -1px
+        margin-top: 0
 
     p:last-child
         margin-bottom: 0
@@ -618,3 +625,44 @@ $global_spacing: 4%
 
 .explore
     padding: $global_spacing 0
+
+.explore-item
+
+    &:before
+        -webkit-transform: translateY(-100px)
+        -moz-transform: translateY(-100px)
+        -ms-transform: translateY(-100px)
+        -o-transform: translateY(-100px)
+        transform: translateY(-100px)
+
+    &:after
+        -webkit-transform: translateY(100px)
+        -moz-transform: translateY(100px)
+        -ms-transform: translateY(100px)
+        -o-transform: translateY(100px)
+        transform: translateY(100px)
+
+    &:before, &:after
+        $spd: 0.2s
+        +padb
+        -webkit-transition: $spd ease -webkit-transform
+        -moz-transition: $spd ease -moz-transform
+        -ms-transition: $spd ease -ms-transform
+        -o-transition: $spd ease -o-transform
+        transition: $spd ease transform
+
+    &:hover
+        .explore-item__image
+            -webkit-filter: grayscale(100%)
+            -moz-filter:    grayscale(100%)
+            -ms-filter:     grayscale(100%)
+            -o-filter:      grayscale(100%)
+            filter: gray
+
+        &:before, &:after
+            -webkit-transform: translateY(0)
+            -moz-transform: translateY(0)
+            -ms-transform: translateY(0)
+            -o-transform: translateY(0)
+            transform: translateY(0)
+

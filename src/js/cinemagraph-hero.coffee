@@ -19,8 +19,8 @@ class CinemagraphHero
         console.log "Connection is reasonable (#{speed}Mbps): injecting hero video."
 
         video_filename = switch _pageID
-            when 'products' then 'lime'
-            when 'people' then 'soda'
+            when 'products' then 'soda'
+            when 'people' then 'orange'
             when 'planet' then 'nature'
 
         videoHtml = """
