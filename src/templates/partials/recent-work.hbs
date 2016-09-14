@@ -1,0 +1,65 @@
+<div class="recent-work-slider" id="recent-work-slider">
+
+    {{!-- Mobile carousel --}}
+    <div class="progress-timeline__carousel-wrapper swiper-container" id="progress-timeline__carousel-wrapper">
+        <div class="progress-timeline__pagination" id="progress-timeline__pagination"></div>
+        <div class="progress-timeline__arrows">
+            <span class="progress-timeline__arrow progress-timeline__arrow--prev" id="progress-timeline__arrow--prev"></span>
+            <span class="progress-timeline__arrow progress-timeline__arrow--next" id="progress-timeline__arrow--next"></span>
+        </div>        
+        <div class="swiper-wrapper">
+            {{#each progress ~}}
+            <div class="swiper-slide progress-timeline__slide">
+                <img class="progress-timeline__image" src="img/{{this.image-filename}}" alt="{{this.title}}">
+                <div class="progress-timeline__copy-container">
+                    <p class="progress-timeline__title">{{{this.title}}}</p>
+                    <p class="copy progress-timeline__copy">{{{this.copy}}}</p>
+                </div>
+            </div>
+            {{~/each}}
+        </div>
+        <img src="img/icon-swipe--grey.png" alt="Swipe to view more" class="progress-timeline__swipe-icon">
+    </div>
+
+    {{!-- DESKTOP CAROUSEL --}}
+    <div class="container progress-timeline--desktop">
+
+        {{!-- THE CAROUSEL --}}
+        <div class="progress-timeline--desktop__image-carousel" id="progress-timeline--desktop__image-carousel">
+            <div class="progress-timeline--desktop--image-wrapper" id="progress-timeline--desktop--image-wrapper">
+                {{#eachProperty progress ~}}
+                <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
+                {{~/eachProperty}}
+            </div>
+        </div>
+
+        {{!-- THE COPY --}}
+        <div class="container progress-timeline--desktop__copy-container">
+            {{#eachProperty progress ~}}
+            <div class="progress-timeline--desktop__copy-item" id="progress-timeline--desktop__copy-{{key}}">
+                <p class="progress-timeline__title">{{{value.title}}}</p>
+                <p class="copy progress-timeline__copy">{{{value.copy}}}</p>
+            </div>
+            {{~/eachProperty}}
+        </div>
+        
+        {{!-- THE SLIDER MECHANISM --}}
+        <div class="container">
+            <div class="progress-timeline--desktop__slider-container" id="progress-timeline--desktop__slider-container">
+                <div class="progress-timeline--desktop__slider" id="progress-timeline--desktop__slider"></div>
+                {{!-- <img class="progress-timeline--desktop__dots" src="img/prog-tl--dots.png"> --}}
+            </div>
+            
+            {{!-- THE YEARS PAGINATION --}}
+            <div class="progress-timeline--desktop__years-container">
+                <div class="progress-timeline--desktop__years-container">
+                    {{#eachProperty progress ~}}
+                    <span class="progress-timeline--desktop__year {{#is key '0'}} selected {{/is}}" id="progress-timeline--desktop__year-{{key}}" data-index="{{key}}">{{value.year}}</span>
+                    {{~/eachProperty}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

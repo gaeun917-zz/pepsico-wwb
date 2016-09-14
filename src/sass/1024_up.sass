@@ -623,6 +623,90 @@ $global_spacing: 4%
     font-size: 0.8rem
 
 
+// Pillar tabs
+.pillar-tabs
+    +prdb
+    
+    &:before
+        content: ""
+        +padb
+        +box-sizing
+        top: 0
+        left: 0
+        height: 120px
+        width: 100%
+        border-top: 4px solid white
+        border-bottom: 1px solid white
+        background-color: #66b5e2
+
+.pillar-tab-container
+    +prdb
+    width: 100% - $global_spacing * 2
+    max-width: 962px
+    margin: 0 auto
+    padding-top: 120px
+
+.pillar-tab
+    width: 100% - $global_spacing * 2
+    max-width: 962px
+    margin: 0 auto
+    overflow: visible
+
+    &:nth-child(1) .pillar-tab__heading
+        left: 0
+    &:nth-child(2) .pillar-tab__heading
+        left: 33.333333%
+    &:nth-child(3) .pillar-tab__heading
+        right: 0
+
+.pillar-tab__heading
+    +padb
+    +box-sizing
+    height: 120px
+    top: 0
+    width: 33.3333333%
+    padding: 0
+    border-top: 4px solid white
+    border-bottom: 1px solid white
+
+    span
+        +box-sizing
+        padding: 0
+        +cover
+        line-height: 112px
+
+    &:hover span 
+        background-color: lighten(#66b5e2, 2%)
+
+    &:active span 
+        background-color: #66b5e2 !important
+
+
+.pillar-tab:nth-child(2) .pillar-tab__heading
+    border-left: 1px solid white
+    border-right: 1px solid white
+
+.pillar-tab:nth-child(1) .pillar-tab__heading
+    border-left: 1px solid white
+
+.pillar-tab:nth-child(3) .pillar-tab__heading
+    border-right: 1px solid white
+
+.pillar-tab__content
+
+    h2:after
+        content: ""
+        +prdb
+        height: 3px
+        width: 300px
+        background-color: $wwb_blue
+        margin: 1rem 0 0 0
+    
+    img 
+        float: right
+        margin-left: $global_spacing
+        margin-bottom: $global_spacing
+
 .explore
     padding: $global_spacing 0
 
