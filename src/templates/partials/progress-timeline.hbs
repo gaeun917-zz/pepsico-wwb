@@ -1,4 +1,4 @@
-<div class="progress-timeline" id="progress-timeline">
+<div class="progress-timeline swipe-carousel" id="progress-timeline">
 
     {{!-- Mobile carousel --}}
     <div class="progress-timeline__carousel-wrapper swiper-container" id="progress-timeline__carousel-wrapper">
@@ -12,7 +12,10 @@
             <div class="swiper-slide progress-timeline__slide">
                 <img class="progress-timeline__image" src="img/{{this.image-filename}}" alt="{{this.title}}">
                 <div class="progress-timeline__copy-container">
-                    <p class="progress-timeline__title">{{{this.title}}}</p>
+                    <p class="progress-timeline__title">
+                        {{#is ../type "pwp"}}<strong>{{this.year}} </strong>{{/is}}
+                        {{this.title}}
+                    </p>
                     <p class="copy progress-timeline__copy">{{{this.copy}}}</p>
                 </div>
             </div>
@@ -22,13 +25,13 @@
     </div>
 
     {{!-- DESKTOP CAROUSEL --}}
-    <div class="container progress-timeline--desktop">
+    <div class="progress-timeline--desktop">
 
         {{!-- THE CAROUSEL --}}
         <div class="progress-timeline--desktop__image-carousel" id="progress-timeline--desktop__image-carousel">
             <div class="progress-timeline--desktop--image-wrapper" id="progress-timeline--desktop--image-wrapper">
                 {{#eachProperty progress ~}}
-                <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" id="prog-tl-{{key}}">
+                <img class="progress-timeline--desktop__image prog-tl-{{key}}" src="img/{{value.image-filename}}" alt="{{value.title}}" data-slide="{{key}}" id="prog-tl-{{key}}">
                 {{~/eachProperty}}
             </div>
         </div>
@@ -37,7 +40,15 @@
         <div class="container progress-timeline--desktop__copy-container">
             {{#eachProperty progress ~}}
             <div class="progress-timeline--desktop__copy-item" id="progress-timeline--desktop__copy-{{key}}">
-                <p class="progress-timeline__title">{{{value.title}}}</p>
+                {{#is ../type "pwp"}}
+                <p class="progress-timeline__title">
+                    <strong>{{value.year}}</strong> {{value.title}}
+                </p>
+                {{else}}
+                <p class="progress-timeline__title">
+                    <strong>{{value.title}}</strong> 
+                </p>
+                {{/is}}
                 <p class="copy progress-timeline__copy">{{{value.copy}}}</p>
             </div>
             {{~/eachProperty}}
@@ -45,16 +56,20 @@
         
         {{!-- THE SLIDER MECHANISM --}}
         <div class="container">
-            <div class="progress-timeline--desktop__slider-container" id="progress-timeline--desktop__slider-container">
+            <div class="progress-timeline--desktop__slider-container {{#is type 'pillar'}}hidden{{/is}}" id="progress-timeline--desktop__slider-container">
+                
                 <div class="progress-timeline--desktop__slider" id="progress-timeline--desktop__slider"></div>
-                {{!-- <img class="progress-timeline--desktop__dots" src="img/prog-tl--dots.png"> --}}
             </div>
             
             {{!-- THE YEARS PAGINATION --}}
-            <div class="progress-timeline--desktop__years-container">
+            <div class="progress-timeline--desktop__years-container {{#is type 'pillar'}}pillar-mode{{/is}}">
                 <div class="progress-timeline--desktop__years-container">
                     {{#eachProperty progress ~}}
-                    <span class="progress-timeline--desktop__year {{#is key '0'}} selected {{/is}}" id="progress-timeline--desktop__year-{{key}}" data-index="{{key}}">{{value.year}}</span>
+                    <span class="progress-timeline--desktop__year {{#is key '0'}} selected {{/is}} {{#is ../type 'pillar'}} pillar-node {{/is}}" id="progress-timeline--desktop__year-{{key}}" data-index="{{key}}">
+                        {{#is ../type 'pwp'}}
+                        {{value.year}} 
+                        {{/is}}
+                    </span>
                     {{~/eachProperty}}
                 </div>
             </div>

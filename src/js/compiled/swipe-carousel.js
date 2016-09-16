@@ -11,9 +11,12 @@
       this.animateStop = bind(this.animateStop, this);
       this.setWidth = bind(this.setWidth, this);
       this.initSlider = bind(this.initSlider, this);
+      this.goToSlide = bind(this.goToSlide, this);
       this.goToYear = bind(this.goToYear, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
-      if (_pageID !== "pwp") {
+      var swipePages;
+      swipePages = ['pwp', 'products', 'planet', 'people'];
+      if (!($.inArray(_pageID, swipePages) > -1)) {
         return false;
       }
       this.initDom();
@@ -24,6 +27,7 @@
           _this.initDesktopTimeline();
           _this.initSlider();
           _this.years.on('click', _this.goToYear);
+          _this.prog_dt_slider_image.on('click', _this.goToSlide);
           _this.sliderPos = 0;
           _this.HM = new Hammer(document.getElementById('progress-timeline--desktop__image-carousel'), {
             recognizers: [[Hammer.Pan]]
@@ -124,6 +128,16 @@
     SwipeCarousel.prototype.goToYear = function(e) {
       var delta, step;
       step = $(e.currentTarget).attr('data-index');
+      delta = step * this.d10;
+      TweenLite.to(this.slidesCopy, 0.2, {
+        opacity: 0
+      });
+      return this.animateStop(delta);
+    };
+
+    SwipeCarousel.prototype.goToSlide = function(e) {
+      var delta, step;
+      step = $(e.currentTarget).attr('data-slide');
       delta = step * this.d10;
       TweenLite.to(this.slidesCopy, 0.2, {
         opacity: 0
@@ -251,6 +265,7 @@
       this.prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper');
       this.prog_dt_slider = $('#progress-timeline--desktop__slider');
       this.prog_dt_slider_container = $('#progress-timeline--desktop__slider-container');
+      this.prog_dt_slider_image = $('.progress-timeline--desktop__image');
       this.slides = $('.progress-timeline--desktop__image');
       this.slidesCopy = $('.progress-timeline--desktop__copy-item');
       this.years = $('.progress-timeline--desktop__year');

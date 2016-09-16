@@ -55,7 +55,7 @@ $global_spacing: 4%
 // ::::: HERO :::::
 .hero--home
     background-image: url(../img/hero-home--dt.jpg)
-    background-position: center bottom
+    background-position: center 60%
 
 .hero--pwp
     background-image: url(../img/hero-pwp--dt.jpg)
@@ -424,10 +424,10 @@ $global_spacing: 4%
 .wangotron__details-modal .wangotron__details-modal__container
     background-color: transparent !important
 
+
 .progress-timeline__carousel-wrapper
     +dn
  
-
 .focus-areas, .our-progress
     padding: $global_spacing 0
     overflow: hidden
@@ -436,15 +436,16 @@ $global_spacing: 4%
         +no-select
 
 .progress-timeline--desktop
-    +db
+    +prdb
     margin-top: $global_spacing
+    width: 1152px
+    margin-left: -576px
+    margin-right: 0
+    left: 50%
 
 .progress-timeline--desktop__image-carousel
     +prdb
     height: 230px
-
-    *
-        +no-pointer-events
 
 .progress-timeline--desktop--image-wrapper
     +padb
@@ -452,10 +453,7 @@ $global_spacing: 4%
 
 .progress-timeline--desktop__image
     +padb
-    // left: 80%
-    // margin-left: -200px
     width: 400px
-    // top: 4%
     +opacityz(0)
     -webkit-transform: scale(0.8)
     -moz-transform: scale(0.8)
@@ -465,8 +463,6 @@ $global_spacing: 4%
     +border-radius(3px)
 
     &:first-child
-        // top: 0
-        // left: 50%
         z-index: 1000
         -webkit-transform: scale(1)
         -moz-transform: scale(1)
@@ -491,6 +487,9 @@ $global_spacing: 4%
     height: 15px
     +border-radius(15px)
     background-color: $light_grey
+
+    &.hidden 
+        +dn
 
 .progress-timeline--desktop__slider
     +padb
@@ -545,13 +544,16 @@ $global_spacing: 4%
     width: 100%
     margin: 0 auto
 
+    &.pillar-mode
+        text-align: center
+        margin-top: 2rem
+
 .progress-timeline--desktop__year
     +prdib
     +title-font-bold
     font-size: 1.3rem
     width: 10%
     text-align: center
-
 
     &::before
         content: ""
@@ -562,7 +564,6 @@ $global_spacing: 4%
         margin: auto
         border: 5px solid $extralight_grey
         background-color: $light_grey
-
 
 
     &::after
@@ -578,6 +579,17 @@ $global_spacing: 4%
         -ms-transition: 0.2s ease width
         -o-transition: 0.2s ease width
         transition: 0.2s ease width
+
+    &.pillar-node
+        text-align: center
+        width: 50px
+        margin-left: auto
+        margin-right: auto
+        &.selected:before
+            background-color: $wwb_blue
+        &:after
+            +dn
+
 
     &.selected
         color: $wwb_blue

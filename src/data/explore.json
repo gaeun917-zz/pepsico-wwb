@@ -1,7 +1,7 @@
 {
     "0": {
         "heading": "Performance with purpose",
-        "image-filename": "explore-pwp.jpg",
+        "image-filename": "explore-commitments.jpg",
         "link": "/performance-with-purpose.html",
         "external": false,
         "overlay-colour": "#005d91",
@@ -33,7 +33,7 @@
     },
     "4": {
         "heading": "Our commitments",
-        "image-filename": "explore-commitments.jpg",
+        "image-filename": "explore-pwp.jpg",
         "link": "/commitments.html",
         "external": false,
         "overlay-colour": "#005d91",
@@ -66,7 +66,7 @@
     "8": {
         "heading": "#HOWWILLWE",
         "image-filename": "explore-hww.jpg",
-        "link": "http://howwillwe.com",
+        "link": "http://howwillwe-staging.herokuapp.com",
         "external": true,
         "overlay-colour": "#005d91",
         "pages": "home pwp products people planet commitments"

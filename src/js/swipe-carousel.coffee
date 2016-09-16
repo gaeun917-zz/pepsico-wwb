@@ -1,8 +1,10 @@
-class ProgressTimeline
+class SwipeCarousel
 
     constructor: ->
 
-        return false unless _pageID is "pwp"
+        swipePages = ['pwp', 'products', 'planet', 'people']
+
+        return false unless $.inArray(_pageID, swipePages) > -1
 
         @initDom()
 
@@ -17,6 +19,8 @@ class ProgressTimeline
             @initSlider()
 
             @years.on('click', @goToYear)
+
+            @prog_dt_slider_image.on('click', @goToSlide)
 
             @sliderPos = 0
 
@@ -74,6 +78,13 @@ class ProgressTimeline
 
     goToYear: (e) =>
         step = $(e.currentTarget).attr('data-index')
+        delta = step * @d10
+        TweenLite.to @slidesCopy, 0.2, {opacity: 0}
+        @animateStop delta
+
+
+    goToSlide: (e) =>
+        step = $(e.currentTarget).attr('data-slide')
         delta = step * @d10
         TweenLite.to @slidesCopy, 0.2, {opacity: 0}
         @animateStop delta
@@ -180,6 +191,8 @@ class ProgressTimeline
         # Desktop
         @prog_dt_slider = $('#progress-timeline--desktop__slider')
         @prog_dt_slider_container = $('#progress-timeline--desktop__slider-container')
+
+        @prog_dt_slider_image = $('.progress-timeline--desktop__image')
         
         @slides = $('.progress-timeline--desktop__image')
         @slidesCopy = $('.progress-timeline--desktop__copy-item')
@@ -192,4 +205,4 @@ class ProgressTimeline
 
 
 
-@ProgressTimeline = new ProgressTimeline
+@SwipeCarousel = new SwipeCarousel

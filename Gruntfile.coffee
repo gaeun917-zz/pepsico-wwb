@@ -63,6 +63,9 @@ module.exports = (grunt) ->
         src: ['**/*.{mp4,webm,ogg}']
         dest: 'pub/vid'
 
+    # Clean out the pub folder
+    clean:
+      clean: ['pub']
 
     # Compiles .html files using Assemble.io
     assemble:
@@ -137,6 +140,8 @@ module.exports = (grunt) ->
   
   # Load Tasks
   grunt.loadNpmTasks 'grunt-assemble'
+  grunt.loadNpmTasks 'grunt-bower-concat'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-copy'
@@ -144,7 +149,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
   grunt.loadNpmTasks 'grunt-contrib-sass'  
   grunt.loadNpmTasks 'grunt-contrib-uglify'
-  grunt.loadNpmTasks 'grunt-bower-concat'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   # Default task(s).
