@@ -257,12 +257,16 @@
         effect: 'slide',
         observer: true,
         observeParents: true,
+        nextButton: this.nextBtn,
+        prevButton: this.prevBtn,
         pagination: '#progress-timeline__pagination'
       });
     };
 
     SwipeCarousel.prototype.initDom = function() {
       this.prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper');
+      this.prevBtn = $('#progress-timeline__arrow--prev');
+      this.nextBtn = $('#progress-timeline__arrow--next');
       this.prog_dt_slider = $('#progress-timeline--desktop__slider');
       this.prog_dt_slider_container = $('#progress-timeline--desktop__slider-container');
       this.prog_dt_slider_image = $('.progress-timeline--desktop__image');

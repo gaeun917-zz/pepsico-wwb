@@ -180,6 +180,8 @@ class SwipeCarousel
             effect: 'slide'
             observer: true
             observeParents: true
+            nextButton: @nextBtn
+            prevButton: @prevBtn
             pagination: '#progress-timeline__pagination'
         }
 
@@ -187,6 +189,8 @@ class SwipeCarousel
 
         # Mobile
         @prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper')
+        @prevBtn = $('#progress-timeline__arrow--prev')
+        @nextBtn = $('#progress-timeline__arrow--next')
 
         # Desktop
         @prog_dt_slider = $('#progress-timeline--desktop__slider')
