@@ -67,23 +67,52 @@ $global_spacing: 4%
     background-image: url(../img/hero-commitments--dt.jpg)
 
 .hero--products
-    background-image: url(../img/hero-products--dt.jpg)
+    background-image: none
+    // background-image: url(../img/hero-products--dt.jpg)
+    // background-position: center
+    
+    .hero--cinemagraph__video-container
+        top: -9%
+        background-image: url(../img/hero-products--dt.jpg)
 
 .hero--planet
-    background-image: url(../img/hero-planet--dt.jpg)
+    background-image: none
+
+    .hero--cinemagraph__video-container
+        bottom: 0
+        background-image: url(../img/hero-planet--dt.jpg)
 
 .hero--people
-    background-image: url(../img/hero-people--dt.jpg)
+    background-image: none
 
+    .hero--cinemagraph__video-container
+        top: -20%
+        background-image: url(../img/hero-people--dt.jpg)
 
 .hero--static
     padding: 6% 0
+    overflow: hidden
 
 .hero--cinemagraph__copy
     margin-top: -8rem
 
 .hero--cinemagraph__video-container
-    +cover
+    // +cover
+    +padb
+    width: 100%
+    padding-bottom: 56.25%
+    left: 0
+
+    // top: 50%
+
+    background-position: top center
+    background-size: cover
+
+    // -webkit-transform: translateY(-50%)
+    // -moz-transform: translateY(-50%)
+    // -ms-transform: translateY(-50%)
+    // -o-transform: translateY(-50%)
+    // transform: translateY(-50%)
 
 .hero--cinemagraph__video-container video
     +padb
