@@ -8,15 +8,15 @@ class CinemagraphHero
 
         return false if $.inArray(_pageID, pillars) < 0
 
-        $(document).ready =>
-            return false if _isMobile
-            @doSpeedTest @initCinemagraph 
+        # $(document).ready =>
+        #     return false if _isMobile
+        #     @doSpeedTest @initCinemagraph
 
     initCinemagraph: (speed) =>
  
-        return console.log "Connection is too slow (#{speed}Mbps): hero fallback to static image." if (speed < 2)
+        return console.log "Connection is too slow (#{speed} seconds to load page): hero fallback to static image." if (speed > 2)
 
-        console.log "Connection is reasonable (#{speed}Mbps): injecting hero video."
+        console.log "Connection is reasonable (#{speed} seconds to load page): injecting hero video."
 
         video_filename = switch _pageID
             when 'products' then 'soda'
@@ -49,30 +49,36 @@ class CinemagraphHero
 
     doSpeedTest: (callback) =>
 
-        imageAddr = "https://s3-eu-west-1.amazonaws.com/howwillwe/production/images/fertilizer-close-up.jpg"
-        downloadSize = 162580
+        # imageAddr = "https://s3-eu-west-1.amazonaws.com/howwillwe/production/images/fertilizer-close-up.jpg"
+        # downloadSize = 162580
+
+        _loadEnd = new Date().getTime()
 
         MeasureConnectionSpeed = =>
-            endTime = 0
-            startTime = (new Date()).getTime()
+            # endTime = 0
+            # startTime = (new Date()).getTime()
             speedMbps = ''
             
-            download = new Image()
-            cacheBuster = "?nnn=" + startTime
-            download.src = imageAddr + cacheBuster
-
-            console.log "Starting connection speed test...."
-
-            download.onload = =>
-                endTime = (new Date()).getTime()
+            # download = new Image()
+            # cacheBuster = "?nnn=" + startTime
+            # download.src = imageAddr + cacheBuster
             
-                duration = (endTime - startTime) / 1000
-                bitsLoaded = downloadSize * 8
-                speedBps = (bitsLoaded / duration).toFixed(2)
-                speedKbps = (speedBps / 1024).toFixed(2)
-                speedMbps = (speedKbps / 1024).toFixed(2)
-                console.log "Test complete."
-                callback(parseFloat speedMbps)
+            duration = (_loadEnd - _loadStart) / 1000
+            
+            
+            console.log "Page load duration: " + duration
+
+            callback(parseFloat duration)
+
+            # download.onload = =>
+            #     endTime = (new Date()).getTime()
+            #     duration = (endTime - startTime) / 1000
+            #     bitsLoaded = downloadSize * 8
+            #     speedBps = (bitsLoaded / duration).toFixed(2)
+            #     speedKbps = (speedBps / 1024).toFixed(2)
+            #     speedMbps = (speedKbps / 1024).toFixed(2)
+            #     console.log "Test complete."
+            #     callback(parseFloat speedMbps)
 
         InitiateSpeedDetection = =>
             window.setTimeout(MeasureConnectionSpeed, 1)

@@ -12,37 +12,20 @@ class Global
 
         $ =>
 
-            @doHeroLoad()
-
             if _isMobile then FastClick.attach(document.body)
+
+            $('body').addClass if _isMobile then 'mobile' else 'desktop'
 
             window.lazySizesConfig =
                 addClasses: true
 
-            $('body').addClass if _isMobile then 'mobile' else 'desktop'
+        $(window).on 'load', =>
 
-
-            @readz.on('click', @toggleReadMore)
-
-
-    doHeroLoad: =>
-
-        
-
-
-
-    toggleReadMore: (e) =>
-
-        parent = $(e.currentTarget).parent()
-        parent.toggleClass 'open'
-
+            if !_isMobile
+                window.CinemagraphHero.doSpeedTest window.CinemagraphHero.initCinemagraph
+                
 
 
     initDom: =>
-
-        @truncated  = $('.truncated')
-        @readz      = $('.readz')
-       
-
 
 @Global = new Global

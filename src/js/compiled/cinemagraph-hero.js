@@ -13,22 +13,14 @@
       if ($.inArray(_pageID, pillars) < 0) {
         return false;
       }
-      $(document).ready((function(_this) {
-        return function() {
-          if (_isMobile) {
-            return false;
-          }
-          return _this.doSpeedTest(_this.initCinemagraph);
-        };
-      })(this));
     }
 
     CinemagraphHero.prototype.initCinemagraph = function(speed) {
       var videoElem, videoHtml, videoPlayCallback, video_filename;
-      if (speed < 2) {
-        return console.log("Connection is too slow (" + speed + "Mbps): hero fallback to static image.");
+      if (speed > 2) {
+        return console.log("Connection is too slow (" + speed + " seconds to load page): hero fallback to static image.");
       }
-      console.log("Connection is reasonable (" + speed + "Mbps): injecting hero video.");
+      console.log("Connection is reasonable (" + speed + " seconds to load page): injecting hero video.");
       video_filename = (function() {
         switch (_pageID) {
           case 'products':
@@ -57,30 +49,15 @@
     };
 
     CinemagraphHero.prototype.doSpeedTest = function(callback) {
-      var InitiateSpeedDetection, MeasureConnectionSpeed, downloadSize, imageAddr;
-      imageAddr = "https://s3-eu-west-1.amazonaws.com/howwillwe/production/images/fertilizer-close-up.jpg";
-      downloadSize = 162580;
+      var InitiateSpeedDetection, MeasureConnectionSpeed, _loadEnd;
+      _loadEnd = new Date().getTime();
       MeasureConnectionSpeed = (function(_this) {
         return function() {
-          var cacheBuster, download, endTime, speedMbps, startTime;
-          endTime = 0;
-          startTime = (new Date()).getTime();
+          var duration, speedMbps;
           speedMbps = '';
-          download = new Image();
-          cacheBuster = "?nnn=" + startTime;
-          download.src = imageAddr + cacheBuster;
-          console.log("Starting connection speed test....");
-          return download.onload = function() {
-            var bitsLoaded, duration, speedBps, speedKbps;
-            endTime = (new Date()).getTime();
-            duration = (endTime - startTime) / 1000;
-            bitsLoaded = downloadSize * 8;
-            speedBps = (bitsLoaded / duration).toFixed(2);
-            speedKbps = (speedBps / 1024).toFixed(2);
-            speedMbps = (speedKbps / 1024).toFixed(2);
-            console.log("Test complete.");
-            return callback(parseFloat(speedMbps));
-          };
+          duration = (_loadEnd - _loadStart) / 1000;
+          console.log("Page load duration: " + duration);
+          return callback(parseFloat(duration));
         };
       })(this);
       InitiateSpeedDetection = (function(_this) {
