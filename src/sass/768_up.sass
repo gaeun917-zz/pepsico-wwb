@@ -221,3 +221,16 @@ $global_spacing: 6%
         .expander-inner
             overflow-y: visible
             height: auto
+
+    .expander-inner-half
+        width: 50%
+        &.left 
+            >div 
+                padding-right: 30px
+        &.right
+            >div 
+                padding-left: 30px
+
+    .gallery
+        .title
+            display: none
