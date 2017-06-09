@@ -121,10 +121,11 @@ $global_spacing: 6%
         bottom: 30%
 
 
-// ::::: PAGE: BRANDS :::::
-.search-brands
+// ::::: PAGE: BRANDS
+.search-blue
     padding: 63px 0
 
+// ::::: PAGE: BRANDS LIST :::::
 .tabs-select
     li 
         a
@@ -203,3 +204,20 @@ $global_spacing: 6%
         font-size: 18px
         padding-left: 50px
         padding-right: 20px
+
+// ::::: PAGE: RECIPES LIST :::::
+.list-recipes-container
+    .categories
+        margin-bottom: 80px
+        &.tabs-select li
+            width: 25%
+            a
+                font-size: 18px
+                &:after 
+                    display: block
+
+    .list-recipes > ul>li
+        width: 25%
+        .expander-inner
+            overflow-y: visible
+            height: auto

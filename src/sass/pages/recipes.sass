@@ -1,180 +1,115 @@
-// .page__brands
-// 	*,
-// 	*:after,
-// 	*:before 
-// 		-webkit-box-sizing: border-box
-// 		-moz-box-sizing: border-box
-// 		box-sizing: border-box
-// 		padding: 0
-// 		margin: 0
-
-
-.hero--brands
+.hero--recipes
 	background-image: url(../img/hero-brands--tb.jpg)
 
 
-.tabs-select
-	li
-		float: left
-		display: block
-		letter-spacing: 1.5px
-		padding-bottom: 16px
-		> div 
-			padding: 0 12px
-		a
-			+title-font-bold
-			margin-bottom: 0
-			font-size: 12px
-			text-decoration: none
-			display: block
-			text-transform: uppercase
-			text-align: center
-			padding: 8px 5px
-			position: relative
-			color: $copy_grey
-			background-color: #e7e7e4
-			&.is-active, &:hover
-				color: #fff
-				background-color: $wwb_darkblue
-
-				&:after 
-					top: 100%
-					left: 50%
-					border: solid transparent
-					content: " "
-					height: 0
-					width: 0
-					position: absolute
-					pointer-events: none
-					border-color: rgba(136, 183, 213, 0)
-					border-top-color: $wwb_darkblue
-					border-width: 16px
-					margin-left: -16px
-
-.list-brands-container
+.list-recipes-container
 	overflow: hidden
 	background: $extralight_grey
 	background: #f3f2ef
-	.categories 
+	padding-top: 50px
+
+.list-recipes
+	clear: both
+	height: auto
+	list-style: none
+	margin: 0 -12px
+	> ul > li 
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 15px
 		overflow: hidden
-		padding-top: 50px
-		margin: 0 -12px
-		&.tabs-select
-			li
-				width: 50%
-				a
-					background-color: #e7e7e4
-					&:after 
-						display: none
-					&.is-active, &:hover
-						background-color: $wwb_darkblue
-
-	.list-brands
-		clear: both
-		height: auto
-		list-style: none
-		margin: 0 -12px
-		> ul > li 
-			width: 50%
-			display: inline-block
-			vertical-align: top
-			margin-bottom: 15px
-			overflow: hidden
-			img 
-				display: block
-				width: 100%
+		img 
+			display: block
+			width: 100%
 
 
-			> a
-				display: block
-				margin: 0 12px
-				position: relative
-				figure
-					position: relative
-					margin: 0
-					padding: 0
-				.mask   
-					position: absolute
-					bottom: 0
-					right: 0
-					left: 0
-					transition: all 100ms ease-in-out
-					transition-delay: 0ms
-					&.close
-						display: block
-						transform: translateY(0px)
-
-			.expander
-				position: absolute
-				background: #fff
-				top: auto
-				left: 0
-				width: 100%
-				// margin-top: 10px
-				text-align: left
-				height: 0
-				overflow: hidden
-				opacity: 0
-				&:after 
-					content: ""
-					display: block
-				&:before 
-					position: absolute
-					content: ""
-					display: block
-					width: 300%
-					margin-left: -150%
-					background-color: #fff
-					height: 100%
-
-			.expander-inner
-				margin-left: 0
-				margin-right: 0
-				position: relative
-				overflow-y: scroll
-				height: 100%
-				
-			&.is-open 
-				// margin-bottom: 20px
-				overflow: visible
-				> a
-					.mask
-						transition-delay: 50ms
-						&.close
-							transform: translateY(100%)
-				
-				.expander
-					// max-height: 999em
-					height: 100%
-					overflow: visible
-					opacity: 1
-
-		.btn-close 
+		> a
+			display: block
+			margin: 0 12px
 			position: relative
-			width: 40px
-			height: 40px
-			top: 20px
-			right: 40px
-			cursor: pointer
-			// hide it for now, not in the design
-			display: none
-		
-			&:before,
-			&:after 
-				content: ''
-				position: absolute
-				width: 100%
-				top: 50%
-				height: 1px
-				background: #888
-				transform: rotate(45deg)
-		
-			&:after 
-				transform: rotate(-45deg)
+			text-decoration: none
+			figure
+				position: relative
+				margin: 0
+				padding: 0
+			figcaption
+				background-color: #fff
+				>div
+					padding: 1em
+				h2
 
-			&:hover::before,
-			&:hover::after 
-				background: #333
+		.expander
+			position: absolute
+			background: #fff
+			top: auto
+			left: 0
+			width: 100%
+			// margin-top: 10px
+			text-align: left
+			height: 0
+			overflow: hidden
+			opacity: 0
+			&:after 
+				content: ""
+				display: block
+			&:before 
+				position: absolute
+				content: ""
+				display: block
+				width: 300%
+				margin-left: -150%
+				background-color: #fff
+				height: 100%
+
+		.expander-inner
+			margin-left: 0
+			margin-right: 0
+			position: relative
+			overflow-y: scroll
+			height: 100%
+			
+		&.is-open 
+			// margin-bottom: 20px
+			overflow: visible
+			> a
+				.mask
+					transition-delay: 50ms
+					&.close
+						transform: translateY(100%)
+			
+			.expander
+				// max-height: 999em
+				height: 100%
+				overflow: visible
+				opacity: 1
+
+	.btn-close 
+		position: relative
+		width: 40px
+		height: 40px
+		top: 20px
+		right: 40px
+		cursor: pointer
+		// hide it for now, not in the design
+		display: none
+	
+		&:before,
+		&:after 
+			content: ''
+			position: absolute
+			width: 100%
+			top: 50%
+			height: 1px
+			background: #888
+			transform: rotate(45deg)
+	
+		&:after 
+			transform: rotate(-45deg)
+
+		&:hover::before,
+		&:hover::after 
+			background: #333
 		
 	.tab-content
 		display: none
@@ -347,5 +282,5 @@
 			width: 20px
 			height: 20px
 			content: ""
-			background: url('../img/icon-arrow-cta-white.png') no-repeat center
+			background: url('../img/brands/arrow-cta-white.png') no-repeat center
 			display: inline-block
