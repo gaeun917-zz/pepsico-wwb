@@ -133,6 +133,8 @@
 				position: relative
 				overflow-y: scroll
 				height: 100%
+				opacity: 0
+				transition: opacity 300ms ease-in-out
 				
 			&.is-open 
 				// margin-bottom: 20px
@@ -148,6 +150,10 @@
 					height: 100%
 					overflow: visible
 					opacity: 1
+
+				.expander-inner
+					opacity: 1
+					transition: opacity 0
 
 		.btn-close 
 			position: relative

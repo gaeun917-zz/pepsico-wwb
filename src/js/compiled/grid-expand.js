@@ -476,8 +476,6 @@ var Grid = (function() {
 				}
 			}
 
-			
-
 			if( heightPreview < minH ) {
 				heightPreview = minH;
 				itemHeight = minH + this.$item.height() + marginExpanded;
@@ -494,7 +492,7 @@ var Grid = (function() {
 				if(expH == 0) {
 					// console.log('===  grid-expand.js [538] left ===', $('.expander-inner-half.left').height());
 					// console.log('===  grid-expand.js [539] right ===', $('.expander-inner-half.right').height());
-					this.height = $('.expander-inner-half.left').height() + $('.expander-inner-half.right').height() + marginExpanded;
+					this.height = $('.expander-inner-half.left').height() + $('.expander-inner-half.right').height();
 					// console.log('===  grid-expand.js [541] total ===', this.height);
 					this.itemHeight = this.height + this.$item.find('>a').height();
 				}

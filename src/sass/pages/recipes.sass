@@ -17,9 +17,9 @@
 		width: 50%
 		display: inline-block
 		vertical-align: top
-		margin-bottom: 55px
+		margin-bottom: 25px
 		overflow: hidden
-		padding-bottom: 16px
+		padding-bottom: 15px
 		img 
 			display: block
 			width: 100%
@@ -43,9 +43,11 @@
 					color: $wwb_darkblue
 					+title-font-bold
 					font-size: 13px
-					min-height: 50px
+					min-height: 45px
 					margin: 0
 					padding: 0
+					margin-bottom: 5px
+					line-height: 130%
 				p
 					color: #868686
 					font-size: 10px
@@ -73,7 +75,6 @@
 			top: auto
 			left: 0
 			width: 100%
-			// margin-top: 10px
 			text-align: left
 			height: 0
 			overflow: hidden
@@ -96,19 +97,23 @@
 			position: relative
 			overflow-y: scroll
 			height: 100%
+			opacity: 0
+			transition: opacity 300ms ease-in-out
 			
-		&.is-open 	
-			overflow: visible
+		&.is-open
 			> a
 				margin-bottom: 20px
 				&:after 
 					display: block
 			
 			.expander
-				// max-height: 999em
 				height: 100%
-				overflow: visible
+				// overflow: visible // this is allowing to see the white border on the left and right
 				opacity: 1
+
+			.expander-inner
+				opacity: 1
+				transition: opacity 0
 
 
 	// content in the expanded box
@@ -123,7 +128,7 @@
 			max-width: 100%
 	
 	.gallery 
-		padding-top: 50px
+		padding-top: 30px
 		figure
 			margin-bottom: 30px
 
@@ -164,7 +169,7 @@
 			margin-bottom: 10px
 
 	.recipe-details-copy
-		padding-top: 50px
+		padding-top: 30px
 		padding-bottom: 20px
 
 
@@ -173,4 +178,3 @@
 		overflow: auto
 		p
 			line-height: 130%
-		
