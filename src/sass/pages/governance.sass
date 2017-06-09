@@ -1,0 +1,210 @@
+.hero--perspectives
+    background-position: center top
+
+    @media screen and (max-width: 680px)
+        h1 em 
+            font-size: 2.5rem
+            line-height: 3rem
+
+.pwp-breakdown
+    +prdb
+    padding: $global_spacing 0
+    background-color: $background_grey
+    background-size: 180% auto
+    background-repeat: no-repeat
+    background-position: center top
+
+.pwp-breakdown h4, .pwp-breakdown-copy
+    margin: 0 auto
+
+.pwp-breakdown h4
+
+.pwp-breakdown__header
+    margin: 0
+
+.pwp-breakdown__header.underline.category
+    +title-font-bold
+    margin-top: 3em
+    margin-bottom: 1em
+
+.desktop-pwp-breakdown-icon
+    +dn
+
+.mobile-pwp-breakdown-icon
+    +prdb
+    width: 65%
+    max-width: 250px
+    margin: auto
+
+.pillar-container
+    margin-top: $global_spacing
+
+@mixin pillar-theme($name, $colour)
+    .pillar--#{$name}
+        .pillar-header, .pillar-item__content
+            +box-sizing
+            width: 100%
+            padding: 3% 5%
+            background-color: $pill_background_gray
+            border-image-slice: 1
+            margin-top: .5em
+
+        .pillar-header
+            +prdb
+            border-top: 2px solid $colour
+
+        .pillar-item__pill
+            background-color: $colour
+
++pillar-theme(A-E, $pill_tab_gray)
++pillar-theme(F-N, $pill_tab_gray)
+
+
+.pillar-item__content
+    border-top: 0
+    margin-bottom: 10px
+
+.pillar-item__pill
+    +prdb
+    height: 3rem
+    width: 100%
+    cursor: pointer
+
+    &::after
+        +padb
+        right: 1rem
+        top: calc(1.5rem - 10px)
+        content: ""
+        width: 20px
+        height: 20px
+        background-image: url(../img/icon-open.png)
+        background-size: contain
+        background-position: center
+        
+    h4
+        color: white
+        line-height: 3rem
+        vertical-align: middle
+        padding: 0 1rem
+
+    &.open
+        background-color: $wwb_darkblue
+        transition: 1s ease background-color
+        h4
+            color: white
+
+        &::after
+            background-image: url(../img/icon-close.png)
+
+.pillar-item__content
+    +prdn
+    overflow: hidden
+    padding: 4% 7%
+    h2 em
+        font-size: 2rem
+    img 
+        +prdb
+        width: 60px
+
+.pillar-item__content.download
+    +prdib
+    height: 1em
+    overflow: hidden
+    width: 100%
+    cursor: pointer
+    margin: auto
+    padding: 1.5em
+    background-color: $pill_download_background
+
+.download_title
+    +prdib
+    +title-font-regular
+    float: left
+    width: 100%
+    height: 2em
+    top: -12px
+    text-transform: uppercase
+    &:before
+        +prdib
+        float: left
+        background: url(../img/download_arrow.png) no-repeat 0 3px
+        border-right: 2px solid lightgrey
+        //padding-right: 1rem
+        content: ""
+        width: 30px
+        height: 2em
+
+    &:after
+        +prdib
+        float: right
+        border-left: 1px solid lightgrey
+        content: "PDF | 897KB"
+        text-align: center
+        padding-left: 1rem
+        margin: 0px auto
+        width: 80px
+        height: 2em
+
+.download_title span a
+    padding-left: 1rem
+    text-decoration: none
+    color: $medium_grey
+
+.download_icon
+    width: 30px
+    height: 30px
+    //border-right: 2px solid lightgrey
+    padding-right: 2rem
+
+
+.pillar-item__content
+    +prdb
+    width: 100%
+    border-bottom: 1px solid $light_grey
+
+.pillar_content.container
+    width: 100%
+    padding: 2em 0 0 0
+    margin: 0 0
+    border-top: 4px solid $wwb_darkblue
+
+
+.pillar_content_bottom_left
+    +prdib
+    float: left
+    width: 25%
+    color: $medium_grey
+    border-right: 1px solid $medium_grey
+    padding-right: 1rem
+    a
+        +pill-font-bold
+        text-decoration: none
+        text-transform: uppercase
+        color: $medium_grey
+        font-size: 1em
+        font-weight: 400
+        letter-spacing: .1em
+        line-height: 2.5em
+        &:after
+            +prdib
+            content: ">"
+            margin-left: 5px
+            top: -2px
+            width: 20px
+            height: 20px
+            background: url(../img/nextArrow.png) no-repeat 0 0
+
+.pillar_content_bottom_right
+    +prdib
+    float: left
+    padding-left: 3rem
+    width: 60%
+
+.pillar_content_bottom_left h4, .pillar_content_bottom_right h4
+    margin-bottom: 50px
+    letter-spacing: 0
+
+.btn
+    display: none
+
+.pillar_copy

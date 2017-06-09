@@ -1,0 +1,80 @@
+---
+title:          "Our Perspectives | Pepsico"
+description:    "We commit to stuff."
+page_id:        "perspectives"
+---
+
+<!-- START MAIN CONTENT -->
+<div class="page__content">
+
+    <!--{{>hero-static heros.commitments}}-->
+
+    <section class="pwp-breakdown">
+
+        <div class="container">
+
+            <div class="pwp-breakdown-copy">
+                <h2 class="pwp-breakdown__header underline">Policies &amp;
+                    <em>Perspectives</em></h2>
+            </div>
+
+            {{#each perspectives ~}}
+                <div class="pwp-breakdown-copy">
+                    <h2 class="pwp-breakdown__header underline category">{{this.pillar-name}}</h2>
+                </div>
+                <div class="pillar-container pillar--{{this.pillar-name}}">
+                    {{#each this.items}}
+                        <div class="pillar-item">
+                            <div class="pillar-item__pill">
+                                <h4>{{this.item-header}}</h4>
+                            </div>
+                            <div class="pillar-item__content closed">
+                                <h2><em>{{this.item-header}}</em></h2>
+                                {{#each this.item-copy}}
+                                    <p class="pillar_copy">{{this}}</p>
+                                {{/each}}
+
+
+                                <div class="pillar_content container">
+                                    <div class="pillar_content_bottom_left">
+                                        <h4 class="">Related Topics</h4>
+                                        <div class=""><a href="#">Deforestation</a></div>
+                                        <div class=""><a href="#">Palm Oil</a></div>
+                                        <div class=""><a href="#">Farm Animal Welfare</a></div>
+                                    </div>
+                                    <div class="pillar_content_bottom_right ">
+                                        <h4>Share</h4>
+                                        <div class="hero__social">
+                                            <a href="/#"
+                                               class="hero__social-item hero__social-item--facebook"><span></span></a>
+                                            <a href="/#"
+                                               class="hero__social-item hero__social-item--twitter"><span></span></a>
+                                            <a href="/#"
+                                               class="hero__social-item hero__social-item--instagram"><span></span></a>
+                                        </div>
+                                        <div class="btn">Discover More ></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pillar-item__content download closed">
+                                <div class="download_title">
+                                    <span><a href="#">Download Policy</a></span>
+                                </div>
+                            </div>
+
+                            <div class="pillar-item__content download closed">
+                                <div class="download_title">
+                                    <span><a href="#">Download Report</a></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    {{~/each}}
+                </div>
+            {{~/each}}
+        </div>
+    </section>
+
+</div>
+<!-- END MAIN CONTENT -->
