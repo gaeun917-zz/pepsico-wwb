@@ -249,7 +249,13 @@ var Grid = (function() {
 			// initialize some events
 			initEvents();
 
+			$window.on( 'debouncedresize', function() {
+				
+			});
+
 		} );
+
+
 
 	}
 
@@ -305,7 +311,7 @@ var Grid = (function() {
 			if( typeof preview != 'undefined' ) {
 				hidePreview();
 			}
-			$items.css('height', 'auto');
+			// $items.css('height', 'auto');
 		} );
 
 	}
@@ -453,35 +459,81 @@ var Grid = (function() {
 		calcHeight : function() {
 
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
-				itemHeight = winsize.height;
-			console.log('===  grid-expand.js [457 itemHeight] ===', itemHeight);	
+			itemHeight = winsize.height;
+console.log('===  grid-expand.js [457] heightPreview ===', heightPreview);
+			var minH = 700;
+
 			if($(window).width() < 768) {
-				// mobile
-
-				// if( heightPreview < settings.minHeight ) {
-					// heightPreview = settings.minHeight;
-					// itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-				// }
-				heightPreview = this.$item.find('.expander').height();
-
-				if(heightPreview == 0) {
-					heightPreview = 700 + this.$item.find('>a').height() + marginExpanded;
-					settings.minHeight = heightPreview;
-				}
-				else {
-					settings.minHeight = 1000;
-				}
-				console.log('===  grid-expand.js [467]heightPreview ===', heightPreview);
-				console.log('=== itemHeight grid-expand.js [470] ===', itemHeight);
+				minH = 1000;
 			}
 			else {
-
+				if($(window).width() < 1200) {
+					minH = 700;
+				}
+				else
+				{
+					minH = 750;
+				}
 			}
-			heightPreview = settings.minHeight;
-			itemHeight = settings.minHeight + this.$item.find('>a').height() + marginExpanded;
+
+			
+
+			if( heightPreview < minH ) {
+				heightPreview = minH;
+				itemHeight = minH + this.$item.height() + marginExpanded;
+			}
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
+
+			console.log('===  grid-expand.js [466] === this.height', this.height);
+			console.log('===  grid-expand.js [466] === this.itemHeight', this.itemHeight);
+
+			var expH = this.$item.find('.expander').height();
+			if(expH == 0) {
+				console.log('===  grid-expand.js [538] left ===', $('.expander-inner-half.left').height());
+				console.log('===  grid-expand.js [539] right ===', $('.expander-inner-half.right').height());
+				this.height = $('.expander-inner-half.left').height() + $('.expander-inner-half.right').height() + marginExpanded;
+				console.log('===  grid-expand.js [541] total ===', this.height);
+				this.itemHeight = this.height + this.$item.find('>a').height();
+			}
+
+			// var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
+			// 	itemHeight = winsize.height;
+			// console.log('===  grid-expand.js [457 itemHeight] ===', itemHeight);	
+			// // if($(window).width() < 768) {
+			// // 	// mobile
+
+			// // 	// if( heightPreview < settings.minHeight ) {
+			// // 		// heightPreview = settings.minHeight;
+			// // 		// itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
+			// // 	// }
+			// // 	heightPreview = this.$item.find('.expander').height();
+
+			// // 	if(heightPreview == 0) {
+			// // 		heightPreview = 700 + this.$item.find('>a').height() + marginExpanded;
+			// // 		settings.minHeight = heightPreview;
+			// // 	}
+			// // 	else {
+			// // 		settings.minHeight = 1000;
+			// // 	}
+			// // 	console.log('===  grid-expand.js [467]heightPreview ===', heightPreview);
+			// // 	console.log('=== itemHeight grid-expand.js [470] ===', itemHeight);
+			// // }
+			// // else {
+
+			// // }
+
+			// if( heightPreview < settings.minHeight ) {
+			// 	heightPreview = settings.minHeight;
+			// 	itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
+			// }
+
+			// heightPreview = settings.minHeight;
+			// itemHeight = settings.minHeight + this.$item.find('>a').height() + marginExpanded;
+
+			// this.height = heightPreview;
+			// this.itemHeight = itemHeight;
 
 		},
 		setHeights : function() {
@@ -495,9 +547,14 @@ var Grid = (function() {
 				};
 
 			this.calcHeight();
+
+			
+
 			self.$item.find('.expander').css( 'height', this.height );
 			this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
-			this.calcHeight();
+
+			// self.$item.find('.expander').css( 'height', this.height );
+			// this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
 			if( !support ) {
 				onEndFn.call();
