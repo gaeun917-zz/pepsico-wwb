@@ -250,7 +250,7 @@ var Grid = (function() {
 			initEvents();
 
 			$window.on( 'debouncedresize', function() {
-				
+
 			});
 
 		} );
@@ -460,7 +460,7 @@ var Grid = (function() {
 
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 			itemHeight = winsize.height;
-console.log('===  grid-expand.js [457] heightPreview ===', heightPreview);
+// console.log('===  grid-expand.js [457] heightPreview ===', heightPreview);
 			var minH = 700;
 
 			if($(window).width() < 768) {
@@ -486,16 +486,18 @@ console.log('===  grid-expand.js [457] heightPreview ===', heightPreview);
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
 
-			console.log('===  grid-expand.js [466] === this.height', this.height);
-			console.log('===  grid-expand.js [466] === this.itemHeight', this.itemHeight);
+			// console.log('===  grid-expand.js [466] === this.height', this.height);
+			// console.log('===  grid-expand.js [466] === this.itemHeight', this.itemHeight);
 
-			var expH = this.$item.find('.expander').height();
-			if(expH == 0) {
-				console.log('===  grid-expand.js [538] left ===', $('.expander-inner-half.left').height());
-				console.log('===  grid-expand.js [539] right ===', $('.expander-inner-half.right').height());
-				this.height = $('.expander-inner-half.left').height() + $('.expander-inner-half.right').height() + marginExpanded;
-				console.log('===  grid-expand.js [541] total ===', this.height);
-				this.itemHeight = this.height + this.$item.find('>a').height();
+			if($(window).width() < 768) {
+				var expH = this.$item.find('.expander').height();
+				if(expH == 0) {
+					// console.log('===  grid-expand.js [538] left ===', $('.expander-inner-half.left').height());
+					// console.log('===  grid-expand.js [539] right ===', $('.expander-inner-half.right').height());
+					this.height = $('.expander-inner-half.left').height() + $('.expander-inner-half.right').height() + marginExpanded;
+					// console.log('===  grid-expand.js [541] total ===', this.height);
+					this.itemHeight = this.height + this.$item.find('>a').height();
+				}
 			}
 
 			// var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
