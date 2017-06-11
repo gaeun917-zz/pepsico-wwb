@@ -1,0 +1,78 @@
+---
+title:          "Our Perspectives | Pepsico"
+description:    "We commit to stuff."
+page_id:        "governance"
+---
+
+<!-- START MAIN CONTENT -->
+<div class="page__content">
+
+    {{>hero-static heros.governance}}
+
+    <section class="pwp-breakdown gov">
+        <div class="container">
+            <div class="pwp-breakdown-copy">
+                <h2 class="pwp-breakdown__header underline">Sustainability
+                    <em>Governance</em></h2>
+            </div>
+            <div class="container gov left">
+                {{#each governance ~}}
+                    {{#each this.items}}
+                        <div class="pillar-item__content gov left">
+                            <h2><em>{{this.item-header}}</em></h2>
+                            {{#each this.item-copy}}
+                                <p class="pillar_copy gov">{{this}}</p>
+                            {{/each}}
+                        </div>
+                    {{~/each}}
+                {{~/each}}
+            </div>
+
+            <div class="pillar-item__content gov right">
+                <div class="pillar_content container gov">
+                    <div class="leadership_img">
+                    </div>
+                    <div class="pillar_content_bottom_right gov">
+                        <div class="hero__social gov">
+                            <h4>Share</h4>
+                            <a href="/#"
+                               class="hero__social-item hero__social-item--facebook"><span></span></a>
+                            <a href="/#"
+                               class="hero__social-item hero__social-item--twitter"><span></span></a>
+                            <a href="/#"
+                               class="hero__social-item hero__social-item--instagram"><span></span></a>
+                        </div>
+                    </div>
+                    <div class="pillar_content_bottom_right gov">
+                        <h4>AVAILABLE DOWNLOADS</h4>
+                        <div class="pillar-item__content download gov">
+                            <div class="download_title">
+                                <span><a href="#">2016 Report </a></span>
+                            </div>
+                        </div>
+
+                        <div class="pillar-item__content download gov">
+                            <div class="download_title">
+                                <span><a href="#">2017 Report</a></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pillar_content_bottom_left gov">
+                        <h4 class="">Related Topics</h4>
+                        <div class=""><a href="#">Deforestation</a></div>
+                        <div class=""><a href="#">Palm Oil</a></div>
+                        <div class=""><a href="#">Farm Animal Welfare</a></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+</div>
+<!-- END MAIN CONTENT -->
