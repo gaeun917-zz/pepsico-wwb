@@ -17,8 +17,6 @@
 .pwp-breakdown h4, .pwp-breakdown-copy
     margin: 0 auto
 
-.pwp-breakdown h4
-
 .pwp-breakdown__header
     margin: 0
 
@@ -207,5 +205,62 @@
 
 .btn
     display: none
+
+select
+    +prdib
+    +title-font-bold
+    height: 42px
+    font-size: 16px
+    width: 100%
+    background-color: #fff
+    padding-left: 20px
+    margin: 0
+    color: #888
+    border-radius: 0
+    border: none
+    outline: none
+    text-transform: uppercase
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    cursor: pointer
+
+
+
+
+select option
+    background-color: #fff !important
+    position: relative
+    display: block
+    padding: 3px
+    margin: 0
+    float: left
+    color: #888
+    border: none
+    outline: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none !important
+    cursor: pointer
+
+#category_search
+    +prdib
+    width: 20%
+    span
+        text-transform: uppercase
+        position: absolute
+        right: 12px
+        top: 11px
+        text-indent: -999em
+        background: url(../img/icon_down_arrow.png) center no-repeat
+        width: 20px
+        height: 20px
+        float: left
+
+#search_bar
+    +prdib
+    width: 70%
+    float: left
+    margin-right: 40px
 
 
