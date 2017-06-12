@@ -22,7 +22,8 @@
 
 .pwp-breakdown__header.underline.category
     +title-font-bold
-    margin-top: 3em
+    font-size: 2em
+    margin-top: 1.5em
     margin-bottom: 1em
 
 .desktop-pwp-breakdown-icon
@@ -56,6 +57,8 @@
 
 +pillar-theme(A-E, $pill_tab_gray)
 +pillar-theme(F-N, $pill_tab_gray)
++pillar-theme(O-R, $pill_tab_gray)
++pillar-theme(S-Z, $pill_tab_gray)
 
 
 .pillar-item__content
@@ -84,12 +87,14 @@
         line-height: 3rem
         vertical-align: middle
         padding: 0 1rem
+        font-size: 1em
 
     &.open
         background-color: $wwb_darkblue
         transition: 1s ease background-color
         h4
             color: white
+
 
         &::after
             background-image: url(../img/icon-close.png)
@@ -128,10 +133,12 @@
         float: left
         background: url(../img/download_arrow.png) no-repeat center center
         border-right: 2px solid lightgrey
-        padding-right: 1rem
+        padding-right: 1.5rem
         content: ""
         width: 30px
         height: 2em
+        left: -17px
+        top: -4px
 
     &:after
         +prdib
@@ -171,9 +178,9 @@
 .pillar_content_bottom_left
     +prdib
     float: left
-    width: 25%
+    width: 20%
     color: $medium_grey
-    border-right: 1px solid $medium_grey
+    border-right: 2px solid rgb(182,181,180)
     padding-right: 1rem
     a
         +pill-font-bold
@@ -198,8 +205,16 @@
     float: left
     padding-left: 3rem
     width: 60%
+    height: 120px
+    h4
+        margin-bottom: 50px
+        letter-spacing: 0
+        float: left
+        width: 100%
+        display: block
+        position: relative
 
-.pillar_content_bottom_left h4, .pillar_content_bottom_right h4
+.pillar_content_bottom_left h4
     margin-bottom: 50px
     letter-spacing: 0
 
@@ -226,12 +241,9 @@ select
     cursor: pointer
 
 
-
-
 select option
+    +prdb
     background-color: #fff !important
-    position: relative
-    display: block
     padding: 3px
     margin: 0
     float: left
@@ -262,5 +274,14 @@ select option
     width: 70%
     float: left
     margin-right: 40px
+
+.hero__social.az
+    +prdb
+    width: 100%
+    float: left
+    a
+        +prdb
+        float: left
+
 
 
