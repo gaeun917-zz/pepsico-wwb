@@ -1,3 +1,6 @@
+//mobile view
+
+
 .hero--perspectives
     background-position: center top
 
@@ -104,7 +107,7 @@
     overflow: hidden
     padding: 4% 7%
     h2 em
-        font-size: 2rem
+        font-size: 1.5rem
     img 
         +prdb
         width: 60px
@@ -173,6 +176,24 @@
     padding-top: 2em
     margin: 0
     border-top: 4px solid $wwb_darkblue
+    display: none
+
+.btn.discover
+    +title-font-regular
+    float: left
+    display: block
+    position: relative
+    max-width: 160px
+    height: 37px
+    text-align: center
+    border-radius: 0
+    border: 0
+    background-color: $wwb_darkblue
+    padding-top: 5px
+
+
+
+
 
 
 .pillar_content_bottom_left
@@ -258,20 +279,12 @@ select option
 #category_search
     +prdib
     width: 20%
-    span
-        text-transform: uppercase
-        position: absolute
-        right: 12px
-        top: 11px
-        text-indent: -999em
-        background: url(../img/icon_down_arrow.png) center no-repeat
-        width: 20px
-        height: 20px
-        float: left
+    select
+        display: none
 
 #search_bar
     +prdib
-    width: 70%
+    width: 100%
     float: left
     margin-right: 40px
 

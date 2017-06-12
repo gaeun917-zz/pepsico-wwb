@@ -226,7 +226,8 @@
       this.wang_planet = $('#wangotron__button--planet');
       this.wang_pwp = $('#wangotron__pwp');
       this.wang_grad = $('#wangotron__gradient');
-      return this.wang_spin = $('#wangotron__spinner');
+      this.wang_spin = $('#wangotron__spinner');
+      return this.discover = $('.btn.discover');
     };
 
     return Wangotron;

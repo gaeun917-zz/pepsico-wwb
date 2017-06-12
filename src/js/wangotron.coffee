@@ -113,5 +113,5 @@ class Wangotron
         @wang_pwp       = $('#wangotron__pwp')
         @wang_grad      = $('#wangotron__gradient')
         @wang_spin      = $('#wangotron__spinner')
-
+        @discover        = $('.btn.discover')
 @Wangotron = new Wangotron
