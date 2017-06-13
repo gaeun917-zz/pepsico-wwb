@@ -26,8 +26,13 @@
 .pwp-breakdown__header.underline.category
     +title-font-bold
     font-size: 2em
-    margin-top: 1.5em
+    margin-top: 0
     margin-bottom: 1em
+
+.pwp-breakdown__header.underline.topics
+    margin: 40px 0 !important
+
+
 
 .desktop-pwp-breakdown-icon
     +dn
@@ -49,7 +54,7 @@
             padding: 3% 5%
             background-color: $pill_background_gray
             border-image-slice: 1
-            margin-top: .5em
+            //margin-top: .5em
 
         .pillar-header
             +prdb
@@ -93,7 +98,7 @@
         font-size: 1em
 
     &.open
-        background-color: $wwb_darkblue
+        background-color: $wwb_blue
         transition: 1s ease background-color
         h4
             color: white
@@ -129,34 +134,35 @@
     text-decoration: none
     width: 100%
     height: 2em
-    top: -12px
-    text-transform: uppercase
+    top: -9px
     &:before
         +prdib
         float: left
         background: url(../img/download_arrow.png) no-repeat center center
-        border-right: 2px solid lightgrey
-        padding-right: 1.5rem
+        border-right: 1px solid lightgrey
+        padding-right: 1rem
         content: ""
         width: 30px
-        height: 2em
-        left: -17px
-        top: -4px
+        height: 2.2em
+        left: -13px
+        top: -5px
 
-    &:after
-        +prdib
-        +title-font
-        float: right
-        border-left: 1px solid lightgrey
-        content: "PDF | 897KB"
-        text-align: center
-        padding-left: 1rem
-        margin: 0px auto
-        width: 80px
-        height: 2em
+    //&:after
+    //    +prdib
+    //    +title-font
+    //    float: right
+    //    border-left: 1px solid lightgrey
+    //    content: "PDF | 897KB"
+    //    text-align: center
+    //    padding-left: 1rem
+    //    margin: 0px auto
+    //    width: 80px
+    //    height: 2em
+    //    padding-right: 0
+    //    padding-left: 0
 
 .download_title span a
-    padding-left: 1rem
+    //padding-left: 1rem
     text-decoration: none
     color: $medium_grey
 
@@ -173,35 +179,22 @@
 
 .pillar_content.container
     width: 100%
-    padding-top: 2em
+    padding-top: 1em
     margin: 0
-    border-top: 4px solid $wwb_darkblue
+    //border-top: 4px solid $wwb_blue
     display: none
 
-.btn.discover
-    +title-font-regular
-    float: left
-    display: block
-    position: relative
-    max-width: 160px
-    height: 37px
-    text-align: center
-    border-radius: 0
-    border: 0
-    background-color: $wwb_darkblue
-    padding-top: 5px
 
-
-
-
-
+.pillar-item__content.closed.bottom
+    height: auto
+    padding: 0 2%
+    background-color: #e9e7e7
 
 .pillar_content_bottom_left
     +prdib
     float: left
-    width: 20%
+    width: 100%
     color: $medium_grey
-    border-right: 2px solid rgb(182,181,180)
     padding-right: 1rem
     a
         +pill-font-bold
@@ -226,7 +219,7 @@
     float: left
     padding-left: 3rem
     width: 60%
-    height: 120px
+    height: 25px
     h4
         margin-bottom: 50px
         letter-spacing: 0
@@ -238,9 +231,6 @@
 .pillar_content_bottom_left h4
     margin-bottom: 50px
     letter-spacing: 0
-
-.btn
-    display: none
 
 select
     +prdib
@@ -289,12 +279,104 @@ select option
     margin-right: 40px
 
 .hero__social.az
-    +prdb
+    +prdib
     width: 100%
     float: left
+    height: 50px
+    top: -10px
+    left: -24px
+    margin-left: 20px
     a
         +prdb
         float: left
+.hero__social-item:nth-child(n)
+    margin-right: 0
+
+.btn.discover
+    +title-font-regular
+    float: left
+    display: none
+    position: relative
+    max-width: 200px
+    height: 37px
+    text-align: center
+    border-radius: 0
+    border: 0
+    background-color: $wwb_blue
+    padding-top: 5px
+
+.pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover, .pillar-container.pillar--A-E .pillar-item:nth-child(3) .btn.discover,
+.pillar-container.pillar--A-E .pillar-item:nth-child(1) .btn.discover, .pillar-container.pillar--A-E .pillar-item:nth-child(2) .btn.discover,
+.pillar-container.pillar--S-Z .pillar-item:nth-child(6) .btn.discover, .pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
+    display: block !important
+
+.pillar_content.container
+    display: block
+.pillar-container.pillar--A-E:nth-child(6) .pillar_content.container, .pillar-container.pillar--A-E:nth-child(3) .pillar_content.container,
+.pillar-container.pillar--A-E:nth-child(1) .pillar_content.container, .pillar-container.pillar--A-E:nth-child(2) .pillar_content.container,
+.pillar-container.pillar--S-Z:nth-child(6) .pillar_content.container,  .pillar-container.pillar--O-R:nth-child(5).pillar_content.container
+    //display: none !important
 
 
+.pillar_content_h4
+    width: 20%
 
+.pillar_content_bottom_left
+    div
+        float: left
+        top: -14px
+.pillar_content
+    padding-top: 12px
+
+.download_title.gov:before
+    position: relative
+    display: inline-block
+    float: left
+    background: url(../img/download_arrow.png) no-repeat center center
+    border-right: 1px solid lightgrey
+    padding-right: 1rem
+    content: ""
+    width: 30px
+    height: 2.2em
+    left: -14px
+    top: -4px
+
+
+.pillar_content_bottom_left h4
+    +title-font-regular
+    width: 100%
+    letter-spacing: 0
+    border-right: 1px solid lightgrey
+    padding-right: 20px
+
+
+.pillar_content_bottom_left a
+    +title-font-regular
+    font-size: 1rem
+    top: -5px
+    width: 100%
+    position: relative
+    margin-left: 40px
+    font-weight: 400
+    color: $wwb_blue
+    margin-left: 0
+
+.pillar_content_bottom_left div
+    width: 100%
+.topics
+    margin: 0 0 !important
+    padding: 40px 0
+
+.search-blue.az
+    padding: 50px 0 80px 0
+    display: block
+    position: relative
+    width: 100%
+//.explore
+//    float: left
+//    display: block
+//    position: relative
+//.pwp-breakdown.topics
+//    float: left
+//    display: block
+//    position: relative

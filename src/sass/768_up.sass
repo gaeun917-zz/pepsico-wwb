@@ -123,7 +123,9 @@ $global_spacing: 6%
 
 // ::::: PAGE: BRANDS
 .search-blue
-    padding: 63px 0
+    padding: 64px 0 105px 0
+    h3
+        font-size: 22px
 
 // ::::: PAGE: BRANDS LIST :::::
 .tabs-select
@@ -250,8 +252,7 @@ $global_spacing: 6%
 
 .pillar_content.container
     display: block
-.btn.discover
-    display: none
+
 
 #category_search
     +prdib
@@ -272,6 +273,83 @@ $global_spacing: 6%
 
 #search_bar
     +prdib
-    width: 70%
+    width: 100%
     float: left
     margin-right: 40px
+
+
+.pillar-item__content.gov.left
+    +title-font-regular
+    padding-right: 50px
+    float: left
+    position: relative
+    display: inline-block
+.pillar-item__content.gov.right
+    padding: 0
+    width: 100%
+    float: right
+    position: relative
+    display: block
+    .pillar_content_bottom_left
+        width: 100%
+        padding: 0
+
+.btn.discover
+    display: none !important
+
+.topics
+    margin: 0 0
+
+
+.pillar-item__content.download.gov
+    padding: 1em
+    .download_title
+        top: -4px
+        left: -7px
+        &:after
+
+            content: ""
+            border-left: 0
+
+.pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover, .pillar-container.pillar--A-E .pillar-item:nth-child(3) .btn.discover,
+.pillar-container.pillar--A-E .pillar-item:nth-child(1) .btn.discover, .pillar-container.pillar--A-E .pillar-item:nth-child(2) .btn.discover,
+.pillar-container.pillar--S-Z .pillar-item:nth-child(6) .btn.discover, .pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
+    display: block !important
+
+
+.pillar-container.pillar--A-E:nth-child(6) .pillar_content.container, .pillar-container.pillar--A-E:nth-child(3) .pillar_content.container,
+.pillar-container.pillar--A-E:nth-child(1) .pillar_content.container, .pillar-container.pillar--A-E:nth-child(2) .pillar_content.container,
+.pillar-container.pillar--S-Z:nth-child(6) .pillar_content.container,  .pillar-container.pillar--O-R:nth-child(5).pillar_content.container
+    //display: block !important
+
+
+.pillar_content_item.gov
+    width: 100%
+.pillar_content_bottom_left.gov div
+    width: auto
+.pillar_content_bottom_left
+    height: 50px
+    position: relative
+    display: inline-block
+    float: left
+    div
+        float: left
+        width: auto
+        margin-right: 30px
+.pillar_content_bottom_left.gov
+    width: 100%
+    height: auto
+    margin-bottom: 40px
+    border-bottom: 4px solid $wwb_blue
+    div:last-child
+        margin-bottom: 20px
+
+.hero__social.az
+    +prdib
+    width: auto
+    float: left
+    height: 50px
+    margin-left: 60px
+    a
+        +prdb
+        float: left

@@ -86,8 +86,10 @@ ul, li
 .block-link
     +padb
     +cover
-    z-index: 500
+    //z-index: 500
     border: 0
+    //background-color: gray
+
 
 .btn
     +prdib
@@ -130,6 +132,8 @@ ul, li
     margin-top: 2%
     margin-bottom: 4%
     line-height: 130%
+    float: left
+    width: 100%
 
 .hero-gradient
     +cover
@@ -177,3 +181,23 @@ ul, li
 
         .readz::before
             content: "< Read less"
+
+
+header
+    float: left
+    position: relative
+    background: url(../img/header_img.png) no-repeat 0 0
+    background-size: cover
+    max-width: 2500px
+    position: relative
+    display: block
+    width: 100%
+    height: 200px
+
+.hero
+    padding: 0
+.page__content
+    position: relative
+    display: block
+    float: left
+    width: 100%

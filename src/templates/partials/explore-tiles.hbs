@@ -1,5 +1,6 @@
 <!-- START EXPLORE LINKS -->
-<section class="container explore">
+<section class="explore">
+    <div class="container">
     {{#each explore ~}}
         {{#contains this.pages ../page_id ~}}
         <div class="explore-item">
@@ -14,5 +15,6 @@
         </div>
         {{~/contains}}
     {{~/each}}
+    </div>
 </section>
 <!-- END EXPLORE LINKS -->

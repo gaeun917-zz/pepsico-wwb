@@ -48,7 +48,9 @@ $global_spacing: 5%
     padding: $global_spacing 0
 
 .explore
-    padding: $global_spacing 0
+    //padding: $global_spacing 0
+    z-index: -1000
+    //background-color: #d7d6d3
 
 
 // ::::: PAGE: RECIPES LIST :::::
@@ -71,3 +73,26 @@ $global_spacing: 5%
 
 .hero__social.gov
     margin-bottom: 0
+
+.h2-az
+    font-size: 1.8rem
+    float: left
+    position: relative
+    width: 100%
+    height: 50px
+
+
+// ::::: AZ Topics: RECIPES LIST :::::
+.pwp-breakdown__header.underline .topics
+    margin: 40px 0
+
+.hero__social.az
+    +prdib
+    width: auto
+    float: left
+    height: 50px
+    top: -9px
+    margin-left: 60px
+    a
+        +prdb
+        float: left

@@ -7,24 +7,36 @@ page_id:        "perspectives"
 <!-- START MAIN CONTENT -->
 <div class="page__content">
 
-{{>hero-static heros.commitments}}
-
-    <section class="search-blue">
+    <section class="pwp-breakdown topics">
         <div class="container">
-            <h3>Search brands</h3>
+            <div class="pwp-breakdown-copy">
+                <h2 class="pwp-breakdown__header underline">A-Z <em>Topics</em></h2>
+                <p class="topics" style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
+                    sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem
+                    ipsum dolor
+                    sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minimliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minimLorem
+                    ipsum dolorsit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna
+                    aliqua. Ut enim ad minim
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-blue az">
+        <div class="container">
+            <h3>Search Topics</h3>
             <div class="form">
                 <form action="" role="search" id="search_bar">
                     <input type="text" name="search" placeholder="Start searching...">
                     <input type="submit" value="submit" name="submit">
-                </form>
-                <form action="" role="search" id="category_search">
-                    <select>
-                        <option>Jump to: A-E</option>
-                        <option>F-N</option>
-                        <option>O-R</option>
-                        <option>S-Z</option>
-                    </select>
-                    <span></span>
                 </form>
             </div>
         </div>
@@ -32,9 +44,21 @@ page_id:        "perspectives"
 
     <section class="pwp-breakdown">
         <div class="container">
-            <div class="pwp-breakdown-copy">
-                <h2 class="pwp-breakdown__header underline"><em>A to Z</em></h2>
-            </div>
+            <!--<div class="pwp-breakdown-copy">-->
+            <!--<h2 class="pwp-breakdown__header underline"><em>A-Z Topics</em></h2>-->
+            <!--<p style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+            <!--tempor incididunt ut labore-->
+            <!--et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elit,-->
+            <!--sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor-->
+            <!--sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
+            <!--aliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem-->
+            <!--ipsum dolor-->
+            <!--sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
+            <!--aliqua. Ut enim ad minimliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem-->
+            <!--ipsum dolorsit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
+            <!--aliqua. Ut enim ad minim-->
+            <!--</p>-->
+            <!--</div>-->
 
             {{#each perspectives ~}}
                 <div class="pwp-breakdown-copy">
@@ -47,53 +71,63 @@ page_id:        "perspectives"
                                 <h4>{{this.item-header}}</h4>
                             </div>
                             <div class="pillar-item__content closed">
-                                <h2><em>{{this.item-header}}</em></h2>
+                                <h2 class="h2-az"><em>{{this.item-header}}</em>
+                                    <div class="hero__social az">
+                                        <a href="/#"
+                                           class="hero__social-item hero__social-item--facebook"><span></span></a>
+                                        <a href="/#"
+                                           class="hero__social-item hero__social-item--twitter"><span></span></a>
+                                        <a href="/#"
+                                           class="hero__social-item hero__social-item--instagram"><span></span></a>
+                                        <a href="/#"
+                                           class="hero__social-item hero__social-item--email"><span></span></a>
+                                    </div>
+                                </h2>
                                 {{#each this.item-copy}}
                                     <p class="pillar_copy">{{this}}</p>
                                 {{/each}}
                                 <div class="btn discover">Discover More ></div>
-
-                                <div class="pillar_content container">
-                                    <div class="pillar_content_bottom_left">
-                                        <h4 class="">Related Topics</h4>
-                                        <div class=""><a href="#">Deforestation</a></div>
-                                        <div class=""><a href="#">Palm Oil</a></div>
-                                        <div class=""><a href="#">Farm Animal Welfare</a></div>
-                                    </div>
-                                    <div class="pillar_content_bottom_right ">
-                                        <h4>Share</h4>
-                                        <div class="hero__social az">
-                                            <a href="/#"
-                                               class="hero__social-item hero__social-item--facebook"><span></span></a>
-                                            <a href="/#"
-                                               class="hero__social-item hero__social-item--twitter"><span></span></a>
-                                            <a href="/#"
-                                               class="hero__social-item hero__social-item--instagram"><span></span></a>
-                                            <a href="/#"
-                                               class="hero__social-item hero__social-item--email"><span></span></a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="pillar-item__content download closed">
                                 <div class="download_title">
                                     <span><a href="#">Download Policy</a></span>
                                 </div>
                             </div>
-
                             <div class="pillar-item__content download closed">
                                 <div class="download_title">
                                     <span><a href="#">Download Report</a></span>
                                 </div>
                             </div>
-
-
+                            <div class="pillar-item__content closed bottom">
+                                <!--<div class="pillar_content container">-->
+                                <div class="pillar_content">
+                                    <div class="pillar_content_bottom_left">
+                                        <h4 class="pillar_content_h4">Related Topics</h4>
+                                        <div class=""><a href="#">Deforestation</a></div>
+                                        <div class=""><a href="#">Farm Animal Welfare</a></div>
+                                        <div class=""><a href="#">Palm Oil</a></div>
+                                    </div>
+                                </div>
+                                <!--<div class="pillar_content_bottom_right ">-->
+                                <!--<h4>Share</h4>-->
+                                <!--&lt;!&ndash;<div class="hero__social az">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
+                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--facebook"><span></span></a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
+                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--twitter"><span></span></a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
+                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--instagram"><span></span></a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
+                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--email"><span></span></a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
                         </div>
                     {{~/each}}
                 </div>
             {{~/each}}
         </div>
     </section>
-
 </div>
 <!-- END MAIN CONTENT -->

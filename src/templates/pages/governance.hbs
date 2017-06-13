@@ -6,27 +6,11 @@ page_id:        "governance"
 
 <!-- START MAIN CONTENT -->
 <div class="page__content">
-    {{>header}}
-
-    {{>hero-static heros.governance}}
-
     <section class="pwp-breakdown gov">
         <div class="container">
             <div class="pwp-breakdown-copy">
                 <h2 class="pwp-breakdown__header underline">Sustainability
                     <em>Governance</em></h2>
-            </div>
-            <div class="container gov left">
-                {{#each governance ~}}
-                    {{#each this.items}}
-                        <div class="pillar-item__content gov left">
-                            <h2><em>{{this.item-header}}</em></h2>
-                            {{#each this.item-copy}}
-                                <p class="pillar_copy gov">{{this}}</p>
-                            {{/each}}
-                        </div>
-                    {{~/each}}
-                {{~/each}}
             </div>
 
             <div class="pillar-item__content gov right">
@@ -42,35 +26,47 @@ page_id:        "governance"
                                class="hero__social-item hero__social-item--twitter"><span></span></a>
                             <a href="/#"
                                class="hero__social-item hero__social-item--instagram"><span></span></a>
+                            <a href="/#"
+                               class="hero__social-item hero__social-item--email"><span></span></a>
                         </div>
                     </div>
                     <div class="pillar_content_bottom_right gov">
                         <h4>AVAILABLE DOWNLOADS</h4>
                         <div class="pillar-item__content download gov">
-                            <div class="download_title">
+                            <div class="download_title gov">
                                 <span><a href="#">2016 Report </a></span>
                             </div>
                         </div>
 
                         <div class="pillar-item__content download gov">
-                            <div class="download_title">
+                            <div class="download_title gov">
                                 <span><a href="#">2017 Report</a></span>
                             </div>
                         </div>
 
                     </div>
-
                     <div class="pillar_content_bottom_left gov">
-                        <h4 class="">Related Topics</h4>
+                        <h4 class="pillar_content_item gov">Related Topics</h4>
                         <div class=""><a href="#">Deforestation</a></div>
                         <div class=""><a href="#">Palm Oil</a></div>
                         <div class=""><a href="#">Farm Animal Welfare</a></div>
                     </div>
-
                 </div>
-
             </div>
 
+
+            <div class="container gov left">
+                {{#each governance ~}}
+                    {{#each this.items}}
+                        <div class="pillar-item__content gov left">
+                            <h2><em>{{this.item-header}}</em></h2>
+                            {{#each this.item-copy}}
+                                <p class="pillar_copy gov">{{this}}</p>
+                            {{/each}}
+                        </div>
+                    {{~/each}}
+                {{~/each}}
+            </div>
 
         </div>
     </section>

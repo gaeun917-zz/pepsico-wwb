@@ -90,7 +90,7 @@ $global_spacing: 4%
         background-image: url(../img/hero-people--dt.jpg)
 
 .hero--static
-    padding: 6% 0
+    //padding: 6% 0
     overflow: hidden
 
 .hero--cinemagraph__copy
@@ -331,7 +331,7 @@ $global_spacing: 4%
         transform: scale(1)
 
 .explore
-    text-align: left
+    text-align: center
 
 .explore-item
     width: 16.8%
@@ -341,6 +341,7 @@ $global_spacing: 4%
 
     &:nth-child(odd)
         margin-right: $global_spacing
+        margin-top: $global_spacing
     &:last-child
         margin: 0
 
@@ -630,13 +631,18 @@ $global_spacing: 4%
 
         &::before
             background-color: darken($light_grey, 5%)
-
-
 .pwp-breakdown
-    padding: $global_spacing 0
-
+    padding: 3% 0
+    //background: rgb(192,192,192)
+.pwp-breakdown.topics
+    background-color: rgb(192,192,192)
 .pwp-breakdown h4
-    font-size: 1.2rem
+    +prdib
+    font-size: 1rem
+    float: left
+    width: auto
+    padding-right: 40px
+
 
 .pwp-breakdown-copy .copy
     max-width: 60%
@@ -804,3 +810,61 @@ $global_spacing: 4%
 
 .pillar-item__content h2 em
     font-size: 2rem
+    width: auto
+    height: 50px
+    float: left
+
+.pillar_content_h4
+    width: 20%
+
+.download_title
+    +prdib
+    +title-font-regular
+    float: left
+    text-decoration: none
+    width: 100%
+    height: 2em
+    top: -12px
+    text-transform: uppercase
+    &:before
+        +prdib
+        float: left
+        background: url(../img/download_arrow.png) no-repeat center center
+        border-right: 1px solid lightgrey
+        padding-right: 1rem
+        content: ""
+        width: 30px
+        height: 2.2em
+        left: -14px
+        top: -5px
+
+.pillar_content_bottom_left h4
+    +title-font-regular
+    //margin-bottom: 50px
+    letter-spacing: 0
+    border-right: 1px solid lightgrey
+    padding-right: 20px
+
+
+.pillar_content_bottom_left a
+    +title-font-regular
+    font-size: 1rem
+    top: -5px
+    position: relative
+    margin-left: 40px
+    font-weight: 400
+    color: $wwb_blue
+.pillar-item__content.closed.bottom
+    height: 50px
+
+
+.hero__social.az
+    +prdib
+    width: auto
+    float: left
+    height: 50px
+    top: -9px
+    margin-left: 60px
+    a
+        +prdb
+        float: left

@@ -49,7 +49,6 @@
     },
     "6": {
         "heading": "Planet",
-        "image-filename": "explore-planet.jpg",
         "link": "/planet.html",
         "external": false,
         "overlay-colour": "#005d91",
@@ -69,6 +68,38 @@
         "link": "http://howwillwe-staging.herokuapp.com",
         "external": true,
         "overlay-colour": "#005d91",
+        "pages": "home pwp products people planet commitments "
+    },
+    "9": {
+        "heading": "perspectives",
+        "image-filename": "explore-hww.jpg",
+        "link": "http://howwillwe-staging.herokuapp.com",
+        "external": true,
+        "overlay-colour": "#005d91",
         "pages": "home pwp products people planet commitments"
+    },
+    "10": {
+        "heading": "BOX1",
+        "image-filename": "explore-hww.jpg",
+        "link": "#",
+        "external": true,
+        "overlay-colour": "#005d91",
+        "pages": "home perspectives"
+    },
+    "11": {
+        "heading": "BOX2",
+        "image-filename": "explore-hww.jpg",
+        "link": "#",
+        "external": true,
+        "overlay-colour": "#005d91",
+        "pages": "home perspectives"
+    },
+    "12": {
+        "heading": "BOX3",
+        "image-filename": "explore-hww.jpg",
+        "link": "#",
+        "external": true,
+        "overlay-colour": "#005d91",
+        "pages": "home perspectives"
     }
 }
