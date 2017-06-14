@@ -53,8 +53,6 @@ $global_spacing: 6%
 .hero--people
     background-image: url(../img/hero-people--tb.jpg)
 
-
-
 // ::::: PAGE: HOME :::::
 
 .misvis
@@ -80,7 +78,6 @@ $global_spacing: 6%
 
 .focus-areas, .our-progress
     padding: $global_spacing 0
-
 
 .progress-timeline__pagination
     width: 100% - $global_spacing * 2
@@ -201,11 +198,8 @@ $global_spacing: 6%
 .cta_container 
     position: relative
     a
-        padding-top: 16px
-        padding-bottom: 16px
         font-size: 18px
-        padding-left: 50px
-        padding-right: 20px
+        padding: 16px 20px 16px 50px
 
 // ::::: PAGE: RECIPES LIST :::::
 .list-recipes-container
@@ -253,7 +247,6 @@ $global_spacing: 6%
 .pillar_content.container
     display: block
 
-
 #category_search
     +prdib
     width: 20%
@@ -270,13 +263,11 @@ $global_spacing: 6%
         height: 20px
         float: left
 
-
 #search_bar
     +prdib
     width: 100%
     float: left
     margin-right: 40px
-
 
 .pillar-item__content.gov.left
     +title-font-regular
@@ -285,11 +276,10 @@ $global_spacing: 6%
     position: relative
     display: inline-block
 .pillar-item__content.gov.right
+    +prdb
     padding: 0
     width: 100%
     float: right
-    position: relative
-    display: block
     .pillar_content_bottom_left
         width: 100%
         padding: 0
@@ -299,34 +289,36 @@ $global_spacing: 6%
 
 .topics
     margin: 0 0
-
+    background-color: silver
 
 .pillar-item__content.download.gov
     padding: 1em
     .download_title
         top: -4px
-        left: -7px
+        left: -3px
         &:after
-
-            content: ""
+            content:  "PDF | 897KB"
             border-left: 0
+            width: 105px
+            border-left: 1px solid lightgrey
+            height: 25px
+            padding-right: .5em
+            padding-left: 0em
+            height: 25px
+            //padding-right: 0
+            //padding-left: 1.2em
 
 .pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover, .pillar-container.pillar--A-E .pillar-item:nth-child(3) .btn.discover,
 .pillar-container.pillar--A-E .pillar-item:nth-child(1) .btn.discover, .pillar-container.pillar--A-E .pillar-item:nth-child(2) .btn.discover,
 .pillar-container.pillar--S-Z .pillar-item:nth-child(6) .btn.discover, .pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
     display: block !important
 
-
-.pillar-container.pillar--A-E:nth-child(6) .pillar_content.container, .pillar-container.pillar--A-E:nth-child(3) .pillar_content.container,
-.pillar-container.pillar--A-E:nth-child(1) .pillar_content.container, .pillar-container.pillar--A-E:nth-child(2) .pillar_content.container,
-.pillar-container.pillar--S-Z:nth-child(6) .pillar_content.container,  .pillar-container.pillar--O-R:nth-child(5).pillar_content.container
-    //display: block !important
-
-
 .pillar_content_item.gov
     width: 100%
 .pillar_content_bottom_left.gov div
-    width: auto
+    width: 100%
+    a
+        margin-left: 0
 .pillar_content_bottom_left
     height: 50px
     position: relative
@@ -349,7 +341,11 @@ $global_spacing: 6%
     width: auto
     float: left
     height: 50px
-    margin-left: 60px
+    //margin-left: 60px
     a
         +prdb
         float: left
+        //width: 25px
+        //height: 25px
+#related_topic_mobile
+    display: none
