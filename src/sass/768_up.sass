@@ -144,19 +144,25 @@ $global_spacing: 6%
                     display: block
 
     .list-brands > ul>li
-        width: 25%
+        width: 33.33%
         .expander-inner
-            overflow-y: visible
-            height: auto
+            overflow-y: initial
+            overflow-x: initial
 
     .expander-inner-half
         width: 50%
+        .tabs-select
+            margin-bottom: 40px
         &.left 
             >div 
                 padding-right: 30px
         &.right
             >div 
                 padding-left: 30px
+
+        .tabs-select 
+            margin-left: -12px
+            margin-right: -12px
     .gallery
         h2
             display: none
@@ -187,9 +193,10 @@ $global_spacing: 6%
                 padding: 0 10px
                 width: 100%
                 height: 100%
+                line-height: 120%
     .tab-content
         .inner-tab 
-            max-height: 570px
+            max-height: 530px
             overflow-y: scroll
 
 .slick-dots
@@ -213,10 +220,11 @@ $global_spacing: 6%
                     display: block
 
     .list-recipes > ul>li
-        width: 25%
+        width: 33.33%
         margin-bottom: 40px
         .expander-inner
-            overflow-y: visible
+            overflow-y: hidden
+            overflow-x: visible
             height: auto
 
     .expander-inner-half
@@ -238,6 +246,7 @@ $global_spacing: 6%
 
     .recipe-details-copy
         padding-top: 50px
+
 
 // ::::: PAGE: GOVERNANCE :::::
 .hero__social-item

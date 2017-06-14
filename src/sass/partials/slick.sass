@@ -119,6 +119,7 @@
         display: inline-block !important
         margin: 0 7px !important
         width: 15px
+        height: 15px
         margin-left: auto
         margin-right: auto
         transition: all 100ms ease-in-out
@@ -134,10 +135,11 @@
             background-color: #e3e2e0
             overflow: hidden
             cursor: pointer
+            font-size: 50%
         
         &:hover, &.slick-active 
             button 
-                background-color: #077ebd
+                background-color: $wwb_blue
                 color: #077ebd
             
         
@@ -194,14 +196,14 @@
     &.slick-prev 
         left: -24px
         i
-            background: url(../img/icon-arrow-left--blue.png) no-repeat center center
+            background: url(../img/icon-arrow-left--lightblue.png) no-repeat center center
             background-size: 11px 22px
         
     
     &.slick-next 
         right: -24px
         i
-            background: url(../img/icon-arrow-right--blue.png) no-repeat center center
+            background: url(../img/icon-arrow-right--lightblue.png) no-repeat center center
             background-size: 11px 22px
         
     

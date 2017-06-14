@@ -7,7 +7,7 @@ page_id:        "brands"
 <!-- START MAIN CONTENT -->
 <div class="page__content page__brands">
 
-	{{>hero-static heros.brands}}
+	{{>hero-cinemagraph heros.brands}}
 	
 	{{!-- {{>media-highlight highlights.brands}} --}}
 
@@ -28,22 +28,22 @@ page_id:        "brands"
 			<ul class="categories tabs-select">
 				<li>
 					<div>
-						<a href="" class="is-active">Top global brands</a>
+						<a href="#top" data-filter="top" class="is-active">Top global brands</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="#">Beverages</a>
+						<a href="#beverages" data-filter="beverages">Beverages</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="#">Snacks</a>
+						<a href="#snacks" data-filter="snacks">Snacks</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="#">Nutrition</a>
+						<a href="#nutritions" data-filter="nutritions">Nutrition</a>
 					</div>
 				</li>
 			</ul>
@@ -51,115 +51,126 @@ page_id:        "brands"
 
 			<article class="list-brands">
 				<ul id="grid">
-					<li class="">
+					<li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
-								<img src="img/brands/pepsi-full.jpg" alt="Brand name"/>
+								<img src="img/brands/pepsi.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/pepsi_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						
-						{{>brand-details brand='pepsi'}}
-					</li><li class="">
+						{{>brand-details brand='pepsi' where-to-buy="https://cu.pepsico.com/pepsi?where=" }}
+					</li><li class="top snacks">
 						<a href="javascript:void(0)">
 							<figure>
-								<img src="img/brands/lays-full.jpg" alt="Brand name"/>
+								<img src="img/brands/lays.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/lays_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='lays'}}
-					</li><li class="">
+						{{>brand-details brand='lays' where-to-buy="https://cu1.pepsico.com/fritolay?where=" }}
+					</li><li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
-								<img src="img/brands/mtn-dew-full.jpg" alt="Brand name"/>
+								<img src="img/brands/mtn-dew.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/mtn-dew_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='mtn dew'}}
-					</li><li class="">
+						{{>brand-details brand='Mountain dew' where-to-buy="https://cu.pepsico.com/mtndew?where=" }}
+					</li><li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
-								<img src="img/brands/g-full.jpg" alt="Brand name"/>
+								<img src="img/brands/g.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/g_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='g'}}
-					</li><li class="">
+						{{>brand-details brand='g' where-to-buy="https://cu.pepsico.com/gatorade?where=" }}
+					</li><li class="top snacks">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/cheetos.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/cheetos_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Cheetos'}}
-					</li><li class="">
+						{{>brand-details brand='Cheetos' where-to-buy="https://cu1.pepsico.com/fritolay?where=" }}
+					</li><li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/pepsi-diet.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/pepsi-diet_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Pepsi'}}
-					</li><li class="">
+						{{>brand-details brand='Pepsi' where-to-buy="https://cu.pepsico.com/pepsi?where=" }}
+					</li><li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/mirinda.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/mirinda_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Mirinda'}}
-					</li><li class="">
+						{{>brand-details brand='Mirinda' where-to-buy="https://cu.pepsico.com/tropicana?where=" }}
+					</li><li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/lipton-ice-tea.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/lipton-ice-tea_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Lipton Ice tea'}}
-					</li><li class="">
+						{{>brand-details brand='Lipton Ice tea' where-to-buy="https://cu.pepsico.com/lipton?where=" }}
+					</li><li class="top beverages nutritions">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/tropicana.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/tropicana_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Tropicana'}}
-					</li><li class="">
+						{{>brand-details brand='Tropicana' where-to-buy="https://cu.pepsico.com/tropicana?where=" }}
+					</li><li class="top beverages">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/7up.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/7up_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='7up'}}
-					</li><li class="">
+						{{>brand-details brand='7up' where-to-buy="https://cu.pepsico.com/pepsi?where=" }}
+					</li><li class="top snacks">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/quaker.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/quaker_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Quaker'}}
-					</li><li class="">
+						{{>brand-details brand='Quaker' where-to-buy="https://cu.pepsico.com/quaker?where=" }}
+					</li><li class="top snacks nutritions">
 						<a href="javascript:void(0)">
 							<figure>
 								<img src="img/brands/doritos.jpg" alt="Brand name"/>
+								<img class="rollover" src="img/brands/doritos_active.jpg" alt="Brand name"/>
 								<img class="mask open" src="img/mask-open.png" alt=""/>
 								<img class="mask close" src="img/mask.png" alt=""/>
 							</figure>
 						</a>
-						{{>brand-details brand='Doritos'}}
+						{{>brand-details brand='Doritos' where-to-buy="https://cu1.pepsico.com/fritolay?where=" }}
 					</li>
 				</ul>
 			</article>

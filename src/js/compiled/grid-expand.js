@@ -311,7 +311,6 @@ var Grid = (function() {
 			if( typeof preview != 'undefined' ) {
 				hidePreview();
 			}
-			// $items.css('height', 'auto');
 		} );
 
 	}
@@ -390,9 +389,9 @@ var Grid = (function() {
 		create : function() {
 			this.$previewEl = this.$item.find( '.expander' );
 			// set the transitions for the preview and the item
-			if( support ) {
-				this.setTransition();
-			}
+			// if( support ) {
+			// 	this.setTransition();
+			// }
 		},
 		update : function( $item ) {
 
@@ -429,22 +428,17 @@ var Grid = (function() {
 
 			var self = this,
 				onEndFn = function() {
-					if( support ) {
-						$( this ).off( transEndEventName );
-					}
+					// if( support ) {
+					// 	$( this ).off( transEndEventName );
+					// }
 					self.$item.removeClass( 'is-open' );
-					// self.$previewEl.remove();
 				};
 
 			setTimeout( $.proxy( function() {
 
-				if( typeof this.$largeImg !== 'undefined' ) {
-					this.$largeImg.fadeOut( 'fast' );
-				}
-				self.$item.find('.expander').css( 'height', 0 );
-				// the current expanded item (might be different from this.$item)
-				// console.log('===  grid-expand.js [455] self.$item.find('.expander') ===', self.$item.find('.expander'));
-				var $expandedItem = $items.eq( this.expandedIdx );
+                // the current expanded item (might be different from this.$item)
+                var $expandedItem = $items.eq( this.expandedIdx );
+				$expandedItem.find('.expander').css( 'height', 0 );
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 
 				if( !support ) {
@@ -454,15 +448,15 @@ var Grid = (function() {
 			}, this ), 25 );
 			
 			return false;
-
 		},
 		calcHeight : function() {
 
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 			itemHeight = winsize.height;
-// console.log('===  grid-expand.js [457] heightPreview ===', heightPreview);
+
 			var minH = 700;
 
+            // set a size at different breakpoints
 			if($(window).width() < 768) {
 				minH = 1000;
 			}
@@ -484,57 +478,14 @@ var Grid = (function() {
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
 
-			// console.log('===  grid-expand.js [466] === this.height', this.height);
-			// console.log('===  grid-expand.js [466] === this.itemHeight', this.itemHeight);
-
 			if($(window).width() < 768) {
 				var expH = this.$item.find('.expander').height();
 				if(expH == 0) {
-					// console.log('===  grid-expand.js [538] left ===', $('.expander-inner-half.left').height());
-					// console.log('===  grid-expand.js [539] right ===', $('.expander-inner-half.right').height());
 					this.height = $('.expander-inner-half.left').height() + $('.expander-inner-half.right').height();
-					// console.log('===  grid-expand.js [541] total ===', this.height);
+
 					this.itemHeight = this.height + this.$item.find('>a').height();
 				}
 			}
-
-			// var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
-			// 	itemHeight = winsize.height;
-			// console.log('===  grid-expand.js [457 itemHeight] ===', itemHeight);	
-			// // if($(window).width() < 768) {
-			// // 	// mobile
-
-			// // 	// if( heightPreview < settings.minHeight ) {
-			// // 		// heightPreview = settings.minHeight;
-			// // 		// itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-			// // 	// }
-			// // 	heightPreview = this.$item.find('.expander').height();
-
-			// // 	if(heightPreview == 0) {
-			// // 		heightPreview = 700 + this.$item.find('>a').height() + marginExpanded;
-			// // 		settings.minHeight = heightPreview;
-			// // 	}
-			// // 	else {
-			// // 		settings.minHeight = 1000;
-			// // 	}
-			// // 	console.log('===  grid-expand.js [467]heightPreview ===', heightPreview);
-			// // 	console.log('=== itemHeight grid-expand.js [470] ===', itemHeight);
-			// // }
-			// // else {
-
-			// // }
-
-			// if( heightPreview < settings.minHeight ) {
-			// 	heightPreview = settings.minHeight;
-			// 	itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-			// }
-
-			// heightPreview = settings.minHeight;
-			// itemHeight = settings.minHeight + this.$item.find('>a').height() + marginExpanded;
-
-			// this.height = heightPreview;
-			// this.itemHeight = itemHeight;
-
 		},
 		setHeights : function() {
 
@@ -543,18 +494,14 @@ var Grid = (function() {
 					if( support ) {
 						self.$item.off( transEndEventName );
 					}
-					self.$item.addClass( 'is-open' );
-				};
+                    self.$item.addClass( 'is-open' );
+                };
 
-			this.calcHeight();
+            this.calcHeight();
 
+            this.$item.find('.expander').css( 'height', this.height );
+            this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 			
-
-			self.$item.find('.expander').css( 'height', this.height );
-			this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
-
-			// self.$item.find('.expander').css( 'height', this.height );
-			// this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
 			if( !support ) {
 				onEndFn.call();
@@ -575,8 +522,8 @@ var Grid = (function() {
 
 		},
 		setTransition : function() {
-			this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
-			this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+			// this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+			// this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
 		}
 	}
 
@@ -602,7 +549,8 @@ var GridContent;
 		 *
 		 */
 		init: function (elt) {
-			this.tabs();
+            this.tabs();
+			this.categoriesFilter();
 			this.slider();
 			this.tileHeight();
 			this.recipeCaptions();
@@ -611,7 +559,7 @@ var GridContent;
 			if($('ul.toggle-tab').length > 0){
 				$('ul.toggle-tab a').click(function(){
 					var tab_id = $(this).attr('data-tab');
-
+console.log('===  grid-expand.js [611] ===', tab_id);
 					$(this).parents('.toggle-tab').find('a').removeClass('is-active');
 					$(this).parents('.expander-inner-half').find('.tab-content').removeClass('is-current');
 					$(this).addClass('is-active');
@@ -619,6 +567,22 @@ var GridContent;
 				});
 			}
 		},
+        categoriesFilter: function(){
+            if($('ul.categories').length > 0){
+                $('ul.categories a').click(function(e){
+                    e.preventDefault();
+
+                    var filter = $(this).attr('data-filter');
+
+                    $(this).parents('ul').find('li a').removeClass('is-active');
+                    $(this).addClass('is-active');
+
+
+                    $('.list-brands li').not('.'+filter).hide();
+                    $('.list-brands li.'+filter).show();
+                });
+            }   
+        },
 		slider: function(){
 			if($('.expander .slider').length>0) {
 				var $slider = $('.expander .slider').slick({
@@ -651,7 +615,7 @@ var GridContent;
 		},
 		tileHeight: function(){
 			if($('#grid li').length>0) {
-				$('#grid li').matchHeight();
+				$('#grid > li').not('.is-open').matchHeight();
 			}
 		},
 		recipeCaptions: function(){

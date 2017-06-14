@@ -35,7 +35,7 @@
 			background-color: #e7e7e4
 			&.is-active, &:hover
 				color: #fff
-				background-color: $wwb_darkblue
+				background-color: $wwb_blue
 
 				&:after 
 					top: 100%
@@ -47,14 +47,14 @@
 					position: absolute
 					pointer-events: none
 					border-color: rgba(136, 183, 213, 0)
-					border-top-color: $wwb_darkblue
+					border-top-color: $wwb_blue
 					border-width: 16px
 					margin-left: -16px
 
 .list-brands-container
 	overflow: hidden
 	background: $extralight_grey
-	background: #f3f2ef
+	margin-bottom: 30px
 	.categories 
 		overflow: hidden
 		padding-top: 50px
@@ -67,7 +67,7 @@
 					&:after 
 						display: none
 					&.is-active, &:hover
-						background-color: $wwb_darkblue
+						background-color: $wwb_blue
 
 	.list-brands
 		clear: both
@@ -80,6 +80,7 @@
 			vertical-align: top
 			margin-bottom: 15px
 			overflow: hidden
+			transition: height 350ms ease-in-out
 			img 
 				display: block
 				width: 100%
@@ -89,13 +90,26 @@
 				display: block
 				margin: 0 12px
 				position: relative
+				-webkit-transform: rotate(0) // chrome over pixel move fix
 				figure
 					position: relative
 					margin: 0
 					padding: 0
-				.mask   
+					img 
+						transform: translate3d(0px,0px,0px)
+						backface-visibility: hidden // chrome over pixel move fix	
+				.rollover 
 					position: absolute
 					bottom: 0
+					right: 0
+					left: 0
+					top: 0
+					transition: all 100ms ease-in-out
+					opacity: 0
+							
+				.mask   
+					position: absolute
+					bottom: -1px
 					right: 0
 					left: 0
 					transition: all 100ms ease-in-out
@@ -103,6 +117,10 @@
 					&.close
 						display: block
 						transform: translateY(0px)
+				&:hover 
+					.rollover 
+						opacity: 1
+
 
 			.expander
 				position: absolute
@@ -132,6 +150,7 @@
 				margin-right: 0
 				position: relative
 				overflow-y: scroll
+				overflow-x: hidden
 				height: 100%
 				opacity: 0
 				transition: opacity 300ms ease-in-out
@@ -140,6 +159,8 @@
 				// margin-bottom: 20px
 				overflow: visible
 				> a
+					.rollover 
+						opacity: 1
 					.mask
 						transition-delay: 50ms
 						&.close
@@ -349,7 +370,7 @@
 		padding-bottom: 8px
 		font-size: 16px
 		padding-right: 10px
-		background: $wwb_darkblue url('../img/icon-location.png') no-repeat 18px center
+		background: $wwb_blue url('../img/icon-location.png') no-repeat 18px center
 		&:after 
 			width: 30px
 			height: 20px

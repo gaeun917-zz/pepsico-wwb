@@ -101,5 +101,45 @@
         "external": true,
         "overlay-colour": "#005d91",
         "pages": "home perspectives"
+    },
+    "13": {
+        "heading": "NUTRITION",
+        "image-filename": "explore-brand-nutrition.jpg",
+        "link": "nutrition.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "brands"
+    },
+    "14": {
+        "heading": "RECIPES",
+        "image-filename": "explore-brand-recipes.jpg",
+        "link": "recipes.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "brands"
+    },
+    "15": {
+        "heading": "PWP PRODUCTS",
+        "image-filename": "explore-brand-pwpproducts.jpg",
+        "link": "brands.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "brands"
+    },
+    "16": {
+        "heading": "NUTRITION",
+        "image-filename": "explore-brand-nutrition.jpg",
+        "link": "nutrition.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "recipes"
+    },
+    "17": {
+        "heading": "PWP PRODUCTS",
+        "image-filename": "explore-brand-pwpproducts.jpg",
+        "link": "brands.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "recipes"
     }
 }
