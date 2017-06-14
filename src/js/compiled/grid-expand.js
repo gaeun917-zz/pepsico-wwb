@@ -438,9 +438,6 @@ var Grid = (function() {
 
 			setTimeout( $.proxy( function() {
 
-				if( typeof this.$largeImg !== 'undefined' ) {
-					this.$largeImg.fadeOut( 'fast' );
-				}
 				self.$item.find('.expander').css( 'height', 0 );
 				// the current expanded item (might be different from this.$item)
 				// console.log('===  grid-expand.js [455] self.$item.find('.expander') ===', self.$item.find('.expander'));
@@ -602,7 +599,8 @@ var GridContent;
 		 *
 		 */
 		init: function (elt) {
-			this.tabs();
+            this.tabs();
+			this.categoriesFilter();
 			this.slider();
 			this.tileHeight();
 			this.recipeCaptions();
@@ -619,6 +617,22 @@ var GridContent;
 				});
 			}
 		},
+        categoriesFilter: function(){
+            if($('ul.categories').length > 0){
+                $('ul.categories a').click(function(e){
+                    e.preventDefault();
+
+                    var filter = $(this).attr('data-filter');
+
+                    $(this).parents('ul').find('li a').removeClass('is-active');
+                    $(this).addClass('is-active');
+
+
+                    $('.list-brands li').not('.'+filter).hide();
+                    $('.list-brands li.'+filter).show();
+                });
+            }   
+        },
 		slider: function(){
 			if($('.expander .slider').length>0) {
 				var $slider = $('.expander .slider').slick({

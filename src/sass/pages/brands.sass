@@ -54,7 +54,7 @@
 .list-brands-container
 	overflow: hidden
 	background: $extralight_grey
-	background: #f3f2ef
+	margin-bottom: 30px
 	.categories 
 		overflow: hidden
 		padding-top: 50px
@@ -89,13 +89,26 @@
 				display: block
 				margin: 0 12px
 				position: relative
+				-webkit-transform: rotate(0) // chrome over pixel move fix
 				figure
 					position: relative
 					margin: 0
 					padding: 0
-				.mask   
+					img 
+						transform: translate3d(0px,0px,0px)
+						backface-visibility: hidden // chrome over pixel move fix	
+				.rollover 
 					position: absolute
 					bottom: 0
+					right: 0
+					left: 0
+					top: 0
+					transition: all 100ms ease-in-out
+					opacity: 0
+							
+				.mask   
+					position: absolute
+					bottom: -1px
 					right: 0
 					left: 0
 					transition: all 100ms ease-in-out
@@ -103,6 +116,10 @@
 					&.close
 						display: block
 						transform: translateY(0px)
+				&:hover 
+					.rollover 
+						opacity: 1
+
 
 			.expander
 				position: absolute
@@ -140,6 +157,8 @@
 				// margin-bottom: 20px
 				overflow: visible
 				> a
+					.rollover 
+						opacity: 1
 					.mask
 						transition-delay: 50ms
 						&.close
