@@ -149,8 +149,8 @@ $global_spacing: 6%
     .list-brands > ul>li
         width: 33.33%
         .expander-inner
-            overflow-y: visible
-            height: auto
+            overflow-y: initial
+            overflow-x: initial
 
     .expander-inner-half
         width: 50%
@@ -162,6 +162,10 @@ $global_spacing: 6%
         &.right
             >div 
                 padding-left: 30px
+
+        .tabs-select 
+            margin-left: -12px
+            margin-right: -12px
     .gallery
         h2
             display: none
@@ -225,7 +229,8 @@ $global_spacing: 6%
         width: 33.33%
         margin-bottom: 40px
         .expander-inner
-            overflow: hidden
+            overflow-y: hidden
+            overflow-x: visible
             height: auto
 
     .expander-inner-half

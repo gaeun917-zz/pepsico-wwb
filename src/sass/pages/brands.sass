@@ -35,7 +35,7 @@
 			background-color: #e7e7e4
 			&.is-active, &:hover
 				color: #fff
-				background-color: $wwb_darkblue
+				background-color: $wwb_blue
 
 				&:after 
 					top: 100%
@@ -47,7 +47,7 @@
 					position: absolute
 					pointer-events: none
 					border-color: rgba(136, 183, 213, 0)
-					border-top-color: $wwb_darkblue
+					border-top-color: $wwb_blue
 					border-width: 16px
 					margin-left: -16px
 
@@ -67,7 +67,7 @@
 					&:after 
 						display: none
 					&.is-active, &:hover
-						background-color: $wwb_darkblue
+						background-color: $wwb_blue
 
 	.list-brands
 		clear: both
@@ -80,6 +80,7 @@
 			vertical-align: top
 			margin-bottom: 15px
 			overflow: hidden
+			transition: height 350ms ease-in-out
 			img 
 				display: block
 				width: 100%
@@ -149,6 +150,7 @@
 				margin-right: 0
 				position: relative
 				overflow-y: scroll
+				overflow-x: hidden
 				height: 100%
 				opacity: 0
 				transition: opacity 300ms ease-in-out
@@ -368,7 +370,7 @@
 		padding-bottom: 8px
 		font-size: 16px
 		padding-right: 10px
-		background: $wwb_darkblue url('../img/icon-location.png') no-repeat 18px center
+		background: $wwb_blue url('../img/icon-location.png') no-repeat 18px center
 		&:after 
 			width: 30px
 			height: 20px
