@@ -141,5 +141,21 @@
         "external": false,
         "overlay-colour": "#005d91",
         "pages": "recipes"
+    },
+    "18": {
+        "heading": "RECIPES",
+        "image-filename": "explore-brand-recipes.jpg",
+        "link": "recipes.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "brands"
+    },
+    "19": {
+        "heading": "PWP PRODUCTS",
+        "image-filename": "explore-brand-pwpproducts.jpg",
+        "link": "brands.html",
+        "external": false,
+        "overlay-colour": "#005d91",
+        "pages": "nutrition"
     }
 }
