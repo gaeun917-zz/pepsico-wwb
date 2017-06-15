@@ -231,7 +231,7 @@ var Grid = (function() {
 		settings = {
 			minHeight : 750,
 			speed : 350,
-			easing : 'ease'
+			easing : 'ease-in-out'
 		};
 
 	function init( config ) {
@@ -248,35 +248,9 @@ var Grid = (function() {
 			getWinSize();
 			// initialize some events
 			initEvents();
-
-			$window.on( 'debouncedresize', function() {
-
-			});
-
 		} );
 
-
-
 	}
-
-	// add more items to the grid.
-	// the new items need to appended to the grid.
-	// after that call Grid.addItems(theItems);
-	// function addItems( $newitems ) {
-
-	//   $items = $items.add( $newitems );
-
-	//   $newitems.each( function() {
-	//     var $item = $( this );
-	//     $item.data( {
-	//       offsetTop : $item.offset().top,
-	//       height : $item.height()
-	//     } );
-	//   } );
-
-	//   initItemsEvents( $newitems );
-
-	// }
 
 	// saves the item´s offset top and height (if saveheight is true)
 	function saveItemInfo( saveheight ) {
@@ -286,7 +260,7 @@ var Grid = (function() {
 			if( saveheight ) {
 				$item.data( 'height', $item.height() );
 			}
-		} );
+		});
 	}
 
 	function initEvents() {
@@ -298,7 +272,7 @@ var Grid = (function() {
 		
 		// on window resize get the window´s size again
 		// reset some values..
-		$window.on( 'debouncedresize', function() {
+		$window.on( 'resize', function() {
 			
 			scrollExtra = 0;
 			previewPos = -1;
@@ -388,10 +362,6 @@ var Grid = (function() {
 	Preview.prototype = {
 		create : function() {
 			this.$previewEl = this.$item.find( '.expander' );
-			// set the transitions for the preview and the item
-			// if( support ) {
-			// 	this.setTransition();
-			// }
 		},
 		update : function( $item ) {
 
@@ -402,8 +372,8 @@ var Grid = (function() {
 			// if already expanded remove class "is-open" from current item and add it to new item
 			if( current !== -1 ) {
 				var $currentItem = $items.eq( current );
-				$currentItem.removeClass( 'is-open' );
-				this.$item.addClass( 'is-open' );
+				$currentItem.removeClass( 'is-li-open' );
+				this.$item.addClass( 'is-li-open' );
 
 				// position the preview correctly
 				this.positionPreview();
@@ -426,24 +396,13 @@ var Grid = (function() {
 		},
 		close : function() {
 
-			var self = this,
-				onEndFn = function() {
-					// if( support ) {
-					// 	$( this ).off( transEndEventName );
-					// }
-					self.$item.removeClass( 'is-open' );
-				};
+			var self = this;
 
 			setTimeout( $.proxy( function() {
-
                 // the current expanded item (might be different from this.$item)
+                self.$item.removeClass( 'is-li-open' );
                 var $expandedItem = $items.eq( this.expandedIdx );
-				$expandedItem.find('.expander').css( 'height', 0 );
-				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
-
-				if( !support ) {
-					onEndFn.call();
-				}
+                $expandedItem.css( 'height', $expandedItem.data( 'height' ) );
 
 			}, this ), 25 );
 			
@@ -460,15 +419,6 @@ var Grid = (function() {
 			if($(window).width() < 768) {
 				minH = 1000;
 			}
-			else {
-				if($(window).width() < 1200) {
-					minH = 700;
-				}
-				else
-				{
-					minH = 750;
-				}
-			}
 
 			if( heightPreview < minH ) {
 				heightPreview = minH;
@@ -478,6 +428,7 @@ var Grid = (function() {
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
 
+            // for mobile only
 			if($(window).width() < 768) {
 				var expH = this.$item.find('.expander').height();
 				if(expH == 0) {
@@ -494,14 +445,15 @@ var Grid = (function() {
 					if( support ) {
 						self.$item.off( transEndEventName );
 					}
-                    self.$item.addClass( 'is-open' );
+                    self.$item.addClass( 'is-li-open' );
                 };
 
             this.calcHeight();
 
-            this.$item.find('.expander').css( 'height', this.height );
+            if($(window).width() < 768) {
+                this.$item.find('.expander').css( 'height', this.height );
+            }
             this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
-			
 
 			if( !support ) {
 				onEndFn.call();
@@ -520,21 +472,13 @@ var Grid = (function() {
 			
 			$body.animate( { scrollTop : scrollVal }, settings.speed );
 
-		},
-		setTransition : function() {
-			// this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
-			// this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
 		}
 	}
-
 	return { 
 		init : init
-		// ,
-		// addItems : addItems
 	};
 
 })();
-
 
 
 
@@ -559,17 +503,17 @@ var GridContent;
 			if($('ul.toggle-tab').length > 0){
 				$('ul.toggle-tab a').click(function(){
 					var tab_id = $(this).attr('data-tab');
-console.log('===  grid-expand.js [611] ===', tab_id);
+
 					$(this).parents('.toggle-tab').find('a').removeClass('is-active');
 					$(this).parents('.expander-inner-half').find('.tab-content').removeClass('is-current');
+                    $(this).parents('.expander-inner-half').find("."+tab_id).addClass('is-current');
 					$(this).addClass('is-active');
-					$(this).parents('.expander-inner-half').find("."+tab_id).addClass('is-current');
 				});
 			}
 		},
         categoriesFilter: function(){
             if($('ul.categories').length > 0){
-                $('ul.categories a').click(function(e){
+                $('ul.categories a').on('click', function(e){
                     e.preventDefault();
 
                     var filter = $(this).attr('data-filter');
@@ -577,11 +521,10 @@ console.log('===  grid-expand.js [611] ===', tab_id);
                     $(this).parents('ul').find('li a').removeClass('is-active');
                     $(this).addClass('is-active');
 
-
-                    $('.list-brands li').not('.'+filter).hide();
-                    $('.list-brands li.'+filter).show();
+                    $('.list-brands > ul > li').not('.'+filter).hide();
+                    $('.list-brands > ul > li.'+filter).show();
                 });
-            }   
+            }
         },
 		slider: function(){
 			if($('.expander .slider').length>0) {
@@ -614,8 +557,8 @@ console.log('===  grid-expand.js [611] ===', tab_id);
 			}
 		},
 		tileHeight: function(){
-			if($('#grid li').length>0) {
-				$('#grid > li').not('.is-open').matchHeight();
+			if($('#grid > li').length>0) {
+				$('#grid > li').not('.is-li-open').matchHeight();
 			}
 		},
 		recipeCaptions: function(){
