@@ -62,6 +62,9 @@ $global_spacing: 8%
 // ::::: FOOTER :::::
 
 // ::::: HERO :::::
+
+// ::::: MISCELLANEOUS :::::
+
 .hero
     +prdb
     +box-sizing
@@ -367,4 +370,28 @@ $global_spacing: 8%
     outline: 0
     border: 0
 
-
+// MISCELLANEOUS
+.download
+    a
+        text-transform: uppercase
+        font-size: 14px
+        overflow: hidden
+        width: 100%
+        display: block
+        line-height: 48px
+        text-decoration: none
+        color: #616161
+        text-align: left
+        background: #e1e1e1 url('../img/icon-dowload.png') no-repeat 0 center
+        &:hover 
+            background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
+        span
+            +title-font-bold
+            padding-left: 70px
+            &.align-right
+                display: none
+                +title-font
+                padding-left: 20px
+                padding-right: 20px
+                float: right
+                background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center

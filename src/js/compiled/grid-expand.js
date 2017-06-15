@@ -569,8 +569,161 @@ var GridContent;
 	};
 })(jQuery);
 
+// Inside the grid content for brands and recipes
+var NutritionContent;
+(function ($) {
+    'use strict'; 
+    
+    NutritionContent = {
+        /**
+         * Tabs for each product on tactile device
+         *
+         */
+        init: function (elt) {
+            this.sliders();
+        },
+        sliders: function (elt) {
+            var self = this;
+
+            if($('.slider-farming').length>0) {
+                var $slider = $('.slider-farming').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    slide: '.slide',
+                    prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
+                    nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
+                    mobileFirst: true,
+                    arrows: true,
+                    dots: true,
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    fade: false,
+                    focusOnSelect: true,
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 100,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true
+                            }
+                        }
+                        // You can unslick at a given breakpoint now by adding:
+                        // settings: "unslick"
+                        // instead of a settings object
+                    ]
+                });
+            }
+
+            if($('.slider-icons').length>0) {
+                var $slider = $('.slider-icons').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    slide: '.slide',
+                    prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
+                    nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
+                    mobileFirst: true,
+                    arrows: true,
+                    dots: true,
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    fade: false,
+                    focusOnSelect: true,
+                    responsive: [
+                        {
+                            breakpoint: 900,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                                arrows: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 100,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true
+                            }
+                        }
+                        // You can unslick at a given breakpoint now by adding:
+                        // settings: "unslick"
+                        // instead of a settings object
+                    ]
+                });
+
+                $('.slider-icons li').on('click', function(){
+                    $(this).toggleClass('hover');
+                });
+            }
+
+            if($('.slider-report').length>0) {
+                var $slider = $('.slider-report').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    slide: '.slide',
+                    prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
+                    nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
+                    mobileFirst: true,
+                    arrows: true,
+                    dots: true,
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    fade: true,
+                    focusOnSelect: true,
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 100,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true
+                            }
+                        }
+                        // You can unslick at a given breakpoint now by adding:
+                        // settings: "unslick"
+                        // instead of a settings object
+                    ]
+                });
+            }
+            
+            
+        }
+    };
+})(jQuery);
+
 // Init everything we need for brands
 $(function() {
-	Grid.init();
-	GridContent.init();
+    // brands sectiosn pages
+    if($('#grid').length > 0) {
+        Grid.init();
+        GridContent.init();
+    }
+
+    // nutrition page
+    if($('.page__nutrition').length > 0) {
+        NutritionContent.init();
+    }
 });

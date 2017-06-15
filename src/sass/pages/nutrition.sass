@@ -10,6 +10,15 @@
 	padding: 5% 0
 	img
 		max-width: 100%
+	h3
+		line-height: 120%
+		font-size: 1.7rem
+	h4
+		font-size: 18px
+		+title-font-bold
+		line-height: 130%
+	p
+		line-height: 150%
 
 .our-story
 	background-color: #c0c0c0
@@ -21,25 +30,112 @@
 .farming
 	background-color: $extralight_grey
 
+	.slider-farming 
+		text-align: center
+		padding-top: 20px
+		margin-bottom: 40px
+		
+		li
+			position: relative
+		img
+			width: 100%
+
 .contributors
-	background-color: $wwb_darkblue
-	color: #fff
+	.blue
+		background-color: $wwb_darkblue
+		color: #fff
+		overflow: visible
+		position: relative
+		&:after 
+			top: 100%
+			left: 50%
+			border: solid transparent
+			content: " "
+			height: 0
+			width: 0
+			display: none
+			position: absolute
+			pointer-events: none
+			border-color: rgba(255, 255, 255, 1)
+			border-top-color: #fff
+			border-width: 25px
+			margin-left: -25px
+	.icons 
+		background-image: url(../img/nutrition/nutrition-icon-bg.jpg)	
+		background-size: cover
+		text-align: center
+		color: #fff
+		padding-bottom: 60px
+		
+		.third
+			position: relative
+			text-align: center
+			img
+				display: inline-block
+			
+			figure
+				margin-left: auto
+				margin-right: auto
+				width: 263px
+				height: 263px
+				padding-top: 20px
+			figcaption
+				margin: 0
+				padding: 0
+				padding-top: 33px
+				font-size: 29px
+				+title-font-bold
+				text-transform: uppercase
+			p
+				+title-font
+				font-size: 24px
+				margin-top: 0
+				max-width: 263px
+				margin-left: auto
+				margin-right: auto
+		.rollover
+			display: none
+			figure
+				background: url(../img/nutrition/icon_rollover.png) center top no-repeat
+			figcaption
+				color: $wwb_darkblue
+		
+		li:hover, .hover
+			.default
+				display: none
+			.rollover
+				display: block
 
 .forward-brands
 	background-color: #d7d6d3
 
 	ul.forward-brand-list 
 		overflow: hidden
-		margin-left: -60px
-		margin-right: -60px
+		margin-left: -15px
+		margin-right: -15px
 		li
 			display: inline-block
 			margin: 0
 			padding: 0
-			width: 33.33%
+			width: 50%
 			> div 
-				padding: 0 60px
-				margin-bottom: 60px
+				padding: 0 15px
+				margin-bottom: 30px
 
 .report
 	background-color: $extralight_grey
+	margin-bottom: 30px
+	text-align: center
+
+	.slider-report
+		margin-bottom: 100px
+		figure
+			text-align: center
+		img
+			display: inline-block
+		h3
+			font-size: 18px
+		p
+			max-width: 650px
+			margin-left: auto
+			margin-right: auto
