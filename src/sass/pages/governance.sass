@@ -32,31 +32,93 @@
 .hero
     padding: 0
 
+#social
+    height: 25px
+    opacity: 1
+    float: right
+    display: inline-block
+    position: relative
+    border-top: 0
+    width: 150px
+    max-width: 180px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 20px
+    height: 30px
+    font-size: 12px
+    opacity: 1
+    background: url(../img/menu_social.png) no-repeat 0 0
+    background-size: 82% auto
+    li
+        height: 26px
+        width: 26px
+        position: relative
+        display: block
+        float: left
+        margin: 0
+        padding: 0
+        list-style: none
+        margin-left: 7%
+        top: -13px
+        left: 7px
+        position: relative
+        border-top: 0
+        a
+            //width: 100%
+            margin: 0
+            display: block
+            height: 26px
+            width: 26px
+            cursor: pointer
+
+#social-az
+    height: 25px
+    opacity: 1
+    display: inline-block
+    position: relative
+    border-top: 0
+    float: left
+    .social-media-icons
+    position: relative
+    text-align: center
+    display: inline-block
+    width: 50%
+    max-width: 180px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 4px
+    height: 30px
+    font-size: 12px
+    opacity: 1
+    background: url(../img/menu_social.png) no-repeat 0 0
+    background-size: 82% auto
+    li
+        height: 26px
+        width: 26px
+        position: relative
+        display: block
+        float: left
+        margin: 0
+        padding: 0
+        list-style: none
+        margin-left: 7%
+        top: -13px
+        left: 7px
+        position: relative
+        border-top: 0
+        a
+            //width: 100%
+            margin: 0
+            display: block
+            height: 26px
+            width: 26px
+            cursor: pointer
+
 .hero__social.gov
     h4,a
         +prdib
         margin-bottom: 0
 
-//.pillar-item__content.gov.left
-//    +title-font-regular
-//    padding-right: 50px
-//
-//.pillar-item__content.gov.right
-//    padding: 0
-//    width: 100%
-//    float: right
-//    .pillar_content_bottom_left
-//        width: 100%
-//        padding: 0
-//
-//.pillar-item__content.download.gov
-//    padding: 1em
-//    .download_title
-//        top: -7px
-//        left: -7px
-//        &:after
-//            content: ""
-//            border-left: 0
 
 .pillar_copy.gov
     font-family: "Arial", "Helvetica", sans-serif
@@ -99,6 +161,11 @@
         width: 100%
         &:last-child
             margin-bottom: 20px
+.pillar_content_bottom_left.gov.second
+    display: block
+    padding-top: 35px
+    border-top: 4px solid $wwb_blue
+
 
 .hero__social.gov
     //margin-bottom:
@@ -115,7 +182,7 @@
         float: right
 .hero__social-item, .hero__social.gov a
     float: right
-    margin: 20px 4px
+    //margin: 20px 4px
 
 .pillar-item__content.gov.right
     padding: 0
