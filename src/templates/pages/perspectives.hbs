@@ -72,16 +72,24 @@ page_id:        "perspectives"
                             </div>
                             <div class="pillar-item__content closed">
                                 <h2 class="h2-az"><em>{{this.item-header}}</em>
-                                    <div class="hero__social az">
-                                        <a href="/#"
-                                           class="hero__social-item hero__social-item--facebook"><span></span></a>
-                                        <a href="/#"
-                                           class="hero__social-item hero__social-item--twitter"><span></span></a>
-                                        <a href="/#"
-                                           class="hero__social-item hero__social-item--instagram"><span></span></a>
-                                        <a href="/#"
-                                           class="hero__social-item hero__social-item--email"><span></span></a>
-                                    </div>
+                                    <li id="social-az">
+                                        <ul class="social-media-icons">
+                                            <li><a class="facebook" href="#"></a></li>
+                                            <li><a class="twitter" href="#"></a></li>
+                                            <li><a class="linkedIn" href="#"></a></li>
+                                            <li><a class="email" href="#"></a></li>
+                                        </ul>
+                                    </li>
+                                    <!--<div class="hero__social az">-->
+                                        <!--<a href="/#"-->
+                                           <!--class="hero__social-item hero__social-item--facebook"><span></span></a>-->
+                                        <!--<a href="/#"-->
+                                           <!--class="hero__social-item hero__social-item--twitter"><span></span></a>-->
+                                        <!--<a href="/#"-->
+                                           <!--class="hero__social-item hero__social-item--instagram"><span></span></a>-->
+                                        <!--<a href="/#"-->
+                                           <!--class="hero__social-item hero__social-item--email"><span></span></a>-->
+                                    <!--</div>-->
                                 </h2>
                                 {{#each this.item-copy}}
                                     <p class="pillar_copy">{{this}}</p>
