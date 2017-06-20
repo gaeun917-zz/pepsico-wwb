@@ -12,7 +12,7 @@
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
-  
+
 @mixin no-pointer-events
   pointer-events: none
 
@@ -162,6 +162,30 @@
   left: 0
   height: 100%
   width: 100%
+
+@mixin width_height($width, $height)
+  width: $width
+  height: $height
+
+@mixin top_left($top, $left)
+  top: $top
+  left: $left
+
+@mixin top_right($top, $right)
+  top: $top
+  right: $right
+
+@mixin left_right($left, $right)
+  left: $left
+  right: $right
+
+@mixin padding_lr($left,$right)
+  padding-left: $left
+  padding-right: $right
+
+@mixin margin_lr($left,$right)
+  margin-left: $left
+  margin-right: $right
 
 @mixin unstyled-anchor
   &:link, &:visited, &:active

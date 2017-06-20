@@ -1,16 +1,12 @@
 // ::::: TYPOGRAPHY :::::
 html
     font-size: 14px
-
 h1 
     font-size: 2rem
-
 h2, h3
     font-weight: 500
-
 h2 
     font-size: 1.35rem
-
     em
         font-size: 3.3rem
         line-height: 3rem
@@ -25,13 +21,10 @@ h2
 h3
     font-size: 2.2rem
     line-height: 2.2rem
-
 h4 
     font-size: 1.8rem
-
 h5
     font-size: 0.72rem
-
 small
     font-size: 0.87rem
 
@@ -97,27 +90,17 @@ $global_spacing: 4%
     margin-top: -8rem
 
 .hero--cinemagraph__video-container
-    // +cover
     +padb
     width: 100%
     padding-bottom: 56.25%
     left: 0
-
-    // top: 50%
-
     background-position: top center
     background-size: cover
-
-    // -webkit-transform: translateY(-50%)
-    // -moz-transform: translateY(-50%)
-    // -ms-transform: translateY(-50%)
-    // -o-transform: translateY(-50%)
     // transform: translateY(-50%)
 
 .hero--cinemagraph__video-container video
     +padb
-    width: 100%
-    height: auto
+    +width_height(100%, auto)
 
 .hero__initial-frame
     -webkit-transform: translateZ(0)
@@ -127,9 +110,9 @@ $global_spacing: 4%
     z-index: 1
 
 .hero__social-item
+    +width_height(27px, 25px)
     margin-bottom: 1rem
-    width: 27px
-    height: 25px
+
     span 
         +dn
 
@@ -154,8 +137,7 @@ $global_spacing: 4%
 
 
 .title-lines::before, .title-lines::after
-    height: 4px
-    width: 350px
+    +width_height(350px, 4px)
     max-width: none
     margin: 2rem auto
 
@@ -198,7 +180,6 @@ $global_spacing: 4%
     p:last-child
         margin-bottom: 0
 
-
 .principles
     padding: $global_spacing 0
 
@@ -216,19 +197,16 @@ $global_spacing: 4%
 .principles--mobile
     +padn
     +opacityz(0)
-    top: 32%
-    left: 5%
+    +width_height(90%, 100%)
+    +top_left(32%, 5%)
     +ontop
-    width: 90%
-    height: 100%
 
     .swiper-slide img
         width: 18%
 
     .swiper-slide p
         width: 60%
-        margin-left: auto
-        margin-right: auto
+        +margin_lr(auto, auto)
 
 .principles--desktop, .principles--mobile, .principles__coloured-overlay
     -webkit-transition: 0.3s linear -webkit-opacity
@@ -256,8 +234,7 @@ $global_spacing: 4%
     content: ""
     +padb
     +ontop
-    top: 0
-    right: 0
+    +top_right(0,0)
     background-image: url(../img/icon-close.png)
     background-size: 30px 30px
     +square(30px)
@@ -278,8 +255,7 @@ $global_spacing: 4%
 .principles__arrow
     +padb
     +ontop
-    width: 12px
-    height: 25px
+    +width_height(12px, 25px)
     top: 30%
     margin-top: -15px
     background-size: contain
@@ -293,10 +269,6 @@ $global_spacing: 4%
     &.principles__arrow-next
         background-image: url(../img/icon-arrow-right.png)
         right: 0
-
-
-.principles--desktop
-    // +opacityz(0)
 
 .principles--desktop__item
     +prdib
@@ -361,7 +333,6 @@ $global_spacing: 4%
 .explore-item__heading
     font-size: 1rem
 
-
 // ::::: HIGHLIGHT :::::
 .highlight 
     padding: $global_spacing 0
@@ -378,7 +349,6 @@ $global_spacing: 4%
     +dn
 .highlight__desktop-copy
     +prdb
-
 
 .highlight__section--media
     width: 50%
@@ -405,28 +375,26 @@ $global_spacing: 4%
     +padb
     +square(100%)
     +opacityz(0)
-    top: -13.5%
-    left: 32%
+    +top_left(-13.5%, 32%)
 
 .wangotron__details-modal
-    height: 100%
-    width: 100%
-    top: 0
-    left: 0
+    +width_height(100%, 100%)
+    +top_left(0,0)
     margin-top: 0
 
 .wangotron__details-modal__container
     +padn
-    top: -3%
-    left: 0
+    +top_left(-3%, 0)
     +square(100%)
-    +border-radius(0)
     +box-sizing
+    +border-radius(0)
     color: $dark_grey
     text-align: left
     padding: 0 8% 8% 8%
 
-.wangotron__details-modal__icon, .wangotron__details-modal__close, .wangotron__tap-cta
+.wangotron__details-modal__icon,
+.wangotron__details-modal__close,
+.wangotron__tap-cta
     +dn
 
 .wangotron__details-modal__header
@@ -466,8 +434,7 @@ $global_spacing: 4%
     +prdb
     margin-top: $global_spacing
     width: 1152px
-    margin-left: -576px
-    margin-right: 0
+    +margin_lr(-576px, 0)
     left: 50%
 
 .progress-timeline--desktop__image-carousel
@@ -501,41 +468,33 @@ $global_spacing: 4%
     &:nth-child(2)
         +opacityz(0.3)
         z-index: 995
-        // left: 75%
-
 
 .progress-timeline--desktop__slider-container
     +prdb
     width: calc(90% + 30px)
+    height: 15px
     margin-top: $global_spacing !important
     margin-bottom: 2.5% !important
-    margin-left: auto
-    margin-right: auto
-    height: 15px
+    +margin_lr(auto, auto)
     +border-radius(15px)
     background-color: $light_grey
-
     &.hidden 
         +dn
 
 .progress-timeline--desktop__slider
     +padb
     +square(30px)
-    left: 0
-    top: -7px
-    background-color: $wwb_blue
+    +top_left(-7px, 0)
     +border-radius(30px)
+
+    background-color: $wwb_blue
     cursor: -webkit-grab
     cursor: -moz-grab
-    cursor: -ms-grab
-    cursor: -o-grab
     cursor: grab
 
     &:active
         cursor: -webkit-grabbing
         cursor: -moz-grabbing
-        cursor: -ms-grabbing
-        cursor: -o-grabbing
         cursor: grabbing
 
 .progress-timeline--desktop__copy-container
@@ -544,10 +503,8 @@ $global_spacing: 4%
 .progress-timeline--desktop__copy-item
     +padb
     +opacityz(0)
-    top: 0
-    left: 50%
-    width: 400px
-    height: 100%
+    +width_height(400px, 100%)
+    +top_left(0, 50%)
     margin: $global_spacing 0 0 -200px
 
     &:first-child
@@ -555,16 +512,9 @@ $global_spacing: 4%
 
 .progress-timeline__title, .progress-timeline__copy
     +prdb
-    width: 100%
-    height: auto
+    +width_height(100%, auto)
     text-align: center
     margin: 0
-
-// .progress-timeline--desktop__dots
-//     +prdb
-//     width: calc(100% - 12px)
-//     top: 40px
-//     margin: auto
 
 .progress-timeline--desktop__years-container
     +prdb
@@ -578,8 +528,8 @@ $global_spacing: 4%
 .progress-timeline--desktop__year
     +prdib
     +title-font-bold
-    font-size: 1.3rem
     width: 10%
+    font-size: 1.3rem
     text-align: center
 
     &::before
@@ -592,15 +542,13 @@ $global_spacing: 4%
         border: 5px solid $extralight_grey
         background-color: $light_grey
 
-
     &::after
         content: ""
-        height: 4px
-        background-color: $wwb_blue
-        width: 0%
+        +width_height(0, 4px)
         +prdb
         margin: 0.5rem auto 0 auto
 
+        background-color: $wwb_blue
         -webkit-transition: 0.2s ease width
         -moz-transition: 0.2s ease width
         -ms-transition: 0.2s ease width
@@ -610,38 +558,32 @@ $global_spacing: 4%
     &.pillar-node
         text-align: center
         width: 50px
-        margin-left: auto
-        margin-right: auto
+        +margin_lr(auto, auto)
         &.selected:before
             background-color: $wwb_blue
         &:after
             +dn
-
-
     &.selected
         color: $wwb_blue
 
         &::after
             width: 42%
-
     &:hover
         color: $wwb_blue
         cursor: pointer
-
         &::before
             background-color: darken($light_grey, 5%)
 .pwp-breakdown
     padding: 3% 0
-    //background: rgb(192,192,192)
+    h4
+        +prdib
+        float: left
+        width: auto
+        padding-right: 40px
+        font-size: 1rem
+
 .pwp-breakdown.topics
     background-color: rgb(192,192,192)
-.pwp-breakdown h4
-    +prdib
-    font-size: 1rem
-    float: left
-    width: auto
-    padding-right: 40px
-
 
 .pwp-breakdown-copy .copy
     max-width: 60%
@@ -666,37 +608,23 @@ $global_spacing: 4%
 .pillar-item__pill h4 
     font-size: 1rem
 
-
 // Pillar tabs
 .pillar-tabs
     +prdb
+    width: 100% - $global_spacing * 2
+    max-width: 962px
+    margin: 0 auto
+    overflow: visible
     
     &:before
         content: ""
         +padb
         +box-sizing
-        top: 0
-        left: 0
-        height: 120px
-        width: 100%
+        +width_height(100%, 120px)
+        +top_left(0, 0)
         border-top: 4px solid white
         border-bottom: 1px solid white
-        // background-color: #66b5e2
         background-color: $medium_grey
-
-
-.pillar-tab-container
-    +prdb
-    width: 100% - $global_spacing * 2
-    max-width: 962px
-    margin: 0 auto
-    padding-top: 120px
-
-.pillar-tab
-    width: 100% - $global_spacing * 2
-    max-width: 962px
-    margin: 0 auto
-    overflow: visible
 
     &:nth-child(1) .pillar-tab__heading
         left: 0
@@ -705,12 +633,18 @@ $global_spacing: 4%
     &:nth-child(3) .pillar-tab__heading
         right: 0
 
+.pillar-tab-container
+    +prdb
+    width: 100% - $global_spacing * 2
+    max-width: 962px
+    margin: 0 auto
+    padding-top: 120px
+
 .pillar-tab__heading
     +padb
     +box-sizing
-    height: 120px
+    +width_height(33.333%, 120px)
     top: 0
-    width: 33.3333333%
     padding: 0
     border-top: 4px solid white
     border-bottom: 1px solid white
@@ -727,7 +661,6 @@ $global_spacing: 4%
     &:active span 
         background-color: #66b5e2 !important
 
-
 .pillar-tab:nth-child(2) .pillar-tab__heading
     border-left: 1px solid white
     border-right: 1px solid white
@@ -739,15 +672,12 @@ $global_spacing: 4%
     border-right: 1px solid white
 
 .pillar-tab__content
-
     h2:after
         content: ""
         +prdb
-        height: 3px
-        width: 300px
-        background-color: $wwb_blue
+        +width_height(300px, 3px)
         margin: 1rem 0 0 0
-    
+        background-color: $wwb_blue
     img 
         float: right
         margin-left: $global_spacing
@@ -757,14 +687,12 @@ $global_spacing: 4%
     padding: $global_spacing 0
 
 .explore-item
-
     &:before
         -webkit-transform: translateY(-100px)
         -moz-transform: translateY(-100px)
         -ms-transform: translateY(-100px)
         -o-transform: translateY(-100px)
         transform: translateY(-100px)
-
     &:after
         -webkit-transform: translateY(100px)
         -moz-transform: translateY(100px)
@@ -772,7 +700,8 @@ $global_spacing: 4%
         -o-transform: translateY(100px)
         transform: translateY(100px)
 
-    &:before, &:after
+    &:before,
+    &:after
         $spd: 0.2s
         +padb
         -webkit-transition: $spd ease -webkit-transform
@@ -780,16 +709,14 @@ $global_spacing: 4%
         -ms-transition: $spd ease -ms-transform
         -o-transition: $spd ease -o-transform
         transition: $spd ease transform
-
     &:hover
         .explore-item__image
             -webkit-filter: grayscale(100%)
             -moz-filter:    grayscale(100%)
-            -ms-filter:     grayscale(100%)
             -o-filter:      grayscale(100%)
-            filter: gray
-
-        &:before, &:after
+            filter:         grayscale(100%)
+        &:before,
+        &:after
             -webkit-transform: translateY(0)
             -moz-transform: translateY(0)
             -ms-transform: translateY(0)
@@ -808,10 +735,10 @@ $global_spacing: 4%
     margin-bottom: 0
 
 .pillar-item__content h2 em
-    font-size: 2rem
-    width: auto
-    height: 50px
+    +prdib
+    +width_height(auto, auto)
     float: left
+    font-size: 2rem
 
 .pillar_content_h4
     width: 20%
@@ -819,38 +746,35 @@ $global_spacing: 4%
 .download_title
     +prdib
     +title-font-regular
+    +width_height(100%, 2em)
     float: left
-    text-decoration: none
-    width: 100%
-    height: 2em
     top: -12px
     text-transform: uppercase
+    text-decoration: none
     &:before
         +prdib
+        +width_height(30px, 2.2em)
+        +top_left(-5px, -17px)
+        content: ""
         float: left
         background: url(../img/download_arrow.png) no-repeat center center
         border-right: 1px solid lightgrey
         padding-right: 1rem
-        content: ""
-        width: 30px
-        height: 2.2em
-        left: -17px
-        top: -5px
 
 .pillar_content_bottom_left h4
-    +title-font-regular
-    //margin-bottom: 50px
+    +title-font-bold
     letter-spacing: 0
     border-right: 1px solid lightgrey
     padding-right: 20px
 
-
 .pillar_content_bottom_left a
+    position: relative
+    top: -1px
+    margin-left: 40px
+    text-transform: uppercase
+
     +title-font-regular
     font-size: 1rem
-    top: -5px
-    position: relative
-    margin-left: 40px
     font-weight: 400
     color: $wwb_blue
 .pillar-item__content.closed.bottom
@@ -859,11 +783,11 @@ $global_spacing: 4%
 .pillar_content_bottom_left.gov
     display: block
 
+// ::::: PAGE: AtoZ :::::
 .hero__social.az
     +prdib
-    width: auto
+    +width_height(auto, 50px)
     float: left
-    height: 50px
     top: -9px
     margin-left: 60px
     a
@@ -871,5 +795,61 @@ $global_spacing: 4%
         float: left
 
 #social-az
-    background: url(../img/menu_social.png) no-repeat 0 0
-    background-size: 82% auto
+    +prdib
+    background: url(../img/menu_social.png) no-repeat center 0
+    background-size: contain
+    margin: 7px 0 0 21px
+
+.download
+    a
+        text-transform: uppercase
+        font-size: 14px
+        overflow: hidden
+        +prdb
+        +top_right(-25px, -24px)
+        width: 105%
+        line-height: 48px
+        text-decoration: none
+        color: #616161
+        text-align: left
+        background: #e1e1e1 url('../img/icon-dowload.png') no-repeat 0 center
+        &:hover
+            background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
+        span
+            +title-font-bold
+            padding-left: 70px
+            &.align-right
+                display: none
+                +title-font
+                +padding_lr(20px, 20px)
+                float: right
+                background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
+
+.download
+    a.related_topics_a
+        +top_right(-25px, -24px)
+        +prdb
+        text-transform: uppercase
+        font-size: 14px
+        overflow: hidden
+        width: 100%
+        line-height: 48px
+        text-decoration: none
+        color: #616161
+        text-align: left
+
+        span
+            +title-font-bold
+            padding-left: 70px
+            &.align-right
+                display: none
+                float: right
+                +title-font
+                +padding_lr(20px, 20px)
+                background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
+span.align-right
+    display: block
+
+.related_topics_a
+    fl
+    background: none

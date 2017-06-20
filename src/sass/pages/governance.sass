@@ -1,196 +1,157 @@
+.container.gov.left
+    word-break: break-all
+
 .pwp-breakdown.gov
     float: left
-    height: auto
-    width: 100%
+    +width_height(100%, auto)
 
-.pillar_content_bottom_right
-    +prdib
-    float: left
-    padding-left: 3rem
-    width: 100%
-
-.pillar_content_bottom_left h4, .pillar_content_bottom_right h4
-    margin-bottom: 20px
-    letter-spacing: 0
-
-.pillar_content_bottom_left a
-    +title-font-regular
-    font-size: 1rem
-
-.btn
-    display: none
-.pillar_content_bottom_left.gov div
-    width: auto
 .container.gov.left
     margin: 0
     width: 100%
     float: left
     .pillar-item__content
+        +db
         padding: 0 10px 0 0
         h2 em
             font-size: 1.5rem
-.hero
-    padding: 0
 
-#social
-    height: 25px
-    opacity: 1
-    float: right
-    display: inline-block
-    position: relative
-    border-top: 0
-    width: 150px
-    max-width: 180px
-    margin-left: auto
-    margin-right: auto
-    margin-top: 20px
-    height: 30px
-    font-size: 12px
-    opacity: 1
-    background: url(../img/menu_social.png) no-repeat 0 0
-    background-size: 82% auto
-    li
-        height: 26px
-        width: 26px
-        position: relative
-        display: block
-        float: left
-        margin: 0
-        padding: 0
-        list-style: none
-        margin-left: 7%
-        top: -13px
-        left: 7px
-        position: relative
-        border-top: 0
-        a
-            //width: 100%
-            margin: 0
-            display: block
-            height: 26px
-            width: 26px
-            cursor: pointer
-
-#social-az
-    height: 25px
-    opacity: 1
-    display: inline-block
-    position: relative
+.pillar_content.container.gov
+    +prdb
     border-top: 0
     float: left
-    .social-media-icons
-    position: relative
-    text-align: center
-    display: inline-block
-    width: 50%
-    max-width: 180px
-    margin-left: auto
-    margin-right: auto
-    margin-top: 4px
-    height: 30px
-    font-size: 12px
-    opacity: 1
-    background: url(../img/menu_social.png) no-repeat 0 0
-    background-size: 82% auto
-    li
-        height: 26px
-        width: 26px
-        position: relative
-        display: block
-        float: left
-        margin: 0
-        padding: 0
-        list-style: none
-        margin-left: 7%
-        top: -13px
-        left: 7px
-        position: relative
-        border-top: 0
-        a
-            //width: 100%
-            margin: 0
-            display: block
-            height: 26px
-            width: 26px
-            cursor: pointer
-
-.hero__social.gov
-    h4,a
-        +prdib
-        margin-bottom: 0
-
 
 .pillar_copy.gov
+    float: left
     font-family: "Arial", "Helvetica", sans-serif
     font-size: 14px
     font-style: normal
     font-variant: normal
     line-height: 17px
-    float: left
 
-.leadership_img
+.pillar_content_bottom_left h4,
+.pillar_content_bottom_right h4
+    +title-font-bold
+    width: auto
+    margin-bottom: 20px
+    //margin-left: 20px
+    letter-spacing: 0
+
+.pillar_content_bottom_right
+    +prdib
+    float: left
     width: 100%
+    padding-left: 3rem
+
+.pillar-item__content.download.gov
+    display: block
+//a-z pill
+.pillar-item__content.download
+    display: none
+
+#available_downloads
+    display: block
+.leadership_img
+    +width_height(100%, 200px)
     max-width: 800px
-    height: 250px
     background: url("../img/Leadership_image.png") no-repeat 0 0
     background-size: contain
 
-.pillar_content.container.gov
-    border-top: 0
-    float: left
-    display: block
-    position: relative
+.pillar_content_bottom_left a
+    +title-font-regular
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 1rem
+    line-height: 2em
+.pillar_content_bottom_left.gov div
+    width: auto
 
+.btn
+    display: none
+    cursor: pointer
+.hero
+    padding: 0
+#gov_download
+    background-color: transparent
+    top: -17px
+    font-size: 12px
 
+#social
+    +prdib
+    +width_height(150px, 30px)
+    float: right
+    max-width: 180px
+    margin: 20px auto 0 auto
+    font-size: 12px
+    opacity: 1
+    background: url(../img/menu_social.png) no-repeat 0 0
+    background-size: 82% auto
+    li
+        +prdb
+        +width_height(26px, 26px)
+        +top_right(-20px, 13px)
+        float: right
+        padding: 0
+        margin: 0 0 0 7%
+        a
+            display: block
+            +width_height(26px, 26px)
+            margin: 0
+            cursor: pointer
+
+.hero__social.gov
+    h4, a
+        +prdib
+        margin-bottom: 0
 
 .pillar_content_bottom_right.gov
     +prdib
-    width: 100%
+    +width_height(100%, auto)
     padding-left: 0
-    height: auto
-    margin-bottom: 35px
+    margin-bottom: 20px
     border-bottom: 4px solid $wwb_blue
     div:last-child
-        margin-bottom: 30px
+        margin-bottom: 20px
 
 .pillar_content_bottom_left.gov
-    margin-bottom: 40px
-    border-bottom: 4px solid $wwb_blue
     display: none
+    //border-bottom: 4px solid $wwb_blue
     div
         width: 100%
         &:last-child
             margin-bottom: 20px
 .pillar_content_bottom_left.gov.second
     display: block
-    padding-top: 35px
+    float: left
+    padding-top: 25px
+    margin-bottom: 25px
+
     border-top: 4px solid $wwb_blue
+    border-bottom: 4px solid #00b7ee
 
 
 .hero__social.gov
-    //margin-bottom:
+    +prdib
+    +width_height(100%, 50px)
     float: left
-    width: 100%
-    height: 50px
-    display: inline-block
-    position: relative
     h4
         float: left
-        margin: 20px 0
         width: auto
+        margin: 20px 0
     a
         float: right
 .hero__social-item, .hero__social.gov a
     float: right
-    //margin: 20px 4px
 
 .pillar-item__content.gov.right
+    +db
     padding: 0
+
 #related_topic_mobile
     border-top: 4px solid $wwb_blue
     display: block
     h4
         margin-top: 30px
+
 .download_title.gov
     top: -4px
     &:after

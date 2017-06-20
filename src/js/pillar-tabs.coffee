@@ -7,7 +7,6 @@ class PillarTabs
             $(@pillar_tabs[0]).addClass('active')
             @tab_toggle.on('click', @toggleTab)
 
-
     toggleTab: (e) =>
         @pillar_tabs.removeClass('active')
         item = $(e.currentTarget).parent('.pillar-tab')

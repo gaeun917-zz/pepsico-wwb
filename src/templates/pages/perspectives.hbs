@@ -1,6 +1,6 @@
 ---
-title:          "Our Perspectives | Pepsico"
-description:    "We commit to stuff."
+title:          "A-Z Topics | Pepsico"
+description:    "A-Z Topics"
 page_id:        "perspectives"
 ---
 
@@ -44,22 +44,6 @@ page_id:        "perspectives"
 
     <section class="pwp-breakdown">
         <div class="container">
-            <!--<div class="pwp-breakdown-copy">-->
-            <!--<h2 class="pwp-breakdown__header underline"><em>A-Z Topics</em></h2>-->
-            <!--<p style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
-            <!--tempor incididunt ut labore-->
-            <!--et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elit,-->
-            <!--sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor-->
-            <!--sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
-            <!--aliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem-->
-            <!--ipsum dolor-->
-            <!--sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
-            <!--aliqua. Ut enim ad minimliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem-->
-            <!--ipsum dolorsit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
-            <!--aliqua. Ut enim ad minim-->
-            <!--</p>-->
-            <!--</div>-->
-
             {{#each perspectives ~}}
                 <div class="pwp-breakdown-copy">
                     <h2 class="pwp-breakdown__header underline category">{{this.pillar-name}}</h2>
@@ -72,64 +56,41 @@ page_id:        "perspectives"
                             </div>
                             <div class="pillar-item__content closed">
                                 <h2 class="h2-az"><em>{{this.item-header}}</em>
-                                    <li id="social-az">
-                                        <ul class="social-media-icons">
+                                        <ul class="social-media-icons" id="social-az">
                                             <li><a class="facebook" href="#"></a></li>
                                             <li><a class="twitter" href="#"></a></li>
                                             <li><a class="linkedIn" href="#"></a></li>
                                             <li><a class="email" href="#"></a></li>
                                         </ul>
-                                    </li>
-                                    <!--<div class="hero__social az">-->
-                                        <!--<a href="/#"-->
-                                           <!--class="hero__social-item hero__social-item--facebook"><span></span></a>-->
-                                        <!--<a href="/#"-->
-                                           <!--class="hero__social-item hero__social-item--twitter"><span></span></a>-->
-                                        <!--<a href="/#"-->
-                                           <!--class="hero__social-item hero__social-item--instagram"><span></span></a>-->
-                                        <!--<a href="/#"-->
-                                           <!--class="hero__social-item hero__social-item--email"><span></span></a>-->
-                                    <!--</div>-->
                                 </h2>
                                 {{#each this.item-copy}}
                                     <p class="pillar_copy">{{this}}</p>
                                 {{/each}}
-                                <div class="btn discover">Discover More ></div>
+                                <div class="btn discover"><a>Discover More ></a></div>
                             </div>
                             <div class="pillar-item__content download closed">
-                                <div class="download_title">
-                                    <span><a href="#">Download Policy</a></span>
-                                </div>
+                                <!--<div class="download" id="download_policy">-->
+                                    <a href="#" id="download_policy">
+                                        <span>Download Policy</span>
+                                        <span class="align-right" id="pdf_block1">PDF | 897KB</span>
+                                    </a>
+                                <!--</div>-->
                             </div>
                             <div class="pillar-item__content download closed">
-                                <div class="download_title">
-                                    <span><a href="#">Download Report</a></span>
-                                </div>
+                                    <a href="#" id="download_report">
+                                        <span>Download Report</span>
+                                        <span class="align-right" id="pdf_block2">PDF | 897KB</span>
+                                    </a>
                             </div>
                             <div class="pillar-item__content closed bottom">
-                                <!--<div class="pillar_content container">-->
-                                <div class="pillar_content">
-                                    <div class="pillar_content_bottom_left">
-                                        <h4 class="pillar_content_h4">Related Topics</h4>
-                                        <div class=""><a href="#">Deforestation</a></div>
-                                        <div class=""><a href="#">Farm Animal Welfare</a></div>
-                                        <div class=""><a href="#">Palm Oil</a></div>
-                                    </div>
+                                <div class="related_topics">
+                                    <ul href="#" class="related_topics_ul">
+                                        <span class="align-right"><li class="related_topics_header">Related Topics</li></span>
+                                        <li class=""><a href="#">Deforestation</a></li>
+                                        <li class=""><a href="#">Farm Animal Welfare</a></li>
+                                        <li class=""><a href="#">Palm Oil</a></li>
+                                    </ul>
                                 </div>
-                                <!--<div class="pillar_content_bottom_right ">-->
-                                <!--<h4>Share</h4>-->
-                                <!--&lt;!&ndash;<div class="hero__social az">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
-                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--facebook"><span></span></a>&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
-                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--twitter"><span></span></a>&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
-                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--instagram"><span></span></a>&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a href="/#"&ndash;&gt;-->
-                                <!--&lt;!&ndash;class="hero__social-item hero__social-item--email"><span></span></a>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                                <!--</div>-->
-                                <!--</div>-->
                             </div>
                         </div>
                     {{~/each}}

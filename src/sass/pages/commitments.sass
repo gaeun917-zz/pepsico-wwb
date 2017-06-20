@@ -70,30 +70,27 @@
 
 .pillar-item
     margin-bottom: 20px
+    letter-spacing: 1px
 
 .pillar-item__pill
     +prdb
-    height: 3rem
-    width: 100%
+    +width_height(100%, 3rem)
     cursor: pointer
 
     &::after
         +padb
+        +width_height(20px, 20px)
         right: 1rem
         top: calc(1.5rem - 10px)
         content: ""
-        width: 20px
-        height: 20px
-        background-image: url(../img/icon-open.png)
+        background: url(../img/icon-open.png) center
         background-size: contain
-        background-position: center
-        
+
     h4
         color: $dark_grey
         line-height: 3rem
         vertical-align: middle
         padding: 0 1rem
-
 
     &.open
         h4
@@ -105,7 +102,6 @@
 .pillar-item__content
     +prdn
     overflow: hidden
-
     img 
         +prdb
         width: 60px
