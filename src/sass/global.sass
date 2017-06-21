@@ -198,3 +198,116 @@ header
     display: block
     float: left
     width: 100%
+
+
+
+
+
+// :: footer ::
+$dk-blue: #1E83AE
+$blue: #3D5B94
+$light-blue: #3DACDD
+$green: #6dcd9a
+$social-size: .8em
+$social-width: 20%
+
+//* {
+//    margin: 0;
+//    padding: 0;
+//    @include box-sizing(border-box);
+//}
+//
+//html, body {
+//    font-family: Raleway, sans-serif;
+//    background-color: #fff;
+//}
+
+footer
+    width: 100%
+    display: inline-block
+    margin: 2em 0
+    height: 70px
+    background-color: #999
+    .logo_main
+        display: inline-block
+        width: auto
+        float: left
+        @media (max-width: 600px)
+        p
+            padding-left: 10%
+            color: white
+            font-size: 0.7em
+            display: block
+            text-transform: capitalize
+            letter-spacing: 1px
+            @media (max-width: 600px)
+            text-align: center
+            padding: 0
+    .social
+        width: 50%
+        font-family: 'Oswald Regular'
+        text-transform: uppercase
+        display: inline-block
+        position: relative
+        float: left
+        @media (max-width: 600px)
+            width: 100%
+        a
+            float: left
+            line-height: 70px
+            text-decoration: none
+            color: white
+            text-align: center
+            font-weight: bold
+.sitemap
+    //background-color: $dk-blue
+    font-size: $social-size
+    width: $social-width
+.terms
+    //background-color: $blue
+    font-size: $social-size
+    width: $social-width
+.privacy
+    //background-color: $light-blue
+    font-size: $social-size
+    width: $social-width
+.more
+    //background-color: $green
+    font-size: $social-size
+    width: $social-width
+
+#footer_social
+    display: inline-block
+    height: inherit
+    width: auto
+    max-width: 464px
+    margin-left: auto
+    margin-right: auto
+    opacity: 1
+
+.social-media-icons
+    +prdib
+    +width_height(80%, 45px)
+    max-width: 390px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    font-size: 12px
+    background: url(../img/Social_icon_white.png) no-repeat center 0
+    background-size: 100% auto
+    opacity: 1
+    li
+        +prdb
+        float: left
+        width: 18%
+        padding: 0
+        margin: 0 1%
+        border-top: 0
+        list-style: none
+        a
+            display: block
+            +width_height(100%, 45px)
+            cursor: pointer
+
+.logo_light
+    display: block

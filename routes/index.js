@@ -41,3 +41,7 @@ exports.recipes = function (req, res) {
 exports.governance = function (req, res) {
     res.render('governance', {appTitle: 'appTitle'});
 };
+
+exports.governance_video = function (req, res) {
+    res.render('governance_video', {appTitle: 'appTitle'});
+};
