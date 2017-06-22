@@ -49,10 +49,6 @@ $global_spacing: 5%
     z-index: -1000
     //background-color: #d7d6d3
 
-
-
-
-
 // ::::: PAGE: RECIPES LIST :::::
 .list-recipes > ul > li > a figcaption h2
     font-size: 18px
@@ -116,8 +112,7 @@ $global_spacing: 5%
         font-size: 14px
         overflow: hidden
         position: relative
-        top: -25px
-        left: -24px
+        +top_left(-25px, -24px)
         width: 104%
         display: block
         line-height: 48px
@@ -133,7 +128,6 @@ $global_spacing: 5%
             &.align-right
                 display: none
                 +title-font
-                padding-left: 20px
-                padding-right: 20px
+                +padding_lr(20px, 20px)
                 float: right
                 background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center

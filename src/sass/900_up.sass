@@ -29,14 +29,13 @@
 #download_policy a, #download_report a
     width: 103%
 #social li
-    position: relative
-    display: block
-    width: 26px
-    height: 26px
-    top: -13px
-    left: -7px
+    +prdb
+    +width_height(26px, 26px)
+    +top_left(-13px, -7px)
     float: left
     padding: 0
     margin: 0 0 0 5%
+#governanace_right_social li
+    +top_left(-26px, -18px)
 #footer_social
     display: block

@@ -1,20 +1,15 @@
 // Colours
 $wwb_blue: #00b7ee
 $wwb_darkblue: #077fbd
-
 $wwb_green: #63ba4d
 $wwb_darkgreen: #28753a
-
 $wwb_yellow: #d5a237
 $wwb_darkyellow: #d5a237
-
 $wwb_orange: #f59331
-
 $extralight_grey: #f3f2ef
 $light_grey: #d7d7d7
 $medium_grey: #666666
 $dark_grey: #545454
-
 $copy_grey: #7c7c7c
 $background_grey: rgb(215,214,211)
 $pill_tab_gray: rgb(166,165,163)
@@ -54,10 +49,9 @@ html
 
 body, html
     +box-sizing
+    +width_height(100%, 100%)
     margin: 0
     padding: 0
-    width: 100%
-    height: 100%
     background-color: #fff
 
 h1,h2,h3,h4
@@ -75,7 +69,6 @@ h1,h2,h3,h4,p,small
 
 ul, li
     list-style: none
-    list-style-type: none
     padding: 0
 
 .block-link
@@ -83,9 +76,7 @@ ul, li
     +cover
     max-width: 161px
     max-height: 161px
-    //z-index: 500
     border: 0
-    //background-color: gray
 
 .btn
     +prdib
@@ -95,21 +86,20 @@ ul, li
     $height: 30px
     height: $height
     clear: both
-    text-transform: uppercase
-    padding: 0 22px
     line-height: ($height - 2px)
-    font-size: 1.2rem
     vertical-align: top
     color: white
     border: 1px solid white
     border-radius: $height
+    padding: 0 22px
     margin-top: 2rem
+    font-size: 1.2rem
     text-align: center
+    text-transform: uppercase
     background-color: rgba(0,0,0,0.5)
     transition: 0.1s ease background-color
 
     &:hover
-
         background-color: rgba(0,0,0,0.8)
 
     &:active
@@ -124,12 +114,12 @@ ul, li
     vertical-align: top
 
 .pillar_copy
+    float: left
     +prdb
+    width: 100%
     margin-top: 2%
     margin-bottom: 4%
     line-height: 130%
-    float: left
-    width: 100%
 
 .hero-gradient
     +cover
@@ -158,10 +148,9 @@ ul, li
     
     .readz
         +prdb
-        cursor: pointer
-        width: 100%
-        height: 30px
+        +width_height(100%, 30px)
         +title-font-regular
+        cursor: pointer
         text-transform: uppercase
         line-height: 30px
 
@@ -170,7 +159,6 @@ ul, li
 
         &:hover
             color: $wwb_blue
-        
     &.open
         .copy 
             +db
@@ -178,29 +166,20 @@ ul, li
         .readz::before
             content: "< Read less"
 
-
 header
     float: left
-    position: relative
+    +prdb
+    +width_height(100%, 200px)
+    max-width: 2500px
     background: url(../img/header_img.png) no-repeat 0 0
     background-size: cover
-    max-width: 2500px
-    position: relative
-    display: block
-    width: 100%
-    height: 200px
 
 .hero
     padding: 0
 .page__content
-    position: relative
-    display: block
+    +prdb
     float: left
     width: 100%
-
-
-
-
 
 // :: footer ::
 $dk-blue: #1E83AE
@@ -222,45 +201,43 @@ $social-width: 20%
 //}
 
 footer
-    width: 100%
+    +width_height(100%, 110px)
     display: inline-block
-    height: 110px
     background-color: $dark_grey
     .logo_main
+        float: left
         display: inline-block
         width: auto
-        float: left
         @media (max-width: 600px)
         p
-            color: white
+            display: block
+            width: 66%
             font-family: "Oswald light"
             font-size: 0.8em
-            display: block
             text-transform: uppercase
             text-align: center
+            color: white
             padding: 0
-            width: 66%
             margin: 8px 0
             #copy_right
-                display: inline-block
-                position: relative
+                +prdib
+                height: inherit
                 margin: auto
                 top: -1px
-                height: inherit
             @media (max-width: 600px)
-            text-align: center
-            padding: 0
+                text-align: center
+                padding: 0
 
     .social
+        +prdib
         width: 55%
         font-family: 'Oswald Regular'
         text-transform: uppercase
-        display: inline-block
-        position: relative
         float: left
         margin-right: 68px
-        @media (max-width: 600px)
+        @media (max-width: 768px)
             width: 100%
+            margin-top: 30px
         a
             float: left
             height: 60px
@@ -268,58 +245,47 @@ footer
             text-decoration: none
             color: white
             text-align: center
-            //font-weight: bold
 #separator
+    +prdib
+    +width_height(auto, 15px)
     border-right: 1px solid lightgray
     float: right
-    height: 15px
-    width: auto
-    display: inline-block
-    position: relative
     margin-top: 42px
     margin-bottom: auto
 
 .sitemap
-    //background-color: $dk-blue
     font-size: $social-size
     width: $social-width
     height: 10px
 .terms
-    //background-color: $blue
     font-size: $social-size
     width: 26%
 .privacy
-    //background-color: $light-blue
     font-size: $social-size
     width: 22%
 .more
-    //background-color: $green
     font-size: $social-size
     width: $social-width
 .footer_container
-    width: 70%
-    height: 90px
+    +width_height(70%, 90px)
     max-width: 1372px
     margin: auto auto
     padding-top: 20px
 
 #footer_social
-    display: inline-block
-    position: relative
-    height: inherit
     float: right
+    +prdib
     width: 15%
+    height: inherit
     max-width: 464px
-    margin-left: auto
-    margin-right: auto
+    +margin_lr(auto, auto)
     opacity: 1
 
 .social-media-icons
     +prdib
     +width_height(87%, 64px)
     max-width: 390px
-    margin-left: auto
-    margin-right: auto
+    +margin_lr(auto,auto)
     margin-top: 5px
     text-align: center
     font-size: 12px
@@ -342,3 +308,8 @@ footer
 .logo_light
     display: block
     width: 80%
+//#governanace_right_social
+//    background: transparent
+//    li
+//        top: 19px
+//        left: 7px

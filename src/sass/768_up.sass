@@ -562,12 +562,9 @@ footer
 #separator
 	border-right: 1px solid lightgray
 	float: right
-	height: 15px
-	width: auto
-	margin-left: 10px
-	margin-right: 10px
-	display: inline-block
-	position: relative
+	+width_height(auto, 15px)
+	+margin_lr(10px, 10px)
+	+prdib
 	margin-top: 38px
 	margin-bottom: auto
 
@@ -589,30 +586,26 @@ footer
 	font-size: $social-size
 	width: $social-width
 .footer_container
-	width: 70%
-	height: 90px
+	+width_height(70%, 90px)
 	max-width: 1372px
 	margin: auto auto
 	padding-top: 20px
 
 #footer_social
 	//display: inline-block
-	display: none
-	position: relative
+	+prdb
+	+margin_lr(auto, auto)
 	height: inherit
 	float: right
 	width: 15%
 	max-width: 464px
-	margin-left: auto
-	margin-right: auto
 	opacity: 1
 
 .social-media-icons
 	+prdib
 	+width_height(87%, 50px)
 	max-width: 390px
-	margin-left: auto
-	margin-right: auto
+	+margin_lr(auto, auto)
 	margin-top: 25px
 	text-align: center
 	font-size: 12px
@@ -636,8 +629,11 @@ footer
 	display: block
 	width: 80%
 #governanace_right_social
-	display: none
-
+	display: block
+	background: transparent
+	li
+		top: -25px
+		left: -16px
 
 
 
