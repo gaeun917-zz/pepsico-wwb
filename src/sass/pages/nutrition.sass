@@ -1,7 +1,6 @@
 .hero--nutrition
 	background-image: url(../img/hero-nutrition--tb.jpg)
 
-
 .nutrition-breakdown-copy
 	.copy
 		line-height: 150%
@@ -14,8 +13,8 @@
 		line-height: 120%
 		font-size: 1.7rem
 	h4
-		font-size: 18px
 		+title-font-bold
+		font-size: 18px
 		line-height: 130%
 	p
 		line-height: 150%
@@ -25,7 +24,6 @@
 
 .our-commitment-to-nutrition
 	background-color: $light_grey
-	
 
 .farming
 	background-color: $extralight_grey
@@ -46,19 +44,14 @@
 		color: #fff
 		overflow: visible
 		position: relative
-		&:after 
-			top: 100%
-			left: 50%
-			border: solid transparent
+		&:after
+			+padn
+			+top_left(100%, 50%)
+			+width_height(0,0)
 			content: " "
-			height: 0
-			width: 0
-			display: none
-			position: absolute
 			pointer-events: none
-			border-color: rgba(255, 255, 255, 1)
+			border: 25px solid rgba(255, 255, 255, 1)
 			border-top-color: #fff
-			border-width: 25px
 			margin-left: -25px
 	.icons 
 		background-image: url(../img/nutrition/nutrition-icon-bg.jpg)	
@@ -74,10 +67,8 @@
 				display: inline-block
 			
 			figure
-				margin-left: auto
-				margin-right: auto
-				width: 263px
-				height: 263px
+				+width_height(263px, 263px)
+				+margin_lr(auto, auto)
 				padding-top: 20px
 			figcaption
 				margin: 0
@@ -89,10 +80,9 @@
 			p
 				+title-font
 				font-size: 24px
+				+margin_lr(auto, auto)
 				margin-top: 0
 				max-width: 263px
-				margin-left: auto
-				margin-right: auto
 		.rollover
 			display: none
 			figure
@@ -111,8 +101,7 @@
 
 	ul.forward-brand-list 
 		overflow: hidden
-		margin-left: -15px
-		margin-right: -15px
+		+margin_lr(-15px, -15px)
 		li
 			display: inline-block
 			margin: 0
@@ -137,5 +126,4 @@
 			font-size: 18px
 		p
 			max-width: 650px
-			margin-left: auto
-			margin-right: auto
+			+margin_lr(auto, auto)

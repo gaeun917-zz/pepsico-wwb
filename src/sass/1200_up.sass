@@ -124,10 +124,22 @@ $global_spacing: 5%
             background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
         span
             +title-font-bold
-            padding-left: 70px
+            padding-left: 45px
             &.align-right
                 display: none
                 +title-font
                 +padding_lr(20px, 20px)
                 float: right
                 background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
+
+
+.btn.discover a::after
+    content: ""
+    float: right
+    position: relative
+    width: 30px
+    height: 25px
+    top: -22px
+    left: 17px
+    background: url(../img/icon-arrow-right.png) no-repeat 7px 1px
+    background-size: 9px 14px

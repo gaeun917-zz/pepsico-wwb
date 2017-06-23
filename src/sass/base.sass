@@ -283,7 +283,9 @@ $global_spacing: 8%
 // ::::: EXPLORE :::::
 .explore
     +prdb
-    padding: $global_spacing 0
+    float: left
+    width: inherit
+    padding:  0 0 3% 0
     text-align: center
     color: white
     z-index: -1000
@@ -299,7 +301,6 @@ $global_spacing: 8%
         margin-right: $global_spacing
     // &:last-child
         // margin: 0
-
     &:before, &:after
         content: ""
         +padn
@@ -363,6 +364,8 @@ $global_spacing: 8%
     padding: 0 10%
     outline: 0
     border: 0
+
+
 
 // MISCELLANEOUS
 .download

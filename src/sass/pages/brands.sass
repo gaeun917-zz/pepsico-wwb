@@ -19,27 +19,23 @@
 			padding: 0 12px
 		a
 			+title-font-bold
+			+prdb
 			margin-bottom: 0
 			font-size: 12px
 			text-decoration: none
-			display: block
 			text-transform: uppercase
 			text-align: center
 			padding: 8px 5px
-			position: relative
 			color: $copy_grey
 			background-color: #e7e7e4
 			&.is-active, &:hover
 				color: #fff
 				background-color: $wwb_blue
-
-				&:after 
-					top: 100%
-					left: 50%
+				&:after
+					+top_left(100%, 50%)
+					+width_height(0,0)
 					border: solid transparent
 					content: " "
-					height: 0
-					width: 0
 					position: absolute
 					pointer-events: none
 					border-color: rgba(136, 183, 213, 0)
@@ -81,11 +77,9 @@
 				display: block
 				width: 100%
 
-
 			> a
-				display: block
+				+prdb
 				margin: 0 12px
-				position: relative
 				-webkit-transform: rotate(0) // chrome over pixel move fix
 				figure
 					position: relative
@@ -96,18 +90,16 @@
 						backface-visibility: hidden // chrome over pixel move fix	
 				.rollover 
 					position: absolute
-					bottom: 0
-					right: 0
-					left: 0
 					top: 0
+					bottom: 0
+					+left_right(0,0)
 					transition: all 100ms ease-in-out
 					opacity: 0
 							
 				.mask   
 					position: absolute
 					bottom: -1px
-					right: 0
-					left: 0
+					+left_right(0,0)
 					transition: all 100ms ease-in-out
 					transition-delay: 0ms
 					&.close
@@ -117,33 +109,27 @@
 					.rollover 
 						opacity: 1
 
-
 			.expander
 				position: absolute
 				background: #fff
-				top: auto
-				left: 0
-				width: 100%
+				+top_left(auto, 0)
+				+width_height(100%, 0)
 				// margin-top: 10px
 				text-align: left
-				height: 0
 				overflow: hidden
 				opacity: 0
 				&:after 
 					content: ""
 					display: block
-				&:before 
-					position: absolute
+				&:before
+					+prdb
+					+width_height(300%, 100%)
 					content: ""
-					display: block
-					width: 300%
 					margin-left: -150%
 					background-color: #fff
-					height: 100%
 
 			.expander-inner
-				margin-left: 0
-				margin-right: 0
+				+margin_lr(0,0)
 				position: relative
 				overflow-y: scroll
 				overflow-x: hidden
@@ -174,21 +160,19 @@
 
 		.btn-close 
 			position: relative
-			width: 40px
-			height: 40px
+			+width_height(40px, 40px)
 			top: 20px
 			right: 40px
 			cursor: pointer
-			// hide it for now, not in the design
+			// hide it for now, not on the design
 			display: none
 		
 			&:before,
 			&:after 
 				content: ''
 				position: absolute
-				width: 100%
+				+width_height(100%, 1px)
 				top: 50%
-				height: 1px
 				background: #888
 				transform: rotate(45deg)
 		
@@ -204,14 +188,12 @@
 		&.is-current
 			display: block
 
-		
 
 	// content in the expanded box
 	.expander-inner-half
-		width: 100%
 		float: left
-		height: auto
 		position: relative
+		+width_height(100%, auto)
 		color: $copy-grey
 		
 		img 
@@ -219,8 +201,9 @@
 
 		.tabs-select 
 			padding-top: 30px
-			overflow: hidden
 			margin-left: -12px
+			overflow: hidden
+
 			li 
 				width: 50%
 			a
@@ -233,8 +216,8 @@
 	// carousel
 	.slider
 		margin-bottom: 100px
-		margin-left: -6px
-		margin-right: -6px
+		+margin_lr(-6px, -6px)
+
 		li
 			> div
 				padding: 0 6px
@@ -245,14 +228,12 @@
 				.image
 					position: relative
 					&:after
-						background-color: rgba(0, 0, 0, 0.6)
 						content: ""
-						display: block
-						position: absolute
-						top: 0
+						+padb
+						+top_left(0,0)
 						bottom: 0
-						left: 0
 						right: 0
+						background-color: rgba(0, 0, 0, 0.6)
 						z-index: 10
 			.caption
 				opacity: 1
@@ -267,10 +248,10 @@
 	.tab-content 
 		font-size: 14px
 		h3
-			padding-top: 0
 			margin-top: 0
-			padding-bottom: 0
 			margin-bottom: 0
+			padding-top: 0
+			padding-bottom: 0
 		hr
 			height: 6px
 			border: 0
@@ -283,9 +264,9 @@
 			padding: 0
 			margin: 0
 			p
-				margin: 0
 				padding: 0
 				padding-top: 10px
+				margin: 0
 				margin-bottom: 6px
 		span
 			display: inline-block
@@ -307,23 +288,21 @@
 				margin-left: 1em
 		.vitamins 
 			overflow: hidden
-			margin-left: -10px
-			margin-right: -10px
+			+margin_lr(-10px, -10px)
+
 			.half
 				clear: none
 				float: left
 				width: 50%
 				ul
 					margin: 0 10px
-					border-bottom: 1px solid #7c7c7c
 					margin-bottom: 6px
+					border-bottom: 1px solid #7c7c7c
 			p 
 				margin: 0 10px
 				margin-bottom: 10px
 		.legal 
 			text-transform: uppercase
-
-					
 
 	// half left		
 	.gallery
@@ -350,26 +329,24 @@
 			right: 0
 		
 
-		
 .cta_container 
 	text-align: right
 	position: relative
 	overflow: hidden
 	a
+		display: inline-block
 		+title-font-regular
 		color: #fff
+		font-size: 16px
 		text-decoration: none
 		text-transform: uppercase
-		display: inline-block
 		padding-left: 40px
+		padding-right: 10px
 		padding-top: 8px
 		padding-bottom: 8px
-		font-size: 16px
-		padding-right: 10px
 		background: $wwb_blue url('../img/icon-location.png') no-repeat 18px center
-		&:after 
-			width: 30px
-			height: 20px
+		&:after
+			+width_height(30px, 20px)
 			content: ""
 			background: url('../img/icon-arrow-cta-white.png') no-repeat center
 			display: inline-block
