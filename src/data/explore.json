@@ -5,7 +5,7 @@
         "link": "/performance-with-purpose.html",
         "external": false,
         "overlay-colour": "#005d91",
-        "pages": "home products people planet commitments"
+        "pages": "home products people planet"
     },
     "1": {
         "heading": "Reporting",
@@ -52,7 +52,7 @@
         "link": "/planet.html",
         "external": false,
         "overlay-colour": "#005d91",
-        "pages": "pwp commitments products people"
+        "pages": "pwp products people"
     },
     "7": {
         "heading": "People",
@@ -68,7 +68,7 @@
         "link": "http://howwillwe-staging.herokuapp.com",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home pwp products people planet commitments "
+        "pages": "home pwp products people planet "
     },
     "9": {
         "heading": "perspectives",
@@ -76,7 +76,7 @@
         "link": "http://howwillwe-staging.herokuapp.com",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home pwp products people planet commitments"
+        "pages": "home pwp products people planet"
     },
     "10": {
         "heading": "BOX1",
@@ -84,7 +84,7 @@
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives"
+        "pages": "home perspectives governance commitments"
     },
     "11": {
         "heading": "BOX2",
@@ -92,7 +92,7 @@
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives"
+        "pages": "home perspectives governance commitments"
     },
     "12": {
         "heading": "BOX3",
@@ -100,7 +100,7 @@
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives"
+        "pages": "home perspectives governance commitments"
     },
     "13": {
         "heading": "NUTRITION",

@@ -413,7 +413,7 @@ $global_spacing: 6%
 
 .download
 	a
-		+top_left(-25px, -24px)
+		+top_left(-25px, -20px)
 		+prdb
 		font-size: 14px
 		overflow: hidden
@@ -428,7 +428,7 @@ $global_spacing: 6%
 			background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
 		span
 			+title-font-bold
-			padding-left: 45px
+			padding-left: 60px
 			//&.align-right
 				//+title-font
 				//+padding_lr(20px,20px)
@@ -471,6 +471,8 @@ $global_spacing: 6%
 			margin: 0
 			display: block
 			cursor: pointer
+			position: relative
+			float: left
 
 .related_topics
 	font-size: 14px
@@ -658,4 +660,6 @@ footer .social
 	margin-top: 0
 .footer_container
 	width: 94%
-
+.btn.discover a::after
+	top: -23px
+	left: 14px
