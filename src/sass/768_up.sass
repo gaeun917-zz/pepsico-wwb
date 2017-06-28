@@ -54,16 +54,6 @@ $global_spacing: 6%
 .misvis
 	padding-top: $global_spacing
 
-//.explore
-	//padding: $global_spacing 0
-
-//.explore-item
-//	width: 48%
-//	//padding-top: 48%
-//	//margin-bottom: $global_spacing
-//	&:nth-child(odd)
-//		margin-right: $global_spacing
-
 .explore-item__heading
 	font-size: 1.6rem
 
@@ -98,26 +88,11 @@ $global_spacing: 6%
 .pillar-tab__heading span
 	padding: $global_spacing 0
 
-//.explore
-//	padding: $global_spacing 0
-//
-//.explore-item
-//	width: 50% - $global_spacing / 2
-//	padding-top: (100% - $global_spacing * 2) / 2
-//	&:before
-//		top: 30%
-//	&:after
-//		bottom: 30%
-
-
 // ::::: PAGE: BRANDS
 .search-blue
 	padding: 64px 0 105px 0
 	h3
 		font-size: 22px
-
-
-
 
 // ::::: PAGE: BRANDS LIST :::::
 .tabs-select
@@ -305,7 +280,6 @@ $global_spacing: 6%
 				padding: 0 40px
 				margin-bottom: 40px
 
-
 // ::::: PAGE: GOVERNANCE :::::
 .hero__social-item
 	float: right
@@ -343,8 +317,6 @@ $global_spacing: 6%
 	background-color: silver
 
 .pillar-item__content.download.gov
-	padding: 1em
-	padding-left: 1.3em
 	.download_title
 		+top_left(-4px, -3px)
 
@@ -362,21 +334,20 @@ $global_spacing: 6%
 .pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
 	display: block !important
 
-//.pillar_content_item.gov
-	//width: 100%
 .pillar_content_bottom_left.gov div
-	width: 100%
+	//width: 100%
 	a
 		margin-left: 0
+
 .pillar_content_bottom_left
 	+prdib
 	height: 50px
 	float: left
-	div
-		float: left
-		width: auto
-		margin-right: 30px
-		//margin-top: 13px
+	//div
+	//	float: left
+	//	width: auto
+	//	margin-right: 30px
+
 .pillar_content_bottom_left.gov
 	+width_height(100%, auto)
 	margin-bottom: 40px
@@ -397,37 +368,15 @@ $global_spacing: 6%
 
 .download
 	a
-		//+top_left(-25px, -20px)
-		//+prdb
-		//font-size: 14px
-		//overflow: hidden
-		//width: 100%
-		//line-height: 48px
-		//text-transform: uppercase
-		//text-decoration: none
-		//text-align: left
-		//color: #616161
-		//background: #e1e1e1 url('../img/icon-dowload.png') no-repeat 0 center
 		&:hover
 			background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
-		span
-			+title-font-bold
-			padding-left: 60px
-			//&.align-right
-				//+title-font
-				//+padding_lr(20px,20px)
-				//float: right
-				//background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
 
-#download_policy a, #download_report a
+#download_policy a,
+#download_report a
 	background:  #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
 	width: 100%
 	&:hover
 		background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
-
-#pdf_block1, #pdf_block2
-	display: inline-block
-	background: #e9e7e7 url(../img/icon-separator.png) no-repeat 0 center
 
 #social-az
 	opacity: 1
@@ -459,30 +408,12 @@ $global_spacing: 6%
 			float: left
 
 .related_topics
-	font-size: 14px
-	overflow: hidden
-	line-height: 49px
-	text-transform: uppercase
-	text-decoration: none
-	text-align: left
-	margin-top: 0px
-	margin-bottom: -10px
 	.related_topics_ul
-		list-style-type: none
-		margin: 0
-		padding: 0
-		overflow: hidden
 		li
-			float: left
-			margin-left: 30px
 			&:first-child
-				float: left
-				+title-font-bold
-				+margin_lr(10px, 50px)
-				text-align: left
+				margin-right: 5%
 				&:after
 					+prdb
-					//background: url('../img/icon-separator.png') no-repeat 0 0
 			span
 				padding-left: 0
 				&.align-right
@@ -491,10 +422,6 @@ $global_spacing: 6%
 					padding-right: 40px
 					background: url('../img/icon-separator.png') no-repeat 120px 3px
 			a
-				display: block
-				+title-font-bold
-				color: $wwb_blue
-				text-decoration: none
 				&:after
 					float: right
 					+pr
@@ -503,17 +430,13 @@ $global_spacing: 6%
 					background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
 					background-size: 7px 10px
 
-//a#download_policy, a#download_report
-//	//width: 103%
-//	padding: 0 20px
-
 .related_topics .related_topics_ul li
 	width: auto
 	font-size: 14px
-	margin: 23px 15px
 	a:after
 		float: right
 		display: block
+
 footer
 	display: inline-block
 	+width_height(100%, 110px)
@@ -571,22 +494,22 @@ footer
 	border-right: 1px solid lightgray
 
 .sitemap
-	//background-color: $dk-blue
 	font-size: $social-size
 	width: $social-width
 	height: 10px
+
 .terms
-	//background-color: $blue
 	font-size: $social-size
 	width: 26%
+
 .privacy
-	//background-color: $light-blue
 	font-size: $social-size
 	width: 22%
+
 .more
-	//background-color: $green
 	font-size: $social-size
 	width: $social-width
+
 .footer_container
 	+width_height(70%, 90px)
 	max-width: 1372px
@@ -594,7 +517,6 @@ footer
 	padding-top: 20px
 
 #footer_social
-	//display: inline-block
 	float: right
 	+prdb
 	+margin_lr(auto, auto)
@@ -630,6 +552,7 @@ footer
 .logo_light
 	display: block
 	width: 80%
+
 #governanace_right_social
 	display: block
 	background: transparent
@@ -637,13 +560,13 @@ footer
 		top: -25px
 		left: -16px
 
-
-
 footer .social
 	margin-right: 0
 	margin-top: 0
+
 .footer_container
 	width: 94%
+
 .btn.discover a::after
 	top: -23px
 	left: 14px

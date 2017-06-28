@@ -187,11 +187,13 @@ $global_spacing: 8%
         margin-top: 1.9rem
 
 @media screen and (max-width: 1023px)
-    .title-lines-medium-down::before, .title-lines-medium-down::after
+    .title-lines-medium-down::before,
+    .title-lines-medium-down::after
         +prdb
 
 @media screen and (min-width: 1024px)
-    .title-lines-large::before, .title-lines-large::after
+    .title-lines-large::before,
+    .title-lines-large::after
         +prdb
 
 .hero__desktop-copy
@@ -204,7 +206,6 @@ $global_spacing: 8%
 
 .hero__anchor
     $height: 30px
-
     +prdib
     +box-sizing
     +unstyled-anchor
@@ -276,9 +277,9 @@ $global_spacing: 8%
     +prdb
     padding-bottom: 56.25% /* 16:9 */
     height: 0
-
     .highlight__media
         +cover
+
 
 // ::::: EXPLORE :::::
 .explore
@@ -299,8 +300,7 @@ $global_spacing: 8%
 
     &:nth-child(odd)
         margin-right: $global_spacing
-    // &:last-child
-        // margin: 0
+
     &:before, &:after
         content: ""
         +padn
@@ -334,46 +334,44 @@ $global_spacing: 8%
         background-position: center
         background-repeat: no-repeat
 
-
 .explore__heading-wrap
     +padb
     +box-sizing
     +width_height(100%, 100%)
     +top_left(0,0)
     +no-pointer-events
-    
-.explore__heading-wrap2
-    +prdt
-    +width_height(100%, 100%)
-    margin: 0
-    padding: 0
-    outline: 0
-    border: 0
-    vertical-align: middle
-    text-align: center
-
-.explore-item__heading
-    +prdtc
-    +title-font-regular
-    +width_height(100%, 100%)
-    font-size: 1.3rem
-    text-transform: uppercase
-    vertical-align: middle
-    text-align: center
-    margin: 0
-    padding: 0 10%
-    outline: 0
-    border: 0
+    .explore__heading-wrap2
+        +prdt
+        +width_height(100%, 100%)
+        margin: 0
+        padding: 0
+        outline: 0
+        border: 0
+        vertical-align: middle
+        text-align: center
+        .explore-item__heading
+            +prdtc
+            +title-font-regular
+            +width_height(100%, 100%)
+            font-size: 1.3rem
+            text-transform: uppercase
+            vertical-align: middle
+            text-align: center
+            margin: 0
+            padding: 0 10%
+            outline: 0
+            border: 0
 
 
 
-// MISCELLANEOUS
+// :::::  MISCELLANEOUS :::::
 .download
     a
         overflow: hidden
         width: 100%
         top: -23px
         left: 0
+        position: relative
         display: block
         line-height: 48px
         font-size: 14px
@@ -386,10 +384,10 @@ $global_spacing: 8%
             background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
         span
             +title-font-bold
-            padding-left: 70px
+            padding-left: 65px
             &.align-right
                 display: none
                 float: right
                 +title-font
-                +padding_lr(20px, 20px)
+                +padding_lr(10px, 10px)
                 background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center

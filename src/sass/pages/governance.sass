@@ -12,8 +12,6 @@
     .pillar-item__content
         +db
         padding: 0 10px 0 0
-        h2 em
-            font-size: 1.5rem
 
 .pillar_content.container.gov
     +prdb
@@ -21,20 +19,10 @@
     float: left
 
 .pillar_copy.gov
-    float: left
     font-family: "Arial", "Helvetica", sans-serif
     font-size: 14px
     font-style: normal
     font-variant: normal
-    line-height: 17px
-
-.pillar_content_bottom_left h4,
-.pillar_content_bottom_right h4
-    +title-font-bold
-    width: auto
-    margin-bottom: 20px
-    //margin-left: 20px
-    letter-spacing: 0
 
 .pillar_content_bottom_right
     +prdib
@@ -42,28 +30,35 @@
     width: 100%
     padding-left: 3rem
 
+.pillar_content_bottom_left h4,
+.pillar_content_bottom_right h4
+    +title-font-bold
+    width: auto
+    margin-bottom: 20px
+    letter-spacing: 0
+
+
 .pillar-item__content.download.gov
     display: block
-//a-z pill
-.pillar-item__content.download
-    display: none
+    height: 3em
+    padding: 0
 
-//#available_downloads
-    //display: block
+//a-z pill
+//.pillar-item__content.download
+//    display: none
 
 .leadership_img
     +width_height(100%, 200px)
     max-width: 800px
-    //background: url("../img/Leadership_image.png") no-repeat 0 0
     background-size: contain
+
 #leadership_img
     max-width: 350px
     width: 100%
+
 #gov_iframe
     max-width: 300px
     max-height: 250px
-    //width: 100%
-    //height: 100%
 
 .pillar_content_bottom_left a
     +title-font-regular
@@ -71,18 +66,38 @@
     text-transform: uppercase
     font-size: 1rem
     line-height: 2em
-.pillar_content_bottom_left.gov div
-    width: auto
+
+//.pillar_content_bottom_left.gov div
+//    width: auto
+
+.pillar_content_bottom_right.gov
+    +prdib
+    +width_height(100%, auto)
+    padding-left: 0
+    margin-bottom: 20px
+    border-bottom: 4px solid $wwb_blue
+    div:last-child
+        margin-bottom: 20px
+
+.pillar_content_bottom_left.gov
+    display: none
+    div
+        width: 100%
+        &:last-child
+            margin-bottom: 20px
+
+.pillar_content_bottom_left.gov.second
+    display: block
+    float: left
+    padding-top: 25px
+    margin-bottom: 25px
+    border-top: 4px solid $wwb_blue
+    border-bottom: 4px solid #00b7ee
 
 .btn
     display: none
     cursor: pointer
-.hero
-    padding: 0
-#gov_download
-    background-color: transparent
-    top: -17px
-    font-size: 12px
+
 
 #social
     +prdib
@@ -106,37 +121,13 @@
             +width_height(26px, 26px)
             margin: 0
             cursor: pointer
+.hero
+    padding: 0
 
 .hero__social.gov
     h4, a
         +prdib
         margin-bottom: 0
-
-.pillar_content_bottom_right.gov
-    +prdib
-    +width_height(100%, auto)
-    padding-left: 0
-    margin-bottom: 20px
-    border-bottom: 4px solid $wwb_blue
-    div:last-child
-        margin-bottom: 20px
-
-.pillar_content_bottom_left.gov
-    display: none
-    //border-bottom: 4px solid $wwb_blue
-    div
-        width: 100%
-        &:last-child
-            margin-bottom: 20px
-.pillar_content_bottom_left.gov.second
-    display: block
-    float: left
-    padding-top: 25px
-    margin-bottom: 25px
-
-    border-top: 4px solid $wwb_blue
-    border-bottom: 4px solid #00b7ee
-
 
 .hero__social.gov
     +prdib
@@ -186,9 +177,10 @@
 #gov_social_media_ul
     background: transparent
 
-//#gov_social_icon
-    //+prdib
-    //float: right
-    //ul
-    //    margin-bottom: 0
-    //    margin-top: 0
+#gov_download
+    background-color: transparent
+    top: 0
+    font-size: 12px
+    line-height: 47px
+    height: inherit
+    background-position: 0

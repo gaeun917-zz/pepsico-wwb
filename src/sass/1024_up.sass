@@ -301,9 +301,6 @@ $global_spacing: 4%
         -o-transform: scale(1)
         transform: scale(1)
 
-.explore
-    text-align: center
-
 .explore-item
     width: 16.8%
     padding-top: 16.8%
@@ -312,7 +309,6 @@ $global_spacing: 4%
 
     &:nth-child(odd)
         margin-right: $global_spacing
-        //margin-top: $global_spacing
     &:last-child
         margin: 0
 
@@ -347,6 +343,7 @@ $global_spacing: 4%
 
 .highlight__mobile-copy
     +dn
+
 .highlight__desktop-copy
     +prdb
 
@@ -418,7 +415,6 @@ $global_spacing: 4%
 
 .wangotron__details-modal .wangotron__details-modal__container
     background-color: transparent !important
-
 
 .progress-timeline__carousel-wrapper
     +dn
@@ -510,7 +506,8 @@ $global_spacing: 4%
     &:first-child
         +opacityz(1)
 
-.progress-timeline__title, .progress-timeline__copy
+.progress-timeline__title,
+.progress-timeline__copy
     +prdb
     +width_height(100%, auto)
     text-align: center
@@ -573,17 +570,13 @@ $global_spacing: 4%
         cursor: pointer
         &::before
             background-color: darken($light_grey, 5%)
+
 .pwp-breakdown
     padding: 3% 0
     h4
-        //+prdib
-        //float: left
-        //width: auto
-        //padding-right: 40px
         font-size: 1rem
         padding-top: 0
         padding-right: 0
-
 
 .pwp-breakdown.topics
     background-color: rgb(192,192,192)
@@ -625,19 +618,6 @@ $global_spacing: 4%
         +box-sizing
         +width_height(100%, 120px)
         +top_left(0, 0)
-        //border-top: 4px solid white
-        //border-bottom: 1px solid white
-        //background-color: $medium_grey
-
-    //&:nth-child(1) .pillar-tab__heading
-    //    left: 0
-    //
-    //&:nth-child(2) .pillar-tab__heading
-    //    //left: 33.333333%
-    //    left: 300px
-    //
-    //&:nth-child(3) .pillar-tab__heading
-    //    right: 0
 
 .pillar-tab-container
     +prdb
@@ -652,8 +632,6 @@ $global_spacing: 4%
     +width_height(30%, 80px)
     top: 0
     padding: 0
-    //border-top: 4px solid white
-    //border-bottom: 1px solid white
 
     span
         +box-sizing
@@ -661,23 +639,18 @@ $global_spacing: 4%
         +cover
         line-height: 80px
 
-    &:hover span 
-        //background-color: lighten(#66b5e2, 2%)
-
     &:active span 
         background-color: #66b5e2 !important
+
+// tab
 .pillar-tab:nth-child(1) .pillar-tab__heading
     left: 0
-    //border-left: 1px solid white
 
 .pillar-tab:nth-child(2) .pillar-tab__heading
     left: 30%
-    //border-left: 1px solid white
-    //border-right: 1px solid white
 
 .pillar-tab:nth-child(3) .pillar-tab__heading
     left: 60%
-    //border-right: 1px solid white
 
 .pillar-tab__content
     h2:after
@@ -690,16 +663,6 @@ $global_spacing: 4%
         float: right
         margin-left: $global_spacing
         margin-bottom: $global_spacing
-
-
-
-
-
-
-
-
-//.explore
-    //padding: $global_spacing 0
 
 .explore-item
     &:before
@@ -737,6 +700,7 @@ $global_spacing: 4%
             -ms-transform: translateY(0)
             -o-transform: translateY(0)
             transform: translateY(0)
+
 
 // ::::: PAGE: GOVERNANCE :::::
 .container.gov.left
@@ -776,25 +740,6 @@ $global_spacing: 4%
         border-right: 1px solid lightgrey
         padding-right: 1rem
 
-.pillar_content_bottom_left h4
-    //+title-font-bold
-    //letter-spacing: 0
-    //border-right: 1px solid lightgrey
-    //padding-right: 20px
-
-.pillar_content_bottom_left a
-    position: relative
-    top: -1px
-    margin-left: 40px
-    text-transform: uppercase
-
-    +title-font-regular
-    font-size: 1rem
-    font-weight: 400
-    color: $wwb_blue
-.pillar-item__content.closed.bottom
-    height: 48px
-
 .pillar_content_bottom_left.gov
     display: block
 
@@ -811,34 +756,13 @@ $global_spacing: 4%
 
 #social-az
     +prdib
-    //background: url(../img/menu_social.png) no-repeat center 0
     background-size: contain
     margin: 7px 0 0 21px
 
 .download
     a
-        //text-transform: uppercase
-        //font-size: 14px
-        //overflow: hidden
-        //+prdb
-        //+top_right(-25px, -24px)
-        //width: 100%
-        //line-height: 48px
-        //text-decoration: none
-        //color: #616161
-        //text-align: left
-        //background: #e1e1e1 url('../img/icon-dowload.png') no-repeat 0 center
         &:hover
             background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
-        span
-            //+title-font-bold
-            //padding-left: 70px
-            &.align-right
-                display: none
-                +title-font
-                +padding_lr(10px, 10px)
-                float: right
-                background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
 
 .download
     a.related_topics_a
@@ -852,7 +776,6 @@ $global_spacing: 4%
         text-decoration: none
         color: #616161
         text-align: left
-
         span
             +title-font-bold
             padding-left: 70px
@@ -862,10 +785,12 @@ $global_spacing: 4%
                 +title-font
                 +padding_lr(20px, 20px)
                 background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
+
 span.align-right
     display: block
 
 .related_topics_a
     background: none
+
 .pillar_content_bottom_left.gov.second
     display: none

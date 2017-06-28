@@ -12,9 +12,6 @@
     background-size: 180% auto
     background: $background_grey no-repeat center top
 
-.pwp-breakdown h4, .pwp-breakdown-copy
-    margin: 0 auto
-
 .pwp-breakdown__header
     margin: 0
 
@@ -97,9 +94,6 @@
             background-image: url(../img/icon-close.png)
 
 .pillar-item__content
-    +prdn
-    //+db
-    overflow: hidden
     padding: 4% 7%
     width: 100%
     border-bottom: 1px solid $light_grey
@@ -168,15 +162,12 @@
 
 .pillar-item__content.closed.bottom
     height: auto
-    padding: 0 1%
+    padding: 0
     background-color: #e9e7e7
 
 .pillar_content_bottom_left
-    //+prdib
-    //float: left
     width: 100%
     color: $medium_grey
-    //padding-right: 1rem
     h4
         margin-bottom: 50px
         letter-spacing: 0
@@ -196,18 +187,6 @@
                 margin-left: 5px
                 top: -2px
                 background: url(../img/nextArrow.png) no-repeat 0 0
-
-.pillar_content_bottom_right
-    +prdib
-    +width_height(60%, 25px)
-    float: left
-    padding-left: 3rem
-    h4
-        +prdb
-        float: left
-        margin-bottom: 50px
-        letter-spacing: 0
-        width: 100%
 
 #search_bar
     +prdib
@@ -240,10 +219,9 @@
     border: 0
     background-color: $wwb_blue
     padding-top: 5px
+    margin: 1rem 0
     &:active
         color: $wwb_blue
-
-.btn.discover
     a
         color: white
         text-decoration: none
@@ -251,13 +229,12 @@
         img
             float: right
             position: relative
-            width: 9px
+            width: 10px
             height: 15px
-            top: 6px
+            top: 5px
             margin-left: 5px
             background-repeat: no-repeat
             background-size: 9px 14px
-
 
 .pillar_content.container,
 .pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover,
@@ -276,16 +253,6 @@
     div
         float: left
         top: -14px
-
-.download_title.gov:before
-    +prdib
-    +width_height(30px, 2.2em)
-    +top_left(-4px, -14px)
-    float: left
-    background: url(../img/download_arrow.png) no-repeat center center
-    border-right: 1px solid lightgrey
-    padding-right: 1rem
-    content: ""
 
 .pillar_content_bottom_left
     h4
@@ -309,7 +276,6 @@
         font-size: 1rem
         font-weight: 400
         color: $wwb_blue
-        //margin-left: 20px
 
 .topics
     margin: 0 0 !important
@@ -331,18 +297,14 @@
     .related_topics_ul
         list-style-type: none
         margin: 0
-        //margin onf related topics box
-        margin-top: 9px
-        margin-bottom: 9px
-        padding: 0
+        padding: 10px 0 0 0
         overflow: hidden
         li
             float: left
             margin-left: 30px
             &:first-child
                 +title-font-bold
-                margin-left: 10px
-                float: left
+                margin-bottom: 20px
                 text-align: left
                 &:after
                     +prdb
@@ -354,7 +316,6 @@
                 padding-left: 0
                 &.align-right
                     display: inline-block
-                    //padding-left: 20px
                     padding-right: 40px
                     float: left
                     background: url('../img/icon-separator.png') no-repeat 120px 3px
@@ -371,46 +332,48 @@
                     top: 17px
                     background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
                     background-size: 7px 10px
+                &:last-child
+                    padding-bottom: 10px
 
-#download_policy a, #download_report a
+#download_policy a,
+#download_report a
+    width: 105%
     background:  #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
     &:hover
         background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
 
-#pdf_block1, #pdf_block2
+#pdf_block1,
+#pdf_block2
     display: block
     background: #e9e7e7 url(../img/icon-separator.png) no-repeat 0 center
 
-#download_policy a, #download_report a
-    width: 105%
-//#footer_social.az_social_icon
-//    background: url(../img/menu_social.png) no-repeat center 0
-//    width: 50%
-//    height: auto
-//    position: relative
-//    display: inline-block
+.download_title.gov:before
+    +prdib
+    +width_height(30px, 2.2em)
+    +top_left(-4px, -14px)
+    float: left
+    background: url(../img/download_arrow.png) no-repeat center center
+    border-right: 1px solid lightgrey
+    padding-right: 1rem
+    content: ""
 
 .social-media-icons#az_social_icon_ul
     background: url(../img/menu_social.png) no-repeat center 0
     background-size: 120px 25px
     width: 120px
-    position: relative
-    display: inline-block
     margin-top: 10px
-
-#az_social_icon_ul
+    height: 35px
     li
         width: 23%
-.h2-az em
-    margin-right: 1em
 
 .social-media-icons#gov_social_icon_ul
     background: url(../img/menu_social.png) no-repeat center 0
     background-size: 120px 25px
     width: 120px
-    position: relative
-    display: inline-block
     float: right
     margin-top: 10px
     li
         width: 23%
+
+.h2-az em
+    margin-right: 1em

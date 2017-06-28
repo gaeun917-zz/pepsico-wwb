@@ -170,7 +170,6 @@ header
     float: left
     +prdb
     +width_height(100%, 200px)
-    //max-width: 2500px
     background: no-repeat 0 0
     background-size: cover
     img
@@ -191,17 +190,6 @@ $light-blue: #3DACDD
 $green: #6dcd9a
 $social-size: .8em
 $social-width: 20%
-
-//* {
-//    margin: 0;
-//    padding: 0;
-//    @include box-sizing(border-box);
-//}
-//
-//html, body {
-//    font-family: Raleway, sans-serif;
-//    background-color: #fff;
-//}
 
 footer
     +width_height(100%, 110px)
@@ -227,9 +215,6 @@ footer
                 height: inherit
                 margin: auto
                 top: -1px
-            @media (max-width: 600px)
-                text-align: center
-                padding: 0
 
     .social
         +prdib
@@ -248,6 +233,7 @@ footer
             text-decoration: none
             color: white
             text-align: center
+
 #separator
     +prdib
     +width_height(auto, 15px)
@@ -269,20 +255,20 @@ footer
 .more
     font-size: $social-size
     width: $social-width
+
 .footer_container
     +width_height(70%, 90px)
     max-width: 1372px
     margin: auto auto
     padding-top: 20px
-
-#footer_social
-    float: right
-    +prdib
-    width: 15%
-    height: inherit
-    max-width: 464px
-    +margin_lr(auto, auto)
-    opacity: 1
+    #footer_social
+        float: right
+        +prdib
+        width: 15%
+        height: inherit
+        max-width: 464px
+        +margin_lr(auto, auto)
+        opacity: 1
 
 .social-media-icons
     +prdib
@@ -311,8 +297,4 @@ footer
 .logo_light
     display: block
     width: 80%
-//#governanace_right_social
-//    background: transparent
-//    li
-//        top: 19px
-//        left: 7px
+
