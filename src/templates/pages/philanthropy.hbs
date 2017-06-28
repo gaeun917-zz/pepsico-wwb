@@ -1,102 +1,98 @@
 ---
-title:          "A-Z Topics | Pepsico"
-description:    "A-Z Topics"
-page_id:        "perspectives"
+title:          "Philanthropy | Pepsico"
+description:    "Philanthropy"
+page_id:        "philanthropy"
 ---
 
 <!-- START MAIN CONTENT -->
 <div class="page__content">
-
     <section class="pwp-breakdown topics">
         <div class="container">
             <div class="pwp-breakdown-copy">
-                <h2 class="pwp-breakdown__header underline">A-Z <em>Topics</em></h2>
+                <h2 class="pwp-breakdown__header underline"><em>philanthropy</em></h2>
                 <p class="topics" style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod
-                    tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
-                    sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem
-                    ipsum dolor
-                    sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minimliqua. Ut enim ad minimtempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minimLorem
-                    ipsum dolorsit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna
-                    aliqua. Ut enim ad minim
+                    sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
+                    sit amet,
+                    consectetur adipisicing elit
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="search-blue az">
-        <div class="container">
-            <h3>Search Topics</h3>
-            <div class="form">
-                <form action="" role="search" id="search_bar">
-                    <input type="text" name="search" placeholder="Start searching...">
-                    <input type="submit" value="submit" name="submit">
-                </form>
+    <section class="list-brands-container" id="phil_list">
+        <div class="container" id="phil_container">
+            <ul class="categories tabs-select">
+                <li>
+                    <div>
+                        <a href="#focus" data-filter="top" class="is-active">OUR FOCUS</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#work" data-filter="beverages">HOW WE WORK</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#relief" data-filter="snacks">DISASTER RELIEF</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="pwp-breakdown-copy">
+                <h2 class="pwp-breakdown__header underline" id="phil_header-left">HOW WE<em>WORK</em></h2>
             </div>
+            <div id="philan_slider"></div>
         </div>
     </section>
 
 
-    <section class="pwp-breakdown">
-        <div class="container">
-            {{#each perspectives ~}}
-                <div class="pwp-breakdown-copy">
-                    <h2 class="pwp-breakdown__header underline category">{{this.pillar-name}}</h2>
+
+
+    <div class="page__content">
+        <section class="our-progress" id="phil_progress">
+            <div class="container">
+                <div class="contained-copy">
+                    <h2 class="underline" id="phil_header-underline">Recent <em>Stories</em></h2>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptatibus quae facere undez.</p>
                 </div>
-                <div class="pillar-container pillar--{{this.pillar-name}}">
-                    {{#each this.items}}
-                        <div class="pillar-item">
-                            <div class="pillar-item__pill">
-                                <h4>{{this.item-header}}</h4>
-                            </div>
-                            <div class="pillar-item__content closed">
-                                <h2 class="h2-az"><em>{{this.item-header}}</em>
-                                        <ul class="social-media-icons" id="social-az">
-                                            <li><a class="facebook" href="#"></a></li>
-                                            <li><a class="twitter" href="#"></a></li>
-                                            <li><a class="linkedIn" href="#"></a></li>
-                                            <li><a class="email" href="#"></a></li>
-                                        </ul>
-                                </h2>
-                                {{#each this.item-copy}}
-                                    <p class="pillar_copy">{{this}}</p>
-                                {{/each}}
-                                <div class="btn discover"><a>Discover More <img src="img/icon-arrow-right.png"></a></div>
-                            </div>
-                            <div class="pillar-item__content download closed">
-                                <!--<div class="download" id="download_policy">-->
-                                    <a href="#" id="download_policy">
-                                        <span>Download Policy</span>
-                                        <span class="align-right" id="pdf_block1">PDF | 897KB</span>
-                                    </a>
-                                <!--</div>-->
-                            </div>
-                            <div class="pillar-item__content download closed">
-                                    <a href="#" id="download_report">
-                                        <span>Download Report</span>
-                                        <span class="align-right" id="pdf_block2">PDF | 897KB</span>
-                                    </a>
-                            </div>
-                            <div class="pillar-item__content closed bottom">
-                                <div class="related_topics">
-                                    <ul href="#" class="related_topics_ul">
-                                        <span class="align-right"><li class="related_topics_header">Related Topics</li></span>
-                                        <li class=""><a href="#">Deforestation</a></li>
-                                        <li class=""><a href="#">Farm Animal Welfare</a></li>
-                                        <li class=""><a href="#">Palm Oil</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    {{~/each}}
+            </div>
+            {{>progress-timeline type='pillar'}}
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="pwp-breakdown topics" id="phil_report">
+        <div class="container" id="phil_report_container">
+            <div class="pwp-breakdown-copy" id="phil_report_left">
+                <h2 class="pwp-breakdown__header underline phil">Financial Year 2016<em>Hightlights</em></h2>
+                <p class="topics phil" style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit,
+                    sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
+                    sit amet, consectetur adipisicing elit
+                </p>
+                <div class="download" id="phil_report_left_download">
+                    <h4>DOWNLOAD OUR LATEST EARNINGS REPORT</h4>
+                    <a href=""><span>Q1 2017 Pepsico Earnings Report</span> <span class="align-right">PDF | 897KB</span></a>
                 </div>
-            {{~/each}}
+            </div>
+            <div class="pwp-breakdown-copy" id="phil_report_right">
+                <h2 class="pwp-breakdown__header underline phil">Request<em>Support</em></h2>
+                <p class="topics phil" style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit,
+                    sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
+                    sit amet,
+                    consectetur adipisicing elit
+                </p>
+                <div class="btn discover" id="phil_report_right_btn"><a>CONTACT US<img
+                        src="img/icon-arrow-right.png"></a></div>
+            </div>
         </div>
     </section>
 </div>

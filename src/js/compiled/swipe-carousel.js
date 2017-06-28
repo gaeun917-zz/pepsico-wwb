@@ -15,7 +15,7 @@
       this.goToYear = bind(this.goToYear, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
       var swipePages;
-      swipePages = ['pwp', 'products', 'planet', 'people'];
+      swipePages = ['pwp', 'products', 'planet', 'people', 'philanthropy'];
       if (!($.inArray(_pageID, swipePages) > -1)) {
         return false;
       }

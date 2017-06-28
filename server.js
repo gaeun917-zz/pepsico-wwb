@@ -57,6 +57,8 @@ app.get('/products', routes.products);
 app.get('/recipes', routes.recipes);
 app.get('/governance', routes.governance);
 app.get('/governance_video', routes.governance_video);
+app.get('/philanthropy', routes.philanthropy);
+
 
 
 

@@ -13,7 +13,10 @@
     "start": "nodemon server.js"
   },
   "devDependencies": {
+    "aws-sdk": "*",
     "clean-css": "^3.4.18",
+    "consolidate": "^0.14.5",
+    "express": "^3.4.0",
     "grunt": "^1.0.1",
     "grunt-assemble": "^0.4.0",
     "grunt-bower-concat": "^1.0.0",
@@ -28,13 +31,11 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-prettify": "^0.4.0",
     "grunt-template": "^1.0.0",
+    "grunt-uncss": "^0.6.1",
     "lodash": "^4.13.1",
-    "aws-sdk": "*",
-    "express": "^3.4.0",
+    "matchdep": "^1.0.1",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
-    "matchdep": "^1.0.1",
-    "consolidate": "^0.14.5",
     "swig": "^1.4.2"
   },
   "dependencies": {

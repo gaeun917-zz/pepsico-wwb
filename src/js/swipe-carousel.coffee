@@ -2,7 +2,7 @@ class SwipeCarousel
 
     constructor: ->
 
-        swipePages = ['pwp', 'products', 'planet', 'people']
+        swipePages = ['pwp', 'products', 'planet', 'people', 'philanthropy']
 
         return false unless $.inArray(_pageID, swipePages) > -1
 

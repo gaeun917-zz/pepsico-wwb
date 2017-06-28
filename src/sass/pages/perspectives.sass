@@ -117,7 +117,7 @@
     cursor: pointer
     margin: auto
     margin-bottom: 5px
-    padding: 1.5em
+    padding: 1.5em 0
     background-color: $pill_download_background
 
 .download_title
@@ -243,20 +243,20 @@
     &:active
         color: $wwb_blue
 
-.btn.discover img
-    //content: ""
-    float: right
-    position: relative
-    width: 9px
-    height: 15px
-    top: 6px
-    /* left: -2px; */
-    margin-left: 5px
-    background-repeat: no-repeat
-    //background: url(../img/icon-arrow-right.png) no-repeat 0 0
-    background-size: 9px 14px
-
-
+.btn.discover
+    a
+        color: white
+        text-decoration: none
+        cursor: pointer
+        img
+            float: right
+            position: relative
+            width: 9px
+            height: 15px
+            top: 6px
+            margin-left: 5px
+            background-repeat: no-repeat
+            background-size: 9px 14px
 
 
 .pillar_content.container,
@@ -265,7 +265,8 @@
 .pillar-container.pillar--A-E .pillar-item:nth-child(1) .btn.discover,
 .pillar-container.pillar--A-E .pillar-item:nth-child(2) .btn.discover,
 .pillar-container.pillar--S-Z .pillar-item:nth-child(6) .btn.discover,
-.pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
+.pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover,
+#phil_report_right_btn
     display: block !important
 
 .pillar_content_h4
@@ -382,3 +383,34 @@
 
 #download_policy a, #download_report a
     width: 105%
+//#footer_social.az_social_icon
+//    background: url(../img/menu_social.png) no-repeat center 0
+//    width: 50%
+//    height: auto
+//    position: relative
+//    display: inline-block
+
+.social-media-icons#az_social_icon_ul
+    background: url(../img/menu_social.png) no-repeat center 0
+    background-size: 120px 25px
+    width: 120px
+    position: relative
+    display: inline-block
+    margin-top: 10px
+
+#az_social_icon_ul
+    li
+        width: 23%
+.h2-az em
+    margin-right: 1em
+
+.social-media-icons#gov_social_icon_ul
+    background: url(../img/menu_social.png) no-repeat center 0
+    background-size: 120px 25px
+    width: 120px
+    position: relative
+    display: inline-block
+    float: right
+    margin-top: 10px
+    li
+        width: 23%

@@ -120,6 +120,10 @@ module.exports = (grunt) ->
 
 
     # Deploy specific tasks
+    uncss:
+      dist:
+        files:
+          'pub/css/styles.css': ['pub/*.html']
     cssmin:
       options:
         shorthandCompacting: false,
@@ -150,11 +154,12 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-sass'  
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-uncss'
 
   # Default task(s).
   grunt.registerTask 'basic',   ['sass', 'coffee', 'concat', 'copy', 'assemble']
   grunt.registerTask 'default', ['basic', 'watch']
 
   # Delpoy task(s).
-  grunt.registerTask 'deploy',  ['default', 'cssmin', 'uglify', 'imagemin']
+  grunt.registerTask 'deploy',  ['default', 'cssmin', 'uncss', 'uglify', 'imagemin']
 

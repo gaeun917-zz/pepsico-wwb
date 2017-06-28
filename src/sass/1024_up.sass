@@ -576,11 +576,14 @@ $global_spacing: 4%
 .pwp-breakdown
     padding: 3% 0
     h4
-        +prdib
-        float: left
-        width: auto
-        padding-right: 40px
+        //+prdib
+        //float: left
+        //width: auto
+        //padding-right: 40px
         font-size: 1rem
+        padding-top: 0
+        padding-right: 0
+
 
 .pwp-breakdown.topics
     background-color: rgb(192,192,192)
@@ -622,16 +625,19 @@ $global_spacing: 4%
         +box-sizing
         +width_height(100%, 120px)
         +top_left(0, 0)
-        border-top: 4px solid white
-        border-bottom: 1px solid white
-        background-color: $medium_grey
+        //border-top: 4px solid white
+        //border-bottom: 1px solid white
+        //background-color: $medium_grey
 
-    &:nth-child(1) .pillar-tab__heading
-        left: 0
-    &:nth-child(2) .pillar-tab__heading
-        left: 33.333333%
-    &:nth-child(3) .pillar-tab__heading
-        right: 0
+    //&:nth-child(1) .pillar-tab__heading
+    //    left: 0
+    //
+    //&:nth-child(2) .pillar-tab__heading
+    //    //left: 33.333333%
+    //    left: 300px
+    //
+    //&:nth-child(3) .pillar-tab__heading
+    //    right: 0
 
 .pillar-tab-container
     +prdb
@@ -643,33 +649,35 @@ $global_spacing: 4%
 .pillar-tab__heading
     +padb
     +box-sizing
-    +width_height(33.333%, 120px)
+    +width_height(30%, 80px)
     top: 0
     padding: 0
-    border-top: 4px solid white
-    border-bottom: 1px solid white
+    //border-top: 4px solid white
+    //border-bottom: 1px solid white
 
     span
         +box-sizing
         padding: 0
         +cover
-        line-height: 112px
+        line-height: 80px
 
     &:hover span 
-        background-color: lighten(#66b5e2, 2%)
+        //background-color: lighten(#66b5e2, 2%)
 
     &:active span 
         background-color: #66b5e2 !important
+.pillar-tab:nth-child(1) .pillar-tab__heading
+    left: 0
+    //border-left: 1px solid white
 
 .pillar-tab:nth-child(2) .pillar-tab__heading
-    border-left: 1px solid white
-    border-right: 1px solid white
-
-.pillar-tab:nth-child(1) .pillar-tab__heading
-    border-left: 1px solid white
+    left: 30%
+    //border-left: 1px solid white
+    //border-right: 1px solid white
 
 .pillar-tab:nth-child(3) .pillar-tab__heading
-    border-right: 1px solid white
+    left: 60%
+    //border-right: 1px solid white
 
 .pillar-tab__content
     h2:after
@@ -682,6 +690,13 @@ $global_spacing: 4%
         float: right
         margin-left: $global_spacing
         margin-bottom: $global_spacing
+
+
+
+
+
+
+
 
 //.explore
     //padding: $global_spacing 0
@@ -762,10 +777,10 @@ $global_spacing: 4%
         padding-right: 1rem
 
 .pillar_content_bottom_left h4
-    +title-font-bold
-    letter-spacing: 0
-    border-right: 1px solid lightgrey
-    padding-right: 20px
+    //+title-font-bold
+    //letter-spacing: 0
+    //border-right: 1px solid lightgrey
+    //padding-right: 20px
 
 .pillar_content_bottom_left a
     position: relative
@@ -796,23 +811,23 @@ $global_spacing: 4%
 
 #social-az
     +prdib
-    background: url(../img/menu_social.png) no-repeat center 0
+    //background: url(../img/menu_social.png) no-repeat center 0
     background-size: contain
     margin: 7px 0 0 21px
 
 .download
     a
-        text-transform: uppercase
-        font-size: 14px
-        overflow: hidden
-        +prdb
-        +top_right(-25px, -24px)
-        width: 105%
-        line-height: 48px
-        text-decoration: none
-        color: #616161
-        text-align: left
-        background: #e1e1e1 url('../img/icon-dowload.png') no-repeat 0 center
+        //text-transform: uppercase
+        //font-size: 14px
+        //overflow: hidden
+        //+prdb
+        //+top_right(-25px, -24px)
+        //width: 100%
+        //line-height: 48px
+        //text-decoration: none
+        //color: #616161
+        //text-align: left
+        //background: #e1e1e1 url('../img/icon-dowload.png') no-repeat 0 center
         &:hover
             background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
         span
@@ -821,7 +836,7 @@ $global_spacing: 4%
             &.align-right
                 display: none
                 +title-font
-                +padding_lr(20px, 20px)
+                +padding_lr(10px, 10px)
                 float: right
                 background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
 
@@ -851,7 +866,6 @@ span.align-right
     display: block
 
 .related_topics_a
-    fl
     background: none
 .pillar_content_bottom_left.gov.second
     display: none

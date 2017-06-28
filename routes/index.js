@@ -45,3 +45,7 @@ exports.governance = function (req, res) {
 exports.governance_video = function (req, res) {
     res.render('governance_video', {appTitle: 'appTitle'});
 };
+
+exports.philanthropy = function (req, res) {
+    res.render('philanthropy', {appTitle: 'appTitle'});
+};

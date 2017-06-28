@@ -11,7 +11,7 @@ page_id:        "perspectives"
         <div class="container">
             <div class="pwp-breakdown-copy">
                 <h2 class="pwp-breakdown__header underline">A-Z <em>Topics</em></h2>
-                <p class="topics" style="margin: 40px 40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                <p class="topics">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do eiusmod
                     tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -57,17 +57,19 @@ page_id:        "perspectives"
                             </div>
                             <div class="pillar-item__content closed">
                                 <h2 class="h2-az"><em>{{this.item-header}}</em>
-                                        <ul class="social-media-icons" id="social-az">
+                                    <div id="footer_social az_social_icon">
+                                        <ul class="social-media-icons" id="az_social_icon_ul" >
                                             <li><a class="facebook" href="#"></a></li>
                                             <li><a class="twitter" href="#"></a></li>
                                             <li><a class="linkedIn" href="#"></a></li>
                                             <li><a class="email" href="#"></a></li>
                                         </ul>
+                                    </div>
                                 </h2>
                                 {{#each this.item-copy}}
                                     <p class="pillar_copy">{{this}}</p>
                                 {{/each}}
-                                <div class="btn discover"><a>Discover More <img src="img/icon-arrow-right.png"></a></div>
+                                <div class="btn discover"><a href="#">Discover More <img src="img/icon-arrow-right.png"/></a></div>
                             </div>
                             <div class="pillar-item__content download closed">
                                 <!--<div class="download" id="download_policy">-->

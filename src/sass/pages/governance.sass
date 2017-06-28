@@ -48,8 +48,8 @@
 .pillar-item__content.download
     display: none
 
-#available_downloads
-    display: block
+//#available_downloads
+    //display: block
 
 .leadership_img
     +width_height(100%, 200px)
@@ -144,11 +144,22 @@
     float: left
     h4
         float: left
-        width: auto
+        width: inherit
         margin: 20px 0
-    a
-        float: right
-.hero__social-item, .hero__social.gov a
+        padding-right: 0
+        em
+            +prdib
+        div#footer_social
+            +prdib
+            float: right
+            width: auto
+            margin-bottom: 0
+            ul
+                margin-bottom: 0
+                margin-top: 0
+
+.hero__social-item,
+.hero__social.gov a
     float: right
 
 .pillar-item__content.gov.right
@@ -165,8 +176,19 @@
     top: -4px
     &:after
         padding-right: 1.5em
+
 #governanace_right_social
     background: transparent
     li
         top: -6px
         left: -8px
+
+#gov_social_media_ul
+    background: transparent
+
+//#gov_social_icon
+    //+prdib
+    //float: right
+    //ul
+    //    margin-bottom: 0
+    //    margin-top: 0

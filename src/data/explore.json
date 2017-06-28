@@ -52,7 +52,7 @@
         "link": "/planet.html",
         "external": false,
         "overlay-colour": "#005d91",
-        "pages": "pwp products people"
+        "pages": ""
     },
     "7": {
         "heading": "People",
@@ -79,28 +79,28 @@
         "pages": "home pwp products people planet"
     },
     "10": {
-        "heading": "BOX1",
+        "heading": "CROSS LINK ONE",
         "image-filename": "explore-hww.jpg",
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives governance commitments"
+        "pages": "home perspectives governance commitments philanthropy"
     },
     "11": {
-        "heading": "BOX2",
+        "heading": "CROSS LINK TWO",
         "image-filename": "explore-hww.jpg",
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives governance commitments"
+        "pages": "home perspectives governance commitments philanthropy"
     },
     "12": {
-        "heading": "BOX3",
+        "heading": "CROSS LINK THREE",
         "image-filename": "explore-hww.jpg",
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives governance commitments"
+        "pages": "home perspectives governance commitments philanthropy"
     },
     "13": {
         "heading": "NUTRITION",
