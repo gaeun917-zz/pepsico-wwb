@@ -1,218 +1,218 @@
-.hero--pwp
-    background-image: url(../img/hero-pwp--mo.jpg)
-    background-position: center top
-
-.focus-areas
-    +prdb
-    padding: $global_spacing 0
-    overflow: hidden
-    background-color: $light_grey
-
-.wangotron-wrap
-    +prdb
-    width: 100%
-    max-width: 500px
-    margin: $global_spacing auto 0 auto
-
-.wangotron
-    +prdb
-    width: 100%
-    padding-bottom: 100%
-
-.wangotron__gradient, .wangotron__details-modal__image
-    +dn
-
-.wangotron__spinner
-    +padb
-    width: 54%
-    height: 55%
-    +nearly-ontop
-    top: 9%
-    left: 23%
-
-.wangotron__arms
-    +padb
-    width: 100%
-    top: 0
-    left: 0
-
-    -webkit-transform-origin: 50% 39.8%
-    -moz-transform-origin: 50% 39.8%
-    -ms-transform-origin: 50% 39.8%
-    -o-transform-origin: 50% 39.8%
-    transform-origin: 50% 39.8%
-
-    -webkit-transform: translateZ(0)
-    -moz-transform: translateZ(0)
-    -ms-transform: translateZ(0)
-    -o-transform: translateZ(0)
-    transform: translateZ(0)
-
-.wangotron__pwp
-    +padb
-    width: 35.5%
-    top: 18.5%
-    left: 32.1%
-
-.wangotron__pillar
-    +padb
-    +square(25%)
-    +ontop
-
-    &::before
-        +padb
-        content: ""
-        +box-sizing
-        +border-radius(100%)
-        top: 1%
-        left: 1%
-        +square(98%)
-        border: 2px solid white
-        z-index: 1
-
-    &:active
-
-        .wangotron__button
-            -webkit-transform: scale(1.2)
-            -moz-transform: scale(1.2)
-            -ms-transform: scale(1.2)
-            -o-transform: scale(1.2)
-            transform: scale(1.2)
-
-        &::before
-            -webkit-transition: 0.2s ease -webkit-transform, 0.2s ease -webkit-opacity
-            -moz-transition: 0.2s ease -moz-transform, 0.2s ease -moz-opacity
-            -ms-transition: 0.2s ease -ms-transform, 0.2s ease -ms-opacity
-            -o-transition: 0.2s ease -o-transform, 0.2s ease -o-opacity
-            transition: 0.2s ease transform, 0.2s ease opacity
-            -webkit-transform: scale(2)
-            -moz-transform: scale(2)
-            -ms-transform: scale(2)
-            -o-transform: scale(2)
-            transform: scale(2)
-            +opacityz(0)
-
-    &.wangotron__pillar--products
-        top: 5%
-        left: 5%
-
-    &.wangotron__pillar--planet
-        top: 5%
-        left: 70%
-
-    &.wangotron__pillar--people
-        top: 62%
-        left: 37.5%
-
-.wangotron__button
-    +padb
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 10
-    -webkit-transform: translateZ(0)
-    -moz-transform: translateZ(0)
-    -ms-transform: translateZ(0)
-    -o-transform: translateZ(0)
-    transform: translateZ(0)
-    -webkit-transition: 0.1s ease -webkit-transform
-    -moz-transition: 0.1s ease -moz-transform
-    -ms-transition: 0.1s ease -ms-transform
-    -o-transition: 0.1s ease -o-transform
-    transition: 0.1s ease transform
-
-.wangotron__details-modal
-    +padn
-    +ontop
-    +opacityz(0)
-    height: 102%
-    width: 102%
-    top: -6%
-    left: -1%
-
-.wangotron__details-modal__container
-    +padn
-    top: 0
-    left: 0
-    +square(100%)
-    +border-radius(100%)
-    +box-sizing
-    color: white
-    text-align: center
-    padding: $global_spacing
-
-.wangotron__details-modal__close
-    +padb
-    top: $global_spacing
-    right: $global_spacing
-    +square(50px)
-    +ontop
-    background-size: contain
-    background-position: center
-    background-repeat: no-repeat
-    cursor: pointer
-
-.wangotron__details-modal__icon
-    +prdb
-    width: 20%
-    padding-bottom: 16%
-    margin: 0 auto 4% auto
-    background-size: contain
-    background-position: center
-    background-repeat: no-repeat
-
-.wangotron__details-modal__header
-    margin: 0 auto
-
-    &::after
-        content: ""
-        +prdb
-        height: 2px
-        background-color: white
-        width: 50%
-        margin: 3% auto 0 auto
-
-.wangotron__details-modal__copy
-    margin: $global_spacing auto
-
-.wangotron__details-modal__cta
-    margin-top: 0
-
-.wangotron__details-modal
-
-    &.products
-
-        .wangotron__details-modal__container--products
-            +db
-            background-color: rgba(213, 162, 55, 0.9)
-
-        .wangotron__details-modal__close
-            background-image: url(../img/icon-close--yellow.png)
-
-        .wangotron__details-modal__icon
-            background-image: url(../img/icon-heart.png)
-
-    &.planet
-
-        .wangotron__details-modal__container--planet
-            +db
-            background-color: rgba(40, 117, 58, 0.9)
-
-        .wangotron__details-modal__close
-            background-image: url(../img/icon-close--green.png)
-
-        .wangotron__details-modal__icon
-            background-image: url(../img/icon-leaf.png)
-
-    &.people
-
-        .wangotron__details-modal__container--people
-            +db
-            background-color: rgba(7, 127, 189, 0.9)
-
-        .wangotron__details-modal__close
-            background-image: url(../img/icon-close--blue.png)
-
-        .wangotron__details-modal__icon
-            background-image: url(../img/icon-hand.png)
-
+//.hero--pwp
+//    background-image: url(../img/hero-pwp--mo.jpg)
+//    background-position: center top
+//
+//.focus-areas
+//    +prdb
+//    padding: $global_spacing 0
+//    overflow: hidden
+//    background-color: $light_grey
+//
+//.wangotron-wrap
+//    +prdb
+//    width: 100%
+//    max-width: 500px
+//    margin: $global_spacing auto 0 auto
+//
+//.wangotron
+//    +prdb
+//    width: 100%
+//    padding-bottom: 100%
+//
+//.wangotron__gradient, .wangotron__details-modal__image
+//    +dn
+//
+//.wangotron__spinner
+//    +padb
+//    width: 54%
+//    height: 55%
+//    +nearly-ontop
+//    top: 9%
+//    left: 23%
+//
+//.wangotron__arms
+//    +padb
+//    width: 100%
+//    top: 0
+//    left: 0
+//
+//    -webkit-transform-origin: 50% 39.8%
+//    -moz-transform-origin: 50% 39.8%
+//    -ms-transform-origin: 50% 39.8%
+//    -o-transform-origin: 50% 39.8%
+//    transform-origin: 50% 39.8%
+//
+//    -webkit-transform: translateZ(0)
+//    -moz-transform: translateZ(0)
+//    -ms-transform: translateZ(0)
+//    -o-transform: translateZ(0)
+//    transform: translateZ(0)
+//
+//.wangotron__pwp
+//    +padb
+//    width: 35.5%
+//    top: 18.5%
+//    left: 32.1%
+//
+//.wangotron__pillar
+//    +padb
+//    +square(25%)
+//    +ontop
+//
+//    &::before
+//        +padb
+//        content: ""
+//        +box-sizing
+//        +border-radius(100%)
+//        top: 1%
+//        left: 1%
+//        +square(98%)
+//        border: 2px solid white
+//        z-index: 1
+//
+//    &:active
+//
+//        .wangotron__button
+//            -webkit-transform: scale(1.2)
+//            -moz-transform: scale(1.2)
+//            -ms-transform: scale(1.2)
+//            -o-transform: scale(1.2)
+//            transform: scale(1.2)
+//
+//        &::before
+//            -webkit-transition: 0.2s ease -webkit-transform, 0.2s ease -webkit-opacity
+//            -moz-transition: 0.2s ease -moz-transform, 0.2s ease -moz-opacity
+//            -ms-transition: 0.2s ease -ms-transform, 0.2s ease -ms-opacity
+//            -o-transition: 0.2s ease -o-transform, 0.2s ease -o-opacity
+//            transition: 0.2s ease transform, 0.2s ease opacity
+//            -webkit-transform: scale(2)
+//            -moz-transform: scale(2)
+//            -ms-transform: scale(2)
+//            -o-transform: scale(2)
+//            transform: scale(2)
+//            +opacityz(0)
+//
+//    &.wangotron__pillar--products
+//        top: 5%
+//        left: 5%
+//
+//    &.wangotron__pillar--planet
+//        top: 5%
+//        left: 70%
+//
+//    &.wangotron__pillar--people
+//        top: 62%
+//        left: 37.5%
+//
+//.wangotron__button
+//    +padb
+//    top: 0
+//    left: 0
+//    width: 100%
+//    z-index: 10
+//    -webkit-transform: translateZ(0)
+//    -moz-transform: translateZ(0)
+//    -ms-transform: translateZ(0)
+//    -o-transform: translateZ(0)
+//    transform: translateZ(0)
+//    -webkit-transition: 0.1s ease -webkit-transform
+//    -moz-transition: 0.1s ease -moz-transform
+//    -ms-transition: 0.1s ease -ms-transform
+//    -o-transition: 0.1s ease -o-transform
+//    transition: 0.1s ease transform
+//
+//.wangotron__details-modal
+//    +padn
+//    +ontop
+//    +opacityz(0)
+//    height: 102%
+//    width: 102%
+//    top: -6%
+//    left: -1%
+//
+//.wangotron__details-modal__container
+//    +padn
+//    top: 0
+//    left: 0
+//    +square(100%)
+//    +border-radius(100%)
+//    +box-sizing
+//    color: white
+//    text-align: center
+//    padding: $global_spacing
+//
+//.wangotron__details-modal__close
+//    +padb
+//    top: $global_spacing
+//    right: $global_spacing
+//    +square(50px)
+//    +ontop
+//    background-size: contain
+//    background-position: center
+//    background-repeat: no-repeat
+//    cursor: pointer
+//
+//.wangotron__details-modal__icon
+//    +prdb
+//    width: 20%
+//    padding-bottom: 16%
+//    margin: 0 auto 4% auto
+//    background-size: contain
+//    background-position: center
+//    background-repeat: no-repeat
+//
+//.wangotron__details-modal__header
+//    margin: 0 auto
+//
+//    &::after
+//        content: ""
+//        +prdb
+//        height: 2px
+//        background-color: white
+//        width: 50%
+//        margin: 3% auto 0 auto
+//
+//.wangotron__details-modal__copy
+//    margin: $global_spacing auto
+//
+//.wangotron__details-modal__cta
+//    margin-top: 0
+//
+//.wangotron__details-modal
+//
+//    &.products
+//
+//        .wangotron__details-modal__container--products
+//            +db
+//            background-color: rgba(213, 162, 55, 0.9)
+//
+//        .wangotron__details-modal__close
+//            background-image: url(../img/icon-close--yellow.png)
+//
+//        .wangotron__details-modal__icon
+//            background-image: url(../img/icon-heart.png)
+//
+//    &.planet
+//
+//        .wangotron__details-modal__container--planet
+//            +db
+//            background-color: rgba(40, 117, 58, 0.9)
+//
+//        .wangotron__details-modal__close
+//            background-image: url(../img/icon-close--green.png)
+//
+//        .wangotron__details-modal__icon
+//            background-image: url(../img/icon-leaf.png)
+//
+//    &.people
+//
+//        .wangotron__details-modal__container--people
+//            +db
+//            background-color: rgba(7, 127, 189, 0.9)
+//
+//        .wangotron__details-modal__close
+//            background-image: url(../img/icon-close--blue.png)
+//
+//        .wangotron__details-modal__icon
+//            background-image: url(../img/icon-hand.png)
+//

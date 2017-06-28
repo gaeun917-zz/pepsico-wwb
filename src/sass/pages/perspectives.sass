@@ -99,12 +99,10 @@
     border-bottom: 1px solid $light_grey
     h2 em
         font-size: 1.5rem
-    img 
-        +prdb
-        width: 60px
+#leadership_img
+    width: 100%
 
 .pillar-item__content.download
-    //+prdib
     display: none
     +width_height(100%, 1em)
     overflow: hidden
@@ -297,7 +295,7 @@
     .related_topics_ul
         list-style-type: none
         margin: 0
-        padding: 10px 0 0 0
+        padding: 10px 0 0 10px
         overflow: hidden
         li
             float: left
@@ -357,7 +355,8 @@
     padding-right: 1rem
     content: ""
 
-.social-media-icons#az_social_icon_ul
+.social-media-icons#az_social_icon_ul,
+.social-media-icons#gov_social_icon_ul
     background: url(../img/menu_social.png) no-repeat center 0
     background-size: 120px 25px
     width: 120px
@@ -367,13 +366,7 @@
         width: 23%
 
 .social-media-icons#gov_social_icon_ul
-    background: url(../img/menu_social.png) no-repeat center 0
-    background-size: 120px 25px
-    width: 120px
     float: right
-    margin-top: 10px
-    li
-        width: 23%
 
 .h2-az em
     margin-right: 1em

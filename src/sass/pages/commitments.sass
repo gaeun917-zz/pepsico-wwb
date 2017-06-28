@@ -1,114 +1,114 @@
-.hero--commitments
-    background-image: url(../img/hero-commitments--mo.jpg)
-    background-position: center top
-
-    @media screen and (max-width: 680px)
-        h1 em 
-            font-size: 2.5rem
-            line-height: 3rem
-
-.pwp-breakdown
-    +prdb
-    padding: $global_spacing 0
-    background-color: #d7d6d3
-    //background-image: url(../img/comm--splash.jpg)
-    background-size: 180% auto
-    background-repeat: no-repeat
-    background-position: center top
-
-.pwp-breakdown h4, .pwp-breakdown-copy
-    // color: white
-    color: $dark_grey
-    margin: 0 auto
-
-.pwp-breakdown h4
-    +title-font-bold
-
-.pwp-breakdown__header
-    margin: 0
-
-.desktop-pwp-breakdown-icon
-    +dn
-
-.mobile-pwp-breakdown-icon
-    +prdb
-    width: 65%
-    max-width: 250px
-    margin: auto
-
-.pillar-container
-    margin-top: $global_spacing
-
-@mixin pillar-theme($name, $colour)
-    .pillar--#{$name}
-        .pillar-header, .pillar-item__content
-            +box-sizing
-            width: 100%
-            padding: $global_spacing
-            background-color: rgba(215,214,211,0.7)
-            border-left: 2px solid $colour
-            border-right: 2px solid $colour
-            -moz-border-image: -moz-linear-gradient(top, $colour 0%, transparent 80%)
-            -webkit-border-image: -webkit-linear-gradient(top, $colour 0%, transparent 80%)
-            border-image: linear-gradient(to bottom, $colour 0%, transparent 80%)
-            border-image-slice: 1
-
-        .pillar-header
-            +prdb
-            border-top: 2px solid $colour
-
-        .pillar-item__pill
-            background-color: $colour
-
-+pillar-theme(products, $wwb_orange)
-+pillar-theme(planet, $wwb_green)
-+pillar-theme(people, $wwb_blue)
-
-
-.pillar-item__content
-    border-top: 0
-
-.pillar-item
-    margin-bottom: 20px
-    letter-spacing: 1px
-
-.pillar-item__pill
-    +prdb
-    +width_height(100%, 3rem)
-    cursor: pointer
-
-    &::after
-        +padb
-        +width_height(20px, 20px)
-        right: 1rem
-        top: calc(1.5rem - 10px)
-        content: ""
-        background: url(../img/icon-open.png) center
-        background-size: contain
-
-    h4
-        color: $dark_grey
-        line-height: 3rem
-        vertical-align: middle
-        padding: 0 1rem
-
-    &.open
-        h4
-            color: white
-
-        &::after
-            background-image: url(../img/icon-close-2.png)
-
-.pillar-item__content
-    +prdn
-    overflow: hidden
-    img 
-        +prdb
-        width: 60px
-
-.pillar-container.pillar--products,
-.pillar-container.pillar--planet,
-.pillar-container.pillar--people
-    width: 30%
-.pillar-item__content.closed
-    display: none
+//.hero--commitments
+//    background-image: url(../img/hero-commitments--mo.jpg)
+//    background-position: center top
+//
+//    @media screen and (max-width: 680px)
+//        h1 em
+//            font-size: 2.5rem
+//            line-height: 3rem
+//
+//.pwp-breakdown
+//    +prdb
+//    padding: $global_spacing 0
+//    background-color: #d7d6d3
+//    //background-image: url(../img/comm--splash.jpg)
+//    background-size: 180% auto
+//    background-repeat: no-repeat
+//    background-position: center top
+//
+//.pwp-breakdown h4, .pwp-breakdown-copy
+//    // color: white
+//    color: $dark_grey
+//    margin: 0 auto
+//
+//.pwp-breakdown h4
+//    +title-font-bold
+//
+//.pwp-breakdown__header
+//    margin: 0
+//
+//.desktop-pwp-breakdown-icon
+//    +dn
+//
+//.mobile-pwp-breakdown-icon
+//    +prdb
+//    width: 65%
+//    max-width: 250px
+//    margin: auto
+//
+//.pillar-container
+//    margin-top: $global_spacing
+//
+//@mixin pillar-theme($name, $colour)
+//    .pillar--#{$name}
+//        .pillar-header, .pillar-item__content
+//            +box-sizing
+//            width: 100%
+//            padding: $global_spacing
+//            background-color: rgba(215,214,211,0.7)
+//            border-left: 2px solid $colour
+//            border-right: 2px solid $colour
+//            -moz-border-image: -moz-linear-gradient(top, $colour 0%, transparent 80%)
+//            -webkit-border-image: -webkit-linear-gradient(top, $colour 0%, transparent 80%)
+//            border-image: linear-gradient(to bottom, $colour 0%, transparent 80%)
+//            border-image-slice: 1
+//
+//        .pillar-header
+//            +prdb
+//            border-top: 2px solid $colour
+//
+//        .pillar-item__pill
+//            background-color: $colour
+//
+//+pillar-theme(products, $wwb_orange)
+//+pillar-theme(planet, $wwb_green)
+//+pillar-theme(people, $wwb_blue)
+//
+//
+//.pillar-item__content
+//    border-top: 0
+//
+//.pillar-item
+//    margin-bottom: 20px
+//    letter-spacing: 1px
+//
+//.pillar-item__pill
+//    +prdb
+//    +width_height(100%, 3rem)
+//    cursor: pointer
+//
+//    &::after
+//        +padb
+//        +width_height(20px, 20px)
+//        right: 1rem
+//        top: calc(1.5rem - 10px)
+//        content: ""
+//        background: url(../img/icon-open.png) center
+//        background-size: contain
+//
+//    h4
+//        color: $dark_grey
+//        line-height: 3rem
+//        vertical-align: middle
+//        padding: 0 1rem
+//
+//    &.open
+//        h4
+//            color: white
+//
+//        &::after
+//            background-image: url(../img/icon-close-2.png)
+//
+//.pillar-item__content
+//    +prdn
+//    overflow: hidden
+//    img
+//        +prdb
+//        width: 60px
+//
+//.pillar-container.pillar--products,
+//.pillar-container.pillar--planet,
+//.pillar-container.pillar--people
+//    width: 30%
+//.pillar-item__content.closed
+//    display: none
