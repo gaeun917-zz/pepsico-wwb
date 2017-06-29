@@ -607,7 +607,8 @@ $global_spacing: 4%
 // Pillar tabs
 .pillar-tabs
     +prdb
-    width: 100% - $global_spacing * 2
+    //width: 100% - $global_spacing * 2
+    width: 100%
     max-width: 962px
     margin: 0 auto
     overflow: visible
@@ -629,7 +630,7 @@ $global_spacing: 4%
 .pillar-tab__heading
     +padb
     +box-sizing
-    +width_height(30%, 80px)
+    +width_height(30%, 50px)
     top: 0
     padding: 0
 
@@ -637,21 +638,23 @@ $global_spacing: 4%
         +box-sizing
         padding: 0
         +cover
-        line-height: 80px
+        line-height: 50px
 
     &:active span 
         background-color: #66b5e2 !important
 
 // tab
 .pillar-tab:nth-child(1) .pillar-tab__heading
-    left: 0
+    left: 10%
+    width: 25%
 
 .pillar-tab:nth-child(2) .pillar-tab__heading
-    left: 30%
+    left: 40%
+    width: 25%
 
 .pillar-tab:nth-child(3) .pillar-tab__heading
-    left: 60%
-
+    left: 70%
+    width: 25%
 .pillar-tab__content
     h2:after
         content: ""

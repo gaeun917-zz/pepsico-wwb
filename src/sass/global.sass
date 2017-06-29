@@ -169,13 +169,13 @@ ul, li
 header
     float: left
     +prdb
-    +width_height(100%, 200px)
-    //max-width: 2500px
+    +width_height(100%, auto)
     background: no-repeat 0 0
     background-size: cover
     img
+        float: left
         width: 100%
-        height: 200px
+        height: inherit
 
 .hero
     padding: 0
@@ -183,6 +183,7 @@ header
     +prdb
     float: left
     width: 100%
+    background-color: #d7d7d7
 
 // :: footer ::
 $dk-blue: #1E83AE

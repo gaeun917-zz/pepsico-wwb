@@ -1,0 +1,19 @@
+<div class="report-slider swiper-container" id="report-slider">
+    <h5 class="report-slider__header">See what's inside our 2015 Sustainability Report</h5>
+    <div class="report-slider__arrows">
+        <span class="arrow arrow--prev" id="report-slider__arrows--prev"></span>
+        <span class="arrow arrow--next" id="report-slider__arrows--next"></span>
+    </div>
+    <div class="swiper-wrapper">
+        {{#each report ~}}
+            <div class="swiper-slide report-slider__slide">
+                <img class="report-slider__image" src="img/{{this.image-filename}}" alt="{{this.title}}">
+                <div class="report-slider__copy-container">
+                    <h5 class="report-slider__title">{{{this.title}}}</h5>
+                    <p class="copy report-slider__copy">{{{this.copy}}}</p>
+                </div>
+            </div>
+        {{~/each}}
+    </div>
+    <div class="report-slider__pagination" id="report-slider__pagination"></div>
+</div>

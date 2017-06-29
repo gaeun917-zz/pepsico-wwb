@@ -155,11 +155,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-uncss'
-
+  grunt.loadNpmTasks 'grunt-uncss'
   # Default task(s).
   grunt.registerTask 'basic',   ['sass', 'coffee', 'concat', 'copy', 'assemble']
   grunt.registerTask 'default', ['basic', 'watch']
 
   # Delpoy task(s).
-  grunt.registerTask 'deploy',  ['default', 'cssmin', 'uncss', 'uglify', 'imagemin']
+  grunt.registerTask 'deploy',  ['default', 'cssmin','uncss', 'uglify', 'imagemin']
 
