@@ -1,0 +1,14 @@
+<div class="downloads downloads--{{type}}" id="downloads--{{type}}">
+    <ul>
+        {{#each downloads ~}}
+            {{#contains this.type ../type ~}}
+                <li>
+                    <a href="{{this.url}}" class="block-link"></a>
+                    <span class="dwnld__icon"></span>
+                    <span class="dwnld__title">{{this.title}}</span>
+                    <span class="dwnld__file-size">{{this.file-size}}</span>
+                </li>
+            {{~/contains}}
+        {{~/each}}
+    </ul>
+</div>

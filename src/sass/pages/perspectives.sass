@@ -59,10 +59,6 @@
 +pillar-theme(O-R, $pill_tab_gray)
 +pillar-theme(S-Z, $pill_tab_gray)
 
-.pillar-item__content
-    border-top: 0
-    margin-bottom: 10px
-
 .pillar-item__pill
     +prdb
     +width_height(100%, 3rem)
@@ -94,11 +90,14 @@
             background-image: url(../img/icon-close.png)
 
 .pillar-item__content
+    border-top: 0
+    margin-bottom: 10px
     padding: 4% 7%
     width: 100%
     border-bottom: 1px solid $light_grey
     h2 em
         font-size: 1.5rem
+
 #leadership_img
     width: 100%
 
@@ -229,7 +228,8 @@
             position: relative
             width: 10px
             height: 15px
-            top: 5px
+            top: 6px
+            left: 3px
             margin-left: 5px
             background-repeat: no-repeat
             background-size: 9px 14px

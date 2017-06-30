@@ -60,7 +60,7 @@
         "link": "/people.html",
         "external": false,
         "overlay-colour": "#005d91",
-        "pages": "pwp commitments products planet"
+        "pages": "pwp commitments products"
     },
     "8": {
         "heading": "#HOWWILLWE",
@@ -84,7 +84,7 @@
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives governance commitments philanthropy"
+        "pages": "home perspectives governance commitments philanthropy reporting"
     },
     "11": {
         "heading": "CROSS LINK TWO",
@@ -92,7 +92,7 @@
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives governance commitments philanthropy"
+        "pages": "home perspectives governance commitments philanthropy reporting"
     },
     "12": {
         "heading": "CROSS LINK THREE",
@@ -100,7 +100,7 @@
         "link": "#",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home perspectives governance commitments philanthropy"
+        "pages": "home perspectives governance commitments philanthropy reporting"
     },
     "13": {
         "heading": "NUTRITION",

@@ -349,7 +349,7 @@ $global_spacing: 4%
 
 .highlight__section--media
     width: 50%
-    margin-top: 0
+    float: right
 
 .highlight__media
     width: 100%
@@ -361,6 +361,7 @@ $global_spacing: 4%
 
     .highlight__media
         +cover
+        top: 25px
 
 .wangotron-wrap
     margin-top: 10%
@@ -612,7 +613,8 @@ $global_spacing: 4%
     max-width: 962px
     margin: 0 auto
     overflow: visible
-    
+    padding: 6% 0
+
     &:before
         content: ""
         +padb
@@ -625,20 +627,21 @@ $global_spacing: 4%
     width: 100% - $global_spacing * 2
     max-width: 962px
     margin: 0 auto
-    padding-top: 120px
+    padding-top: 60px
 
 .pillar-tab__heading
     +padb
     +box-sizing
-    +width_height(30%, 50px)
+    +width_height(30%, 60px)
     top: 0
     padding: 0
 
     span
         +box-sizing
         padding: 0
+        font-size: 18px
         +cover
-        line-height: 50px
+        line-height: 60px
 
     &:active span 
         background-color: #66b5e2 !important

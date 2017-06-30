@@ -7,7 +7,7 @@
 		display: inline-block
 		letter-spacing: 1.5px
 		padding-bottom: 16px
-		> div 
+		> div
 			padding: 0 12px
 		a
 			+title-font-bold
@@ -39,7 +39,7 @@
 	overflow: hidden
 	background: $extralight_grey
 	margin-bottom: 30px
-	.categories 
+	.categories
 		overflow: hidden
 		padding-top: 50px
 		margin: 0 -12px
@@ -48,7 +48,7 @@
 				width: 50%
 				a
 					background-color: #e7e7e4
-					&:after 
+					&:after
 						display: none
 					&.is-active, &:hover
 						background-color: $wwb_blue
@@ -58,14 +58,14 @@
 		height: auto
 		list-style: none
 		margin: 0 -12px
-		> ul > li 
+		> ul > li
 			width: 50%
 			display: inline-block
 			vertical-align: top
 			margin-bottom: 15px
 			overflow: hidden
 			transition: height 350ms ease-in-out
-			img 
+			img
 				display: block
 				width: 100%
 
@@ -77,18 +77,18 @@
 					position: relative
 					margin: 0
 					padding: 0
-					img 
+					img
 						transform: translate3d(0px,0px,0px)
-						backface-visibility: hidden // chrome over pixel move fix	
-				.rollover 
+						backface-visibility: hidden // chrome over pixel move fix
+				.rollover
 					position: absolute
 					top: 0
 					bottom: 0
 					+left_right(0,0)
 					transition: all 100ms ease-in-out
 					opacity: 0
-							
-				.mask   
+
+				.mask
 					position: absolute
 					bottom: -1px
 					+left_right(0,0)
@@ -97,8 +97,8 @@
 					&.close
 						display: block
 						transform: translateY(0px)
-				&:hover 
-					.rollover 
+				&:hover
+					.rollover
 						opacity: 1
 
 			.expander
@@ -110,7 +110,7 @@
 				text-align: left
 				overflow: hidden
 				opacity: 0
-				&:after 
+				&:after
 					content: ""
 					display: block
 				&:before
@@ -128,18 +128,18 @@
 				height: 100%
 				opacity: 0
 				transition: opacity 400ms ease-in-out
-				
+
 			&.is-li-open
 				// margin-bottom: 20px
 				overflow: visible
 				> a
-					.rollover 
+					.rollover
 						opacity: 1
 					.mask
 						transition-delay: 50ms
 						&.close
 							transform: translateY(100%)
-				
+
 				.expander
 					// max-height: 999em
 					height: 100%
@@ -150,7 +150,7 @@
 					opacity: 1
 					transition: opacity 0
 
-		.btn-close 
+		.btn-close
 			position: relative
 			+width_height(40px, 40px)
 			top: 20px
@@ -158,23 +158,23 @@
 			cursor: pointer
 			// hide it for now, not on the design
 			display: none
-		
+
 			&:before,
-			&:after 
+			&:after
 				content: ''
 				position: absolute
 				+width_height(100%, 1px)
 				top: 50%
 				background: #888
 				transform: rotate(45deg)
-		
-			&:after 
+
+			&:after
 				transform: rotate(-45deg)
 
 			&:hover::before,
-			&:hover::after 
+			&:hover::after
 				background: #333
-		
+
 	.tab-content
 		display: none
 		&.is-current
@@ -187,22 +187,22 @@
 		position: relative
 		+width_height(100%, auto)
 		color: $copy-grey
-		
-		img 
+
+		img
 			max-width: 100%
 
-		.tabs-select 
+		.tabs-select
 			padding-top: 30px
 			margin-left: -12px
 			overflow: hidden
 
-			li 
+			li
 				width: 50%
 			a
 				margin-bottom: 12px
 				font-size: 16px
 				font-weight: normal
-				&:after 
+				&:after
 					display: block
 
 	// carousel
@@ -237,7 +237,7 @@
 			opacity: 0
 
 	// right content in tabs
-	.tab-content 
+	.tab-content
 		font-size: 14px
 		h3
 			margin-top: 0
@@ -262,7 +262,7 @@
 				margin-bottom: 6px
 		span
 			display: inline-block
-			&.align-right 
+			&.align-right
 				float: right
 			&.ml
 				margin-left: 20px
@@ -273,12 +273,12 @@
 			border-top: 1px solid #7c7c7c
 			padding-bottom: 6px
 			padding-top: 6px
-			&:first-child 
+			&:first-child
 				border-top: none
 
-			li 
+			li
 				margin-left: 1em
-		.vitamins 
+		.vitamins
 			overflow: hidden
 			+margin_lr(-10px, -10px)
 
@@ -290,13 +290,13 @@
 					margin: 0 10px
 					margin-bottom: 6px
 					border-bottom: 1px solid #7c7c7c
-			p 
+			p
 				margin: 0 10px
 				margin-bottom: 10px
-		.legal 
+		.legal
 			text-transform: uppercase
 
-	// half left		
+	// half left
 	.gallery
 		padding-top: 30px
 		h2
@@ -304,7 +304,7 @@
 			font-size: 37px
 			margin: 0
 			margin-bottom: 20px
-		h4 	
+		h4
 			+title-font-bold
 			font-size: 18px
 			padding-bottom: 10px
@@ -312,16 +312,16 @@
 		p
 			margin: 0
 
-		.related 
+		.related
 			position: relative
 			padding-top: 60px
-		.cta_container 
+		.cta_container
 			position: absolute
 			top: 20px
 			right: 0
-		
 
-.cta_container 
+
+.cta_container
 	text-align: right
 	position: relative
 	overflow: hidden

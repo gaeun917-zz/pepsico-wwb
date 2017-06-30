@@ -9,6 +9,7 @@
     margin: 0
     width: 100%
     float: left
+    word-break: normal
     .pillar-item__content
         +db
         padding: 0 10px 0 0
@@ -39,13 +40,17 @@
 
 .pillar-item__content.download.gov
     display: block
-    height: 3em
+    height: 40px
     padding: 0
-
+#available_downloads
+    height: 40px
+.pillar-item__content.gov.left
+    float: left
+    h2
+        float: left
 //a-z pill
 .leadership_img
     +width_height(100%, 200px)
-    //max-width: 800px
     background-size: contain
     max-width: 350px
     width: 100%
@@ -170,12 +175,19 @@
     background: transparent
 
 #gov_download
-    background-color: transparent
     top: 0
     font-size: 12px
-    line-height: 47px
+    line-height: 40px
     height: inherit
-    background-position: 0
-
-#leadership_img
+    background:  url(../img/icon-dowload.png) no-repeat 0 0
+.pillar_content.container.gov > div:first-child
+    float: left
+    display: block
+    position: relative
     width: 100%
+    height: auto
+    background-size: cover
+    #leadership_img
+        width: 100%
+        max-width: 900px
+        height: auto
