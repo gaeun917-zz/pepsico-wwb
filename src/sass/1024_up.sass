@@ -59,6 +59,9 @@ $global_spacing: 4%
 .hero--commitments
     background-image: url(../img/hero-commitments--dt.jpg)
 
+.hero--reporting
+    background-image: url(../img/hero-reporting--dt.jpg)
+
 .hero--products
     background-image: none
     // background-image: url(../img/hero-products--dt.jpg)
@@ -350,7 +353,8 @@ $global_spacing: 4%
 .highlight__section--media
     width: 50%
     float: right
-
+    margin-top: 0
+    top: 25px
 .highlight__media
     width: 100%
 
@@ -361,7 +365,7 @@ $global_spacing: 4%
 
     .highlight__media
         +cover
-        top: 25px
+        //top: 25px
 
 .wangotron-wrap
     margin-top: 10%
@@ -629,6 +633,18 @@ $global_spacing: 4%
     margin: 0 auto
     padding-top: 60px
 
+#phil_report_left
+    width: 46%
+    padding: 0 3%
+#phil_report_right
+    width: 46%
+
+#phil_report_container
+    width: 84%
+
+.btn.discover#phil_report_right_btn
+    margin: 4.5rem 0
+
 .pillar-tab__heading
     +padb
     +box-sizing
@@ -648,16 +664,20 @@ $global_spacing: 4%
 
 // tab
 .pillar-tab:nth-child(1) .pillar-tab__heading
-    left: 10%
+    //left: 10%
+    left: 0
     width: 25%
 
 .pillar-tab:nth-child(2) .pillar-tab__heading
-    left: 40%
+    //left: 35%
+    left: 38%
     width: 25%
 
 .pillar-tab:nth-child(3) .pillar-tab__heading
-    left: 70%
+    //left: 75%
+    right: 0
     width: 25%
+
 .pillar-tab__content
     h2:after
         content: ""
@@ -706,6 +726,93 @@ $global_spacing: 4%
             -ms-transform: translateY(0)
             -o-transform: translateY(0)
             transform: translateY(0)
+// ::::: report :::::
+.downloads-accordian-header h4
+    font-size: 0.8rem
+
+.previous-reports, .latest-reports
+    padding: $global_spacing 0
+
+    .copy
+        margin-top: 2rem
+        margin-bottom: 2rem
+
+.report-slider__title
+    margin: $global_spacing auto $global_spacing/2 auto
+
+.report-slider__slide .copy
+    margin-left: auto
+    margin-right: auto
+    max-width: 500px
+    margin: $global_spacing/2 auto $global_spacing auto
+
+.previous-downloads
+    margin-bottom: 1rem
+
+.report-slider__arrows
+    +padb
+    width: 100%
+    top: 150px
+    left: 0
+
+    .arrow
+        +padb
+        width: 15px
+        height: 30px
+        background-position: center
+        background-size: cover
+        +ontop
+        cursor: pointer
+
+        &.arrow--prev
+            left: 0
+            background-image: url(../img/icon-arrow-left--blue.png)
+        &.arrow--next
+            right: 0
+            background-image: url(../img/icon-arrow-right--blue.png)
+
+.report-slider .swiper-pagination-bullet
+    width: 13px
+    height: 13px
+    margin: 0 10px !important
+
+
+.latest-reports,
+.report-slider__slide
+    background-color: $light_grey
+
+.downloads ul li,
+.previous-reports
+    background-color: $extralight_grey
+
+// .previous-reports
+//     margin-bottom: 41px
+
+.previous-reports .downloads li
+    background-color: $light_grey
+
+
+.howwillwe-plug
+    padding: $global_spacing 0
+
+.container.special
+    max-width: 500px
+
+.our-partners
+    padding: $global_spacing 0
+    margin-bottom: 41px
+
+.our-partners ul
+    +prdib
+    +box-sizing
+    vertical-align: top
+    padding: 0 0 0 1rem
+    margin: 2rem 0 0 0
+    width: 50%
+
+.stakeholder-engagement, .latest-downloads
+    margin-top: $global_spacing*1.5
+
 
 
 // ::::: PAGE: GOVERNANCE :::::

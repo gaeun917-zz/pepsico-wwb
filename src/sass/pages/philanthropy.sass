@@ -6,6 +6,7 @@
   background-color: $wwb_darkblue
   opacity: .7
   margin: 50px 0
+
 #phil_container
   text-align: center
 
@@ -25,27 +26,34 @@
   text-align: center
 
 #phil_report_left
+  +prdb
   float: left
-  width: 46%
-  padding-right: 3%
-  border-right: 1px solid lightgrey
-  height: 21em
+  width: 100%
+  //padding-right: 3%
+  padding-bottom: 15%
+  //border-right: 1px solid lightgrey
+  //height: 21em
   p
     font-size: 13px
 
 #phil_report_right
+  +prdb
   float: left
-  width: 46%
-  padding-left: 3%
+  width: 100%
+  //padding-left: 3%
   p
     font-size: 13px
+
+
 #phil_report_container
-  width: 70%
+  //width: 88%
   max-width: 1372px
-  background-color: white
+  //float: left
+  margin: 0 8%
+  //background-color: white
 
 #phil_report_right_btn
-  margin-top: 57px
+  //margin-top: 57px
   height: 40px
   line-height: 30px
   width: 200px
@@ -91,12 +99,10 @@ h2.pwp-breakdown__header.underline.phil:after
   background-color: rgb(215,214,211)
 
 #phil_header-underline
-  padding: 0 57px
+  //padding: 0 57px
   font-size: 25px
   em
     font-size: 45px
 
 #phil_header-underline:after
   margin: 2rem auto 0 auto
-
-//#az_social_icon_ul

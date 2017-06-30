@@ -154,17 +154,21 @@
 		margin-top: 0
 
 .our-partners
+	+prdb
+	float: left
+	width: 100%
 	background-color: $extralight_grey
+	background-size: cover
+
 
 .our-partners ul
 	+prdb
 	+box-sizing
 	padding: 0 0 0 1rem
-	margin: 0
-
-	&:first-child
-		margin: 2rem 0 0 0
-
+	//width: 50%
+	width: 100%
+	float: left
+	margin: 2rem 0 0 0
 	li
 		list-style: disc
 		list-style-type: disc !important
