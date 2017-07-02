@@ -3,9 +3,10 @@
         {{#each downloads ~}}
             {{#contains this.type ../type ~}}
                 <li>
-                    <a href="{{this.url}}" class="block-link"></a>
+                    <a href="{{this.url}}" class="block-link">
                     <span class="dwnld__icon"></span>
                     <span class="dwnld__title">{{this.title}}</span>
+                    </a>
                     <span class="dwnld__file-size">{{this.file-size}}</span>
                 </li>
             {{~/contains}}

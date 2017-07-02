@@ -1,11 +1,11 @@
 <!-- START PRINCIPLES -->
     <section class="principles" id="principles">
         <div class="principles__coloured-overlay" id="principles__coloured-overlay"></div>
-        <div class="container principles__header-wrap">
+        <div class="colorido-container principles__header-wrap">
             <h2 class="principles__header underline">Our guiding <em>principles</em></h2>
         </div>
-        <div class="principles--desktop container" id="principles--desktop">
-            <div class="container">
+        <div class="principles--desktop colorido-container" id="principles--desktop">
+            <div class="colorido-container">
                 {{#eachProperty principles ~}}
                 <div class="principles--desktop__item" data-principle-index="{{key}}">
                     <img src="img/icon-{{value.icon}}.png" alt="{{value.sub-header}}">
@@ -24,7 +24,7 @@
                 <div class="swiper-slide">
                     <img src="img/icon-{{this.icon}}.png" alt="{{this.sub-header}}">
                     <p>{{{this.sub-header}}}</p>
-                    <div class="container">
+                    <div class="colorido-container">
                         {{#each this.copy}}
                         <p class="copy">{{this}}</p>
                         {{~/each}}

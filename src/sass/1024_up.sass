@@ -1,909 +1,928 @@
 // ::::: TYPOGRAPHY :::::
-html
+html#colorido-html
     font-size: 14px
-h1 
-    font-size: 2rem
-h2, h3
-    font-weight: 500
-h2 
-    font-size: 1.35rem
-    em
-        font-size: 3.3rem
-        line-height: 3rem
-
-    &::after
-        height: 3px
-        margin: 1rem auto 2rem auto
-
-    &.underline::after
-        height: 4px
-
-h3
-    font-size: 2.2rem
-    line-height: 2.2rem
-h4 
-    font-size: 1.8rem
-h5
-    font-size: 0.72rem
-small
-    font-size: 0.87rem
-
-// ::::: GLOBAL :::::
-
-$global_spacing: 4%
-
-.container
-    width: 100% - $global_spacing * 2
-    max-width: 962px
-    margin: 0 auto
-
-.copy
-    margin-top: $global_spacing
-    margin-bottom: $global_spacing
-
-// ::::: HEADER :::::
-
-// ::::: FOOTER :::::
-
-// ::::: HERO :::::
-.hero--home
-    background-image: url(../img/hero-home--dt.jpg)
-    background-position: center 60%
-
-.hero--pwp
-    background-image: url(../img/hero-pwp--dt.jpg)
-
-    .hero__desktop-copy:before, .hero__desktop-copy:after
-        width: 400px
-
-.hero--commitments
-    background-image: url(../img/hero-commitments--dt.jpg)
-
-.hero--reporting
-    background-image: url(../img/hero-reporting--dt.jpg)
-
-.hero--products
-    background-image: none
-    // background-image: url(../img/hero-products--dt.jpg)
-    // background-position: center
-    
-    .hero--cinemagraph__video-container
-        top: -9%
-        background-image: url(../img/hero-products--dt.jpg)
-
-.hero--planet
-    background-image: none
-
-    .hero--cinemagraph__video-container
-        bottom: 0
-        background-image: url(../img/hero-planet--dt.jpg)
-
-.hero--people
-    background-image: none
-
-    .hero--cinemagraph__video-container
-        top: -20%
-        background-image: url(../img/hero-people--dt.jpg)
-
-.hero--static
-    //padding: 6% 0
-    overflow: hidden
-
-.hero--cinemagraph__copy
-    margin-top: -8rem
-
-.hero--cinemagraph__video-container
-    +padb
-    width: 100%
-    padding-bottom: 56.25%
-    left: 0
-    background-position: top center
-    background-size: cover
-    // transform: translateY(-50%)
-
-.hero--cinemagraph__video-container video
-    +padb
-    +width_height(100%, auto)
-
-.hero__initial-frame
-    -webkit-transform: translateZ(0)
-    z-index: 2
-
-.hero--cinemagraph__video-container
-    z-index: 1
-
-.hero__social-item
-    +width_height(27px, 25px)
-    margin-bottom: 1rem
-
-    span 
-        +dn
-
-    &:nth-child(-n+2)
-        //margin-right: 0.5rem
-
-    &:hover
-        +opacityz(0.8)
-
-    &:active
-        -webkit-transform: scale(0.95)
-        -moz-transform: scale(0.95)
-        -ms-transform: scale(0.95)
-        -o-transform: scale(0.95)
-        transform: scale(0.95)
-        span 
-            transform: none
-
-.hero__title em 
-    font-size: 5rem
-    line-height: 5.6rem
-
-
-.title-lines::before, .title-lines::after
-    +width_height(350px, 4px)
-    max-width: none
-    margin: 2rem auto
-
-.hero__desktop-copy
-    +prdb
-    color: white
-    width: 670px
-    margin: 0 auto
-    line-height: 150%
-
-.hero__mobile-copy
-    +dn
-
-.hero__anchor
-    line-height: 29px
-    margin-top: 0
-
-// ::::: PAGE: HOME :::::
-.misvis
-    padding: $global_spacing 0
-    background-color: $light_grey
-
-.misvis__item
-    +prdib
-    +box-sizing
-    vertical-align: top
-    width: 50%
-
-    &:first-child
-        border-right: 1px solid #bcbbb8
-        padding-right: $global_spacing
-        margin-bottom: 0
-
-    &:last-child
-        border-left: 1px solid #bcbbb8
-        padding-left: $global_spacing
-        left: -1px
-        margin-top: 0
-
-    p:last-child
-        margin-bottom: 0
-
-.principles
-    padding: $global_spacing 0
-
-.principles--desktop
-    +prdb
-    +box-sizing
-    width: 100%
-    max-width: 950px
-
-.principles__coloured-overlay
-    +dn
-    +opacityz(0)
-    background-color: rgba(30,41,44,0.8)
-
-.principles--mobile
-    +padn
-    +opacityz(0)
-    +width_height(90%, 100%)
-    +top_left(32%, 5%)
-    +ontop
-
-    .swiper-slide img
-        width: 18%
-
-    .swiper-slide p
-        width: 60%
-        +margin_lr(auto, auto)
-
-.principles--desktop, .principles--mobile, .principles__coloured-overlay
-    -webkit-transition: 0.3s linear -webkit-opacity
-    -moz-transition: 0.3s linear -moz-opacity
-    -ms-transition: 0.3s linear -ms-opacity
-    -o-transition: 0.3s linear -o-opacity
-    transition: 0.3s linear opacity
-
-.principles.unhide
-    .principles--mobile
-        +db
-    .principles__coloured-overlay
-        +db
-
-.principles.visible
-
-    .principles--desktop
-        +opacityz(0)
-    .principles--mobile
-        +opacityz(1)
-    .principles__coloured-overlay
-        +opacityz(0.8)
-
-.principles__btn-close
-    content: ""
-    +padb
-    +ontop
-    +top_right(0,0)
-    background-image: url(../img/icon-close.png)
-    background-size: 30px 30px
-    +square(30px)
-    cursor: pointer
-
-    &:hover
-        -webkit-transition: 0.3s ease -webkit-transform
-        -moz-transition: 0.3s ease -moz-transform
-        -ms-transition: 0.3s ease -ms-transform
-        -o-transition: 0.3s ease -o-transform
-        transition: 0.3s ease transform
-        -webkit-transform: rotate(180deg) translateZ(0)
-        -moz-transform: rotate(180deg) translateZ(0)
-        -ms-transform: rotate(180deg) translateZ(0)
-        -o-transform: rotate(180deg) translateZ(0)
-        transform: rotate(180deg) translateZ(0)
-
-.principles__arrow
-    +padb
-    +ontop
-    +width_height(12px, 25px)
-    top: 30%
-    margin-top: -15px
-    background-size: contain
-    background-repeat: no-repeat
-    cursor: pointer
-
-    &.principles__arrow-prev
-        background-image: url(../img/icon-arrow-left.png)
-        left: 0
-
-    &.principles__arrow-next
-        background-image: url(../img/icon-arrow-right.png)
-        right: 0
-
-.principles--desktop__item
-    +prdib
-    width: 18%
-    margin: $global_spacing 23% 0 0
-    text-align: center
-    cursor: pointer
-
-    &:nth-child(3n+3)
-        margin-right: 0
-
-    img
-        +prdb
-        width: 100%
-        -webkit-transform: scale(0.89)
-        -moz-transform: scale(0.89)
-        -ms-transform: scale(0.89)
-        -o-transform: scale(0.89)
-        transform: scale(0.89)
-        -webkit-transition: 0.1s ease -webkit-transform
-        -moz-transition: 0.1s ease -moz-transform
-        -ms-transition: 0.1s ease -ms-transform
-        -o-transition: 0.1s ease -o-transform
-        transition: 0.1s ease transform
-
-    &:hover img
-        -webkit-transform: scale(1)
-        -moz-transform: scale(1)
-        -ms-transform: scale(1)
-        -o-transform: scale(1)
-        transform: scale(1)
-
-.explore-item
-    width: 16.8%
-    padding-top: 16.8%
-    margin-bottom: 0
-    margin-right: $global_spacing
-
-    &:nth-child(odd)
-        margin-right: $global_spacing
-    &:last-child
-        margin: 0
-
-    .colour-overlay
-        -webkit-transition: 0.3s ease opacity
-        -moz-transition: 0.3s ease opacity
-        -ms-transition: 0.3s ease opacity
-        -o-transition: 0.3s ease opacity
-        transition: 0.3s ease opacity
-
-    &:active .colour-overlay
-        -webkit-transition: none
-        -moz-transition: none
-        -ms-transition: none
-        -o-transition: none
-        transition: none
-
-.explore-item__heading
-    font-size: 1rem
-
-// ::::: HIGHLIGHT :::::
-.highlight 
-    padding: $global_spacing 0
-
-.highlight__section
-    +prdib
-    vertical-align: top
-
-.highlight__section--copy
-    width: 46%
-    margin-right: $global_spacing
-
-.highlight__mobile-copy
-    +dn
-
-.highlight__desktop-copy
-    +prdb
-
-.highlight__section--media
-    width: 50%
-    float: right
-    margin-top: 0
-    top: 25px
-.highlight__media
-    width: 100%
-
-.highlight__video-wrap
-    +prdb
-    padding-bottom: 56.25% /* 16:9 */
-    height: 0
-
-    .highlight__media
-        +cover
-        //top: 25px
-
-.wangotron-wrap
-    margin-top: 10%
-
-.wangotron__items
-    +cover
-
-.wangotron__gradient
-    +padb
-    +square(100%)
-    +opacityz(0)
-    +top_left(-13.5%, 32%)
-
-.wangotron__details-modal
-    +width_height(100%, 100%)
-    +top_left(0,0)
-    margin-top: 0
-
-.wangotron__details-modal__container
-    +padn
-    +top_left(-3%, 0)
-    +square(100%)
-    +box-sizing
-    +border-radius(0)
-    color: $dark_grey
-    text-align: left
-    padding: 0 8% 8% 8%
-
-.wangotron__details-modal__icon,
-.wangotron__details-modal__close,
-.wangotron__tap-cta
-    +dn
-
-.wangotron__details-modal__header
-    margin: 0 auto
-
-    &::after
-        background-color: #bcbbb8
-        width: 100%
-        margin: 3% auto 0 auto
-
-.wangotron__details-modal__copy
-    margin: $global_spacing auto
-
-.wangotron__details-modal__image
-    +prdb
-    width: 100%
-    +box-sizing
-
-.wangotron__details-modal__cta
-    margin-top: $global_spacing
-
-.wangotron__details-modal .wangotron__details-modal__container
-    background-color: transparent !important
-
-.progress-timeline__carousel-wrapper
-    +dn
- 
-.focus-areas, .our-progress
-    padding: $global_spacing 0
-    overflow: hidden
-
-    *
-        +no-select
-
-.progress-timeline--desktop
-    +prdb
-    margin-top: $global_spacing
-    width: 1152px
-    +margin_lr(-576px, 0)
-    left: 50%
-
-.progress-timeline--desktop__image-carousel
-    +prdb
-    height: 230px
-
-.progress-timeline--desktop--image-wrapper
-    +padb
-    +square(100%)
-
-.progress-timeline--desktop__image
-    +padb
-    width: 400px
-    +opacityz(0)
-    -webkit-transform: scale(0.8)
-    -moz-transform: scale(0.8)
-    -ms-transform: scale(0.8)
-    -o-transform: scale(0.8)
-    transform: scale(0.8)
-    +border-radius(3px)
-
-    &:first-child
-        z-index: 1000
-        -webkit-transform: scale(1)
-        -moz-transform: scale(1)
-        -ms-transform: scale(1)
-        -o-transform: scale(1)
-        transform: scale(1)
-        +opacityz(1)
-
-    &:nth-child(2)
-        +opacityz(0.3)
-        z-index: 995
-
-.progress-timeline--desktop__slider-container
-    +prdb
-    width: calc(90% + 30px)
-    height: 15px
-    margin-top: $global_spacing !important
-    margin-bottom: 2.5% !important
-    +margin_lr(auto, auto)
-    +border-radius(15px)
-    background-color: $light_grey
-    &.hidden 
-        +dn
-
-.progress-timeline--desktop__slider
-    +padb
-    +square(30px)
-    +top_left(-7px, 0)
-    +border-radius(30px)
-
-    background-color: $wwb_blue
-    cursor: -webkit-grab
-    cursor: -moz-grab
-    cursor: grab
-
-    &:active
-        cursor: -webkit-grabbing
-        cursor: -moz-grabbing
-        cursor: grabbing
-
-.progress-timeline--desktop__copy-container
-    height: 140px
-
-.progress-timeline--desktop__copy-item
-    +padb
-    +opacityz(0)
-    +width_height(400px, 100%)
-    +top_left(0, 50%)
-    margin: $global_spacing 0 0 -200px
-
-    &:first-child
-        +opacityz(1)
-
-.progress-timeline__title,
-.progress-timeline__copy
-    +prdb
-    +width_height(100%, auto)
-    text-align: center
-    margin: 0
-
-.progress-timeline--desktop__years-container
-    +prdb
-    width: 100%
-    margin: 0 auto
-
-    &.pillar-mode
-        text-align: center
-        margin-top: 2rem
-
-.progress-timeline--desktop__year
-    +prdib
-    +title-font-bold
-    width: 10%
-    font-size: 1.3rem
-    text-align: center
-
-    &::before
-        content: ""
-        +prdb
-        +box-sizing
-        +square(30px)
-        +border-radius(100%)
-        margin: auto
-        border: 5px solid $extralight_grey
-        background-color: $light_grey
-
-    &::after
-        content: ""
-        +width_height(0, 4px)
-        +prdb
-        margin: 0.5rem auto 0 auto
-
-        background-color: $wwb_blue
-        -webkit-transition: 0.2s ease width
-        -moz-transition: 0.2s ease width
-        -ms-transition: 0.2s ease width
-        -o-transition: 0.2s ease width
-        transition: 0.2s ease width
-
-    &.pillar-node
-        text-align: center
-        width: 50px
-        +margin_lr(auto, auto)
-        &.selected:before
-            background-color: $wwb_blue
-        &:after
-            +dn
-    &.selected
-        color: $wwb_blue
-
-        &::after
-            width: 42%
-    &:hover
-        color: $wwb_blue
-        cursor: pointer
-        &::before
-            background-color: darken($light_grey, 5%)
-
-.pwp-breakdown
-    padding: 3% 0
-    h4
-        font-size: 1rem
-        padding-top: 0
-        padding-right: 0
-
-.pwp-breakdown.topics
-    background-color: rgb(192,192,192)
-
-.pwp-breakdown-copy .copy
-    max-width: 60%
-
-.desktop-pwp-breakdown-icon
-    +prdb
-    width: 50%
-    margin: 0 auto
-
-.mobile-pwp-breakdown-icon
-    +dn
-
-.pillar-container
-    +prdib
-    width: 100%
-    margin: 0 5% 0 0
-    vertical-align: top
-
-    &:last-child
-        margin-right: 0
-
-.pillar-item__pill h4 
-    font-size: 1rem
-
-// Pillar tabs
-.pillar-tabs
-    +prdb
-    //width: 100% - $global_spacing * 2
-    width: 100%
-    max-width: 962px
-    margin: 0 auto
-    overflow: visible
-    padding: 6% 0
-
-    &:before
-        content: ""
-        +padb
-        +box-sizing
-        +width_height(100%, 120px)
-        +top_left(0, 0)
-
-.pillar-tab-container
-    +prdb
-    width: 100% - $global_spacing * 2
-    max-width: 962px
-    margin: 0 auto
-    padding-top: 60px
-
-#phil_report_left
-    width: 46%
-    padding: 0 3%
-#phil_report_right
-    width: 46%
-
-#phil_report_container
-    width: 84%
-
-.btn.discover#phil_report_right_btn
-    margin: 4.5rem 0
-
-.pillar-tab__heading
-    +padb
-    +box-sizing
-    +width_height(30%, 60px)
-    top: 0
-    padding: 0
-
-    span
-        +box-sizing
-        padding: 0
-        font-size: 18px
-        +cover
-        line-height: 60px
-
-    &:active span 
-        background-color: #66b5e2 !important
-
-// tab
-.pillar-tab:nth-child(1) .pillar-tab__heading
-    //left: 10%
-    left: 0
-    width: 25%
-
-.pillar-tab:nth-child(2) .pillar-tab__heading
-    //left: 35%
-    left: 38%
-    width: 25%
-
-.pillar-tab:nth-child(3) .pillar-tab__heading
-    //left: 75%
-    right: 0
-    width: 25%
-
-.pillar-tab__content
-    h2:after
-        content: ""
-        +prdb
-        +width_height(300px, 3px)
-        margin: 1rem 0 0 0
-        background-color: $wwb_blue
-    img 
-        float: right
-        margin-left: $global_spacing
-        margin-bottom: $global_spacing
-
-.explore-item
-    &:before
-        -webkit-transform: translateY(-100px)
-        -moz-transform: translateY(-100px)
-        -ms-transform: translateY(-100px)
-        -o-transform: translateY(-100px)
-        transform: translateY(-100px)
-    &:after
-        -webkit-transform: translateY(100px)
-        -moz-transform: translateY(100px)
-        -ms-transform: translateY(100px)
-        -o-transform: translateY(100px)
-        transform: translateY(100px)
-
-    &:before,
-    &:after
-        $spd: 0.2s
-        +padb
-        -webkit-transition: $spd ease -webkit-transform
-        -moz-transition: $spd ease -moz-transform
-        -ms-transition: $spd ease -ms-transform
-        -o-transition: $spd ease -o-transform
-        transition: $spd ease transform
-    &:hover
-        .explore-item__image
-            -webkit-filter: grayscale(100%)
-            -moz-filter:    grayscale(100%)
-            -o-filter:      grayscale(100%)
-            filter:         grayscale(100%)
-        &:before,
-        &:after
-            -webkit-transform: translateY(0)
-            -moz-transform: translateY(0)
-            -ms-transform: translateY(0)
-            -o-transform: translateY(0)
-            transform: translateY(0)
-// ::::: report :::::
-.downloads-accordian-header h4
-    font-size: 0.8rem
-
-.previous-reports, .latest-reports
-    padding: $global_spacing 0
-
-    .copy
-        margin-top: 2rem
-        margin-bottom: 2rem
-
-.report-slider__title
-    margin: $global_spacing auto $global_spacing/2 auto
-
-.report-slider__slide .copy
-    margin-left: auto
-    margin-right: auto
-    max-width: 500px
-    margin: $global_spacing/2 auto $global_spacing auto
-
-.previous-downloads
-    margin-bottom: 1rem
-
-.report-slider__arrows
-    +padb
-    width: 100%
-    top: 150px
-    left: 0
-
-    .arrow
-        +padb
-        width: 15px
-        height: 30px
-        background-position: center
-        background-size: cover
-        +ontop
-        cursor: pointer
-
-        &.arrow--prev
+    body.colorido-body
+        h1
+            font-size: 2rem
+        h2, h3
+            font-weight: 500
+        h2
+            font-size: 1.35rem
+            em
+                font-size: 3.3rem
+                line-height: 3rem
+
+            &::after
+                height: 3px
+                margin: 1rem auto 2rem auto
+
+            &.underline::after
+                height: 4px
+
+        h3
+            font-size: 2.2rem
+            line-height: 2.2rem
+        h4
+            font-size: 1.8rem
+        h5
+            font-size: 0.72rem
+        small
+            font-size: 0.87rem
+
+        // ::::: GLOBAL :::::
+
+        $global_spacing: 4%
+
+        .colorido-container
+            margin: 0 auto
+
+        .copy
+            margin-top: $global_spacing
+            margin-bottom: $global_spacing
+
+        .topics
+            font-size: 16px
+
+        // ::::: HEADER :::::
+
+         // ::::: FOOTER :::::
+
+        // ::::: HERO :::::
+        .hero--home
+            background-image: url(../img/hero-home--dt.jpg)
+            background-position: center 60%
+
+        .hero--pwp
+            background-image: url(../img/hero-pwp--dt.jpg)
+
+            .hero__desktop-copy:before, .hero__desktop-copy:after
+                width: 400px
+
+        .hero--commitments
+            background-image: url(../img/hero-commitments--dt.jpg)
+
+        .hero--reporting
+            background-image: url(../img/hero-reporting--dt.jpg)
+
+        .hero--products
+            background-image: none
+            // background-image: url(../img/hero-products--dt.jpg)
+            // background-position: center
+
+            .hero--cinemagraph__video-container
+                top: -9%
+                background-image: url(../img/hero-products--dt.jpg)
+
+        .hero--planet
+            background-image: none
+
+            .hero--cinemagraph__video-container
+                bottom: 0
+                background-image: url(../img/hero-planet--dt.jpg)
+
+        .hero--people
+            background-image: none
+
+            .hero--cinemagraph__video-container
+                top: -20%
+                background-image: url(../img/hero-people--dt.jpg)
+
+        .hero--static
+            //padding: 6% 0
+            overflow: hidden
+
+        .hero--cinemagraph__copy
+            margin-top: -8rem
+
+        .hero--cinemagraph__video-container
+            +padb
+            width: 100%
+            padding-bottom: 56.25%
             left: 0
-            background-image: url(../img/icon-arrow-left--blue.png)
-        &.arrow--next
-            right: 0
-            background-image: url(../img/icon-arrow-right--blue.png)
+            background-position: top center
+            background-size: cover
+            // transform: translateY(-50%)
 
-.report-slider .swiper-pagination-bullet
-    width: 13px
-    height: 13px
-    margin: 0 10px !important
+        .hero--cinemagraph__video-container video
+            +padb
+            +width_height(100%, auto)
 
+        .hero__initial-frame
+            -webkit-transform: translateZ(0)
+            z-index: 2
 
-.latest-reports,
-.report-slider__slide
-    background-color: $light_grey
+        .hero--cinemagraph__video-container
+            z-index: 1
 
-.downloads ul li,
-.previous-reports
-    background-color: $extralight_grey
+        .hero__social-item
+            +width_height(27px, 25px)
+            margin-bottom: 1rem
 
-// .previous-reports
-//     margin-bottom: 41px
+            span
+                +dn
 
-.previous-reports .downloads li
-    background-color: $light_grey
+            &:nth-child(-n+2)
+                //margin-right: 0.5rem
 
+            &:hover
+                +opacityz(0.8)
 
-.howwillwe-plug
-    padding: $global_spacing 0
+            &:active
+                -webkit-transform: scale(0.95)
+                -moz-transform: scale(0.95)
+                -ms-transform: scale(0.95)
+                -o-transform: scale(0.95)
+                transform: scale(0.95)
+                span
+                    transform: none
 
-.container.special
-    max-width: 500px
-
-.our-partners
-    padding: $global_spacing 0
-    margin-bottom: 41px
-
-.our-partners ul
-    +prdib
-    +box-sizing
-    vertical-align: top
-    padding: 0 0 0 1rem
-    margin: 2rem 0 0 0
-    width: 50%
-
-.stakeholder-engagement, .latest-downloads
-    margin-top: $global_spacing*1.5
+        .hero__title em
+            font-size: 5rem
+            line-height: 5.6rem
 
 
+        .title-lines::before, .title-lines::after
+            +width_height(350px, 4px)
+            max-width: none
+            margin: 2rem auto
 
-// ::::: PAGE: GOVERNANCE :::::
-.container.gov.left
-    width: 70%
-    padding-right: 30px
+        .hero__desktop-copy
+            +prdb
+            color: white
+            width: 670px
+            margin: 0 auto
+            line-height: 150%
 
-.pillar-item__content.gov.right
-    width: 30%
+        .hero__mobile-copy
+            +dn
 
-.hero__social.gov
-    margin-bottom: 0
+        .hero__anchor
+            line-height: 29px
+            margin-top: 0
 
-.pillar-item__content h2 em
-    +prdib
-    +width_height(auto, auto)
-    float: left
-    font-size: 2rem
+        // ::::: PAGE: HOME :::::
+        .misvis
+            padding: $global_spacing 0
+            background-color: $light_grey
 
-.pillar_content_h4
-    width: 20%
+        .misvis__item
+            +prdib
+            +box-sizing
+            vertical-align: top
+            width: 50%
 
-.download_title
-    +prdib
-    +title-font-regular
-    +width_height(100%, 2em)
-    float: left
-    top: -12px
-    text-transform: uppercase
-    text-decoration: none
-    &:before
-        +prdib
-        +width_height(30px, 2.2em)
-        +top_left(-5px, -17px)
-        content: ""
-        float: left
-        background: url(../img/download_arrow.png) no-repeat center center
-        border-right: 1px solid lightgrey
-        padding-right: 1rem
+            &:first-child
+                border-right: 1px solid #bcbbb8
+                padding-right: $global_spacing
+                margin-bottom: 0
 
-.pillar_content_bottom_left.gov
-    display: block
+            &:last-child
+                border-left: 1px solid #bcbbb8
+                padding-left: $global_spacing
+                left: -1px
+                margin-top: 0
 
-// ::::: PAGE: AtoZ :::::
-.hero__social.az
-    +prdib
-    +width_height(auto, 50px)
-    float: left
-    top: -9px
-    margin-left: 60px
-    a
-        +prdb
-        float: left
+            p:last-child
+                margin-bottom: 0
 
-#social-az
-    +prdib
-    background-size: contain
-    margin: 7px 0 0 21px
+        .principles
+            padding: $global_spacing 0
 
-.download
-    a
-        &:hover
-            background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
+        .principles--desktop
+            +prdb
+            +box-sizing
+            width: 100%
+            max-width: 950px
 
-.download
-    a.related_topics_a
-        +top_right(-25px, -24px)
-        +prdb
-        text-transform: uppercase
-        font-size: 14px
-        overflow: hidden
-        width: 100%
-        line-height: 48px
-        text-decoration: none
-        color: #616161
-        text-align: left
-        span
+        .principles__coloured-overlay
+            +dn
+            +opacityz(0)
+            background-color: rgba(30,41,44,0.8)
+
+        .principles--mobile
+            +padn
+            +opacityz(0)
+            +width_height(90%, 100%)
+            +top_left(32%, 5%)
+            +ontop
+
+            .swiper-slide img
+                width: 18%
+
+            .swiper-slide p
+                width: 60%
+                +margin_lr(auto, auto)
+
+        .principles--desktop, .principles--mobile, .principles__coloured-overlay
+            -webkit-transition: 0.3s linear -webkit-opacity
+            -moz-transition: 0.3s linear -moz-opacity
+            -ms-transition: 0.3s linear -ms-opacity
+            -o-transition: 0.3s linear -o-opacity
+            transition: 0.3s linear opacity
+
+        .principles.unhide
+            .principles--mobile
+                +db
+            .principles__coloured-overlay
+                +db
+
+        .principles.visible
+
+            .principles--desktop
+                +opacityz(0)
+            .principles--mobile
+                +opacityz(1)
+            .principles__coloured-overlay
+                +opacityz(0.8)
+
+        .principles__btn-close
+            content: ""
+            +padb
+            +ontop
+            +top_right(0,0)
+            background-image: url(../img/icon-close.png)
+            background-size: 30px 30px
+            +square(30px)
+            cursor: pointer
+
+            &:hover
+                -webkit-transition: 0.3s ease -webkit-transform
+                -moz-transition: 0.3s ease -moz-transform
+                -ms-transition: 0.3s ease -ms-transform
+                -o-transition: 0.3s ease -o-transform
+                transition: 0.3s ease transform
+                -webkit-transform: rotate(180deg) translateZ(0)
+                -moz-transform: rotate(180deg) translateZ(0)
+                -ms-transform: rotate(180deg) translateZ(0)
+                -o-transform: rotate(180deg) translateZ(0)
+                transform: rotate(180deg) translateZ(0)
+
+        .principles__arrow
+            +padb
+            +ontop
+            +width_height(12px, 25px)
+            top: 30%
+            margin-top: -15px
+            background-size: contain
+            background-repeat: no-repeat
+            cursor: pointer
+
+            &.principles__arrow-prev
+                background-image: url(../img/icon-arrow-left.png)
+                left: 0
+
+            &.principles__arrow-next
+                background-image: url(../img/icon-arrow-right.png)
+                right: 0
+
+        .principles--desktop__item
+            +prdib
+            width: 18%
+            margin: $global_spacing 23% 0 0
+            text-align: center
+            cursor: pointer
+
+            &:nth-child(3n+3)
+                margin-right: 0
+
+            img
+                +prdb
+                width: 100%
+                -webkit-transform: scale(0.89)
+                -moz-transform: scale(0.89)
+                -ms-transform: scale(0.89)
+                -o-transform: scale(0.89)
+                transform: scale(0.89)
+                -webkit-transition: 0.1s ease -webkit-transform
+                -moz-transition: 0.1s ease -moz-transform
+                -ms-transition: 0.1s ease -ms-transform
+                -o-transition: 0.1s ease -o-transform
+                transition: 0.1s ease transform
+
+            &:hover img
+                -webkit-transform: scale(1)
+                -moz-transform: scale(1)
+                -ms-transform: scale(1)
+                -o-transform: scale(1)
+                transform: scale(1)
+
+
+
+        .explore
+            .explore-item
+                width: 16.8%
+                padding-top: 16.8%
+                margin-bottom: 0
+                margin-right: $global_spacing
+                &:before, &:after
+                    content: ""
+                    +padb
+
+                &:nth-child(odd)
+                    margin-right: $global_spacing
+
+                &:last-child
+                    margin: 0
+
+                .colour-overlay
+                    -webkit-transition: 0.3s ease opacity
+                    -moz-transition: 0.3s ease opacity
+                    -ms-transition: 0.3s ease opacity
+                    -o-transition: 0.3s ease opacity
+                    transition: 0.3s ease opacity
+
+                &:active .colour-overlay
+                    -webkit-transition: none
+                    -moz-transition: none
+                    -ms-transition: none
+                    -o-transition: none
+                    transition: none
+
+            .explore-item__heading
+                font-size: 1rem
+
+        .block-link
+            position: absolute
+            display: block
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            max-width: 161px
+            max-height: 161px
+            border: 0
+
+
+        // ::::: HIGHLIGHT :::::
+        .highlight
+            padding: $global_spacing 0
+
+        .highlight__section
+            +prdib
+            vertical-align: top
+
+        .highlight__section--copy
+            width: 46%
+            margin-right: $global_spacing
+
+        .highlight__mobile-copy
+            +dn
+
+        .highlight__desktop-copy
+            +prdb
+
+        .highlight__section--media
+            width: 50%
+            float: right
+            margin-top: 0
+            top: 25px
+        .highlight__media
+            width: 100%
+
+        .highlight__video-wrap
+            +prdb
+            padding-bottom: 56.25% /* 16:9 */
+            height: 0
+
+            .highlight__media
+                +cover
+
+        .wangotron-wrap
+            margin-top: 10%
+
+        .wangotron__items
+            +cover
+
+        .wangotron__gradient
+            +padb
+            +square(100%)
+            +opacityz(0)
+            +top_left(-13.5%, 32%)
+
+        .wangotron__details-modal
+            +width_height(100%, 100%)
+            +top_left(0,0)
+            margin-top: 0
+
+        .wangotron__details-modal__container
+            +padn
+            +top_left(-3%, 0)
+            +square(100%)
+            +box-sizing
+            +border-radius(0)
+            color: $dark_grey
+            text-align: left
+            padding: 0 8% 8% 8%
+
+        .wangotron__details-modal__icon,
+        .wangotron__details-modal__close,
+        .wangotron__tap-cta
+            +dn
+
+        .wangotron__details-modal__header
+            margin: 0 auto
+
+            &::after
+                background-color: #bcbbb8
+                width: 100%
+                margin: 3% auto 0 auto
+
+        .wangotron__details-modal__copy
+            margin: $global_spacing auto
+
+        .wangotron__details-modal__image
+            +prdb
+            width: 100%
+            +box-sizing
+
+        .wangotron__details-modal__cta
+            margin-top: $global_spacing
+
+        .wangotron__details-modal .wangotron__details-modal__container
+            background-color: transparent !important
+
+        .progress-timeline__carousel-wrapper
+            +dn
+
+        .focus-areas, .our-progress
+            padding: $global_spacing 0
+            overflow: hidden
+
+            *
+                +no-select
+
+        .progress-timeline--desktop
+            +prdb
+            margin-top: $global_spacing
+            width: 1152px
+            +margin_lr(-576px, 0)
+            left: 50%
+
+        .progress-timeline--desktop__image-carousel
+            +prdb
+            height: 230px
+
+        .progress-timeline--desktop--image-wrapper
+            +padb
+            +square(100%)
+
+        .progress-timeline--desktop__image
+            +padb
+            width: 400px
+            +opacityz(0)
+            -webkit-transform: scale(0.8)
+            -moz-transform: scale(0.8)
+            -ms-transform: scale(0.8)
+            -o-transform: scale(0.8)
+            transform: scale(0.8)
+            +border-radius(3px)
+
+            &:first-child
+                z-index: 1000
+                -webkit-transform: scale(1)
+                -moz-transform: scale(1)
+                -ms-transform: scale(1)
+                -o-transform: scale(1)
+                transform: scale(1)
+                +opacityz(1)
+
+            &:nth-child(2)
+                +opacityz(0.3)
+                z-index: 995
+
+        .progress-timeline--desktop__slider-container
+            +prdb
+            width: calc(90% + 30px)
+            height: 15px
+            margin-top: $global_spacing !important
+            margin-bottom: 2.5% !important
+            +margin_lr(auto, auto)
+            +border-radius(15px)
+            background-color: $light_grey
+            &.hidden
+                +dn
+
+        .progress-timeline--desktop__slider
+            +padb
+            +square(30px)
+            +top_left(-7px, 0)
+            +border-radius(30px)
+
+            background-color: $wwb_blue
+            cursor: -webkit-grab
+            cursor: -moz-grab
+            cursor: grab
+
+            &:active
+                cursor: -webkit-grabbing
+                cursor: -moz-grabbing
+                cursor: grabbing
+
+        .progress-timeline--desktop__copy-container
+            height: 140px
+
+        .progress-timeline--desktop__copy-item
+            +padb
+            +opacityz(0)
+            +width_height(400px, 100%)
+            +top_left(0, 50%)
+            margin: $global_spacing 0 0 -200px
+
+            &:first-child
+                +opacityz(1)
+
+        .progress-timeline__title,
+        .progress-timeline__copy
+            +prdb
+            +width_height(100%, auto)
+            text-align: center
+            margin: 0
+
+        .progress-timeline--desktop__years-container
+            +prdb
+            width: 100%
+            margin: 0 auto
+
+            &.pillar-mode
+                text-align: center
+                margin-top: 2rem
+
+        .progress-timeline--desktop__year
+            +prdib
             +title-font-bold
-            padding-left: 70px
-            &.align-right
-                display: none
+            width: 10%
+            font-size: 1.3rem
+            text-align: center
+
+            &::before
+                content: ""
+                +prdb
+                +box-sizing
+                +square(30px)
+                +border-radius(100%)
+                margin: auto
+                border: 5px solid $extralight_grey
+                background-color: $light_grey
+
+            &::after
+                content: ""
+                +width_height(0, 4px)
+                +prdb
+                margin: 0.5rem auto 0 auto
+
+                background-color: $wwb_blue
+                -webkit-transition: 0.2s ease width
+                -moz-transition: 0.2s ease width
+                -ms-transition: 0.2s ease width
+                -o-transition: 0.2s ease width
+                transition: 0.2s ease width
+
+            &.pillar-node
+                text-align: center
+                width: 50px
+                +margin_lr(auto, auto)
+                &.selected:before
+                    background-color: $wwb_blue
+                &:after
+                    +dn
+            &.selected
+                color: $wwb_blue
+
+                &::after
+                    width: 42%
+            &:hover
+                color: $wwb_blue
+                cursor: pointer
+                &::before
+                    background-color: darken($light_grey, 5%)
+
+        .pwp-breakdown
+            padding: 3% 0
+            h4
+                font-size: 1rem
+                padding-top: 0
+                padding-right: 0
+
+        //.pwp-breakdown.topics
+            //background-color: rgb(192,192,192)
+
+        .pwp-breakdown-copy .copy
+            max-width: 60%
+
+        .desktop-pwp-breakdown-icon
+            +prdb
+            width: 50%
+            margin: 0 auto
+
+        .mobile-pwp-breakdown-icon
+            +dn
+
+        .pillar-container
+            +prdib
+            width: 100%
+            margin: 0 5% 0 0
+            vertical-align: top
+
+            &:last-child
+                margin-right: 0
+
+        .pillar-item__pill h4
+            font-size: 1rem
+
+        // Pillar tabs
+        .pillar-tabs
+            +prdb
+            //width: 100% - $global_spacing * 2
+            width: 100%
+            max-width: 962px
+            margin: 0 auto
+            overflow: visible
+            padding: 6% 0
+
+            &:before
+                content: ""
+                +padb
+                +box-sizing
+                +width_height(100%, 120px)
+                +top_left(0, 0)
+
+        .pillar-tab-container
+            +prdb
+            width: 100% - $global_spacing * 2
+            max-width: 962px
+            margin: 0 auto
+            padding-top: 60px
+
+        #phil_report_left
+            width: 46%
+            padding: 0 3%
+        #phil_report_right
+            width: 46%
+
+        #phil_report_container
+            width: 84%
+
+        .btn.discover#phil_report_right_btn
+            margin: 4.5rem 0
+
+        .pillar-tab__heading
+            +padb
+            +box-sizing
+            +width_height(30%, 60px)
+            top: 0
+            padding: 0
+
+            span
+                +box-sizing
+                padding: 0
+                font-size: 18px
+                +cover
+                line-height: 60px
+
+            &:active span
+                background-color: #66b5e2 !important
+
+        // tab
+        .pillar-tab:nth-child(1) .pillar-tab__heading
+            left: 0
+            width: 25%
+
+        .pillar-tab:nth-child(2) .pillar-tab__heading
+            left: 38%
+            width: 25%
+
+        .pillar-tab:nth-child(3) .pillar-tab__heading
+            right: 0
+            width: 25%
+
+        .pillar-tab__content
+            h2:after
+                content: ""
+                +prdb
+                +width_height(300px, 3px)
+                margin: 1rem 0 0 0
+                background-color: $wwb_blue
+            img
                 float: right
-                +title-font
-                +padding_lr(20px, 20px)
-                background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
+                margin-left: $global_spacing
+                margin-bottom: $global_spacing
 
-span.align-right
-    display: block
+        .explore-item
+            &:before
+                -webkit-transform: translateY(-100px)
+                -moz-transform: translateY(-100px)
+                -ms-transform: translateY(-100px)
+                -o-transform: translateY(-100px)
+                transform: translateY(-100px)
+            &:after
+                -webkit-transform: translateY(100px)
+                -moz-transform: translateY(100px)
+                -ms-transform: translateY(100px)
+                -o-transform: translateY(100px)
+                transform: translateY(100px)
 
-.related_topics_a
-    background: none
+            &:before,
+            &:after
+                $spd: 0.2s
+                +padb
+                -webkit-transition: $spd ease -webkit-transform
+                -moz-transition: $spd ease -moz-transform
+                -ms-transition: $spd ease -ms-transform
+                -o-transition: $spd ease -o-transform
+                transition: $spd ease transform
+            &:hover
+                .explore-item__image
+                    -webkit-filter: grayscale(100%)
+                    -moz-filter:    grayscale(100%)
+                    -o-filter:      grayscale(100%)
+                    filter:         grayscale(100%)
+                &:before,
+                &:after
+                    -webkit-transform: translateY(0)
+                    -moz-transform: translateY(0)
+                    -ms-transform: translateY(0)
+                    -o-transform: translateY(0)
+                    transform: translateY(0)
 
-.pillar_content_bottom_left.gov.second
-    display: none
+
+        // ::::: report :::::
+        .downloads-accordian-header h4
+            font-size: 0.8rem
+
+        .previous-reports, .latest-reports
+            padding: $global_spacing 0
+
+            .copy
+                margin-top: 2rem
+                margin-bottom: 2rem
+
+        .report-slider__title
+            margin: $global_spacing auto $global_spacing/2 auto
+
+        .report-slider__slide .copy
+            margin-left: auto
+            margin-right: auto
+            max-width: 500px
+            margin: $global_spacing/2 auto $global_spacing auto
+
+        .previous-downloads
+            margin-bottom: 1rem
+
+        .report-slider__arrows
+            +padb
+            width: 100%
+            top: 150px
+            left: 0
+
+            .arrow
+                +padb
+                width: 15px
+                height: 30px
+                background-position: center
+                background-size: cover
+                +ontop
+                cursor: pointer
+
+                &.arrow--prev
+                    left: 0
+                    background-image: url(../img/icon-arrow-left--blue.png)
+                &.arrow--next
+                    right: 0
+                    background-image: url(../img/icon-arrow-right--blue.png)
+
+        .report-slider .swiper-pagination-bullet
+            width: 13px
+            height: 13px
+            margin: 0 10px !important
+
+
+        .latest-reports,
+        .report-slider__slide
+            background-color: $light_grey
+
+        .downloads ul li,
+        .previous-reports
+            background-color: $extralight_grey
+
+        // .previous-reports
+        //     margin-bottom: 41px
+
+        .previous-reports .downloads li
+            background-color: $light_grey
+
+
+        .howwillwe-plug
+            padding: $global_spacing 0
+
+        .colorido-container.special
+            max-width: 500px
+
+        .our-partners
+            padding: $global_spacing 0
+            //margin-bottom: 41px
+
+        .our-partners ul
+            +prdib
+            +box-sizing
+            vertical-align: top
+            padding: 0 0 0 1rem
+            margin: 2rem 0 0 0
+            width: 50%
+
+        //.stakeholder-engagement, .latest-downloads
+        //    margin-top: $global_spacing*1.5
+
+
+
+        // ::::: PAGE: GOVERNANCE :::::
+        .colorido-container.gov.left
+            width: 70% !important
+            padding-right: 30px
+
+        .pillar-item__content.gov.right
+            width: 30%
+
+        .hero__social.gov
+            margin-bottom: 0
+
+        .pillar-item__content h2 em
+            //+prdib
+            //+width_height(auto, auto)
+            float: left
+            font-size: 2rem
+
+        .pillar_content_h4
+            width: 20%
+
+        .download_title
+            +prdib
+            +title-font-regular
+            +width_height(100%, 2em)
+            float: left
+            top: -12px
+            text-transform: uppercase
+            text-decoration: none
+            &:before
+                +prdib
+                +width_height(30px, 2.2em)
+                +top_left(-5px, -17px)
+                content: ""
+                float: left
+                background: url(../img/download_arrow.png) no-repeat center center
+                border-right: 1px solid lightgrey
+                padding-right: 1rem
+
+        .pillar_content_bottom_left.gov
+            display: block
+
+        // ::::: PAGE: AtoZ :::::
+        .hero__social.az
+            +prdib
+            +width_height(auto, 50px)
+            float: left
+            top: -9px
+            margin-left: 60px
+            a
+                +prdb
+                float: left
+
+        #social-az
+            +prdib
+            background-size: contain
+            margin: 7px 0 0 21px
+
+        .download
+            a
+                &:hover
+                    background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
+
+        .download
+            a.related_topics_a
+                +top_right(-25px, -24px)
+                +prdb
+                text-transform: uppercase
+                font-size: 14px
+                overflow: hidden
+                width: 100%
+                line-height: 48px
+                text-decoration: none
+                color: #616161
+                text-align: left
+                span
+                    +title-font-bold
+                    padding-left: 70px
+                    &.align-right
+                        display: none
+                        float: right
+                        +title-font
+                        +padding_lr(20px, 20px)
+                        background: #e1e1e1 url('../img/icon-separator.png') no-repeat 0 center
+
+        span.align-right
+            display: block
+
+        .related_topics_a
+            background: none
+
+        .pillar_content_bottom_left.gov.second
+            display: none

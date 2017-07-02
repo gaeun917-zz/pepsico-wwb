@@ -1,44 +1,47 @@
-// ::::: PAGE: BRANDS LIST :::::
-.list-brands-container
-    .list-brands > ul>li
-        width: 25%
+html#colorido-html
+    body.colorido-body
+        // ::::: PAGE: BRANDS LIST :::::
+        .list-brands-container
+            .list-brands > ul>li
+                width: 25%
 
-// ::::: PAGE: RECIPES LIST :::::
-.list-recipes-container
+        // ::::: PAGE: RECIPES LIST :::::
+        .list-recipes-container
 
-    .list-recipes > ul>li
-        width: 25%
- 
-// ::::: PAGE: NUTRITION :::::
-.forward-brands
-    ul.forward-brand-list
-        +margin_lr(-60px, -60px)
-        li
-            > div 
-                padding: 0 60px
-                margin-bottom: 60px
+            .list-recipes > ul>li
+                width: 25%
 
-// RECIPE AND BRANDS GRID
-#grid
-    .expander
-        max-height: 0
-    .is-li-open
-        .expander
-            max-height: 700px
-#download_policy a,
-#download_report a
-    width: 103%
+        // ::::: PAGE: NUTRITION :::::
+        .forward-brands
+            ul.forward-brand-list
+                +margin_lr(-60px, -60px)
+                li
+                    > div
+                        padding: 0 60px
+                        margin-bottom: 60px
 
-#social li
-    +prdb
-    +width_height(26px, 26px)
-    +top_left(-13px, -7px)
-    float: left
-    padding: 0
-    margin: 0 0 0 5%
+        // RECIPE AND BRANDS GRID
+        #grid
+            .expander
+                max-height: 0
+            .is-li-open
+                .expander
+                    max-height: 700px
+        #download_policy a,
+        #download_report a
+            width: 103%
 
-#governanace_right_social li
-    +top_left(-26px, -18px)
+        #social li
+            +prdb
+            +width_height(26px, 26px)
+            +top_left(-13px, -7px)
+            float: left
+            padding: 0
+            margin: 0 0 0 5%
 
-#footer_social
-    display: block
+        #governanace_right_social li
+            +top_left(-26px, -18px)
+
+        .footer_container
+            #footer_social
+                margin-top: 3%

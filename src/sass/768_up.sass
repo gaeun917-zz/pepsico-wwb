@@ -1,608 +1,618 @@
 // ::::: TYPOGRAPHY :::::
-html
+html#colorido-html
 	font-size: 15px
-h1
-	font-size: 1.8rem
-h2
-	font-size: 1.5rem
-	font-weight: 500
-
-$global_spacing: 6%
-
-// ::::: GLOBAL :::::
-.container
-	width: 100% - $global_spacing * 2
-	margin: 0 $global_spacing
-
-.contained-copy
-	+prdb
-	text-align: center
-	width: 55%
-	margin: 0 auto
-	h3
-		margin: 0
-.copy
-	margin-top: $global_spacing
-	margin-bottom: $global_spacing
-
-// ::::: HEADER ::::: 
-
-// ::::: FOOTER :::::
-
-// ::::: HERO :::::
-.hero--home
-	background-image: url(../img/hero-home--tb.jpg)
-	background-position: center bottom
-
-.hero--pwp
-	background-image: url(../img/hero-pwp--tb.jpg)
-
-.hero--commitments
-	background-image: url(../img/hero-commitments--tb.jpg)
-
-.hero--products
-	background-image: url(../img/hero-products--tb.jpg)
-
-.hero--planet
-	background-image: url(../img/hero-planet--tb.jpg)
-
-.hero--people
-	background-image: url(../img/hero-people--tb.jpg)
-
-// ::::: PAGE: HOME :::::
-
-.misvis
-	padding-top: $global_spacing
-
-.explore-item__heading
-	font-size: 1.6rem
-
-// ::::: HIGHLIGHT :::::
-.highlight
-	padding: $global_spacing 0 0 0
-
-.focus-areas, .our-progress
-	padding: $global_spacing 0
-
-.progress-timeline__pagination
-	width: 100% - $global_spacing * 2
-	margin-top: 54%
-
-.progress-timeline__pagination .swiper-pagination-bullet
-	margin: 0 7% 0 0 !important
-	+square(14px)
-
-.progress-timeline__arrows
-	margin-top: calc(61% + 50px)
-
-.progress-timeline__swipe-icon
-	margin-top: 0
-
-.progress-timeline__copy-container
-	margin-top: 13%
-
-.pwp-breakdown
-	background-size: contain
-
-// Pillar tabs
-.pillar-tab__heading span
-	padding: $global_spacing 0
-
-
-// ::::: PAGE: BRANDS
-.search-blue
-	padding: 64px 0 105px 0
-	h3
-		font-size: 22px
-
-
-
-// ::::: PAGE: BRANDS LIST :::::
-.tabs-select
-	li 
-		a
-			font-size: 14px
-			margin-bottom: 12px
-			padding-top: 16px
-			padding-bottom: 16px
-
-.list-brands-container
-	.categories
-		margin-bottom: 80px
-		&.tabs-select li
-			width: 25%
-			a
-				font-size: 18px
-				&:after 
-					display: block
-
-	.list-brands > ul>li
-		width: 33.33%
-		.expander-inner
-			overflow-y: initial
-			overflow-x: initial
-
-	.expander-inner-half
-		width: 50%
-		.tabs-select
-			margin-bottom: 40px
-		&.left 
-			>div 
-				padding-right: 30px
-		&.right
-			>div 
-				padding-left: 30px
-
-		.tabs-select
-			+margin_lr(-12px,-12px)
-
-	.gallery
+	body.colorido-body
+		h1
+			font-size: 1.8rem
 		h2
-			display: none
-		> figure
-			max-height: 310px
-			overflow: hidden
-		.related 
-			padding-top: 0
+			font-size: 1.5rem
+			font-weight: 500
+
+		$global_spacing: 6%
+
+		// ::::: GLOBAL :::::
+		.colorido-container
+			width: 100% - $global_spacing * 2
+			margin: 0 $global_spacing
+
+		.contained-copy
+			+prdb
+			text-align: center
+			width: 55%
+			margin: 0 auto
+			h3
+				margin: 0
+		.copy
+			margin-top: $global_spacing
+			margin-bottom: $global_spacing
+
+		// ::::: HEADER :::::
+
+		// ::::: FOOTER :::::
+
+		// ::::: HERO :::::
+		.hero--home
+			background-image: url(../img/hero-home--tb.jpg)
+			background-position: center bottom
+
+		.hero--pwp
+			background-image: url(../img/hero-pwp--tb.jpg)
+
+		.hero--commitments
+			background-image: url(../img/hero-commitments--tb.jpg)
+
+		.hero--products
+			background-image: url(../img/hero-products--tb.jpg)
+
+		.hero--planet
+			background-image: url(../img/hero-planet--tb.jpg)
+
+		.hero--people
+			background-image: url(../img/hero-people--tb.jpg)
+
+		// ::::: PAGE: HOME :::::
+
+		.misvis
+			padding-top: $global_spacing
+
+		.explore-item__heading
+			font-size: 1.6rem
+
+		.explore
+			.explore-item:before
+				display: none
+
+		.highlight
+			padding: $global_spacing 0 0 0
+
+		.focus-areas, .our-progress
+			padding: $global_spacing 0
+
+		.progress-timeline__pagination
+			width: 100% - $global_spacing * 2
+			margin-top: 54%
+
+		.progress-timeline__pagination .swiper-pagination-bullet
+			margin: 0 7% 0 0 !important
+			+square(14px)
+
+		.progress-timeline__arrows
+			margin-top: calc(61% + 50px)
+
+		.progress-timeline__swipe-icon
+			margin-top: 0
+
+		.progress-timeline__copy-container
+			margin-top: 13%
+
+		.pwp-breakdown
+			background-size: contain
+
+		// Pillar tabs
+		.pillar-tab__heading span
+			padding: $global_spacing 0
+
+
+		// ::::: PAGE: BRANDS
+		.search-blue
+			padding: 64px 0 105px 0
+			h3
+				font-size: 22px
+
+
+
+		// ::::: PAGE: BRANDS LIST :::::
+		.tabs-select
+			li
+				a
+					font-size: 14px
+					margin-bottom: 12px
+					padding-top: 16px
+					padding-bottom: 16px
+
+		.list-brands-container
+			.categories
+				margin-bottom: 80px
+				&.tabs-select li
+					width: 25%
+					a
+						font-size: 18px
+						&:after
+							display: block
+
+			.list-brands > ul>li
+				width: 33.33%
+				.expander-inner
+					overflow-y: initial
+					overflow-x: initial
+
+			.expander-inner-half
+				width: 50%
+				.tabs-select
+					margin-bottom: 40px
+				&.left
+					>div
+						padding-right: 30px
+				&.right
+					>div
+						padding-left: 30px
+
+				.tabs-select
+					+margin_lr(-12px,-12px)
+
+			.gallery
+				h2
+					display: none
+				> figure
+					max-height: 310px
+					overflow: hidden
+				.related
+					padding-top: 0
+				.cta_container
+					position: relative
+					top: -40px
+			.slider
+				.caption
+					position: absolute
+					display: table
+					+width_height(100%, 100%)
+					+top_left_right_bottom(0, 0, 0, 0)
+					z-index: 50
+					color: #fff
+					line-height: 100%
+					p
+						display: table-cell
+						+width_height(100%, 100%)
+						vertical-align: middle
+						padding: 0 10px
+						line-height: 120%
+			.tab-content
+				.inner-tab
+					max-height: 530px
+					overflow-y: scroll
+
+		.slick-dots
+			bottom: -40px
+
 		.cta_container
 			position: relative
-			top: -40px
-	.slider
-		.caption
-			position: absolute
-			display: table
-			+width_height(100%, 100%)
-			+top_left_right_bottom(0, 0, 0, 0)
-			z-index: 50
-			color: #fff
-			line-height: 100%
-			p
-				display: table-cell
-				+width_height(100%, 100%)
-				vertical-align: middle
-				padding: 0 10px
-				line-height: 120%
-	.tab-content
-		.inner-tab 
-			max-height: 530px
-			overflow-y: scroll
-
-.slick-dots
-	bottom: -40px
-
-.cta_container 
-	position: relative
-	a
-		font-size: 18px
-		padding: 16px 20px 16px 50px
-
-// recipe and brands grid
-#grid
-	.expander
-		max-height: 0
-	.is-li-open
-		.expander
-			max-height: 650px
-
-// ::::: PAGE: RECIPES LIST :::::
-.list-recipes-container
-	.categories
-		margin-bottom: 80px
-		&.tabs-select li
-			width: 25%
 			a
 				font-size: 18px
-				&:after 
-					display: block
+				padding: 16px 20px 16px 50px
 
-	.list-recipes > ul>li
-		width: 33.33%
-		margin-bottom: 40px
-		.expander-inner
-			overflow-y: hidden
-			overflow-x: visible
-			height: auto
+		// recipe and brands grid
+		#grid
+			.expander
+				max-height: 0
+			.is-li-open
+				.expander
+					max-height: 650px
 
-	.expander-inner-half
-		width: 50%
-		&.left 
-			>div 
-				padding-right: 30px
-		&.right
-			>div 
-				padding-left: 30px
+		// ::::: PAGE: RECIPES LIST :::::
+		.list-recipes-container
+			.categories
+				margin-bottom: 80px
+				&.tabs-select li
+					width: 25%
+					a
+						font-size: 18px
+						&:after
+							display: block
 
-	.content-recipe
-		max-height: 490px
-
-	.gallery 
-		padding-top: 50px
-		.title
-			display: none
-
-	.recipe-details-copy
-		padding-top: 50px
-
-
-// ::::: PAGE: NUTRITION :::::
-.our-commitment-to-nutrition
-	.copy
-		max-width: 60%
-	figure 
-		float: right
-		padding-top: 15px
-		width: 35%
-
-.slider-farming
-	.slick-arrow
-		i
-			+width_height(22px, 44px)
-
-		&.slick-prev 
-			left: 20px
-			i
-				background: url(../img/icon-arrow-left.png) no-repeat center center
-				background-size: 100%
-			&:hover
-				i 
-					background: url(../img/icon-arrow-left--lightblue.png) no-repeat center center
-					background-size: 100%
-
-		&.slick-next 
-			right: 20px
-			i
-				background: url(../img/icon-arrow-right.png) no-repeat center center
-				background-size: 100%
-			&:hover 
-				i
-					background: url(../img/icon-arrow-right--lightblue.png) no-repeat center center
-					background-size: 100%
-	li.slide
-		div.content
-			position: absolute
-			+left_right(10%, 10%)
-			top: 50%
-			color: #fff
-			transform: translateY(-50%)
-		h3
-			color: #fff
-			&:after
-				content: ""
-				display: block
-				+width_height(363px, 4px)
-				+margin_lr(auto, auto)
-				margin-top: 40px
-				background: $wwb_blue
-
-.forward-brands
-	ul.forward-brand-list
-		+margin_lr(-40px,-40px)
-		li
-			width: 33.33%
-			> div 
-				padding: 0 40px
+			.list-recipes > ul>li
+				width: 33.33%
 				margin-bottom: 40px
+				.expander-inner
+					overflow-y: hidden
+					overflow-x: visible
+					height: auto
+
+			.expander-inner-half
+				width: 50%
+				&.left
+					>div
+						padding-right: 30px
+				&.right
+					>div
+						padding-left: 30px
+
+			.content-recipe
+				max-height: 490px
+
+			.gallery
+				padding-top: 50px
+				.title
+					display: none
+
+			.recipe-details-copy
+				padding-top: 50px
+
+
+		// ::::: PAGE: NUTRITION :::::
+		.our-commitment-to-nutrition
+			.copy
+				max-width: 60%
+			figure
+				float: right
+				padding-top: 15px
+				width: 35%
+
+		.slider-farming
+			.slick-arrow
+				i
+					+width_height(22px, 44px)
+
+				&.slick-prev
+					left: 20px
+					i
+						background: url(../img/icon-arrow-left.png) no-repeat center center
+						background-size: 100%
+					&:hover
+						i
+							background: url(../img/icon-arrow-left--lightblue.png) no-repeat center center
+							background-size: 100%
+
+				&.slick-next
+					right: 20px
+					i
+						background: url(../img/icon-arrow-right.png) no-repeat center center
+						background-size: 100%
+					&:hover
+						i
+							background: url(../img/icon-arrow-right--lightblue.png) no-repeat center center
+							background-size: 100%
+			li.slide
+				div.content
+					position: absolute
+					+left_right(10%, 10%)
+					top: 50%
+					color: #fff
+					transform: translateY(-50%)
+				h3
+					color: #fff
+					&:after
+						content: ""
+						display: block
+						+width_height(363px, 4px)
+						+margin_lr(auto, auto)
+						margin-top: 40px
+						background: $wwb_blue
+
+		.forward-brands
+			ul.forward-brand-list
+				+margin_lr(-40px,-40px)
+				li
+					width: 33.33%
+					> div
+						padding: 0 40px
+						margin-bottom: 40px
 
 
 
-// ::::: PAGE: GOVERNANCE :::::
-.hero__social-item
-	float: right
-	margin: 20px 4px
+		// ::::: PAGE: GOVERNANCE :::::
+		.hero__social-item
+			float: right
+			margin: 20px 4px
 
-.pillar_content.container
-	display: block
-
-#search_bar
-	+prdib
-	width: 100%
-	float: left
-	margin-right: 40px
-
-.pillar-item__content.gov.left
-	+title-font-regular
-	+prdib
-	float: left
-	padding-right: 50px
-
-.pillar-item__content.gov.right
-	+prdb
-	float: right
-	padding: 0
-	width: 100%
-	.pillar_content_bottom_left
-		width: 100%
-		padding: 0
-
-.btn.discover
-	display: none !important
-
-.topics
-	margin: 0 0
-	background-color: silver
-
-.pillar-item__content.download.gov
-	.download_title
-		+top_left(-4px, -3px)
-
-		&:after
-			+width_height(105px, 25px)
-			+padding_lr(0, .5me)
-			content:  "PDF | 897KB"
-			border-left: 1px solid lightgrey
-
-.pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover,
-.pillar-container.pillar--A-E .pillar-item:nth-child(3) .btn.discover,
-.pillar-container.pillar--A-E .pillar-item:nth-child(1) .btn.discover,
-.pillar-container.pillar--A-E .pillar-item:nth-child(2) .btn.discover,
-.pillar-container.pillar--S-Z .pillar-item:nth-child(6) .btn.discover,
-.pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
-	display: block !important
-
-.pillar_content_bottom_left.gov div
-	a
-		margin-left: 0
-
-.pillar_content_bottom_left
-	+prdib
-	height: 50px
-	float: left
-	div
-		float: left
-		width: auto
-		margin-right: 30px
-
-.pillar_content_bottom_left.gov
-	+width_height(100%, auto)
-	margin-bottom: 40px
-	border-bottom: 4px solid $wwb_blue
-	div:last-child
-		margin-bottom: 20px
-
-.hero__social.az
-	+prdib
-	+width_height(auto, 50px)
-	float: left
-	a
-		+prdb
-		float: left
-
-#related_topic_mobile
-	display: none
-//#gov_download
-	//line-height: 48
-.download
-	a
-		font-size: 14px
-		&:hover
-			background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
-
-#download_policy a,
-#download_report a
-	background:  #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
-	width: 100%
-	&:hover
-		background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
-
-#social-az
-	opacity: 1
-	+prdib
-	+width_height(50%, 30px)
-	+margin_lr(auto,auto)
-	border-top: 0
-	float: left
-	text-align: center
-	max-width: 180px
-	margin-top: 10px
-	background: url(../img/menu_social.png) no-repeat 0 0
-	background-size: 82% auto
-	li
-		+width_height(30px,30px)
-		+prdb
-		+top_left(0,-12px)
-		float: left
-		padding: 0
-		list-style: none
-		margin: 0 0 0 7%
-		border-top: 0
-		a
-			+width_height(26px,26px)
-			margin: 0
+		.pillar_content.colorido-container
 			display: block
-			cursor: pointer
-			position: relative
+
+		#search_bar
+			+prdib
+			width: 100%
 			float: left
+			margin-right: 40px
 
-.related_topics
-	.related_topics_ul
-		li
-			&:first-child
-				margin-right: 5%
-				&:after
-					+prdb
-			span
-				padding-left: 0
-				&.align-right
-					float: left
-					display: inline-block
-					padding-right: 40px
-					background: url('../img/icon-separator.png') no-repeat 120px 3px
-			a
-				&:after
-					float: right
-					+pr
-					+width_height(30px,12px)
-					top: -5px
-					background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
-					background-size: 7px 10px
-
-.related_topics .related_topics_ul li
-	width: auto
-	font-size: 14px
-	a:after
-		float: right
-		display: block
-
-
-
-
-
-footer
-	display: inline-block
-	+width_height(100%, 110px)
-	background-color: $dark_grey
-	.logo_main
-		display: inline-block
-		width: auto
-		float: left
-		@media (max-width: 600px)
-		p
-			display: block
-			width: 66%
-			margin: 8px 0
+		.pillar-item__content.gov.left
+			+title-font-regular
+			+prdib
+			float: left
 			padding: 0
-			color: white
-			font-family: "Oswald light"
-			font-size: 0.8em
-			text-transform: uppercase
-			text-align: center
+			padding-right: 50px
 
-			#copy_right
-				+prdib
-				margin: auto
-				top: -1px
-				height: inherit
-			@media (max-width: 600px)
-				text-align: center
+		.pillar-item__content.gov.right
+			+prdb
+			float: right
+			padding: 0
+			width: 100%
+			.pillar_content_bottom_left
+				width: 100%
 				padding: 0
 
-	.social
-		float: left
-		+prdib
-		width: 55%
-		margin-right: 68px
-		font-family: 'Oswald Regular'
-		text-transform: uppercase
-		@media (max-width: 600px)
-			width: 100%
-		a
+		.btn.discover
+			display: none !important
+
+		.topics
+			//margin: 0 0
+			//background-color: silver
+
+		.pillar-item__content.download.gov
+			.download_title
+				+top_left(-4px, -3px)
+
+				&:after
+					+width_height(105px, 25px)
+					+padding_lr(0, .5me)
+					content:  "PDF | 897KB"
+					border-left: 1px solid lightgrey
+
+		//.pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover,
+		//.pillar-container.pillar--A-E .pillar-item:nth-child(3) .btn.discover,
+		//.pillar-container.pillar--A-E .pillar-item:nth-child(1) .btn.discover,
+		//.pillar-container.pillar--A-E .pillar-item:nth-child(2) .btn.discover,
+		//.pillar-container.pillar--S-Z .pillar-item:nth-child(6) .btn.discover,
+		//.pillar-container.pillar--O-R .pillar-item:nth-child(5) .btn.discover
+		//	display: block !important
+
+		.pillar_content_bottom_left.gov div
+			a
+				margin-left: 0
+
+		.pillar_content_bottom_left
+			+prdib
+			height: 50px
 			float: left
-			height: 60px
-			line-height: 92px
-			color: white
+			div
+				float: left
+				width: auto
+				margin-right: 30px
+
+		.pillar_content_bottom_left.gov
+			+width_height(100%, auto)
+			margin-bottom: 40px
+			border-bottom: 4px solid $wwb_blue
+			div:last-child
+				margin-bottom: 20px
+
+		.hero__social.az
+			+prdib
+			+width_height(auto, 50px)
+			float: left
+			a
+				+prdb
+				float: left
+
+		#related_topic_mobile
+			display: none
+		//#gov_download
+			//line-height: 48
+		.download
+			a
+				font-size: 14px
+				&:hover
+					background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
+
+		#download_policy a,
+		#download_report a
+			background:  #e9e7e7 url('../img/icon-download.png') no-repeat 0 center
+			width: 100%
+			&:hover
+				background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
+
+		#social-az
+			opacity: 1
+			+prdib
+			+width_height(50%, 30px)
+			+margin_lr(auto,auto)
+			border-top: 0
+			float: left
 			text-align: center
-			text-decoration: none
+			max-width: 180px
+			margin-top: 10px
+			background: url(../img/menu_social.png) no-repeat 0 0
+			background-size: 82% auto
+			li
+				+width_height(30px,30px)
+				+prdb
+				+top_left(0,-12px)
+				float: left
+				padding: 0
+				list-style: none
+				margin: 0 0 0 7%
+				border-top: 0
+				a
+					+width_height(26px,26px)
+					margin: 0
+					display: block
+					cursor: pointer
+					position: relative
+					float: left
 
-//font-weight: bold
-#separator
-	float: right
-	+prdib
-	+width_height(auto, 15px)
-	+margin_lr(10px, 10px)
-	margin-top: 38px
-	margin-bottom: auto
-	border-right: 1px solid lightgray
+		.related_topics
+			.related_topics_ul
+				li
+					&:first-child
+						margin-right: 5%
+						&:after
+							+prdb
+					span
+						padding-left: 0
+						&.align-right
+							float: left
+							display: inline-block
+							padding-right: 40px
+							background: url('../img/icon-separator.png') no-repeat 120px 3px
+					a
+						&:after
+							float: right
+							+pr
+							+width_height(30px,12px)
+							top: -6px
+							background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
+							background-size: 7px 10px
 
-.sitemap
-	font-size: $social-size
-	width: $social-width
-	height: 10px
+		.related_topics .related_topics_ul li
+			width: auto
+			font-size: 14px
+			a:after
+				float: right
+				display: block
 
-.terms
-	font-size: $social-size
-	width: 26%
 
-.privacy
-	font-size: $social-size
-	width: 22%
 
-.more
-	font-size: $social-size
-	width: $social-width
 
-.footer_container
-	+width_height(70%, 90px)
-	max-width: 1372px
-	margin: auto auto
-	padding-top: 20px
 
-#footer_social
-	float: right
-	+prdb
-	+margin_lr(auto, auto)
-	height: inherit
-	width: 15%
-	max-width: 464px
-	opacity: 1
+		footer
+			//display: inline-block
+			//+width_height(100%, 105px)
+			//background-color: $dark_grey
+			.footer_container
+				.logo_main
+					//display: inline-block
+					//width: auto
+					//float: left
+					@media (max-width: 600px)
+					p
+						//display: block
+						//width: 66%
+						//padding: 0
+						//color: white
+						//font-family: "Oswald light"
+						//font-size: 0.8em
+						//text-transform: uppercase
+						//text-align: center
 
-.social-media-icons
-	+prdib
-	+width_height(87%, 50px)
-	max-width: 390px
-	+margin_lr(auto, auto)
-	margin-top: 25px
-	text-align: center
-	font-size: 12px
-	background: url(../img/Social_icon_white.png) no-repeat center 10px
-	background-size: 100% auto
-	opacity: 1
-	li
-		+prdb
-		float: left
-		width: 18%
-		padding: 0
-		margin: 0 1%
-		border-top: 0
-		list-style: none
-		a
+						#copy_right
+							+prdib
+							margin: auto
+							top: -1px
+							height: inherit
+						@media (max-width: 600px)
+							text-align: center
+							padding: 0
+
+				.social
+					//float: left
+					//+prdib
+					//width: 50%
+					margin-top: 30px
+					//height: 30px
+					//font-family: 'Oswald Regular'
+					//text-transform: uppercase
+					@media (max-width: 600px)
+						width: 100%
+					a
+						//float: left
+						//height: inherit
+						line-height: 40px
+						//color: white
+						//text-align: center
+						//text-decoration: none
+						font-size: .9em
+						#separator
+							float: right
+							+prdib
+							+width_height(auto, 15px)
+							+margin_lr(10px, 10px)
+							margin-top: 13px
+							margin-bottom: auto
+							border-right: 1px solid lightgray
+
+				#footer_social
+					display: inline-block
+					margin-top: 30px
+					height: 50px
+					float: right
+					//+prdb
+					+margin_lr(auto, auto)
+					width: 15%
+					max-width: 464px
+					//opacity: 1
+					.social-media-icons
+						//+prdib
+						height: 50px
+						//max-width: 390px
+						+margin_lr(auto, auto)
+						//margin-top: 15px
+						text-align: center
+						//font-size: 12px
+						background: url(../img/Social_icon_white.png) no-repeat center 10px
+						background-size: 100% auto
+						//opacity: 1
+						li
+							+prdb
+							float: left
+							width: 18%
+							padding: 0
+							margin: 0 1%
+							border-top: 0
+							list-style: none
+							a
+								display: block
+								+width_height(100%, 45px)
+								cursor: pointer
+
+		.sitemap
+			//font-size: $social-size
+			width: $social-width
+
+		.terms
+			//font-size: $social-size
+			width: 26%
+
+		.privacy
+			//font-size: $social-size
+			width: 22%
+
+		.more
+			//font-size: $social-size
+			width: $social-width
+
+		.footer_container
+			+width_height(70%, 105px)
+			max-width: 1372px
+			//margin: auto auto
+			padding: 20px
+
+
+
+
+		//.logo_light
+		//	display: block
+		//	width: 80%
+
+		#governanace_right_social
 			display: block
-			+width_height(100%, 45px)
-			cursor: pointer
+			background: transparent
+			li
+				top: -25px
+				left: -16px
 
-.logo_light
-	display: block
-	width: 80%
+		footer .social
+			margin-right: 0
+			margin-top: 0
 
-#governanace_right_social
-	display: block
-	background: transparent
-	li
-		top: -25px
-		left: -16px
+		.footer_container
+			width: 94%
 
-footer .social
-	margin-right: 0
-	margin-top: 0
+		.btn.discover a::after
+			top: -23px
+			left: 14px
 
-.footer_container
-	width: 94%
-	#footer_social
-		display: inline-block
+		.hero--reporting
+			background-image: url(../img/hero-reporting--tb.jpg)
 
-.btn.discover a::after
-	top: -23px
-	left: 14px
+		.report-slider
+			margin-top: $global_spacing
 
-.hero--reporting
-	background-image: url(../img/hero-reporting--tb.jpg)
+		.report-slider__title
+			margin-top: $global_spacing
 
-.report-slider
-	margin-top: $global_spacing
+		.previous-reports,
+		.latest-reports,
+		.howwillwe-plug
+			padding: $global_spacing 0
 
-.report-slider__title
-	margin-top: $global_spacing
+		.howwillwe-plug
+			background-image: url(../img/reporting--howwillwe--dt.jpg)
+			padding: $global_spacing 0
 
-.previous-reports,
-.latest-reports,
-.howwillwe-plug
-	padding: $global_spacing 0
+		.our-partners
+			padding: $global_spacing 0
 
-.howwillwe-plug
-	background-image: url(../img/reporting--howwillwe--dt.jpg)
-	padding: $global_spacing 0
-
-.our-partners
-	padding: $global_spacing 0
-
-
+html#colorido-html
+	body.colorido-body
+		.explore
+			.explore-item:before
+				display: none
 
