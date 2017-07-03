@@ -18,6 +18,7 @@
 
 .topics.phil
   background: rgb(243,242,239)
+  //margin: 40px 0
 
 #phil_header-left
   text-align: left
@@ -25,65 +26,55 @@
 #phil_header-center
   text-align: center
 
-#phil_report_left
-  +prdb
-  float: left
-  width: 100%
-  //padding-right: 3%
-  padding-bottom: 15%
-  //border-right: 1px solid lightgrey
-  //height: 21em
-  p
-    font-size: 13px
-
-#phil_report_right
-  +prdb
-  float: left
-  width: 100%
-  //padding-left: 3%
-  p
-    font-size: 13px
 
 
 #phil_report_container
-  //width: 88%
   max-width: 1372px
-  //float: left
   margin: 0 auto
-  //background-color: white
-
-#phil_report_right_btn
-  //margin-top: 57px
-  height: 40px
-  line-height: 30px
-  width: 200px
-  text-align: left
-  a
-    font-size: 1.1rem
-    img
-      width: 8px
-      height: 13px
-      top: 9px
-
-#phil_report_left_download
-  h4
-    letter-spacing: 0
-    padding: 4% 0
-  a
-    top: 0
-    left: 0
-    height: 40px
+  #phil_report_left
+    +prdb
+    float: left
     width: 100%
-    line-height: 40px
-    background: rgb(205, 204, 201) url(../img/icon_arrow_down_gray.png) no-repeat 4% center
-    background-size: 20px 24px
-    text-transform: capitalize
+    padding-bottom: 15%
+    p
+      font-size: 13px
+    #phil_report_left_download
+      h4
+        letter-spacing: 0
+        padding: 4% 0
+      a
+        top: 0
+        height: 40px
+        line-height: 40px
+        background: #e1e1e1 url(../img/icon_arrow_down_gray.png) no-repeat 4% center
+        background-size: 20px 24px
+        text-transform: capitalize
+
+  #phil_report_right
+    +prdb
+    float: left
+    width: 100%
+    p
+      font-size: 13px
+    #phil_report_right_btn
+      height: 40px
+      line-height: 30px
+      width: 200px
+      text-align: left
+      a
+        font-size: 1.1rem
+        img
+          width: 8px
+          height: 13px
+          top: 9px
+
 
 .explore-item__heading
   padding: 0 21%
 
 h2.pwp-breakdown__header.underline.phil
   font-size: 1.3rem
+  line-height: 30px
   em
     font-size: 2em
 
@@ -99,7 +90,6 @@ h2.pwp-breakdown__header.underline.phil:after
   background-color: rgb(215,214,211)
 
 #phil_header-underline
-  //padding: 0 57px
   font-size: 25px
   em
     font-size: 45px

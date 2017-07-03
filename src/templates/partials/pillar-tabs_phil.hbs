@@ -1,0 +1,19 @@
+<div class="pillar-tabs">
+    <div class="pillar-tab-container">
+        {{#eachProperty this ~}}
+        <div class="pillar-tab ">
+            <div class="pillar-tab__heading">
+                <span>{{key}}</span>
+            </div>
+
+            <div class="colorido-container pillar-tab__content">
+                <h2>{{{value.heading}}}</h2>
+                <img src="img/{{value.image-filename}}" alt="{{key}}">
+                {{#each value.copy1 ~}}
+                <p class="copy">{{this}}</p>
+                {{~/each}}
+            </div>
+        </div>
+        {{~/eachProperty}}
+    </div>
+</div>

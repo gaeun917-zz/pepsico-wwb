@@ -121,9 +121,6 @@ html#colorido-html
             span
                 +dn
 
-            &:nth-child(-n+2)
-                //margin-right: 0.5rem
-
             &:hover
                 +opacityz(0.8)
 
@@ -383,7 +380,6 @@ html#colorido-html
             +prdb
             padding-bottom: 56.25% /* 16:9 */
             height: 0
-
             .highlight__media
                 +cover
 
@@ -597,14 +593,11 @@ html#colorido-html
                     background-color: darken($light_grey, 5%)
 
         .pwp-breakdown
-            padding: 3% 0
+            padding: 6% 0
             h4
                 font-size: 1rem
                 padding-top: 0
                 padding-right: 0
-
-        //.pwp-breakdown.topics
-            //background-color: rgb(192,192,192)
 
         .pwp-breakdown-copy .copy
             max-width: 60%
@@ -654,16 +647,20 @@ html#colorido-html
             padding-top: 60px
 
         #phil_report_left
-            width: 46%
+            width: 48%
             padding: 0 3%
+
         #phil_report_right
-            width: 46%
+            width: 48%
 
         #phil_report_container
             width: 84%
 
         .btn.discover#phil_report_right_btn
-            margin: 4.5rem 0
+            margin: 1.8em 0
+            width: 180px
+            height: 40px
+            text-align: left
 
         .pillar-tab__heading
             +padb
@@ -795,7 +792,6 @@ html#colorido-html
             height: 13px
             margin: 0 10px !important
 
-
         .latest-reports,
         .report-slider__slide
             background-color: $light_grey
@@ -803,9 +799,6 @@ html#colorido-html
         .downloads ul li,
         .previous-reports
             background-color: $extralight_grey
-
-        // .previous-reports
-        //     margin-bottom: 41px
 
         .previous-reports .downloads li
             background-color: $light_grey
@@ -819,7 +812,6 @@ html#colorido-html
 
         .our-partners
             padding: $global_spacing 0
-            //margin-bottom: 41px
 
         .our-partners ul
             +prdib
@@ -828,11 +820,6 @@ html#colorido-html
             padding: 0 0 0 1rem
             margin: 2rem 0 0 0
             width: 50%
-
-        //.stakeholder-engagement, .latest-downloads
-        //    margin-top: $global_spacing*1.5
-
-
 
         // ::::: PAGE: GOVERNANCE :::::
         .colorido-container.gov.left
@@ -846,8 +833,6 @@ html#colorido-html
             margin-bottom: 0
 
         .pillar-item__content h2 em
-            //+prdib
-            //+width_height(auto, auto)
             float: left
             font-size: 2rem
 
@@ -926,3 +911,12 @@ html#colorido-html
 
         .pillar_content_bottom_left.gov.second
             display: none
+
+html#colorido-html
+    body.colorido-body
+        footer
+            .footer_container
+                #footer_social
+                    display: inline-block
+                .social
+                    margin-top: 30px

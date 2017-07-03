@@ -453,25 +453,13 @@ html#colorido-html
 
 
 		footer
-			//display: inline-block
-			//+width_height(100%, 105px)
-			//background-color: $dark_grey
 			.footer_container
+				+width_height(90%, 100px)
+				max-width: 1372px
+				padding: 20px
 				.logo_main
-					//display: inline-block
-					//width: auto
-					//float: left
 					@media (max-width: 600px)
 					p
-						//display: block
-						//width: 66%
-						//padding: 0
-						//color: white
-						//font-family: "Oswald light"
-						//font-size: 0.8em
-						//text-transform: uppercase
-						//text-align: center
-
 						#copy_right
 							+prdib
 							margin: auto
@@ -482,22 +470,15 @@ html#colorido-html
 							padding: 0
 
 				.social
-					//float: left
-					//+prdib
-					//width: 50%
-					margin-top: 30px
-					//height: 30px
-					//font-family: 'Oswald Regular'
-					//text-transform: uppercase
+					margin-top: 15px
+					margin-bottom: 15px
+
 					@media (max-width: 600px)
 						width: 100%
 					a
-						//float: left
-						//height: inherit
+
 						line-height: 40px
-						//color: white
-						//text-align: center
-						//text-decoration: none
+
 						font-size: .9em
 						#separator
 							float: right
@@ -509,21 +490,16 @@ html#colorido-html
 							border-right: 1px solid lightgray
 
 				#footer_social
-					display: inline-block
-					margin-top: 30px
-					height: 50px
-					float: right
-					//+prdb
-					+margin_lr(auto, auto)
-					width: 15%
-					max-width: 464px
-					//opacity: 1
+					display: none
+					//margin-top: 20px
+
 					.social-media-icons
 						//+prdib
 						height: 50px
 						//max-width: 390px
-						+margin_lr(auto, auto)
+						//+margin_lr(auto, auto)
 						//margin-top: 15px
+						margin-bottom: 0
 						text-align: center
 						//font-size: 12px
 						background: url(../img/Social_icon_white.png) no-repeat center 10px
@@ -543,33 +519,16 @@ html#colorido-html
 								cursor: pointer
 
 		.sitemap
-			//font-size: $social-size
 			width: $social-width
 
 		.terms
-			//font-size: $social-size
 			width: 26%
 
 		.privacy
-			//font-size: $social-size
 			width: 22%
 
 		.more
-			//font-size: $social-size
 			width: $social-width
-
-		.footer_container
-			+width_height(70%, 105px)
-			max-width: 1372px
-			//margin: auto auto
-			padding: 20px
-
-
-
-
-		//.logo_light
-		//	display: block
-		//	width: 80%
 
 		#governanace_right_social
 			display: block
