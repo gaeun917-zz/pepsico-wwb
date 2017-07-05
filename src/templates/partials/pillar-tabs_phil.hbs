@@ -1,19 +1,45 @@
 <div class="pillar-tabs">
     <div class="pillar-tab-container">
         {{#eachProperty this ~}}
-        <div class="pillar-tab ">
-            <div class="pillar-tab__heading">
-                <span>{{key}}</span>
-            </div>
+            <div class="pillar-tab ">
+                <div class="pillar-tab__heading">
+                    <span>{{key}}</span>
+                </div>
+                <div class="colorido-container pillar-tab__content">
+                    <!--<h2>{{{value.heading}}}</h2>-->
+                    <div class="image_wrapper-{{{value.id}}}">
+                        <!--<img src="img/{{value.image-background}}" id="img-{{{value.id}}}-background>-->
+                        <img src="img/{{value.image-filename}}" alt="{{key}}" id="img-{{{value.id}}}">
+                    </div>
+                    <a class="hww-btn" id="btn-{{{value.id}}}-up" ><img src="img/icon_arrow_down.png"></a>
+                    <a class="hww-btn" id="btn-{{{value.id}}}-down" ><img src="img/icon_arrow_up.png"></a>
 
-            <div class="colorido-container pillar-tab__content">
-                <h2>{{{value.heading}}}</h2>
-                <img src="img/{{value.image-filename}}" alt="{{key}}">
-                {{#each value.copy1 ~}}
-                <p class="copy">{{this}}</p>
-                {{~/each}}
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                            <div class="swiper-slide">Slide 6</div>
+                            <div class="swiper-slide">Slide 7</div>
+                            <div class="swiper-slide">Slide 8</div>
+                            <div class="swiper-slide">Slide 9</div>
+                            <div class="swiper-slide">Slide 10</div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    {{#each value.copy1 ~}}
+                        <p class="copy">{{this}}</p>
+                    {{~/each}}
+                </div>
             </div>
-        </div>
         {{~/eachProperty}}
     </div>
 </div>

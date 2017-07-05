@@ -10,7 +10,7 @@ html#colorido-html
             font-size: 1.35rem
             em
                 font-size: 3.3rem
-                line-height: 3rem
+                line-height: 2rem
 
             &::after
                 height: 3px
@@ -345,8 +345,9 @@ html#colorido-html
             left: 0
             height: 100%
             width: 100%
-            max-width: 161px
-            max-height: 161px
+            line-height: 45px
+            //max-width: 161px
+            //max-height: 161px
             border: 0
 
 
@@ -646,18 +647,18 @@ html#colorido-html
             margin: 0 auto
             padding-top: 60px
 
-        #phil_report_left
-            width: 48%
-            padding: 0 3%
 
-        #phil_report_right
-            width: 48%
 
         #phil_report_container
             width: 84%
+            #phil_report_left
+                width: 48%
+                padding: 0 2%
+            #phil_report_right
+                width: 48%
 
         .btn.discover#phil_report_right_btn
-            margin: 1.8em 0
+            margin: 3em 0 0 0
             width: 180px
             height: 40px
             text-align: left
@@ -692,17 +693,16 @@ html#colorido-html
             right: 0
             width: 25%
 
-        .pillar-tab__content
-            h2:after
-                content: ""
-                +prdb
-                +width_height(300px, 3px)
-                margin: 1rem 0 0 0
-                background-color: $wwb_blue
+        //.pillar-tab__content
+            //h2:after
+            //    content: ""
+            //    +prdb
+            //    +width_height(300px, 3px)
+            //    margin: 1rem 0 0 0
+            //    background-color: $wwb_blue
             img
                 float: right
-                margin-left: $global_spacing
-                margin-bottom: $global_spacing
+                margin: $global_spacing
 
         .explore-item
             &:before
@@ -911,6 +911,13 @@ html#colorido-html
 
         .pillar_content_bottom_left.gov.second
             display: none
+
+        .latest-reports
+            .sust-gov
+                width: 48%
+            .stakeholder-engagement
+                width: 48%
+
 
 html#colorido-html
     body.colorido-body

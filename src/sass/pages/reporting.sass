@@ -1,179 +1,182 @@
-.hero--reporting
-	background-image: url(../img/hero-reporting--mo.jpg)
-	background-position: center bottom
+html#colorido-html
+	body.colorido-body
+		.hero--reporting
+			background-image: url(../img/hero-reporting--mo.jpg)
+			background-position: center bottom
 
-.latest-reports,
-.previous-reports,
-.our-partners
-	padding: $global_spacing 0
+		.latest-reports,
+		.previous-reports,
+		.our-partners
+			padding: $global_spacing 0
 
-	h2
-		margin: 0
+			h2
+				margin: 0
 
-.latest-reports
-	background-color: $extralight_grey
-	.sust-gov
-		width: 48%
-		display: inline-block
-	.stakeholder-engagement
-		width: 48%
-		display: inline-block
-		float: right
+		.latest-reports
+			background-color: $extralight_grey
+			.sust-gov
+				width: 100%
+				display: inline-block
+			.stakeholder-engagement
+				width: 100%
+				display: inline-block
+				float: right
 
-.report-slider__header
-	margin-top: 0
+		.report-slider__header
+			margin-top: 0
 
-.downloads ul
-	+prdt
-	width: 100%
+		.downloads ul
+			+prdt
+			width: 100%
 
-	li
-		+prdt
-		width: 100%
-		background-color: white
-		color: $dark_grey
-		+title-font-bold
-		font-size: 0.9rem
-		margin-bottom: 3px
-		padding: 0.5rem 0
-		span
-			+prdtc
-			top: 0
-			height: 100%
-			vertical-align: middle
-			padding: 0.2rem
+			li
+				+prdt
+				width: 100%
+				background-color: white
+				color: $dark_grey
+				+title-font-bold
+				font-size: 0.9rem
+				margin-bottom: 3px
+				padding: 0.5rem 0
+				span
+					+prdtc
+					top: 0
+					height: 100%
+					vertical-align: middle
+					padding: 0.2rem
 
-			&.dwnld__title
-				padding-left: 1rem
-				padding-right: 1rem
-				color: #545454
+					&.dwnld__title
+						padding-left: 1rem
+						padding-right: 1rem
+						color: #545454
 
-			&.dwnld__icon, &.dwnld__file-size
-				+title-font
-				text-align: center
-				width: 40px
-				padding: 0.5rem
+					&.dwnld__icon, &.dwnld__file-size
+						+title-font
+						text-align: center
+						width: 40px
+						padding: 0.5rem
 
-			&.dwnld__icon
-				background-image: url(../img/icon-download.png)
-				background-size: 40px auto
+					&.dwnld__icon
+						background-image: url(../img/icon-download.png)
+						background-size: 40px auto
+						background-position: center
+						background-repeat: no-repeat
+						border-right: 1px dotted $medium_grey
+
+					&.dwnld__file-size
+						border-left: 1px dotted $medium_grey
+
+
+		.report-slider
+			+prdb
+			text-align: center
+			margin: $global_spacing*2 0 0 0
+
+		.report-slider__pagination
+			+prdb
+			bottom: 0 !important
+
+			.swiper-pagination-bullet-active
+				background-color: $wwb_blue
+
+		.report-slider__slide
+			width: 100%
+			background-color: $extralight_grey
+
+		.report-slider__slide img
+			+prdb
+			width: 80%
+			max-width: 850px
+			margin: 0 auto 1rem auto
+
+		.report-slider__title
+			+title-font-bold
+			text-transform: uppercase
+
+
+		.previous-reports
+			background-color: white
+
+		.downloads-accordian-header
+			+prdb
+			+box-sizing
+			width: 100%
+			cursor: pointer
+			background-color: $wwb_blue
+			padding: 1rem 3rem 1rem 1rem
+
+			&:after
+				+padb
+				right: 1rem
+				top: 50%
+				margin-top: -10px
+				content: ""
+				width: 20px
+				height: 20px
+				background-image: url(../img/icon-open.png)
+				background-size: contain
 				background-position: center
-				background-repeat: no-repeat
-				border-right: 1px dotted $medium_grey
 
-			&.dwnld__file-size
-				border-left: 1px dotted $medium_grey
+			h4
+				+title-font-bold
+				color: white
+				margin: 0
+				font-size: .8rem
 
+			&.open
+				h4
+					color: white
 
-.report-slider
-	+prdb
-	text-align: center
-	margin: $global_spacing*2 0 0 0
-
-.report-slider__pagination
-	+prdb
-	bottom: 0 !important
-
-	.swiper-pagination-bullet-active
-		background-color: $wwb_blue
-
-.report-slider__slide
-	width: 100%
-	background-color: $extralight_grey
-
-.report-slider__slide img
-	+prdb
-	width: 80%
-	max-width: 850px
-	margin: 0 auto 1rem auto
-
-.report-slider__title
-	+title-font-bold
-	text-transform: uppercase
+				&::after
+					background-image: url(../img/icon-close-2.png)
 
 
-.previous-reports
-	background-color: white
+		.previous-reports ul li
+			background-color: $extralight_grey
 
-.downloads-accordian-header
-	+prdb
-	+box-sizing
-	width: 100%
-	cursor: pointer
-	background-color: $wwb_blue
-	padding: 1rem 3rem 1rem 1rem
+		.previous-downloads
+			margin-bottom: 1%
 
-	&:after
-		+padb
-		right: 1rem
-		top: 50%
-		margin-top: -10px
-		content: ""
-		width: 20px
-		height: 20px
-		background-image: url(../img/icon-open.png)
-		background-size: contain
-		background-position: center
+		.previous-reports .downloads
+			+dn
 
-	h4
-		+title-font-bold
-		color: white
-		margin: 0
-		font-size: .8rem
 
-	&.open
-		h4
+		.howwillwe-plug
+			background-image: url(../img/reporting--howwillwe--mo.jpg)
+			background-size: cover
+			background-position: center
+			padding: $global_spacing 0
+
+			text-align: center
 			color: white
-
-		&::after
-			background-image: url(../img/icon-close-2.png)
-
-
-.previous-reports ul li
-	background-color: $extralight_grey
-
-.previous-downloads
-	margin-bottom: 1%
-
-.previous-reports .downloads
-	+dn
-
-
-.howwillwe-plug
-	background-image: url(../img/reporting--howwillwe--mo.jpg)
-	background-size: cover
-	background-position: center
-	padding: $global_spacing 0
-
-	text-align: center
-	color: white
-	h2
-		margin-top: 0
-	a.btn
-		display: block
-		padding: 0
-		margin: 2rem 10rem
-		font-size: 1rem
-.our-partners
-	+prdb
-	float: left
-	width: 100%
-	background-color: $extralight_grey
-	background-size: cover
+			h2
+				margin-top: 0
+			a.btn
+				display: block
+				padding: 0
+				margin: 2rem 9rem
+				font-size: 1rem
+		.our-partners
+			+prdb
+			float: left
+			width: 100%
+			background-color: $extralight_grey
+			background-size: cover
 
 
-.our-partners ul
-	+prdb
-	+box-sizing
-	padding: 0 0 0 1rem
-	//width: 50%
-	width: 100%
-	float: left
-	margin: 2rem 0 0 0
-	li
-		list-style: disc
-		list-style-type: disc !important
-		font-weight: bold
-		line-height: 2rem
+		.our-partners ul
+			+prdb
+			+box-sizing
+			padding: 0 0 0 1rem
+			//width: 50%
+			width: 100%
+			float: left
+			//margin: 2rem 0 0 0
+			margin: 0
+			li
+				list-style: disc
+				list-style-type: disc !important
+				font-weight: bold
+				line-height: 2rem
 
 
