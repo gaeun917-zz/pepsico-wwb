@@ -23,10 +23,6 @@ class Commitments
         , 1)
 
 
-        
-
-
-
     initDom: =>
 
         @pills              = $('.pillar-item__pill')

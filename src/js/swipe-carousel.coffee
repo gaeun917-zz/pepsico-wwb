@@ -2,7 +2,7 @@ class SwipeCarousel
 
     constructor: ->
 
-        swipePages = ['pwp', 'products', 'planet', 'people', 'philanthropy']
+        swipePages = ['pwp', 'products', 'planet', 'people', 'philanthropy', 'reporting']
 
         return false unless $.inArray(_pageID, swipePages) > -1
 
@@ -17,6 +17,13 @@ class SwipeCarousel
             @initDesktopTimeline()
 
             @initSlider()
+
+            # reporting
+            @doReportSlider()
+
+            @multiItemEnabled = false
+
+            @dwnldToggle.on('click', @toggleDownloadsList)
 
             @years.on('click', @goToYear)
 
@@ -184,6 +191,43 @@ class SwipeCarousel
             prevButton: @prevBtn
             pagination: '#progress-timeline__pagination'
         }
+    doReportSlider: =>
+
+        @SWIPER = new Swiper @reportSlider, {
+            spaceBetween: 0
+            speed: 600 # Duration of transition between slides
+            loop: true
+            autoplay: false
+            effect: if _isMobile then 'slide' else 'fade'
+            nextButton: @reportnextBtn
+            prevButton: @reportprevBtn
+            pagination: '#report-slider__pagination'
+            paginationClickable: true
+        }
+    toggleDownloadsList: (e) =>
+
+        header = $(e.currentTarget)
+        which = $(header).attr('data-type')
+
+        if !@multiItemEnabled && !header.hasClass 'open'
+            @downloads.slideUp()
+            @headers.removeClass 'open'
+
+        setTimeout( =>
+            content = $(".downloads--#{which}")
+            header.toggleClass 'open'
+            $(content).slideToggle()
+        , 1)
+#    philanthropySwiper: =>
+#
+#        @swiper = new Swiper @philanthropy_slider_container, {
+#            pagination: @philanthropy_slider_pagination
+#            paginationClickable: true
+#            nextButton: @philanthropy_slider_next
+#            prevButton:  @philanthropy_slider_prev
+#            spaceBetween: 30
+#            paginationType: 'fraction'
+#    }
 
     initDom: =>
 
@@ -206,7 +250,18 @@ class SwipeCarousel
         @image_carousel = $('#progress-timeline--desktop__image-carousel')
         @image_wrapper  = $('#progress-timeline--desktop--image-wrapper')
 
+#        @philanthropy_slider_next = $('.swiper-button-next')
+#        @philanthropy_slider_prev = $('.swiper-button-prev')
+#        @philanthropy_slider_container = $('.swiper-container')
+#        @philanthropy_slider_pagination = $('.swiper-pagination')
 
+#       REPORTING PAGE
+        @reportSlider   = $('#report-slider')
+        @reportnextBtn  = $('#report-slider__arrows--next')
+        @reportprevBtn  = $('#report-slider__arrows--prev')
 
+        @dwnldToggle    = $('.downloads-accordian-header')
+        @downloads      = $('.previous-reports .downloads')
+        @headers        = $('.downloads-accordian-header')
 
 @SwipeCarousel = new SwipeCarousel

@@ -5,6 +5,8 @@
   SwipeCarousel = (function() {
     function SwipeCarousel() {
       this.initDom = bind(this.initDom, this);
+      this.toggleDownloadsList = bind(this.toggleDownloadsList, this);
+      this.doReportSlider = bind(this.doReportSlider, this);
       this.initMobileTimelineSwiper = bind(this.initMobileTimelineSwiper, this);
       this.updateTimeline = bind(this.updateTimeline, this);
       this.revealCopy = bind(this.revealCopy, this);
@@ -15,7 +17,7 @@
       this.goToYear = bind(this.goToYear, this);
       this.initDesktopTimeline = bind(this.initDesktopTimeline, this);
       var swipePages;
-      swipePages = ['pwp', 'products', 'planet', 'people', 'philanthropy'];
+      swipePages = ['pwp', 'products', 'planet', 'people', 'philanthropy', 'reporting'];
       if (!($.inArray(_pageID, swipePages) > -1)) {
         return false;
       }
@@ -26,6 +28,9 @@
           _this.initMobileTimelineSwiper();
           _this.initDesktopTimeline();
           _this.initSlider();
+          _this.doReportSlider();
+          _this.multiItemEnabled = false;
+          _this.dwnldToggle.on('click', _this.toggleDownloadsList);
           _this.years.on('click', _this.goToYear);
           _this.prog_dt_slider_image.on('click', _this.goToSlide);
           _this.sliderPos = 0;
@@ -263,6 +268,38 @@
       });
     };
 
+    SwipeCarousel.prototype.doReportSlider = function() {
+      return this.SWIPER = new Swiper(this.reportSlider, {
+        spaceBetween: 0,
+        speed: 600,
+        loop: true,
+        autoplay: false,
+        effect: _isMobile ? 'slide' : 'fade',
+        nextButton: this.reportnextBtn,
+        prevButton: this.reportprevBtn,
+        pagination: '#report-slider__pagination',
+        paginationClickable: true
+      });
+    };
+
+    SwipeCarousel.prototype.toggleDownloadsList = function(e) {
+      var header, which;
+      header = $(e.currentTarget);
+      which = $(header).attr('data-type');
+      if (!this.multiItemEnabled && !header.hasClass('open')) {
+        this.downloads.slideUp();
+        this.headers.removeClass('open');
+      }
+      return setTimeout((function(_this) {
+        return function() {
+          var content;
+          content = $(".downloads--" + which);
+          header.toggleClass('open');
+          return $(content).slideToggle();
+        };
+      })(this), 1);
+    };
+
     SwipeCarousel.prototype.initDom = function() {
       this.prog_tl_swiper_container = $('#progress-timeline__carousel-wrapper');
       this.prevBtn = $('#progress-timeline__arrow--prev');
@@ -274,7 +311,13 @@
       this.slidesCopy = $('.progress-timeline--desktop__copy-item');
       this.years = $('.progress-timeline--desktop__year');
       this.image_carousel = $('#progress-timeline--desktop__image-carousel');
-      return this.image_wrapper = $('#progress-timeline--desktop--image-wrapper');
+      this.image_wrapper = $('#progress-timeline--desktop--image-wrapper');
+      this.reportSlider = $('#report-slider');
+      this.reportnextBtn = $('#report-slider__arrows--next');
+      this.reportprevBtn = $('#report-slider__arrows--prev');
+      this.dwnldToggle = $('.downloads-accordian-header');
+      this.downloads = $('.previous-reports .downloads');
+      return this.headers = $('.downloads-accordian-header');
     };
 
     return SwipeCarousel;

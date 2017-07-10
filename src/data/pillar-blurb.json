@@ -97,18 +97,9 @@
     "philanthropy": {
         "OUR FOCUS": {
             "id" : "focus",
-            "heading": "OUR <em>FOCUS</em>",
-            "copy1": [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis sed qui nisi impedit vero, quae accusamus harum, placeat officiis, corrupti cumque. Eius accusantium, expedita iusto veniam blanditiis, laudantium rem iste!",
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores reiciendis aperiam optio tenetur laborum ut commodi eligendi beatae placeat voluptatem, aspernatur, quibusdam voluptatibus porro, officiis delectus, vero aliquam atque vitae.",
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, est totam quos architecto suscipit facere pariatur enim earum hic, sit atque porro odit ipsam reiciendis a, provident eligendi impedit commodi!"
-            ],
-            "image-filename": "pillar-blurb.jpg",
-            "sub-heading": "Lorem ipsum dolor",
-            "copy2": [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis nihil excepturi quos, repellat, assumenda voluptas fugit atque ratione.",
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, atque consectetur soluta facilis accusantium recusandae tenetur ullam reprehenderit ut saepe?"
-            ]
+            "heading": "OUR <em>FOCUS</em>"
+
+
         },
         "HOW WE WORK": {
             "id" : "hww",
@@ -120,17 +111,12 @@
         "DISASTER RELIEF": {
             "id" : "relief",
             "heading": "DISASTER <em>RELIEF</em>",
-            "copy1": [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis sed qui nisi impedit vero, quae accusamus harum, placeat officiis, corrupti cumque. Eius accusantium, expedita iusto veniam blanditiis, laudantium rem iste!",
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores reiciendis aperiam optio tenetur laborum ut commodi eligendi beatae placeat voluptatem, aspernatur, quibusdam voluptatibus porro, officiis delectus, vero aliquam atque vitae.",
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, est totam quos architecto suscipit facere pariatur enim earum hic, sit atque porro odit ipsam reiciendis a, provident eligendi impedit commodi!"
-            ],
-            "image-filename": "pillar-future.jpg",
             "sub-heading": "Lorem ipsum dolor",
-            "copy2": [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis nihil excepturi quos, repellat, assumenda voluptas fugit atque ratione.",
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, atque consectetur soluta facilis accusantium recusandae tenetur ullam reprehenderit ut saepe?"
+            "title": "Explicabo doloribus cupiditate",
+            "copy": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil perferendis suscipit, quidem dolorum mollitia explicabo facilis reiciendis ducimus consectetur atque perspiciatis quia omnis id quaerat ea molestias officia repellat."
             ]
+
         }
     },
     "people": {

@@ -10,11 +10,10 @@ html#colorido-html
             font-size: 1.35rem
             em
                 font-size: 3.3rem
-                line-height: 3rem
+                line-height: 3.5rem
 
             &::after
                 height: 3px
-                margin: 1rem auto 2rem auto
 
             &.underline::after
                 height: 4px
@@ -33,9 +32,8 @@ html#colorido-html
 
         $global_spacing: 4%
 
-        .colorido-container
-            margin: 0 auto
-
+        //.colorido-container
+            //margin: 0 auto
         .copy
             margin-top: $global_spacing
             margin-bottom: $global_spacing
@@ -45,8 +43,6 @@ html#colorido-html
             background-color: #cdccc9
 
         // ::::: HEADER :::::
-
-         // ::::: FOOTER :::::
 
         // ::::: HERO :::::
         .hero--home
@@ -137,7 +133,6 @@ html#colorido-html
         .hero__title em
             font-size: 5rem
             line-height: 5.6rem
-
 
         .title-lines::before, .title-lines::after
             +width_height(350px, 4px)
@@ -304,8 +299,6 @@ html#colorido-html
                 -o-transform: scale(1)
                 transform: scale(1)
 
-
-
         .explore
             .explore-item
                 width: 16.8%
@@ -340,17 +333,16 @@ html#colorido-html
                 font-size: 1rem
 
         .block-link
-            position: absolute
-            display: block
-            top: 0
+            //position: absolute
+            //display: block
+            top: 13px
             left: 0
-            height: 100%
-            width: 100%
-            line-height: 45px
+            //height: 100%
+            //width: 100%
+            //line-height: 45px
             //max-width: 161px
             //max-height: 161px
-            border: 0
-
+            //border: 0
 
         // ::::: HIGHLIGHT :::::
         .highlight
@@ -439,6 +431,7 @@ html#colorido-html
         .wangotron__details-modal .wangotron__details-modal__container
             background-color: transparent !important
 
+        // ::::: Progress-Timeline :::::
         .progress-timeline__carousel-wrapper
             +dn
 
@@ -505,7 +498,6 @@ html#colorido-html
             +square(30px)
             +top_left(-7px, 0)
             +border-radius(30px)
-
             background-color: $wwb_blue
             cursor: -webkit-grab
             cursor: -moz-grab
@@ -583,6 +575,7 @@ html#colorido-html
                     background-color: $wwb_blue
                 &:after
                     +dn
+
             &.selected
                 color: $wwb_blue
 
@@ -647,8 +640,6 @@ html#colorido-html
             max-width: 962px
             margin: 0 auto
             padding-top: 60px
-
-
 
         #phil_report_container
             width: 84%
@@ -743,7 +734,7 @@ html#colorido-html
                     transform: translateY(0)
 
 
-        // ::::: report :::::
+        // :::::  PAGE: Report :::::
         .downloads-accordian-header h4
             font-size: 0.8rem
 
@@ -753,15 +744,18 @@ html#colorido-html
             .copy
                 margin-top: 2rem
                 margin-bottom: 2rem
+                font-size: 1em
 
         .report-slider__title
             margin: $global_spacing auto $global_spacing/2 auto
+            font-size: 1em
 
         .report-slider__slide .copy
             margin-left: auto
             margin-right: auto
             max-width: 500px
             margin: $global_spacing/2 auto $global_spacing auto
+            font-size: 16px
 
         .previous-downloads
             margin-bottom: 1rem
@@ -795,30 +789,23 @@ html#colorido-html
 
         .latest-reports,
         .report-slider__slide
-            background-color: $light_grey
-
-        .downloads ul li,
-        .previous-reports
-            background-color: $extralight_grey
+            background-color: #f3f2ef
 
         .previous-reports .downloads li
             background-color: $light_grey
-
 
         .howwillwe-plug
             padding: $global_spacing 0
 
         .colorido-container.special
             max-width: 500px
+            margin: 0 auto
 
         .our-partners
             padding: $global_spacing 0
 
         .our-partners ul
-            +prdib
-            +box-sizing
-            vertical-align: top
-            padding: 0 0 0 1rem
+            display: inline-block
             margin: 2rem 0 0 0
             width: 50%
 
@@ -918,12 +905,11 @@ html#colorido-html
                 width: 48%
             .stakeholder-engagement
                 width: 48%
+        .colorido-container.pillar-tab__content.philanthropy
+            .phil_col-3
+                width: 20%
 
-
-html#colorido-html
-    body.colorido-body
-        .topics
-            //margin: 10px 0
+        // ::::: FOOTER :::::
         footer
             .footer_container
                 #footer_social

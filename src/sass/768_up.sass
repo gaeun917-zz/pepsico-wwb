@@ -28,8 +28,6 @@ html#colorido-html
 
 		// ::::: HEADER :::::
 
-		// ::::: FOOTER :::::
-
 		// ::::: HERO :::::
 		.hero--home
 			background-image: url(../img/hero-home--tb.jpg)
@@ -50,8 +48,10 @@ html#colorido-html
 		.hero--people
 			background-image: url(../img/hero-people--tb.jpg)
 
-		// ::::: PAGE: HOME :::::
+		.hero--reporting
+			background-image: url(../img/hero-reporting--tb.jpg)
 
+		// ::::: PAGE: HOME :::::
 		.misvis
 			padding-top: $global_spacing
 
@@ -98,8 +98,6 @@ html#colorido-html
 			padding: 64px 0 105px 0
 			h3
 				font-size: 22px
-
-
 
 		// ::::: PAGE: BRANDS LIST :::::
 		.tabs-select
@@ -184,8 +182,8 @@ html#colorido-html
 		#grid
 			.expander
 				max-height: 0
-			.is-li-open
-				.expander
+			//.is-li-open
+			//	.expander
 					//max-height: 650px
 
 		// ::::: PAGE: RECIPES LIST :::::
@@ -288,7 +286,6 @@ html#colorido-html
 						margin-bottom: 40px
 
 
-
 		// ::::: PAGE: GOVERNANCE :::::
 		.hero__social-item
 			float: right
@@ -321,10 +318,6 @@ html#colorido-html
 
 		.btn.discover
 			display: none !important
-
-		.topics
-			//margin: 0 0
-			//background-color: silver
 
 		.pillar-item__content.download.gov
 			.download_title
@@ -374,8 +367,7 @@ html#colorido-html
 
 		#related_topic_mobile
 			display: none
-		//#gov_download
-			//line-height: 48
+
 		.download
 			a
 				font-size: 14px
@@ -421,6 +413,8 @@ html#colorido-html
 		.related_topics
 			.related_topics_ul
 				li
+					width: auto
+					font-size: 14px
 					&:first-child
 						margin-right: 5%
 						&:after
@@ -435,22 +429,16 @@ html#colorido-html
 					a
 						&:after
 							float: right
-							+pr
+							+prdb
 							+width_height(30px,12px)
 							top: -6px
 							background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
 							background-size: 7px 10px
 
-		.related_topics .related_topics_ul li
-			width: auto
-			font-size: 14px
-			a:after
-				float: right
-				display: block
-
+		// ::::: FOOTER :::::
 		footer
 			.footer_container
-				+width_height(90%, 120px)
+				+width_height(94%, 120px)
 				max-width: 1372px
 				padding: 20px
 				.logo_main
@@ -468,13 +456,12 @@ html#colorido-html
 				.social
 					margin-top: 15px
 					margin-bottom: 15px
-
+					margin-right: 0
+					margin-top: 0
 					@media (max-width: 600px)
 						width: 100%
 					a
-
 						line-height: 40px
-
 						font-size: .9em
 						#separator
 							float: right
@@ -487,20 +474,12 @@ html#colorido-html
 
 				#footer_social
 					display: none
-					//margin-top: 20px
-
 					.social-media-icons
-						//+prdib
 						height: 50px
-						//max-width: 390px
-						//+margin_lr(auto, auto)
-						//margin-top: 15px
 						margin-bottom: 0
 						text-align: center
-						//font-size: 12px
 						background: url(../img/Social_icon_white.png) no-repeat center 10px
 						background-size: 100% auto
-						//opacity: 1
 						li
 							+prdb
 							float: left
@@ -533,22 +512,9 @@ html#colorido-html
 				top: -25px
 				left: -16px
 
-		footer .social
-			margin-right: 0
-			margin-top: 0
-
-		.footer_container
-			width: 94%
-
 		.btn.discover a::after
 			top: -23px
 			left: 14px
-
-		.hero--reporting
-			background-image: url(../img/hero-reporting--tb.jpg)
-
-		.report-slider
-			margin-top: $global_spacing
 
 		.report-slider__title
 			margin-top: $global_spacing
@@ -565,8 +531,10 @@ html#colorido-html
 		.our-partners
 			padding: $global_spacing 0
 
-html#colorido-html
-	body.colorido-body
+		.colorido-container.pillar-tab__content.philanthropy
+			.phil_col-3
+				width: 40%
+
 		.explore
 			.explore-item:before
 				display: none
