@@ -1,345 +1,343 @@
-html#colorido-html
-	body.colorido-body
-		.hero--brands
-			background-image: url(../img/hero-brands--tb.jpg)
+.hero--brands
+	background-image: url(../img/hero-brands--tb.jpg)
 
-		.tabs-select
-			li
-				display: inline-block
-				letter-spacing: 1.5px
-				padding-bottom: 16px
-				> div
-					padding: 0 12px
-				a
-					+title-font-bold
-					+prdb
-					margin-bottom: 0
-					font-size: 12px
-					text-decoration: none
-					text-transform: uppercase
-					text-align: center
-					padding: 8px 5px
-					color: $copy_grey
-					background-color: #e7e7e4
-					&.is-active, &:hover
-						color: #fff
-						background-color: $wwb_blue
-						&:after
-							+top_left(100%, 50%)
-							+width_height(0,0)
-							border: solid transparent
-							content: " "
-							position: absolute
-							pointer-events: none
-							border-color: rgba(136, 183, 213, 0)
-							border-top-color: $wwb_blue
-							border-width: 16px
-							margin-left: -16px
-
-		.list-brands-container
-			overflow: hidden
-			background: $extralight_grey
-			margin-bottom: 30px
-			.categories
-				overflow: hidden
-				padding-top: 50px
-				margin: 0 -12px
-				&.tabs-select
-					li
-						width: 50%
-						a
-							background-color: #e7e7e4
-							&:after
-								display: none
-							&.is-active, &:hover
-								background-color: $wwb_blue
-
-			.list-brands
-				clear: both
-				height: auto
-				list-style: none
-				margin: 0 -12px
-				> ul > li
-					width: 50%
-					display: inline-block
-					vertical-align: top
-					margin-bottom: 15px
-					overflow: hidden
-					transition: height 350ms ease-in-out
-					img
-						display: block
-						width: 100%
-
-					> a
-						+prdb
-						margin: 0 12px
-						-webkit-transform: rotate(0) // chrome over pixel move fix
-						figure
-							position: relative
-							margin: 0
-							padding: 0
-							img
-								transform: translate3d(0px,0px,0px)
-								backface-visibility: hidden // chrome over pixel move fix
-						.rollover
-							position: absolute
-							top: 0
-							bottom: 0
-							+left_right(0,0)
-							transition: all 100ms ease-in-out
-							opacity: 0
-
-						.mask
-							position: absolute
-							bottom: -1px
-							+left_right(0,0)
-							transition: all 100ms ease-in-out
-							transition-delay: 0ms
-							&.close
-								display: block
-								transform: translateY(0px)
-						&:hover
-							.rollover
-								opacity: 1
-
-					.expander
-						position: absolute
-						background: #fff
-						+top_left(auto, 0)
-						+width_height(100%, 0)
-						// margin-top: 10px
-						text-align: left
-						overflow: hidden
-						opacity: 0
-						&:after
-							content: ""
-							display: block
-						&:before
-							//+prdb
-							+width_height(300%, 100%)
-							content: ""
-							margin-left: -150%
-							background-color: #fff
-
-					.expander-inner
-						+margin_lr(0,0)
-						position: relative
-						overflow-y: scroll
-						overflow-x: hidden
-						height: 100%
-						opacity: 0
-						transition: opacity 400ms ease-in-out
-
-					&.is-li-open
-						// margin-bottom: 20px
-						overflow: visible
-						> a
-							.rollover
-								opacity: 1
-							.mask
-								transition-delay: 50ms
-								&.close
-									transform: translateY(100%)
-
-						.expander
-							// max-height: 999em
-							height: 100%
-							overflow: visible
-							opacity: 1
-
-						.expander-inner
-							opacity: 1
-							transition: opacity 0
-
-				.btn-close
-					position: relative
-					+width_height(40px, 40px)
-					top: 20px
-					right: 40px
-					cursor: pointer
-					// hide it for now, not on the design
-					display: none
-
-					&:before,
-					&:after
-						content: ''
-						position: absolute
-						+width_height(100%, 1px)
-						top: 50%
-						background: #888
-						transform: rotate(45deg)
-
-					&:after
-						transform: rotate(-45deg)
-
-					&:hover::before,
-					&:hover::after
-						background: #333
-
-			.tab-content
-				display: none
-				&.is-current
-					display: block
-
-
-			// content in the expanded box
-			.expander-inner-half
-				float: left
-				position: relative
-				+width_height(100%, auto)
-				color: $copy-grey
-
-				img
-					max-width: 100%
-
-				.tabs-select
-					padding-top: 30px
-					margin-left: -12px
-					overflow: hidden
-
-					li
-						width: 50%
-					a
-						margin-bottom: 12px
-						font-size: 16px
-						font-weight: normal
-						&:after
-							display: block
-
-			// carousel
-			.slider
-				margin-bottom: 100px
-				+margin_lr(-6px, -6px)
-
-				li
-					> div
-						padding: 0 6px
-
-				.slick-current
-					figure
-						position: relative
-						.image
-							position: relative
-							&:after
-								content: ""
-								+padb
-								+top_left(0,0)
-								bottom: 0
-								right: 0
-								background-color: rgba(0, 0, 0, 0.6)
-								z-index: 10
-					.caption
-						opacity: 1
-
-				.caption
-					+title-font-bold
-					text-transform: uppercase
-					padding-top: 10px
-					opacity: 0
-
-			// right content in tabs
-			.tab-content
-				font-size: 14px
-				h3
-					margin-top: 0
-					margin-bottom: 0
-					padding-top: 0
-					padding-bottom: 0
-				hr
-					height: 6px
-					border: 0
-					background: #7c7c7c
-					margin: 0
-					padding: 0
-				.title
-					font-weight: bold
-					font-size: 130%
-					padding: 0
-					margin: 0
-					p
-						padding: 0
-						padding-top: 10px
-						margin: 0
-						margin-bottom: 6px
-				span
-					display: inline-block
-					&.align-right
-						float: right
-					&.ml
-						margin-left: 20px
-				ul
-					clear: both
-				li
-					clear: both
-					border-top: 1px solid #7c7c7c
-					padding-bottom: 6px
-					padding-top: 6px
-					&:first-child
-						border-top: none
-
-					li
-						margin-left: 1em
-				.vitamins
-					overflow: hidden
-					+margin_lr(-10px, -10px)
-
-					.half
-						clear: none
-						float: left
-						width: 50%
-						ul
-							margin: 0 10px
-							margin-bottom: 6px
-							border-bottom: 1px solid #7c7c7c
-					p
-						margin: 0 10px
-						margin-bottom: 10px
-				.legal
-					text-transform: uppercase
-
-			// half left
-			.gallery
-				padding-top: 30px
-				h2
-					+title-font-bold
-					font-size: 37px
-					margin: 0
-					margin-bottom: 20px
-				h4
-					+title-font-bold
-					font-size: 18px
-					padding-bottom: 10px
-					margin-bottom: 0
-				p
-					margin: 0
-
-				.related
-					position: relative
-					padding-top: 60px
-				.cta_container
-					position: absolute
-					top: 20px
-					right: 0
-
-
-		.cta_container
-			text-align: right
-			position: relative
-			overflow: hidden
+	.tabs-select
+		li
+			display: inline-block
+			letter-spacing: 1.5px
+			padding-bottom: 16px
+			> div
+				padding: 0 12px
 			a
-				display: inline-block
-				+title-font-regular
-				color: #fff
-				font-size: 16px
+				+title-font-bold
+				+prdb
+				margin-bottom: 0
+				font-size: 12px
 				text-decoration: none
 				text-transform: uppercase
-				padding-left: 40px
-				padding-right: 10px
-				padding-top: 8px
-				padding-bottom: 8px
-				background: $wwb_blue url('../img/icon-location.png') no-repeat 18px center
+				text-align: center
+				padding: 8px 5px
+				color: $copy_grey
+				background-color: #e7e7e4
+				&.is-active, &:hover
+					color: #fff
+					background-color: $wwb_blue
+					&:after
+						+top_left(100%, 50%)
+						+width_height(0,0)
+						border: solid transparent
+						content: " "
+						position: absolute
+						pointer-events: none
+						border-color: rgba(136, 183, 213, 0)
+						border-top-color: $wwb_blue
+						border-width: 16px
+						margin-left: -16px
+
+	.list-brands-container
+		overflow: hidden
+		background: $extralight_grey
+		margin-bottom: 30px
+		.categories
+			overflow: hidden
+			padding-top: 50px
+			margin: 0 -12px
+			&.tabs-select
+				li
+					width: 50%
+					a
+						background-color: #e7e7e4
+						&:after
+							display: none
+						&.is-active, &:hover
+							background-color: $wwb_blue
+
+		.list-brands
+			clear: both
+			height: auto
+			list-style: none
+			margin: 0 -12px
+			> ul > li
+				width: 50%
+				display: inline-block
+				vertical-align: top
+				margin-bottom: 15px
+				overflow: hidden
+				transition: height 350ms ease-in-out
+				img
+					display: block
+					width: 100%
+
+				> a
+					+prdb
+					margin: 0 12px
+					-webkit-transform: rotate(0) // chrome over pixel move fix
+					figure
+						position: relative
+						margin: 0
+						padding: 0
+						img
+							transform: translate3d(0px,0px,0px)
+							backface-visibility: hidden // chrome over pixel move fix
+					.rollover
+						position: absolute
+						top: 0
+						bottom: 0
+						+left_right(0,0)
+						transition: all 100ms ease-in-out
+						opacity: 0
+
+					.mask
+						position: absolute
+						bottom: -1px
+						+left_right(0,0)
+						transition: all 100ms ease-in-out
+						transition-delay: 0ms
+						&.close
+							display: block
+							transform: translateY(0px)
+					&:hover
+						.rollover
+							opacity: 1
+
+				.expander
+					position: absolute
+					background: #fff
+					+top_left(auto, 0)
+					+width_height(100%, 0)
+					// margin-top: 10px
+					text-align: left
+					overflow: hidden
+					opacity: 0
+					&:after
+						content: ""
+						display: block
+					&:before
+						//+prdb
+						+width_height(300%, 100%)
+						content: ""
+						margin-left: -150%
+						background-color: #fff
+
+				.expander-inner
+					+margin_lr(0,0)
+					position: relative
+					overflow-y: scroll
+					overflow-x: hidden
+					height: 100%
+					opacity: 0
+					transition: opacity 400ms ease-in-out
+
+				&.is-li-open
+					// margin-bottom: 20px
+					overflow: visible
+					> a
+						.rollover
+							opacity: 1
+						.mask
+							transition-delay: 50ms
+							&.close
+								transform: translateY(100%)
+
+					.expander
+						// max-height: 999em
+						height: 100%
+						overflow: visible
+						opacity: 1
+
+					.expander-inner
+						opacity: 1
+						transition: opacity 0
+
+			.btn-close
+				position: relative
+				+width_height(40px, 40px)
+				top: 20px
+				right: 40px
+				cursor: pointer
+				// hide it for now, not on the design
+				display: none
+
+				&:before,
 				&:after
-					+width_height(30px, 20px)
-					content: ""
-					background: url('../img/icon-arrow-cta-white.png') no-repeat center
-					display: inline-block
+					content: ''
+					position: absolute
+					+width_height(100%, 1px)
+					top: 50%
+					background: #888
+					transform: rotate(45deg)
+
+				&:after
+					transform: rotate(-45deg)
+
+				&:hover::before,
+				&:hover::after
+					background: #333
+
+		.tab-content
+			display: none
+			&.is-current
+				display: block
+
+
+		// content in the expanded box
+		.expander-inner-half
+			float: left
+			position: relative
+			+width_height(100%, auto)
+			color: $copy-grey
+
+			img
+				max-width: 100%
+
+			.tabs-select
+				padding-top: 30px
+				margin-left: -12px
+				overflow: hidden
+
+				li
+					width: 50%
+				a
+					margin-bottom: 12px
+					font-size: 16px
+					font-weight: normal
+					&:after
+						display: block
+
+		// carousel
+		.slider
+			margin-bottom: 100px
+			+margin_lr(-6px, -6px)
+
+			li
+				> div
+					padding: 0 6px
+
+			.slick-current
+				figure
+					position: relative
+					.image
+						position: relative
+						&:after
+							content: ""
+							+padb
+							+top_left(0,0)
+							bottom: 0
+							right: 0
+							background-color: rgba(0, 0, 0, 0.6)
+							z-index: 10
+				.caption
+					opacity: 1
+
+			.caption
+				+title-font-bold
+				text-transform: uppercase
+				padding-top: 10px
+				opacity: 0
+
+		// right content in tabs
+		.tab-content
+			font-size: 14px
+			h3
+				margin-top: 0
+				margin-bottom: 0
+				padding-top: 0
+				padding-bottom: 0
+			hr
+				height: 6px
+				border: 0
+				background: #7c7c7c
+				margin: 0
+				padding: 0
+			.title
+				font-weight: bold
+				font-size: 130%
+				padding: 0
+				margin: 0
+				p
+					padding: 0
+					padding-top: 10px
+					margin: 0
+					margin-bottom: 6px
+			span
+				display: inline-block
+				&.align-right
+					float: right
+				&.ml
+					margin-left: 20px
+			ul
+				clear: both
+			li
+				clear: both
+				border-top: 1px solid #7c7c7c
+				padding-bottom: 6px
+				padding-top: 6px
+				&:first-child
+					border-top: none
+
+				li
+					margin-left: 1em
+			.vitamins
+				overflow: hidden
+				+margin_lr(-10px, -10px)
+
+				.half
+					clear: none
+					float: left
+					width: 50%
+					ul
+						margin: 0 10px
+						margin-bottom: 6px
+						border-bottom: 1px solid #7c7c7c
+				p
+					margin: 0 10px
+					margin-bottom: 10px
+			.legal
+				text-transform: uppercase
+
+		// half left
+		.gallery
+			padding-top: 30px
+			h2
+				+title-font-bold
+				font-size: 37px
+				margin: 0
+				margin-bottom: 20px
+			h4
+				+title-font-bold
+				font-size: 18px
+				padding-bottom: 10px
+				margin-bottom: 0
+			p
+				margin: 0
+
+			.related
+				position: relative
+				padding-top: 60px
+			.cta_container
+				position: absolute
+				top: 20px
+				right: 0
+
+
+	.cta_container
+		text-align: right
+		position: relative
+		overflow: hidden
+		a
+			display: inline-block
+			+title-font-regular
+			color: #fff
+			font-size: 16px
+			text-decoration: none
+			text-transform: uppercase
+			padding-left: 40px
+			padding-right: 10px
+			padding-top: 8px
+			padding-bottom: 8px
+			background: $wwb_blue url('../img/icon-location.png') no-repeat 18px center
+			&:after
+				+width_height(30px, 20px)
+				content: ""
+				background: url('../img/icon-arrow-cta-white.png') no-repeat center
+				display: inline-block

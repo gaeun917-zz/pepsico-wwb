@@ -1,8 +1,7 @@
 // ::::: TYPOGRAPHY :::::
-html
-    font-size: 12.5px
 
-body.colorido-body
+body
+    font-size: 12.5px
     h1
         font-size: 1.5rem
 
@@ -44,10 +43,6 @@ body.colorido-body
         margin: 0
         padding: 0
 
-// ::::: GLOBAL :::::
-
-$global_spacing: 8%
-body.colorido-body
     .colorido-container
         +prdb
         width: 84%
@@ -59,15 +54,6 @@ body.colorido-body
     .contained-copy h3
         margin: 0
 
-
-// ::::: HEADER :::::
-
-// ::::: FOOTER :::::
-
-// ::::: HERO :::::
-
-// ::::: MISCELLANEOUS :::::
-body.colorido-body
     .hero
         +prdb
         +box-sizing
@@ -199,7 +185,6 @@ body.colorido-body
     .title-lines-large::after
         +prdb
 
-body.colorido-body
     .hero__desktop-copy
         +dn
 
@@ -285,96 +270,92 @@ body.colorido-body
         .highlight__media
             +cover
 
+    .explore
+        +prdb
+        float: left
+        width: inherit
+        padding:  0 0 7% 0
+        text-align: center
+        color: white
+        z-index: -1000
 
-// ::::: EXPLORE :::::
-html#colorido-html
-    body.colorido-body
-        .explore
-            +prdb
-            float: left
-            width: inherit
-            padding:  0 0 7% 0
-            text-align: center
-            color: white
-            z-index: -1000
+        .explore-item
+            +prdib
+            width: 50% - $global_spacing / 2
+            padding-top: (100% - $global_spacing * 2) / 2
+            margin-top: $global_spacing
+            overflow: hidden
 
-            .explore-item
-                +prdib
-                width: 50% - $global_spacing / 2
-                padding-top: (100% - $global_spacing * 2) / 2
-                margin-top: $global_spacing
-                overflow: hidden
+            &:nth-child(odd)
+                margin-right: $global_spacing
 
-                &:nth-child(odd)
-                    margin-right: $global_spacing
+            &:before, &:after
+                content: ""
+                +padn
+                +width_height(60px, 3px)
+                left: 50%
+                margin-left: -30px
+                background-color: white
+                z-index: 10
 
+            &:before
+                top: 20%
 
-                &:before, &:after
-                    content: ""
-                    +padn
-                    +width_height(60px, 3px)
-                    left: 50%
-                    margin-left: -30px
-                    background-color: white
-                    z-index: 10
+            &:after
+                bottom: 20%
 
-
-                &:before
-                    top: 20%
-                &:after
-                    bottom: 20%
-
-                &:active:before, &:active:after
-                    +padb
-
-                .colour-overlay
-                    +cover
-                    +opacityz(0)
-
-                &:hover .colour-overlay
-                    +opacityz(0.5)
-
-                &:active .colour-overlay
-                    +opacityz(0.7)
-
-                .explore-item__image
-                    +cover
-                    background-size: cover
-                    background-position: center
-                    background-repeat: no-repeat
-
-            .explore__heading-wrap
+            &:active:before, &:active:after
                 +padb
-                +box-sizing
-                +width_height(100%, 100%)
-                +top_left(0,0)
-                +no-pointer-events
-                .explore__heading-wrap2
-                    +prdt
-                    +width_height(100%, 100%)
-                    margin: 0
-                    padding: 0
-                    outline: 0
-                    border: 0
-                    vertical-align: middle
-                    text-align: center
 
-            .explore-item__heading
-                +prdtc
-                +title-font-regular
+            .colour-overlay
+                +cover
+                +opacityz(0)
+
+            &:hover .colour-overlay
+                +opacityz(0.5)
+
+            &:active .colour-overlay
+                +opacityz(0.7)
+
+            .explore-item__image
+                +cover
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+
+        .explore__heading-wrap
+            +padb
+            +box-sizing
+            +width_height(100%, 100%)
+            +top_left(0,0)
+            +no-pointer-events
+            .explore__heading-wrap2
+                +prdt
                 +width_height(100%, 100%)
-                font-size: 1.3rem
-                text-transform: uppercase
-                vertical-align: middle
-                text-align: center
                 margin: 0
-                padding: 0 10%
+                padding: 0
                 outline: 0
                 border: 0
+                vertical-align: middle
+                text-align: center
+
+        .explore-item__heading
+            +prdtc
+            +title-font-regular
+            +width_height(100%, 100%)
+            font-size: 1.3rem
+            text-transform: uppercase
+            vertical-align: middle
+            text-align: center
+            margin: 0
+            padding: 0 10%
+            outline: 0
+            border: 0
 
 
-// :::::  MISCELLANEOUS :::::
-body.colorido-body
+
+
+    // :::::  MISCELLANEOUS :::::
     .download
         a
             overflow: hidden

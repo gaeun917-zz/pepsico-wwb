@@ -1,206 +1,198 @@
-/* Slider */
-html#colorido-html
-    body.colorido-body
-        .slick-slider
-            height: 500px
-            position: relative
-            display: block
-            box-sizing: border-box
-            -webkit-touch-callout: none
-            -webkit-user-select: none
-            -khtml-user-select: none
-            -moz-user-select: none
-            -ms-user-select: none
-            user-select: none
-            -ms-touch-action: pan-y
-            touch-action: pan-y
-            -webkit-tap-highlight-color: transparent
+.slick-slider
+    height: 500px
+    position: relative
+    display: block
+    box-sizing: border-box
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    -ms-touch-action: pan-y
+    touch-action: pan-y
+    -webkit-tap-highlight-color: transparent
 
-        .slick-list
-            position: relative
-            overflow: hidden
-            display: block
-            margin: 0
-            padding: 0
+    .slick-list
+        position: relative
+        overflow: hidden
+        display: block
+        margin: 0
+        padding: 0
 
-            &:focus
-                outline: none
-
-            &.dragging
-                cursor: pointer
-                cursor: hand
-
-
-        .slick-slider .slick-track,
-        .slick-slider .slick-list
-            -webkit-transform: translate3d(0, 0, 0)
-            -moz-transform: translate3d(0, 0, 0)
-            -ms-transform: translate3d(0, 0, 0)
-            -o-transform: translate3d(0, 0, 0)
-            transform: translate3d(0, 0, 0)
-
-
-        .slick-track
-            position: relative
-            left: 0
-            top: 0
-            display: block
-
-            &:before,
-            &:after
-                content: ""
-                display: table
-
-
-            &:after
-                clear: both
-
-
-            .slick-loading &
-                visibility: hidden
-
-
-        .slick-slide
-            float: left
-            height: 100%
-            min-height: 1px
-            [dir="rtl"] &
-                float: right
-
-            img
-                display: block
-
-            &.slick-loading img
-                //display: none
-
-
-            //display: none
-
-            &.dragging img
-                pointer-events: none
-
-
-            .slick-initialized &
-                display: block
-
-
-            .slick-loading &
-                visibility: hidden
-
-
-            .slick-vertical &
-                display: block
-                height: auto
-                border: 1px solid transparent
-
-
-        .slick-arrow.slick-hidden
-            display: none
-
-        // Custom author style
-        // slider
-
-        .slick-slide, .slick-arrow, button
+        &:focus
             outline: none
-            &:focus, &:active
-                outline: none
+
+        &.dragging
+            cursor: pointer
+            cursor: hand
 
 
-        .slick-dots
-            position: absolute
-            bottom: -25px
-            left: 0
-            right: 0
-            text-align: center
-            li
-                outline: none
-                cursor: pointer
-                display: inline-block !important
-                margin: 0 7px !important
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+        -webkit-transform: translate3d(0, 0, 0)
+        -moz-transform: translate3d(0, 0, 0)
+        -ms-transform: translate3d(0, 0, 0)
+        -o-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+
+
+    .slick-track
+        position: relative
+        left: 0
+        top: 0
+        display: block
+
+        &:before,
+        &:after
+            content: ""
+            display: table
+
+        &:after
+            clear: both
+
+        .slick-loading &
+            visibility: hidden
+
+    .slick-slide
+        float: left
+        height: 100%
+        min-height: 1px
+        [dir="rtl"] &
+            float: right
+
+        img
+            display: block
+
+        &.slick-loading img
+        //display: none
+
+        &.dragging img
+            pointer-events: none
+
+
+        .slick-initialized &
+            display: block
+
+
+        .slick-loading &
+            visibility: hidden
+
+
+        .slick-vertical &
+            display: block
+            height: auto
+            border: 1px solid transparent
+
+
+    .slick-arrow.slick-hidden
+        display: none
+
+    // Custom author style
+    // slider
+
+    .slick-slide, .slick-arrow, button
+        outline: none
+        &:focus, &:active
+            outline: none
+
+
+    .slick-dots
+        position: absolute
+        bottom: -25px
+        left: 0
+        right: 0
+        text-align: center
+        li
+            outline: none
+            cursor: pointer
+            display: inline-block !important
+            margin: 0 7px !important
+            width: 15px
+            height: 15px
+            margin-left: auto
+            margin-right: auto
+            transition: all 100ms ease-in-out
+            position: relative
+
+            button
+                text-indent: -999em
+                border-radius: 50%
+                border-radius: 50%
+                border: 0
                 width: 15px
                 height: 15px
-                margin-left: auto
-                margin-right: auto
-                transition: all 100ms ease-in-out
-                position: relative
+                background-color: #e3e2e0
+                overflow: hidden
+                cursor: pointer
+                font-size: 50%
 
+            &:hover, &.slick-active
                 button
-                    text-indent: -999em
-                    border-radius: 50%
-                    border-radius: 50%
-                    border: 0
-                    width: 15px
-                    height: 15px
-                    background-color: #e3e2e0
-                    overflow: hidden
-                    cursor: pointer
-                    font-size: 50%
-
-                &:hover, &.slick-active
-                    button
-                        background-color: $wwb_blue
-                        color: #077ebd
+                    background-color: $wwb_blue
+                    color: #077ebd
 
 
-        .slick-arrow
-            position: absolute
-            top: 50%
-            text-align: center
-            margin-top: -20px
-            width: 30px
-            height: 40px
-            z-index: 100
+    .slick-arrow
+        position: absolute
+        top: 50%
+        text-align: center
+        margin-top: -20px
+        width: 30px
+        height: 40px
+        z-index: 100
+        opacity: 1
+        transition: opacity 300ms ease-in-out
+        cursor: pointer
+        &:hover
             opacity: 1
-            transition: opacity 300ms ease-in-out
-            cursor: pointer
+
+        &.slick-prev, &.slick-next
+            background-repeat: no-repeat
+            // background-color: red
+            span
+                position: relative
+                text-align: center
+
+            i
+                position: relative
+                top: 10px
+                width: 20px
+                height: 20px
+                z-index: 10
+                text-align: center
+                display: inline-block
+
+
+            &:after
+                font-size: 250%
+                color: white
+                position: absolute
+                top: 0
+                left: 0
+                z-index: 5
+
             &:hover
-                opacity: 1
-
-            &.slick-prev, &.slick-next
-                background-repeat: no-repeat
-                // background-color: red
-                span
-                    position: relative
-                    text-align: center
-
                 i
-                    position: relative
-                    top: 10px
-                    width: 20px
-                    height: 20px
-                    z-index: 10
-                    text-align: center
-                    display: inline-block
-
+                    color: #fff
 
                 &:after
-                    font-size: 250%
-                    color: white
-                    position: absolute
-                    top: 0
-                    left: 0
-                    z-index: 5
-
-                &:hover
-                    i
-                        color: #fff
-
-                    &:after
-                        color: #fff
+                    color: #fff
 
 
 
-            &.slick-prev
-                left: -24px
-                i
-                    background: url(../img/icon-arrow-left--lightblue.png) no-repeat center center
-                    background-size: 11px 22px
+        &.slick-prev
+            left: -24px
+            i
+                background: url(../img/icon-arrow-left--lightblue.png) no-repeat center center
+                background-size: 11px 22px
 
 
-            &.slick-next
-                right: -24px
-                i
-                    background: url(../img/icon-arrow-right--lightblue.png) no-repeat center center
-                    background-size: 11px 22px
+        &.slick-next
+            right: -24px
+            i
+                background: url(../img/icon-arrow-right--lightblue.png) no-repeat center center
+                background-size: 11px 22px
+
 
 

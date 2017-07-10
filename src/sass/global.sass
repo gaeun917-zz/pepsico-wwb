@@ -16,6 +16,9 @@ $pill_tab_gray: rgb(166,165,163)
 $pill_background_gray: rgb(205,204,201)
 $pill_download_background: rgb(233,231,231)
 
+// ::::: GLOBAL :::::
+$global_spacing: 8%
+
 @mixin title-font
     font-family: 'Oswald Light'
 
@@ -38,7 +41,7 @@ $pill_download_background: rgb(233,231,231)
     font-family: 'Oswald Bold'
     font-size: .8em
 
-html#colorido-html
+html
     color: $medium_grey
     +body-font
     font-size: 12.5px
@@ -54,7 +57,7 @@ body, html
     padding: 0
     background-color: #fff
 
-body.colorido-body
+body
     +box-sizing
     +width_height(100%, 100%)
     margin: 0
@@ -194,15 +197,14 @@ body.colorido-body
         width: 100%
         background-color: #d7d7d7
 
-// :: footer ::
-$dk-blue: #1E83AE
-$blue: #3D5B94
-$light-blue: #3DACDD
-$green: #6dcd9a
-$social-size: .8em
-$social-width: 20%
+    // :: footer ::
+    $dk-blue: #1E83AE
+    $blue: #3D5B94
+    $light-blue: #3DACDD
+    $green: #6dcd9a
+    $social-size: .8em
+    $social-width: 20%
 
-body.colorido-body
     footer
         +width_height(100%, auto)
         float: left

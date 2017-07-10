@@ -1,132 +1,130 @@
+.hero--nutrition
+	background-image: url(../img/hero-nutrition--tb.jpg)
 
-html#colorido-html
-	body.colorido-body
-		.hero--nutrition
-			background-image: url(../img/hero-nutrition--tb.jpg)
+	.nutrition-breakdown-copy
+		.copy
+			line-height: 150%
 
-		.nutrition-breakdown-copy
-			.copy
-				line-height: 150%
+	.nutrition-section
+		padding: 5% 0
+		img
+			max-width: 100%
+		h3
+			line-height: 120%
+			font-size: 1.7rem
+		h4
+			+title-font-bold
+			font-size: 18px
+			line-height: 130%
+		p
+			line-height: 150%
 
-		.nutrition-section
-			padding: 5% 0
-			img
-				max-width: 100%
-			h3
-				line-height: 120%
-				font-size: 1.7rem
-			h4
-				+title-font-bold
-				font-size: 18px
-				line-height: 130%
-			p
-				line-height: 150%
+	.our-story
+		background-color: #c0c0c0
 
-		.our-story
-			background-color: #c0c0c0
+	.our-commitment-to-nutrition
+		background-color: $light_grey
 
-		.our-commitment-to-nutrition
-			background-color: $light_grey
+	.farming
+		background-color: $extralight_grey
 
-		.farming
-			background-color: $extralight_grey
+		.slider-farming
+			text-align: center
+			padding-top: 20px
+			margin-bottom: 40px
 
-			.slider-farming
-				text-align: center
-				padding-top: 20px
-				margin-bottom: 40px
-
-				li
-					position: relative
-				img
-					width: 100%
-
-		.contributors
-			.blue
-				background-color: $wwb_darkblue
-				color: #fff
-				overflow: visible
+			li
 				position: relative
-				&:after
-					+padn
-					+top_left(100%, 50%)
-					+width_height(0,0)
-					content: " "
-					pointer-events: none
-					border: 25px solid rgba(255, 255, 255, 1)
-					border-top-color: #fff
-					margin-left: -25px
-			.icons
-				background-image: url(../img/nutrition/nutrition-icon-bg.jpg)
-				background-size: cover
+			img
+				width: 100%
+
+	.contributors
+		.blue
+			background-color: $wwb_darkblue
+			color: #fff
+			overflow: visible
+			position: relative
+			&:after
+				+padn
+				+top_left(100%, 50%)
+				+width_height(0,0)
+				content: " "
+				pointer-events: none
+				border: 25px solid rgba(255, 255, 255, 1)
+				border-top-color: #fff
+				margin-left: -25px
+		.icons
+			background-image: url(../img/nutrition/nutrition-icon-bg.jpg)
+			background-size: cover
+			text-align: center
+			color: #fff
+			padding-bottom: 60px
+
+			.third
+				position: relative
 				text-align: center
-				color: #fff
-				padding-bottom: 60px
-
-				.third
-					position: relative
-					text-align: center
-					img
-						display: inline-block
-
-					figure
-						+width_height(263px, 263px)
-						+margin_lr(auto, auto)
-						padding-top: 20px
-					figcaption
-						margin: 0
-						padding: 0
-						padding-top: 33px
-						font-size: 29px
-						+title-font-bold
-						text-transform: uppercase
-					p
-						+title-font
-						font-size: 24px
-						+margin_lr(auto, auto)
-						margin-top: 0
-						max-width: 263px
-				.rollover
-					display: none
-					figure
-						background: url(../img/nutrition/icon_rollover.png) center top no-repeat
-					figcaption
-						color: $wwb_darkblue
-
-				li:hover, .hover
-					.default
-						display: none
-					.rollover
-						display: block
-
-		.forward-brands
-			background-color: #d7d6d3
-
-			ul.forward-brand-list
-				overflow: hidden
-				+margin_lr(-15px, -15px)
-				li
+				img
 					display: inline-block
+
+				figure
+					+width_height(263px, 263px)
+					+margin_lr(auto, auto)
+					padding-top: 20px
+				figcaption
 					margin: 0
 					padding: 0
-					width: 50%
-					> div
-						padding: 0 15px
-						margin-bottom: 30px
-
-		.report
-			background-color: $extralight_grey
-			margin-bottom: 30px
-			text-align: center
-
-			.slider-report
-				margin-bottom: 100px
-				figure
-					text-align: center
-				img
-					display: inline-block
-				h3
-					font-size: 18px
+					padding-top: 33px
+					font-size: 29px
+					+title-font-bold
+					text-transform: uppercase
 				p
-					max-width: 650px
+					+title-font
+					font-size: 24px
 					+margin_lr(auto, auto)
+					margin-top: 0
+					max-width: 263px
+			.rollover
+				display: none
+				figure
+					background: url(../img/nutrition/icon_rollover.png) center top no-repeat
+				figcaption
+					color: $wwb_darkblue
+
+			li:hover, .hover
+				.default
+					display: none
+				.rollover
+					display: block
+
+	.forward-brands
+		background-color: #d7d6d3
+
+		ul.forward-brand-list
+			overflow: hidden
+			+margin_lr(-15px, -15px)
+			li
+				display: inline-block
+				margin: 0
+				padding: 0
+				width: 50%
+				> div
+					padding: 0 15px
+					margin-bottom: 30px
+
+	.report
+		background-color: $extralight_grey
+		margin-bottom: 30px
+		text-align: center
+
+		.slider-report
+			margin-bottom: 100px
+			figure
+				text-align: center
+			img
+				display: inline-block
+			h3
+				font-size: 18px
+			p
+				max-width: 650px
+				+margin_lr(auto, auto)
+
