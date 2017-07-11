@@ -1,97 +1,82 @@
 body
     font-size: 16px
-    h2
-        font-size: 1.8rem
-    h3
-        font-size: 2.2rem
-    h5
-        font-size: 0.8rem
+h2
+    font-size: 1.8rem
+h3
+    font-size: 2.2rem
+h5
+    font-size: 0.8rem
 
-    // ::::: GLOBAL :::::
-    $global_spacing: 5%
+// ::::: GLOBAL :::::
+$global_spacing: 5%
 
-    .colorido-container
-        //width: 70% !important
-        max-width: 1372px
+.colorido-container
+    //width: 70% !important
+    max-width: 1372px
     //margin: 0 auto
 
-    .copy
-        margin-top: $global_spacing
-        margin-bottom: $global_spacing
+.copy
+    margin-top: $global_spacing
+    margin-bottom: $global_spacing
 
     // ::::: HERO :::::
-    .hero--cinemagraph__copy
-        margin-top: -9rem
+.hero--cinemagraph__copy
+    margin-top: -9rem
 
-    .misvis
-        padding: $global_spacing 0
+.misvis
+    padding: $global_spacing 0
 
     // ::::: HIGHLIGHT :::::
-    .highlight
-        padding: 5% 0
+.highlight
+    padding: 5% 0
 
-    .focus-areas, .our-progress
-        padding: $global_spacing 0
-    #phil_report_container
-        #phil_report_right
-            #phil_report_right_btn
-                margin: 52px 0 0 0
+.focus-areas, .our-progress
+    padding: $global_spacing 0
 
-    // ::::: PAGE: RECIPES LIST :::::
-    .list-recipes > ul > li > a figcaption h2
-        font-size: 18px
+#phil_report_right_btn
+    margin: 52px 0 0 0
 
-    .list-recipes > ul > li > a figcaption p
-        font-size: 12px
+// ::::: PAGE: RECIPES LIST :::::
+.list-recipes > ul > li > a figcaption h2
+    font-size: 18px
 
-    .pillar-item__content.gov.right
-        width: 30%
+.list-recipes > ul > li > a figcaption p
+    font-size: 12px
 
-    .hero__social-item,
-    .hero__social.gov a
-        float: right
+.pillar-item__content.gov.right
+    width: 30%
 
-    .hero__social.gov
-        margin-bottom: 0
+.hero__social-item,
+.hero__social.gov a
+    float: right
 
-    .h2-az
-        +width_height(100%, auto)
-        //font-size: 1.8rem
+.hero__social.gov
+    margin-bottom: 0
+
+// ::::: BRANDS SECTION :::::
+// recipe and brands grid
+#grid
+    .is-li-open
+        .expander
+            max-height: 750px
+
+// ::::: PAGE: A-Z Topics :::::
+.pwp-breakdown__header.underline .topics
+    margin: 40px 0
+
+.hero__social.az
+    +prdib
+    +width_height(auto, 50px)
+    float: left
+    top: -9px
+    margin-left: 60px
+    a
+        +prdb
         float: left
-        position: relative
 
-    // ::::: BRANDS SECTION :::::
-    // recipe and brands grid
-    #grid
-        .is-li-open
-            .expander
-                max-height: 750px
+.pillar_content_bottom_left.gov.second
+    display: none
 
-    // ::::: PAGE: A-Z Topics :::::
-    .pwp-breakdown__header.underline .topics
-        margin: 40px 0
-
-    .hero__social.az
-        +prdib
-        +width_height(auto, 50px)
-        float: left
-        top: -9px
-        margin-left: 60px
-        a
-            +prdb
-            float: left
-
-    #social-az
-        +prdib
-        background: url(../img/menu_social.png) no-repeat center 0
-        background-size: contain
-        margin: 8px 0 0 21px
-
-    .pillar_content_bottom_left.gov.second
-        display: none
-
-    .download
-        a:hover
-            background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center
-
-
+#download_policy, #download_report
+    &:hover
+        background: #e1e1e1 url('../img/icon-dowload-blue.png') no-repeat 0 center

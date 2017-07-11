@@ -9,7 +9,7 @@ page_id:        "perspectives"
 
     <!-- page header -->
     <section class="pwp-breakdown topics">
-        <div class="colorido-container">
+        <div class="colorido-container" id="colorido-container">
             <div class="pwp-breakdown-copy">
                 <h2 class="pwp-breakdown__header underline" id="summary_header-h2">A-Z <em>Topics</em> </h2>
                 <p class="topics">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -26,7 +26,7 @@ page_id:        "perspectives"
 
     <!-- search bar -->
     <section class="search-blue az">
-        <div class="colorido-container">
+        <div class="colorido-container" id="colorido-container">
             <h3>Search Topics</h3>
             <div class="form">
                 <form action="" role="search" id="search_bar">
@@ -37,11 +37,9 @@ page_id:        "perspectives"
         </div>
     </section>
 
-
-
     <!-- a-z drop-down menu -->
     <section class="pwp-breakdown">
-        <div class="colorido-container">
+        <div class="colorido-container" id="colorido-container">
             {{#each perspectives ~}}
                 <div class="pwp-breakdown-copy">
                     <h2 class="pwp-breakdown__header underline category">{{this.pillar-name}}</h2>
@@ -53,24 +51,27 @@ page_id:        "perspectives"
                                 <h4>{{this.item-header}}</h4>
                             </div>
                             <div class="pillar-item__content closed">
-                                <h2 class="h2-az"><em>{{this.item-header}}</em>
+                                <h2 class="pillar-item__content_h2-az"><em>{{this.item-header}}</em>
                                     <div id="footer_social az_social_icon">
                                         <ul class="social-media-icons" id="az_social_icon_ul" >
-                                            <li><a class="facebook" href="#"></a></li>
-                                            <li><a class="twitter" href="#"></a></li>
-                                            <li><a class="linkedIn" href="#"></a></li>
-                                            <li><a class="email" href="#"></a></li>
+                                            <li class="social-media-icons_li"><a class="facebook" href="#"></a></li>
+                                            <li class="social-media-icons_li"><a class="twitter" href="#"></a></li>
+                                            <li class="social-media-icons_li"><a class="linkedIn" href="#"></a></li>
+                                            <li class="social-media-icons_li"><a class="email" href="#"></a></li>
                                         </ul>
                                     </div>
                                 </h2>
                                 {{#each this.item-copy}}
                                     <p class="pillar_copy">{{this}}</p>
                                 {{/each}}
-                                <div class="btn discover"><a href="#">Discover More <img src="img/icon-arrow-right.png"/></a></div>
+                                <div class="btn discover">
+                                    <a href="#" class="btn-discover_a">Discover More
+                                        <img class="btn-discover_img" src="img/icon-arrow-right.png"/>
+                                    </a>
+                                </div>
                             </div>
                             <div class="pillar-item__content download closed">
                                     <a href="#" id="download_policy">
-                                        <!--<img src="icon-download.png.png">-->
                                         <span>Download Policy</span>
                                         <span class="align-right" id="pdf_block1">PDF | 897KB</span>
                                     </a>
@@ -84,10 +85,10 @@ page_id:        "perspectives"
                             <div class="pillar-item__content closed bottom">
                                 <div class="related_topics">
                                     <ul href="#" class="related_topics_ul">
-                                        <li class="related_topics_header">Related Topics</li>
-                                        <li class=""><a href="#">Deforestation</a></li>
-                                        <li class=""><a href="#">Farm Animal Welfare</a></li>
-                                        <li class=""><a href="#">Palm Oil</a></li>
+                                        <li class="related_topics_li"><span class="align-right">Related Topics</li>
+                                        <li class="related_topics_li"><a href="#">Deforestation</a></li>
+                                        <li class="related_topics_li"><a href="#">Farm Animal Welfare</a></li>
+                                        <li class="related_topics_li"><a href="#">Palm Oil</a></li>
                                     </ul>
                                 </div>
                             </div>

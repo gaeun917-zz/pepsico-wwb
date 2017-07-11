@@ -2,44 +2,51 @@
     .list-brands > ul>li
         width: 25%
 
-    // ::::: PAGE: RECIPES LIST :::::
-    .list-recipes-container
 
-        .list-recipes > ul>li
-            width: 25%
-    //width: 33%
+// ::::: PAGE: RECIPES LIST :::::
+.list-recipes-container
+    .list-recipes > ul>li
+        width: 25%
+        //width: 33%
 
-    // ::::: PAGE: NUTRITION :::::
-    .forward-brands
-        ul.forward-brand-list
-            +margin_lr(-60px, -60px)
-            li
-                > div
-                    padding: 0 60px
-                    margin-bottom: 60px
 
-    // RECIPE AND BRANDS GRID
-    #grid
+// ::::: PAGE: NUTRITION :::::
+.forward-brands
+    ul.forward-brand-list
+        +margin_lr(-60px, -60px)
+        li
+            > div
+                padding: 0 60px
+                margin-bottom: 60px
+
+
+// RECIPE AND BRANDS GRID
+#grid
+    .expander
+        max-height: 0
+    .is-li-open
         .expander
-            max-height: 0
-        .is-li-open
-            .expander
     //max-height: 700px
     #download_policy a,
     #download_report a
         width: 103%
 
-    #social li
-        +prdb
-        +width_height(26px, 26px)
-        +top_left(-13px, -7px)
-        float: left
-        padding: 0
-        margin: 0 0 0 5%
 
-    #governanace_right_social li
-        +top_left(-26px, -18px)
+// ::::: PAGE: GOVERNANCE :::::
+#social li
+    +prdb
+    +width_height(26px, 26px)
+    +top_left(-13px, -7px)
+    float: left
+    padding: 0
+    margin: 0 0 0 5%
 
-    .footer_container
-        #footer_social
-            margin-top: 30px
+#governanace_right_social li
+    +top_left(-26px, -18px)
+
+// ::::: PAGE: Perspectives :::::
+.pillar-item__content_h2-az em
+    font-size: 3rem
+
+//#footer_social
+//    margin-top: 30px

@@ -1,18 +1,3 @@
-#summary_header-h2
-    font-size: 24px
-
-// search bar
-.search-blue.az
-    padding: 64px 0 105px 0
-    height: 251px
-    h3
-        font-size: 22px
-#search_bar
-    +prdib
-    width: 100%
-    float: left
-    margin-right: 40px
-
 .hero--perspectives
     background-position: center top
     @media screen and (max-width: 680px)
@@ -20,9 +5,46 @@
             font-size: 2.5rem
             line-height: 3rem
 
-// header
+// ::::: SEARCH BAR :::::
+.search-blue.az
+    padding: 64px 0 105px 0
+    height: 251px
+    h3
+        font-family: "Oswald Bold"
+        font-size: 22px
+        color: white
+
+form#search_bar
+    +prdib
+    width: 100%
+    float: left
+    margin-right: 40px
+
+
+// ::::: SUMMARY HEADER  :::::
+.pwp-breakdown
+    position: relative
+    display: block
+    padding: 8% 0
+    background-color: #d7d6d3
+    background-size: 180% auto
+    background-repeat: no-repeat
+    background-position: center top
+
+#colorido-container
+    padding-left: 0
+    padding-right: 0
+    width: 88%
+    //margin: 0 6%
 .pwp-breakdown__header
     margin: 0
+
+#summary_header-h2
+    font-size: 1.5em
+    font-family: "Oswald light"
+    em
+        font-size: 2em
+        line-height: 1em
 
 .pwp-breakdown__header.underline.category
     +title-font-bold
@@ -41,20 +63,25 @@
 
 .desktop-pwp-breakdown-icon
     +dn
+
 .mobile-pwp-breakdown-icon
     +prdb
     width: 65%
     max-width: 250px
     margin: auto
 
-// pillar
+
+
+// ::::: PILLAR  :::::
 .pillar-container
     margin-top: $global_spacing
 
-//    closed at the beginning
+// closed at the beginning
 @mixin pillar-theme($name, $colour)
     .pillar--#{$name}
         .pillar-header, .pillar-item__content
+            position: relative
+            overflow: hidden
             +box-sizing
             display: none
             width: 100%
@@ -68,40 +95,50 @@
 
         .pillar-item__pill
             background-color: $colour
-
-    +pillar-theme(A-E, $pill_tab_gray)
-    +pillar-theme(F-N, $pill_tab_gray)
-    +pillar-theme(O-R, $pill_tab_gray)
-    +pillar-theme(S-Z, $pill_tab_gray)
-
-.pillar-item__pill
-    height: auto
-    //cursor: pointer
-    overflow: hidden
-    &::after
-        +padb
-        +width_height(20px, 20px)
-        top: calc(1.5rem - 10px)
-        right: 1rem
-        content: ""
-        background: url(../img/icon-open.png) center
-        background-size: contain
-        h4
-            color: white
-            line-height: 3rem
-            vertical-align: middle
-            padding: 0 4rem 0 1rem
-            font-size: 1em
-            font-family: "Oswald bold"
-
-        &.open
-            background-color: $wwb_blue
-            transition: 1s ease background-color
+            height: auto
+            cursor: pointer
+            overflow: hidden
             h4
                 color: white
+                vertical-align: middle
+                padding: 0 4rem 0 2rem
+                font-size: 1em
+                line-height: 3em
 
-            &::after
-                background-image: url(../img/icon-close.png)
+
++pillar-theme(A-E, $pill_tab_gray)
++pillar-theme(F-N, $pill_tab_gray)
++pillar-theme(O-R, $pill_tab_gray)
++pillar-theme(S-Z, $pill_tab_gray)
+
+.pillar-item
+    margin-bottom: 20px
+    letter-spacing: 1px
+
+.pillar-item__pill::after
+    +padb
+    +width_height(20px, 20px)
+    top: calc(1.5rem - 3px)
+    right: 1rem
+    content: ""
+    background: url(../img/icon-open.png) center
+    background-repeat: no-repeat
+    background-size: contain
+
+
+.pillar-item__pill.open
+    background-color: $wwb_blue
+    transition: 1s ease background-color
+
+.pillar-item__pill.open::after
+    +padb
+    +width_height(20px, 20px)
+    top: calc(1.5rem - 3px)
+    right: 1rem
+    content: ""
+    background: url(../img/icon-close.png) no-repeat
+    background-size: contain
+
 
 .pillar-item__content
     border-top: 0
@@ -109,8 +146,7 @@
     padding: 4% 7%
     width: 100%
     border-bottom: 1px solid $light_grey
-    h2 em
-        font-size: 1.5rem
+
 
 .pillar-item__content.download
     display: none
@@ -122,38 +158,6 @@
     padding: 1.5em 0
     background-color: $pill_download_background
 
-.download_title
-    +prdib
-    +title-font-regular
-    +width_height(100%, 2em)
-    float: left
-    text-decoration: none
-    top: -12px
-    span a
-        text-decoration: none
-        color: $medium_grey
-        position: relative
-        display: inherit
-    &:before
-        +prdib
-        +width_height(30px, 2.2em)
-        +top_left(-2px, -20px)
-        float: left
-        background: url(../img/download_arrow.png) no-repeat center center
-        border-right: 1px solid lightgrey
-        padding-right: 1.2rem
-        content: " "
-
-    &:after
-        +prdib
-        +title-font
-        +width_height(80px, 25px)
-        +padding_lr(.8em, 0)
-        float: right
-        border-left: 1px solid lightgrey
-        content: "PDF | 897KB"
-        text-align: center
-        margin: 0 auto
 
 #align-right_pdf_top,
 #align-right_pdf_bottom
@@ -174,28 +178,11 @@
     padding: 0
     background-color: #e9e7e7
 
-.pillar_content_bottom_left
-    width: 100%
-    color: $medium_grey
-    h4
-        margin-bottom: 50px
-        letter-spacing: 0
-        a
-            +pill-font-bold
-            text-decoration: none
-            text-transform: uppercase
-            color: $medium_grey
-            font-size: 1em
-            font-weight: 400
-            letter-spacing: .1em
-            line-height: 2.5em
-            &:after
-                +prdib
-                +width_height(20px, 20px)
-                content: ">"
-                margin-left: 5px
-                top: -2px
-                background: url(../img/nextArrow.png) no-repeat 0 0
+.pillar-item__content_h2-az em
+    margin-top: 15px
+    float: left
+    margin-right: 1em
+    color: rgb(102, 102, 102)
 
 .hero__social.az
     +prdib
@@ -216,31 +203,36 @@
     +title-font-regular
     float: left
     max-width: 200px
-    height: 37px
+    height: 3em
     text-align: center
     border-radius: 0
     border: 0
     background-color: $wwb_blue
-    padding-top: 5px
+    padding-top: 10px
     margin: 1rem 0
-    &:active
-        color: $wwb_blue
-    a
+    &:hover
         color: white
-        text-decoration: none
-        cursor: pointer
-        font-size: 1em
-        font-family: "Oswald Regular"
-        img
-            float: right
-            position: relative
-            width: 10px
-            height: 15px
-            top: 6px
-            left: 3px
-            margin-left: 5px
-            background-repeat: no-repeat
-            background-size: 9px 14px
+        background-color: $wwb_blue
+
+.btn-discover_a
+    color: white
+    text-decoration: none
+    cursor: pointer
+    font-size: 1.2em
+    font-family: "Oswald Regular"
+    &:hover
+        color: white
+
+img.btn-discover_img
+    float: right
+    position: relative
+    width: 10px
+    height: 15px
+    top: 4px
+    left: 0px
+    margin-left: 5px
+    background-repeat: no-repeat
+    background-size: 9px 14px
 
 .pillar_content.colorido-container,
 .pillar-container.pillar--A-E .pillar-item:nth-child(6) .btn.discover,
@@ -252,122 +244,118 @@
 #phil_report_right_btn
     display: block !important
 
-    .pillar_content_h4
-        width: 20%
+.pillar_content_h4
+    width: 20%
 
-    .pillar_content_bottom_left
-        div
-            float: left
-            top: -14px
+#download_policy,
+#download_report
+    width: 100%
+    background: #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
+    &:hover
+        background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
 
-    .pillar_content_bottom_left
-        h4
-            display: inline-block
-            float: left
-            +title-font-regular
-            +width_height(19%, 31px)
-            letter-spacing: 0
-            border-right: 1px solid lightgrey
-            padding-right: 20px
-            padding-top: 11px
-            margin-bottom: 0
-            text-align: center
-        div
-            width: 100%
-        a
-            +title-font-regular
-            +pr
-            top: -5px
-            width: 100%
-            font-size: 1rem
-            font-weight: 400
-            color: $wwb_blue
+#pdf_block1, #pdf_block2
+    display: block
+    background: #e9e7e7 url(../img/icon-separator.png) no-repeat 0 center
 
-    .related_topics
-        overflow: hidden
-        line-height: 10px
-        text-decoration: none
-        font-size: 14px
-        text-transform: uppercase
-        text-align: left
-        .related_topics_ul
-            list-style-type: none
-            margin: 0
-            overflow: hidden
-            li
-                float: left
-                position: relative
-                margin-left: 15px
-                top: 5px
-                &:first-child
-                    +title-font-bold
-                    margin-bottom: 20px
-                    text-align: left
-                    &:after
-                        +prdb
-                        +padding_lr(20px, 20px)
-                        +width_height(inherit,inherit)
-                        float: right
-                        background: url('../img/icon-separator.png') no-repeat 0 0
-                span
-                    padding-left: 0
-                    &.align-right
-                        display: inline-block
-                        padding-right: 40px
-                        float: left
-                        background: url('../img/icon-separator.png') no-repeat 120px 3px
-                a
-                    display: block
-                    +title-font-bold
-                    color: $wwb_blue
-                    text-decoration: none
-                    &:after
-                        content: ""
-                        position: absolute
-                        +width_height(30px, 12px)
-                        float: right
-                        top: 17px
-                        background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
-                        background-size: 7px 10px
-                    &:last-child
-                        padding-bottom: 10px
+.align-right
+    display: inline-block
+    padding-right: 40px
+    float: left
+    background: url('../img/icon-separator.png') no-repeat 120px 3px
 
-    #download_policy a,
-    #download_report a
-        width: 105%
-        background:  #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
-        &:hover
-            background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
+.related_topics
+    overflow: hidden
+    line-height: 10px
+    text-decoration: none
+    font-size: 14px
+    text-transform: uppercase
+    text-align: left
 
-    #pdf_block1,
-    #pdf_block2
-        display: block
-        background: #e9e7e7 url(../img/icon-separator.png) no-repeat 0 center
+//.related_topics_ul
+//    list-style-type: none
+//    margin: 0
+//    overflow: hidden
 
-    .download_title.gov:before
-        +prdib
-        +width_height(30px, 2.2em)
-        +top_left(-4px, -14px)
-        float: left
-        background: url(../img/download_arrow.png) no-repeat center center
-        border-right: 1px solid lightgrey
-        padding-right: 1rem
-        content: ""
+.related_topics_li
+    float: left
+    position: relative
+    margin-left: 15px
+    top: 5px
 
-    .social-media-icons#az_social_icon_ul,
-    .social-media-icons#gov_social_icon_ul
-        background: url(../img/menu_social.png) no-repeat center 0
-        background-size: 120px 25px
-        width: 120px
-        margin-top: 10px
-        height: 35px
-        li
-            width: 23%
+.related_topics_li:first-child
+    +title-font-bold
+    //margin-bottom: 20px
+    //text-align: left
 
-    .social-media-icons#gov_social_icon_ul
-        float: right
+//.related_topics_li:after
+//    +prdb
+//    +padding_lr(20px, 20px)
+//    +width_height(inherit,inherit)
+//    float: right
+//    background: url('../img/icon-separator.png') no-repeat 0 0
 
-    .h2-az em
-        margin-right: 1em
+.related_topics_li span
+    padding-left: 0
 
+.related_topics_li a
+    display: block
+    +title-font-bold
+    color: $wwb_blue
+    text-decoration: none
+
+//.related_topics_li::after
+//    content: " "
+//    float: right
+//    position: relative
+//    display: block
+//    width: 30px
+//    height: 15px
+//    top: -2px
+//    left: 3px
+    //background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
+    //background-size: 7px 10px
+    //position: absolute
+    +width_height(30px, 12px)
+    //float: right
+    //top: 17px
+    background: url(../img/icon-arrow-right--lightblue.png) no-repeat 4px 1px
+    background-size: 7px 10px
+
+.related_topics_li:last-child
+    padding-bottom: 10px
+    transition-duration: 0s
+
+//.download_title
+//    +prdib
+//    +title-font-regular
+//    +width_height(100%, 2em)
+//    float: left
+//    text-decoration: none
+//    top: -12px
+//    span a
+//        text-decoration: none
+//        color: $medium_grey
+//        position: relative
+//        display: inherit
+//    &:before
+//        +prdib
+//        +width_height(30px, 2.2em)
+//        +top_left(-2px, -20px)
+//        float: left
+//        background: url(../img/download_arrow.png) no-repeat center center
+//        border-right: 1px solid lightgrey
+//        padding-right: 1.2rem
+//        content: " "
+//
+//    &:after
+//        +prdib
+//        +title-font
+//        +width_height(80px, 25px)
+//        +padding_lr(.8em, 0)
+//        float: right
+//        border-left: 1px solid lightgrey
+//        content: "PDF | 897KB"
+//        text-align: center
+//        margin: 0 auto
 

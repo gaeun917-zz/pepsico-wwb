@@ -64,253 +64,274 @@ body
     padding: 0
     background-color: #fff
     color: rgb(102, 102, 102)
-    h1,h2,h3,h4
+h1,h2,h3,h4
+    text-transform: uppercase
+    +title-font
+    font-weight: 400 !important
+    letter-spacing: 2px
+
+    em
+        font-style: normal
+        +title-font-bold
+
+h1,h2,h3,h4,p,small
+    +no-select
+
+ul, li
+    list-style: none
+    padding: 0
+
+.page__content
+    +prdb
+    float: left
+    width: 100%
+    background-color: #d7d7d7
+
+.block-link
+    +padb
+    text-decoration: none
+    top: 13px
+    //+cover
+    //max-width: 161px
+    //max-height: 161px
+    border: 0
+
+.btn
+    +prdib
+    +box-sizing
+    +unstyled-anchor
+    +title-font
+    $height: 30px
+    height: $height
+    clear: both
+    line-height: ($height - 2px)
+    vertical-align: top
+    color: white
+    border: 1px solid white
+    border-radius: $height
+    padding: 0 22px
+    margin-top: 2rem
+    font-size: 1.2rem
+    text-align: center
+    text-transform: uppercase
+    background-color: rgba(0,0,0,0.5)
+    transition: 0.1s ease background-color
+
+    &:hover
+        background-color: rgba(0,0,0,0.8)
+
+    &:active
+        transition: none
+        background-color: rgba(255,255,255,0.8)
+        color: black
+
+.btn__icon
+    +prdib
+    height: 10px
+    margin: 9px -4px 0 5px
+    vertical-align: top
+
+.pillar_copy
+    float: left
+    +prdb
+    width: 100%
+    margin-top: 2%
+    margin-bottom: 4%
+    line-height: 130%
+
+.hero-gradient
+    +cover
+    +opacityz(0.5)
+    z-index: 3
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.74) 7%, rgba(0,0,0,0) 67%, rgba(0,0,0,0) 100%)
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.74) 0%,rgba(0,0,0,0.74) 7%,rgba(0,0,0,0) 67%,rgba(0,0,0,0) 100%)
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.74) 0%,rgba(0,0,0,0.74) 7%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd000000', endColorstr='#00000000',GradientType=1 )
+
+.copy
+    +prdb
+    margin-top: 8%
+    margin-bottom: 8%
+    line-height: 130%
+
+.hero--static__copy-container
+    +ontop
+
+.truncated
+    overflow: hidden
+    -webkit-transition: 0.3s ease height
+
+    .copy:nth-child(n+3)
+        +dn
+
+    .readz
+        +prdb
+        +width_height(100%, 30px)
+        +title-font-regular
+        cursor: pointer
         text-transform: uppercase
-        +title-font
-        font-weight: 400 !important
-        letter-spacing: 2px
+        line-height: 30px
 
-        em
-            font-style: normal
-            +title-font-bold
-
-    h1,h2,h3,h4,p,small
-        +no-select
-
-    ul, li
-        list-style: none
-        padding: 0
-
-    .block-link
-        +padb
-        text-decoration: none
-        top: 13px
-        //+cover
-        //max-width: 161px
-        //max-height: 161px
-        border: 0
-
-    .btn
-        +prdib
-        +box-sizing
-        +unstyled-anchor
-        +title-font
-        $height: 30px
-        height: $height
-        clear: both
-        line-height: ($height - 2px)
-        vertical-align: top
-        color: white
-        border: 1px solid white
-        border-radius: $height
-        padding: 0 22px
-        margin-top: 2rem
-        font-size: 1.2rem
-        text-align: center
-        text-transform: uppercase
-        background-color: rgba(0,0,0,0.5)
-        transition: 0.1s ease background-color
+        &::before
+            content: "Read more >"
 
         &:hover
-            background-color: rgba(0,0,0,0.8)
+            color: $wwb_blue
+    &.open
+        .copy
+            +db
 
-        &:active
-            transition: none
-            background-color: rgba(255,255,255,0.8)
-            color: black
-    .btn__icon
-        +prdib
-        height: 10px
-        margin: 9px -4px 0 5px
-        vertical-align: top
+        .readz::before
+            content: "< Read less"
 
-    .pillar_copy
-        float: left
-        +prdb
-        width: 100%
-        margin-top: 2%
-        margin-bottom: 4%
-        line-height: 130%
-
-    .hero-gradient
-        +cover
-        +opacityz(0.5)
-        z-index: 3
-        background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.74) 7%, rgba(0,0,0,0) 67%, rgba(0,0,0,0) 100%)
-        background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.74) 0%,rgba(0,0,0,0.74) 7%,rgba(0,0,0,0) 67%,rgba(0,0,0,0) 100%)
-        background: radial-gradient(ellipse at center,  rgba(0,0,0,0.74) 0%,rgba(0,0,0,0.74) 7%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%)
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd000000', endColorstr='#00000000',GradientType=1 )
-
-    .copy
-        +prdb
-        margin-top: 8%
-        margin-bottom: 8%
-        line-height: 130%
-
-    .hero--static__copy-container
-        +ontop
-
-    .truncated
-        overflow: hidden
-        -webkit-transition: 0.3s ease height
-
-        .copy:nth-child(n+3)
-            +dn
-
-        .readz
-            +prdb
-            +width_height(100%, 30px)
-            +title-font-regular
-            cursor: pointer
-            text-transform: uppercase
-            line-height: 30px
-
-            &::before
-                content: "Read more >"
-
-            &:hover
-                color: $wwb_blue
-        &.open
-            .copy
-                +db
-
-            .readz::before
-                content: "< Read less"
-
-    header
-        float: left
-        +prdb
-        +width_height(100%, auto)
-        background: no-repeat 0 0
-        background-size: cover
-        border-bottom: 0
-        img
-            float: left
-            width: 100%
-            height: inherit
-
-    .hero
-        padding: 0
-    .page__content
-        +prdb
+header
+    float: left
+    +prdb
+    +width_height(100%, auto)
+    background: no-repeat 0 0
+    background-size: cover
+    border-bottom: 0
+    img
         float: left
         width: 100%
-        background-color: #d7d7d7
+        height: inherit
 
-    // :: footer ::
-    $dk-blue: #1E83AE
-    $blue: #3D5B94
-    $light-blue: #3DACDD
-    $green: #6dcd9a
-    $social-size: .8em
-    $social-width: 20%
+.hero
+    padding: 0
 
-    footer
-        +width_height(100%, auto)
-        float: left
-        display: inline-block
-        position: relative
-        background-color: $dark_grey
-        line-height: 0
-        .logo_main
-            float: left
-            display: inline-block
-            width: auto
-            @media (max-width: 600px)
-            p
-                display: block
-                width: 60%
-                font-family: "Oswald light"
-                font-size: 0.8em
-                text-transform: uppercase
-                text-align: center
-                color: white
-                padding: 0
-                margin: 15px -5px
-                #copy_right
-                    +prdib
-                    height: inherit
-                    margin: auto
-                    top: -1px
 
-        .social
-            +prdib
-            width: 52%
-            text-transform: uppercase
-            float: left
-            margin-right: 68px
-            @media (max-width: 768px)
-                width: 100%
-                margin-top: 30px
-            a
-                float: left
-                font-family: 'Oswald Regular'
-                height: 60px
-                line-height: 92px
-                text-decoration: none
-                color: white
-                text-align: center
 
-    #separator
-        +prdib
-        +width_height(auto, 15px)
-        border-right: 1px solid lightgray
-        float: right
-        margin-top: 42px
-        margin-bottom: auto
+// :::: PAGE: FOOTER ::::
+$dk-blue: #1E83AE
+$blue: #3D5B94
+$light-blue: #3DACDD
+$green: #6dcd9a
+$social-size: .8em
+$social-width: 20%
 
-    .sitemap
-        font-size: $social-size
-        width: $social-width
-        height: 10px
-    .terms
-        font-size: $social-size
-        width: 26%
-    .privacy
-        font-size: $social-size
-        width: 22%
-    .more
-        font-size: $social-size
-        width: $social-width
+footer.colorido-footer
+    display: block
+    height: auto
+    position: relative
+    float: left
+    bottom: 0
+    width: 100%
+    background-color: #545454
+    box-sizing: content-box
 
-    .footer_container
-        +width_height(70%, 90px)
-        max-width: 1372px
-        margin: auto auto
-        padding-top: 20px
-        #footer_social
-            float: right
-            +prdn
-            width: 15%
-            //height: inherit
-            max-width: 464px
-            +margin_lr(auto, auto)
-            opacity: 1
+.footer_container
+    //+width_height(100%, auto)
+    float: left
+    display: inline-block
+    position: relative
+    background-color: $dark_grey
+    line-height: 0
+    +width_height(70%, auto)
+    //max-width: 1372px
+    margin: auto auto
+    padding-top: 20px
 
-    .social-media-icons
-        +prdib
-        +width_height(87%, 64px)
-        max-width: 390px
-        +margin_lr(auto,auto)
-        text-align: center
-        font-size: 12px
-        background: url(../img/Social_icon_white.png) no-repeat center 26px
-        background-size: 100% auto
-        opacity: 1
-        li
-            +prdb
-            float: left
-            width: 18%
-            padding: 0
-            margin: 0 1%
-            border-top: 0
-            list-style: none
-            a
-                display: block
-                +width_height(100%, 45px)
-                cursor: pointer
 
-    .logo_light
+
+.footer_logo_main
+    float: left
+    display: inline-block
+    width: auto
+    @media (max-width: 600px)
+    p
         display: block
-        width: 80%
+        width: 60%
+        font-family: "Oswald light"
+        font-size: 0.8em
+        text-transform: uppercase
+        text-align: center
+        color: white
+        padding: 0
+        margin: 15px -5px
+
+.logo_light
+    display: block
+    width: 80%
+
+#copy_right
+    +prdib
+    height: inherit
+    margin: auto
+    top: -1px
+
+.footer_list
+    +prdib
+    width: 52%
+    text-transform: uppercase
+    float: left
+    margin-right: 68px
+    @media (max-width: 768px)
+        width: 100%
+        margin-top: 30px
+    a
+        float: left
+        font-family: 'Oswald Regular'
+        height: 60px
+        line-height: 92px
+        text-decoration: none
+        color: white
+        text-align: center
+
+#separator
+    +prdib
+    +width_height(auto, 15px)
+    border-right: 1px solid lightgray
+    float: right
+    margin-top: 42px
+    margin-bottom: auto
+
+.sitemap
+    font-size: $social-size
+    width: $social-width
+    height: 10px
+.terms
+    font-size: $social-size
+    width: 26%
+.privacy
+    font-size: $social-size
+    width: 22%
+.more
+    font-size: $social-size
+    width: $social-width
+
+#footer_social
+    float: right
+    +prdn
+    width: 15%
+    //height: inherit
+    max-width: 200px
+    +margin_lr(auto, auto)
+    margin-top: 15px
+    opacity: 1
+
+.social-media-icons
+    +prdib
+    +width_height(87%, 64px)
+    max-width: 390px
+    +margin_lr(auto, auto)
+    text-align: center
+    font-size: 12px
+    background: url(../img/Social_icon_white.png) no-repeat center 26px
+    background-size: 100% auto
+    opacity: 1
+
+.social-media-icons_li
+    +prdb
+    float: left
+    width: 18%
+    padding: 0
+    margin: 0 1%
+    border-top: 0
+    list-style: none
+    a
+        display: block
+        +width_height(100%, 45px)
+        cursor: pointer
+
+
 
