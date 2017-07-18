@@ -22,10 +22,8 @@ h2.underline.gov
 
 .pillar-item__content.gov.right
     +prdb
-    padding: 0
     float: right
     width: 30%
-    float: left
     +width_height(100%, auto)
     position: relative
     display: block
@@ -47,7 +45,6 @@ h2.underline.gov
     width: 100% !important
     float: left
     padding-right: 30px
-    //padding-left: 4%
     word-break: normal
     color: rgb(102, 102, 102)
     h2
@@ -64,23 +61,13 @@ h2.underline.gov
     float: left
     margin-bottom: 5%
 
-
-
 .pillar_copy.gov
     font-family: "Arial", "Helvetica", sans-serif
     font-size: 14px
     font-style: normal
     font-variant: normal
 
-// related topics bottom
-.mobile.pillar_content_bottom_left.gov
-    display: block
-    float: left
-    width: 100%
-    padding-top: 25px
-    margin-bottom: 25px
-    border-top: 4px solid $wwb_blue
-    border-bottom: 4px solid #00b7ee
+// related topics
 
 .pillar_content_bottom_right
     +prdib
@@ -104,9 +91,6 @@ h2.underline.gov
     display: block
     position: relative
 
-#desktop_related_topic_section
-    display: none
-
 .related_topic_div
     a
         text-decoration: none
@@ -126,14 +110,19 @@ h2.underline.gov
         top: -2px
         background: url(../img/nextArrow.png) no-repeat 0 0
 
+#desktop_related_topic_section
+    display: none
+
+#mobile_related_topic_section
+    display: block
+
 .pillar_content_bottom_left h4,
 .pillar_content_bottom_right h4
     +title-font-bold
-    width: auto
+    width: 100%
     margin-bottom: 20px
     letter-spacing: 0
     color: $medium_grey
-
 
 .pillar_content_bottom_left.gov
     display: none
@@ -160,7 +149,6 @@ h2.underline.gov
         top: -2px
         background: url(../img/nextArrow.png) no-repeat 0 0
 
-
 .pillar-item__content.download.gov
     display: block
     height: 40px
@@ -182,12 +170,7 @@ h2.underline.gov
 .hero
     padding: 0
 
-//.hero__social.gov
-//    +prdib
-//    +width_height(100%, 50px)
-//    float: left
-
-.h2-az.gov
+.pillar_content_right-header
     float: left
     width: inherit
     margin: 20px 0
@@ -231,10 +214,13 @@ h2.underline.gov
     background-size: cover
     margin-bottom: 20px
 
-//#gov_iframe
-//    //width: 100%
-//    max-width: 300px
-//    height: auto
+#gov_iframe
+    margin-bottom: 20px
+    max-width: 1000px
+    height: auto
+
+#leadership_img
+    margin-bottom: 20px
 
 #az_social_icon_ul,
 #gov_social_icon_ul
