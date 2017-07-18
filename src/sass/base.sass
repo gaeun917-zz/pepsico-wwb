@@ -236,9 +236,10 @@ figure
 
 
 
-// ::::: HIGHLIGHT :::::
+// ::::: PAGE: PWP-HIGHLIGHT :::::
 .highlight
     +prdb
+    float: left
     background-color: $extralight_grey
     overflow: hidden
     padding: $global_spacing 0
@@ -277,10 +278,13 @@ figure
     text-align: center
     color: white
     z-index: -1000
+    .colorido-container
+        padding-left: 0
+        padding-right: 0
 
 .explore-item
     +prdib
-    width: 50% - $global_spacing / 2
+    width: 45%
     padding-top: (100% - $global_spacing * 2) / 2
     margin-top: $global_spacing
     overflow: hidden
@@ -357,7 +361,7 @@ figure
 // :::::  MISCELLANEOUS :::::
 .download
     a
-        overflow: hidden
+        //overflow: hidden
         width: 100%
         top: -23px
         left: 0
@@ -382,5 +386,4 @@ figure
             +title-font
             +padding_lr(10px, 10px)
             background: url('../img/icon-separator.png') no-repeat 0 center
-//          //  background color : #e1e1e1
 

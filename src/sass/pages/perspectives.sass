@@ -5,11 +5,13 @@
             font-size: 2.5rem
             line-height: 3rem
 
+
 // ::::: SEARCH BAR :::::
 .search-blue.az
-    position: relative
-    display: block
     padding: 64px 0
+    +prdb
+    float: left
+    width: 100%
     h3
         font-family: "Oswald Bold"
         margin-top: 10px
@@ -26,13 +28,15 @@ form#search_bar
 
 // ::::: SUMMARY HEADER  :::::
 .pwp-breakdown
-    position: relative
-    display: block
+    +prdb
     padding: 8% 0
     background-color: #d7d6d3
     background-size: 180% auto
     background-repeat: no-repeat
     background-position: center top
+    float: left
+    width: 100%
+    color: #cdccc9
 
 #colorido-container
     padding-left: 0
@@ -52,12 +56,10 @@ form#search_bar
 .pwp-breakdown__header.underline.category
     +title-font-bold
     font-size: 2.2em
-    margin-top: 0
+    margin-top: 1em
     margin-bottom: 1em
 
 .pwp-breakdown__header.underline.topics
-    //margin: 40px 0 !important
-    //margin: 0 0 !important
     padding: 40px 0
     background-color: silver
     line-height: normal
@@ -74,10 +76,10 @@ form#search_bar
     margin: auto
 
 
-
 // ::::: PILLAR  :::::
 .pillar-container
     margin-top: $global_spacing
+    margin-bottom: $global_spacing
 
 // closed at the beginning
 @mixin pillar-theme($name, $colour)
@@ -108,14 +110,12 @@ form#search_bar
                 font-size: 1em
                 line-height: 3em
 
-
 +pillar-theme(A-E, $pill_tab_gray)
 +pillar-theme(F-N, $pill_tab_gray)
 +pillar-theme(O-R, $pill_tab_gray)
 +pillar-theme(S-Z, $pill_tab_gray)
 
 .pillar-item
-    +padb
     margin-bottom: 20px
     letter-spacing: 1px
 
@@ -161,7 +161,6 @@ form#search_bar
     margin-bottom: 5px
     padding: 1.5em 0
     background-color: $pill_download_background
-
 
 
 #align-right_pdf_top,
@@ -280,6 +279,8 @@ img.btn-discover_img
 .topics
     line-height: normal
     font-size: 12.5px
+    background-color: #cdccc9
+
 
 .related_topics
     overflow: hidden
@@ -303,33 +304,16 @@ img.btn-discover_img
 
 .related_topics_li:first-child
     +title-font-bold
-    //margin-bottom: 20px
-    //text-align: left
-
-//.related_topics_li:after
-//    +prdb
-//    +padding_lr(20px, 20px)
-//    +width_height(inherit,inherit)
-//    float: right
-//    background: url('../img/icon-separator.png') no-repeat 0 0
 
 .related_topics_li span
     padding-left: 0
+    color: #616161
 
 .related_topics_li a
     display: block
     +title-font-bold
     color: $wwb_blue
     text-decoration: none
-
-//.related_topics_li:not(:first-child):after
-    //+prdib
-    //+width_height(20px, 20px)
-    //content: ">"
-    //margin-left: 5px
-    //float: right
-    //top: -2px
-    //background: url(../img/nextArrow.png) no-repeat 0 0
 
 .related_topics_li:last-child
     padding-bottom: 10px
@@ -353,39 +337,3 @@ img.btn-discover_img
     background-size: 7px 10px
     +width_height(30px, 12px)
     background-size: 7px 10px
-
-
-
-//.download_title
-//    +prdib
-//    +title-font-regular
-//    +width_height(100%, 2em)
-//    float: left
-//    text-decoration: none
-//    top: -12px
-//    span a
-//        text-decoration: none
-//        color: $medium_grey
-//        position: relative
-//        display: inherit
-//    &:before
-//        +prdib
-//        +width_height(30px, 2.2em)
-//        +top_left(-2px, -20px)
-//        float: left
-//        background: url(../img/download_arrow.png) no-repeat center center
-//        border-right: 1px solid lightgrey
-//        padding-right: 1.2rem
-//        content: " "
-//
-//    &:after
-//        +prdib
-//        +title-font
-//        +width_height(80px, 25px)
-//        +padding_lr(.8em, 0)
-//        float: right
-//        border-left: 1px solid lightgrey
-//        content: "PDF | 897KB"
-//        text-align: center
-//        margin: 0 auto
-

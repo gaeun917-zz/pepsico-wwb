@@ -136,11 +136,9 @@ ul, li
 .pillar_copy
     float: left
     +prdb
-    //width: 100%
     margin-top: 30px
-    //margin-bottom: 4%
     line-height: 130%
-
+    color: #666666
 .hero-gradient
     +cover
     +opacityz(0.5)
@@ -186,14 +184,17 @@ ul, li
         .readz::before
             content: "< Read less"
 
-header
+#colorido_header
     float: left
     +prdb
     +width_height(100%, auto)
     background: no-repeat 0 0
     background-size: cover
     border-bottom: 0
+    float: left
+    width: 100%
     img
+        +prdb
         float: left
         width: 100%
         height: inherit
@@ -300,16 +301,6 @@ footer.colorido-footer
 .more
     font-size: $social-size
     width: $social-width
-
-//#footer_social
-//    float: right
-//    +prdn
-//    width: 15%
-//    //height: inherit
-//    max-width: 200px
-//    +margin_lr(auto, auto)
-//    margin-top: 15px
-//    opacity: 1
 
 .social-media-icons
     +prdib

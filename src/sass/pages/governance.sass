@@ -1,16 +1,15 @@
+// header cover
 .pwp-breakdown.gov
     float: left
     +width_height(100%, auto)
     position: relative
     display: block
+    color: #666666
     background-color: #d7d6d3
+    padding: 0 0 3%
 
-.colorido-container.gov
-    padding: 0
-    //+prdb
-    //border-top: 0
-    //margin: 0 auto
-    //width: 88% !important
+.pwp-breakdown.gov.header
+    padding: 3% 0
 
 h2.underline.gov
     font-family: 'Oswald Light'
@@ -21,11 +20,34 @@ h2.underline.gov
         margin: 1rem auto 2rem auto
         height: 4px
 
+.pillar-item__content.gov.right
+    +prdb
+    padding: 0
+    float: right
+    width: 30%
+    float: left
+    +width_height(100%, auto)
+    position: relative
+    display: block
+    color: #666666
+    background-color: #d7d6d3
+    padding: 0 0 3% 0
+
+.colorido-container.gov
+    padding: 0
+
+.colorido-container.gov.right
+    margin: 0
+    padding: 0
+    width: 100% !important
+
 .colorido-container.gov.left
     margin: 0
     padding: 0
     width: 100% !important
     float: left
+    padding-right: 30px
+    //padding-left: 4%
     word-break: normal
     color: rgb(102, 102, 102)
     h2
@@ -42,10 +64,7 @@ h2.underline.gov
     float: left
     margin-bottom: 5%
 
-.colorido-container.gov.right
-    margin: 0
-    padding: 0
-    width: 100% !important
+
 
 .pillar_copy.gov
     font-family: "Arial", "Helvetica", sans-serif
@@ -54,9 +73,10 @@ h2.underline.gov
     font-variant: normal
 
 // related topics bottom
-.pillar_content_bottom_left.gov.second
+.mobile.pillar_content_bottom_left.gov
     display: block
     float: left
+    width: 100%
     padding-top: 25px
     margin-bottom: 25px
     border-top: 4px solid $wwb_blue
@@ -64,18 +84,47 @@ h2.underline.gov
 
 .pillar_content_bottom_right
     +prdib
-    float: left
+    float: right
     width: 100%
     padding-left: 3rem
 
 .pillar_content_bottom_right.gov
-    +prdib
+    +prdb
     +width_height(100%, auto)
+    float: right
     padding-left: 0
     margin-bottom: 20px
     border-bottom: 4px solid $wwb_blue
     div:last-child
         margin-bottom: 20px
+
+.pillar_content.colorido-container.gov.right
+    float: right
+    width: 30%
+    display: block
+    position: relative
+
+#desktop_related_topic_section
+    display: none
+
+.related_topic_div
+    a
+        text-decoration: none
+        text-transform: uppercase
+        line-height: 2em
+        font-family: "Oswald Regular"
+        position: relative
+        font-size: 1.5rem
+        color: #00b7ee
+    a:after
+        position: relative
+        display: inline-block
+        width: 20px
+        height: 20px
+        content: ">"
+        margin-left: 5px
+        top: -2px
+        background: url(../img/nextArrow.png) no-repeat 0 0
 
 .pillar_content_bottom_left h4,
 .pillar_content_bottom_right h4
@@ -95,15 +144,12 @@ h2.underline.gov
     div:last-child
         margin-bottom: 20px
 
-
 .pillar_content_bottom_left a
     text-decoration: none
     text-transform: uppercase
     line-height: 2em
     +title-font-regular
     +pr
-    //top: -5px
-    //width: 100%
     font-size: 1.5rem
     color: $wwb_blue
     &:after
@@ -124,54 +170,22 @@ h2.underline.gov
     top: 0
     font-size: 12px
     line-height: 40px
-    background:  url(../img/icon-dowload.png) no-repeat 0 0
+    background: #e9e7e7 url(../img/icon-dowload.png) no-repeat 0 0
     &:hover
-        background: url('../img/icon-dowload-blue.png') no-repeat 0 center
+        background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
 
 //a-z pill
-
-#gov_iframe
-    max-width: 300px
-    max-height: 250px
-
 .btn
     display: none
     cursor: pointer
 
-//#social
-//    +prdib
-//    +width_height(150px, 30px)
-//    float: right
-//    max-width: 180px
-//    margin: 20px auto 0 auto
-//    font-size: 12px
-//    opacity: 1
-//    background: url(../img/menu_social.png) no-repeat 0 0
-//    background-size: 82% auto
-//    li
-//        +prdb
-//        +width_height(26px, 26px)
-//        +top_right(-13px, -7px)
-//        float: left
-//        padding: 0
-//        margin: 0 0 0 5%
-//        a
-//            display: block
-//            +width_height(26px, 26px)
-//            margin: 0
-//            cursor: pointer
-
 .hero
     padding: 0
 
-.hero__social.gov
-    +prdib
-    +width_height(100%, 50px)
-    float: left
-    //a
-    //    +prdib
-    //    margin-bottom: 0
-    //    float: right
+//.hero__social.gov
+//    +prdib
+//    +width_height(100%, 50px)
+//    float: left
 
 .h2-az.gov
     float: left
@@ -182,11 +196,11 @@ h2.underline.gov
         +prdib
         font-size: 1em
 
-div#footer_social
+.footer_social
     +prdib
     float: right
     width: auto
-    margin-bottom: 0
+    margin-bottom: 0 !important
     margin-top: 0
 
 #gov_social_icon_ul
@@ -196,8 +210,6 @@ div#footer_social
 
 .hero__social-item
     float: right
-
-
 
 #related_topic_mobile
     border-top: 4px solid $wwb_blue
@@ -217,11 +229,12 @@ div#footer_social
     width: 100%
     height: auto
     background-size: cover
+    margin-bottom: 20px
 
-#leadership_img
-    width: 100%
-    max-width: 900px
-    height: auto
+//#gov_iframe
+//    //width: 100%
+//    max-width: 300px
+//    height: auto
 
 #az_social_icon_ul,
 #gov_social_icon_ul
@@ -236,10 +249,6 @@ div#footer_social
 #az_social_icon_ul
     margin-top: 17px
     float: left
-
-.pillar-item__content.gov.right
-    +db
-    padding: 0
 
 .pillar-item__content_h2-az
     margin-bottom: 20px

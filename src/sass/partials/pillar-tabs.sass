@@ -1,91 +1,105 @@
 .pillar-tabs
     background-color: $light_grey
     overflow: hidden
+    +prdb
+    float: left
+    width: 100%
+    margin: 0 auto
+    overflow: visible
     padding: 6% 0
-    .pillar-tab__heading
+
+    &:before
+        content: ""
+        +padb
+        +box-sizing
+        +width_height(100%, 120px)
+        +top_left(0, 0)
+        padding: 6% 0
+
+.pillar-tab__heading
+    +prdb
+    width: 100%
+    z-index: 5
+    cursor: pointer
+    margin-top: 0
+
+    span
         +prdb
+        +no-pointer-events
+        +no-select
         width: 100%
-        z-index: 5
-        cursor: pointer
+        padding: $global_spacing*1.4 0
+        text-align: center
+        color: gray
+        text-transform: uppercase
+        +title-font-bold
+        $typesize: 1 rem
+        font-size: $typesize
+        line-height: $typesize
+        background-color: #cdccc9
+        z-index: 2
+
+    &:after
+        display: none
+        top: 100%
+        left: 50%
+        width: 0
+        height: 0
+        border: solid transparent
+        content: " "
+        position: absolute
+        pointer-events: none
+        border-color: rgba(136, 183, 213, 0)
+        border-top-color: #00b7ee
+        border-width: 16px
+        margin-left: -16px
+
+        -webkit-transition: 0.2s ease-out -webkit-transform
+        -moz-transition: 0.2s ease-out -moz-transform
+        -ms-transition: 0.2s ease-out -ms-transform
+        -o-transition: 0.2s ease-out -o-transform
+        transition: 0.2s ease-out transform
+
+    &:hover
+        background-color: $wwb_blue
+.pillar-tab__content
+    +prdn
+    padding: $global_spacing 0
+    img
+        position: relative
+        width: 100%
+        float: right
+        max-width: 400px
+        height: auto
+        margin: auto
+        margin-left: 4%
+        margin-bottom: 4%
+        margin-top: 4%
+
+    h2
         margin-top: 0
 
+    p:last-child
+        +prdb
+        width: 100%
+        content: ""
+        //height: 3px
+        height: auto
+        //background-color: $wwb_darkblue
+        margin: 1rem auto 0 auto
+
+.pillar-tab.active
+    .pillar-tab__heading
         span
-            +prdb
-            +no-pointer-events
-            +no-select
-            width: 100%
-            padding: $global_spacing*1.4 0
-            text-align: center
-            color: gray
-            text-transform: uppercase
-            +title-font-bold
-            $typesize: 1 rem
-            font-size: $typesize
-            line-height: $typesize
-            background-color: #cdccc9
-            z-index: 2
+            background-color: $wwb_blue !important
+            color: white
 
         &:after
-            display: none
-            top: 100%
-            left: 50%
-            width: 0
-            height: 0
-            border: solid transparent
-            content: " "
-            position: absolute
-            pointer-events: none
-            border-color: rgba(136, 183, 213, 0)
-            border-top-color: #00b7ee
-            border-width: 16px
-            margin-left: -16px
+            display: block
 
-            -webkit-transition: 0.2s ease-out -webkit-transform
-            -moz-transition: 0.2s ease-out -moz-transform
-            -ms-transition: 0.2s ease-out -ms-transform
-            -o-transition: 0.2s ease-out -o-transform
-            transition: 0.2s ease-out transform
 
-        &:hover
-            background-color: $wwb_blue
     .pillar-tab__content
-        +prdn
-        padding: $global_spacing 0
-        img
-            position: relative
-            width: 100%
-            float: right
-            max-width: 400px
-            height: auto
-            margin: auto
-            margin-left: 4%
-            margin-bottom: 4%
-            margin-top: 4%
-
-        h2
-            margin-top: 0
-
-        p:last-child
-            +prdb
-            width: 100%
-            content: ""
-            //height: 3px
-            height: auto
-            //background-color: $wwb_darkblue
-            margin: 1rem auto 0 auto
-
-    .pillar-tab.active
-        .pillar-tab__heading
-            span
-                background-color: $wwb_blue !important
-                color: white
-
-            &:after
-                display: block
-
-
-        .pillar-tab__content
-            +db
+        +db
 
 //.pillar-tab__heading:active span
     //background-color: $wwb_blue !important

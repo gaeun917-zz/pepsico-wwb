@@ -68,7 +68,7 @@
         "link": "http://howwillwe-staging.herokuapp.com",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home pwp products people planet "
+        "pages": "home perspectives pwp products people planet "
     },
     "9": {
         "heading": "perspectives",
@@ -76,7 +76,7 @@
         "link": "http://howwillwe-staging.herokuapp.com",
         "external": true,
         "overlay-colour": "#005d91",
-        "pages": "home pwp products people planet"
+        "pages": "home pwp  perspectives products people planet"
     },
     "10": {
         "heading": "CROSS LINK ONE",
