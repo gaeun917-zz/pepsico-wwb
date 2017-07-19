@@ -5,6 +5,8 @@
       {
         "item-header": "Added sugar Reduction",
         "item-image-filename": "",
+        "item-download": ["Download Policy", "Download Policy2"],
+        "item-pdf": ["897"],
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -13,6 +15,8 @@
       {
         "item-header": "Advertising & Marketing ",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -21,6 +25,8 @@
       {
         "item-header": "Agriculture",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy", "Download Policy3"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -29,6 +35,8 @@
       {
         "item-header": "Alternatives to Animal Testing",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -37,6 +45,8 @@
       {
         "item-header": "Carmel Coloring",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy", "Download Policy3"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -45,6 +55,8 @@
       {
         "item-header": "Climate Change/Carbon Emissions",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy", "Download Policy3"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -53,6 +65,8 @@
       {
         "item-header": "Deforestation",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy", "Download Policy3"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -61,6 +75,8 @@
       {
         "item-header": "Eliminate Waste",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -69,6 +85,8 @@
       {
         "item-header": "Environmental Health & Safety",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -77,6 +95,8 @@
       {
         "item-header": "ESG Materiality",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy", "Download Policy3"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -90,6 +110,8 @@
       {
         "item-header": "Farm Animal Welfare",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2",  "Download Policy3"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -98,6 +120,8 @@
       {
         "item-header": "Fleet",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -106,6 +130,8 @@
       {
         "item-header": "Gender Parity",
         "item-image-filename": "",
+        "item-download":["Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -114,6 +140,8 @@
       {
         "item-header": "Generically Modified Crops",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -122,6 +150,8 @@
       {
         "item-header": "GRI Index",
         "item-image-filename": "",
+        "item-download":["Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -130,6 +160,8 @@
       {
         "item-header": "HFCS",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -138,6 +170,8 @@
       {
         "item-header": "HIV/AIDS",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -151,6 +185,8 @@
       {
         "item-header": "Palm Oil",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -159,6 +195,8 @@
       {
         "item-header": "Pay Equity",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -167,6 +205,8 @@
       {
         "item-header": "Political Activities, Political Contributions & Issue Advocacy",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -175,6 +215,8 @@
       {
         "item-header": "Positive Nutrition",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -183,6 +225,8 @@
       {
         "item-header": "Positive Water Impact",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -191,6 +235,8 @@
       {
         "item-header": "Product Quality & Safety",
         "item-image-filename": "",
+        "item-download":["Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -199,6 +245,8 @@
       {
         "item-header": "Public Policy",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -207,6 +255,8 @@
       {
         "item-header": "Renewable Energy",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -215,6 +265,8 @@
       {
         "item-header": "Responsible Research",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -228,6 +280,8 @@
       {
         "item-header": "Saturated Fat Reduction",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -236,6 +290,8 @@
       {
         "item-header": "Sodium Reduction",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -244,6 +300,8 @@
       {
         "item-header": "Stakeholder Engagement",
         "item-image-filename": "",
+        "item-download":["Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -252,6 +310,8 @@
       {
         "item-header": "Generically Modified Crops",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -260,6 +320,8 @@
       {
         "item-header": "Supplier Diversity",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -268,6 +330,8 @@
       {
         "item-header": "Sustainability Governance",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -276,6 +340,8 @@
       {
         "item-header": "Sustainable Packaging",
         "item-image-filename": "",
+        "item-download":["Download Policy", "Download Policy2", "Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."
@@ -284,6 +350,8 @@
       {
         "item-header": "Sustainable Sourcing",
         "item-image-filename": "",
+        "item-download":["Download Policy"],
+        "item-pdf": "897",
         "item-copy": [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.",
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex, illum itaque, iusto aliquam."

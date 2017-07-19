@@ -31,13 +31,11 @@ h2.underline.gov
     background-color: #d7d6d3
     padding: 0 0 3% 0
 
+#pillar_header_gov-img
+    border-bottom: transparent
+
 .colorido-container.gov
     padding: 0
-
-.colorido-container.gov.right
-    margin: 0
-    padding: 0
-    width: 100% !important
 
 .colorido-container.gov.left
     margin: 0
@@ -47,6 +45,7 @@ h2.underline.gov
     padding-right: 30px
     word-break: normal
     color: rgb(102, 102, 102)
+    margin-bottom: 5%
     h2
         margin-bottom: 20px
     em
@@ -57,18 +56,14 @@ h2.underline.gov
         padding: 0
         background: transparent
 
-.pillar-item__content.gov.left
-    float: left
-    margin-bottom: 5%
-
 .pillar_copy.gov
     font-family: "Arial", "Helvetica", sans-serif
     font-size: 14px
     font-style: normal
     font-variant: normal
 
-// related topics
 
+// related topics
 .pillar_content_bottom_right
     +prdib
     float: right
@@ -84,6 +79,16 @@ h2.underline.gov
     border-bottom: 4px solid $wwb_blue
     div:last-child
         margin-bottom: 20px
+
+.pillar_content_bottom_right h4
+    +title-font-bold
+    width: 100%
+    margin-bottom: 20px
+    letter-spacing: 0
+    color: $medium_grey
+    em
+        +prdib
+        font-size: 1em
 
 .pillar_content.colorido-container.gov.right
     float: right
@@ -115,39 +120,9 @@ h2.underline.gov
 
 #mobile_related_topic_section
     display: block
-
-.pillar_content_bottom_left h4,
-.pillar_content_bottom_right h4
-    +title-font-bold
-    width: 100%
-    margin-bottom: 20px
-    letter-spacing: 0
-    color: $medium_grey
-
-.pillar_content_bottom_left.gov
-    display: none
-    div
-        float: left
-        top: -14px
-        width: 100%
-    div:last-child
-        margin-bottom: 20px
-
-.pillar_content_bottom_left a
-    text-decoration: none
-    text-transform: uppercase
-    line-height: 2em
-    +title-font-regular
-    +pr
-    font-size: 1.5rem
-    color: $wwb_blue
-    &:after
-        +prdib
-        +width_height(20px, 20px)
-        content: ">"
-        margin-left: 5px
-        top: -2px
-        background: url(../img/nextArrow.png) no-repeat 0 0
+    border-top: 4px solid #00b7ee
+    h4
+        margin-top: 20px
 
 .pillar-item__content.download.gov
     display: block
@@ -170,14 +145,14 @@ h2.underline.gov
 .hero
     padding: 0
 
-.pillar_content_right-header
-    float: left
-    width: inherit
-    margin: 20px 0
-    padding-right: 0
-    em
-        +prdib
-        font-size: 1em
+//.pillar_content_right-header
+//    float: left
+//    width: inherit
+//    margin: 20px 0
+//    padding-right: 0
+//    em
+//        +prdib
+//        font-size: 1em
 
 .footer_social
     +prdib
@@ -190,15 +165,6 @@ h2.underline.gov
     margin-top: 0
     margin-bottom: 0
     float: right
-
-.hero__social-item
-    float: right
-
-#related_topic_mobile
-    border-top: 4px solid $wwb_blue
-    display: block
-    h4
-        margin-top: 30px
 
 .download_title.gov
     top: -4px
@@ -221,6 +187,8 @@ h2.underline.gov
 
 #leadership_img
     margin-bottom: 20px
+    height: auto
+    width: 100%
 
 #az_social_icon_ul,
 #gov_social_icon_ul
@@ -231,10 +199,3 @@ h2.underline.gov
     height: 35px
     li
         width: 23%
-
-#az_social_icon_ul
-    margin-top: 17px
-    float: left
-
-.pillar-item__content_h2-az
-    margin-bottom: 20px

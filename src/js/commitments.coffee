@@ -22,7 +22,6 @@ class Commitments
             $(content).slideToggle()
         , 1)
 
-
     initDom: =>
 
         @pills              = $('.pillar-item__pill')
