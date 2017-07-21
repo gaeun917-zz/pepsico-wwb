@@ -12,9 +12,10 @@ page_id:        "perspectives"
     <section class="pwp-breakdown topics">
         <div class="colorido-container" id="colorido-container">
             <div class="pwp-breakdown-copy">
-                <h2 class="pwp-breakdown__header underline" id="summary_header-h2">A-Z <em>Topics</em> </h2>
+                <h2 class="pwp-breakdown__header underline" id="summary_header-h2">A-Z <em>Topics</em></h2>
                 <p class="topics">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minimLorem ipsum dolor sit amet,
+                    sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
+                    sit amet,
                     consectetur adipisicing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimLorem ipsum dolor
                     sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -55,7 +56,7 @@ page_id:        "perspectives"
                             <div class="pillar-item__content closed">
                                 <h2 class="pillar-item__content_h2-az"><em>{{this.item-header}}</em>
                                     <div id="footer_social az_social_icon">
-                                        <ul class="social-media-icons" id="az_social_icon_ul" >
+                                        <ul class="social-media-icons" id="az_social_icon_ul">
                                             <li class="social-media-icons_li"><a class="facebook" href="#"></a></li>
                                             <li class="social-media-icons_li"><a class="twitter" href="#"></a></li>
                                             <li class="social-media-icons_li"><a class="linkedIn" href="#"></a></li>
@@ -75,17 +76,27 @@ page_id:        "perspectives"
 
                             {{#each this.item-download}}
                                 <div class="pillar-item__content download closed">
+                                    <form class="pillar-item__content_lang" method="GET" action="">
+                                        <select class="pillar-item__content_lan-select">
+                                            <option value="1">select a language...</option>
+                                            <option value="2">language 1</option>
+                                            <option value="3">language 2</option>
+                                            <option value="3">language 3</option>
+                                            <option value="3">language 4</option>
+                                        </select>
+                                    </form>
                                     <a href="#" id="download_policy">
                                         <span>{{this}}</span>
-                                        <span class="align-right" id="pdf_block1">PDF | {{this.item-pdf}}KB</span>
                                     </a>
+                                    <span class="align-right" id="pdf_block1">PDF | {{this.item-pdf}}KB</span>
                                 </div>
                             {{/each}}
 
                             <div class="pillar-item__content closed bottom">
                                 <div class="related_topics">
                                     <ul href="#" class="related_topics_ul">
-                                        <li class="related_topics_li"><span class="align-right">Related Topics</span></li>
+                                        <li class="related_topics_li"><span class="align-right">Related Topics</span>
+                                        </li>
                                         <li class="related_topics_li"><a href="#">Deforestation</a></li>
                                         <li class="related_topics_li"><a href="#">Farm Animal Welfare</a></li>
                                         <li class="related_topics_li"><a href="#">Palm Oil</a></li>

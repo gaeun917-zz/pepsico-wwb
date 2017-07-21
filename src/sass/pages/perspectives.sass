@@ -30,7 +30,7 @@ form#search_bar
 .pwp-breakdown
     +prdb
     padding: 8% 0
-    background-color: #d7d6d3
+    background-color: $background_grey
     background-size: 180% auto
     background-repeat: no-repeat
     background-position: center top
@@ -103,6 +103,7 @@ form#search_bar
             height: auto
             cursor: pointer
             overflow: hidden
+            margin-bottom: 10px
             h4
                 color: white
                 vertical-align: middle
@@ -143,10 +144,9 @@ form#search_bar
     background: url(../img/icon-close.png) no-repeat
     background-size: contain
 
-
 .pillar-item__content
     border-top: 0
-    margin-bottom: 10px
+    margin-bottom: 5px
     padding: 4% 7%
     width: 100%
     border-bottom: 1px solid $light_grey
@@ -154,14 +154,26 @@ form#search_bar
 
 .pillar-item__content.download
     display: none
-    +width_height(100%, 1em)
+    +width_height(100%, 50px)
     overflow: hidden
     cursor: pointer
     margin: auto
     margin-bottom: 5px
-    padding: 1.5em 0
+    padding:  0
     background-color: $pill_download_background
 
+.pillar-item__content_lang
+    display: inline-block
+    position: relative
+    float: left
+    line-height: 48px
+    margin-left: 20px
+    margin-right: 10px
+    color: rgb(97, 97, 97)
+
+.pillar-item__content_lan-select
+    width: 170px
+    font-size: 12px
 
 #align-right_pdf_top,
 #align-right_pdf_bottom
@@ -259,16 +271,21 @@ img.btn-discover_img
 .pillar_content_h4
     width: 20%
 
-#download_policy,
-#download_report
+#download_policy span:first-child,
+#download_report span:first-child
     width: 100%
     background: #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
+    padding-top: 5px
+    padding-bottom: 5px
     &:hover
         background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
 
 #pdf_block1, #pdf_block2
     display: block
-    background: #e9e7e7 url(../img/icon-separator.png) no-repeat 0 center
+    background: url(../img/icon-separator.png) no-repeat 0 center
+    height: inherit
+    line-height: 48px
+    color: rgb(97, 97, 97)
 
 .align-right
     display: inline-block
@@ -338,6 +355,6 @@ img.btn-discover_img
     +width_height(30px, 12px)
     background-size: 7px 10px
 
-#az_social_icon_ul
+.social-media-icons#az_social_icon_ul
     margin-top: 17px
     float: left

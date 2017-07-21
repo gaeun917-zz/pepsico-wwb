@@ -53,9 +53,12 @@ app.get('/commitments', routes.commitments);
 app.get('/people', routes.people);
 app.get('/pwp', routes.pwp);
 app.get('/perspectives', routes.perspectives);
+app.get('/perspectives_dropdown', routes.perspectives_dropdown);
 app.get('/products', routes.products);
 app.get('/recipes', routes.recipes);
 app.get('/governance', routes.governance);
+app.get('/governance_dropdown', routes.governance_dropdown);
+
 app.get('/governance_video', routes.governance_video);
 app.get('/philanthropy', routes.philanthropy);
 

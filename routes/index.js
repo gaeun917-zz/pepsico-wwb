@@ -29,7 +29,9 @@ exports.pwp = function (req, res) {
 exports.perspectives = function (req, res) {
     res.render('perspectives', {appTitle: 'appTitle'});
 };
-
+exports.perspectives_dropdown = function (req, res) {
+    res.render('perspectives_dropdown', {appTitle: 'appTitle'});
+};
 exports.products = function (req, res) {
     res.render('products', {appTitle: 'appTitle'});
 };
@@ -40,6 +42,10 @@ exports.recipes = function (req, res) {
 
 exports.governance = function (req, res) {
     res.render('governance', {appTitle: 'appTitle'});
+};
+
+exports.governance_dropdown = function (req, res) {
+    res.render('governance_dropdown', {appTitle: 'appTitle'});
 };
 
 exports.governance_video = function (req, res) {
