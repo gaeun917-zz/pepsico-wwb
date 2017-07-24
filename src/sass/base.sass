@@ -19,7 +19,7 @@ h2, h3
         content: ""
         height: 3px
         background-color: $wwb_blue
-        margin: 1em auto 3rem auto
+        margin: 1em auto 1em auto
 
 h3
     +title-font-bold
@@ -241,13 +241,15 @@ figure
 .highlight
     +prdb
     float: left
+    width: 100%
     background-color: $extralight_grey
     overflow: hidden
     padding: $global_spacing 0
 
 .highlight__header
-    margin-top: 0
-    margin-bottom: 0
+    font-family: "Oswald Light"
+    em
+        font-size: 1.2em
 
 .highlight__desktop-copy
     +dn
