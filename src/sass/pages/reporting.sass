@@ -19,19 +19,6 @@
 		font-size: 1.5em
 		color: rgb(102, 102, 102)
 
-.latest-reports
-	background-color: #f3f2ef
-
-	.sust-gov
-		width: 100%
-		display: inline-block
-		margin-bottom: 8%
-
-	.stakeholder-engagement
-		width: 100%
-		display: inline-block
-		float: right
-
 .report-slider__header
 	//margin-top: 0
 	font-family: "Oswald Bold"
@@ -43,6 +30,7 @@
 .downloads ul
 	+prdt
 	width: 100%
+	margin-bottom: 1rem
 
 	li
 		+prdt
@@ -80,6 +68,8 @@
 
 			&.dwnld__file-size
 				border-left: 1px dotted $medium_grey
+#report-slider__pagination
+	margin-bottom: 20px
 
 .report-slider
 	text-align: center
@@ -101,6 +91,22 @@
 		max-width: 850px
 		margin: 1rem auto 1rem auto
 
+.latest-reports
+	background-color: #f3f2ef
+	display: block
+	position: relative
+	.sust-gov
+		width: 100%
+		display: inline-block
+		float: left
+		margin-bottom: 8%
+
+	.stakeholder-engagement
+		width: 100%
+		display: inline-block
+		float: left
+		margin-right: 2%
+
 .report-slider__title
 	+title-font-bold
 	text-transform: uppercase
@@ -108,9 +114,9 @@
 
 .previous-reports
 	background-color: white
-	//display: block
-	//position: relative
-	//float: left
+	display: block
+	position: relative
+	float: left
 
 .downloads-accordian-header
 	+prdb
@@ -150,8 +156,10 @@
 
 .previous-downloads
 	margin-bottom: 4%
+	overflow: hidden
 	h4
 		line-height: 1.5em
+
 .previous-reports .downloads
 	+dn
 

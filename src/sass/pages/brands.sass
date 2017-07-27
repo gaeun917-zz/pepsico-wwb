@@ -93,11 +93,12 @@
 
 					.mask
 						position: absolute
-						bottom: -1px
+						bottom: 0px
 						+left_right(0,0)
 						transition: all 100ms ease-in-out
 						transition-delay: 0ms
 						&.close
+							bottom: -1px
 							display: block
 							transform: translateY(0px)
 					&:hover
@@ -126,8 +127,8 @@
 			.expander-inner
 				+margin_lr(0,0)
 				position: relative
-				overflow-y: scroll
-				overflow-x: hidden
+				//overflow-y: scroll
+				//overflow-x: hidden
 				height: 100%
 				opacity: 0
 				transition: opacity 400ms ease-in-out
@@ -149,9 +150,9 @@
 					overflow: visible
 					opacity: 1
 
-				.expander-inner
-					opacity: 1
-					transition: opacity
+					.expander-inner
+						opacity: 1
+						transition: opacity
 
 		.btn-close
 			position: relative

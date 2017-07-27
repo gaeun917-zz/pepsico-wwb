@@ -7,9 +7,12 @@
     background-color: $extralight_grey
     overflow: hidden
     margin: 0 auto
+    width: 100%
+    float: left
 
 .misvis__item:first-child
     margin-bottom: $global_spacing*2
+    float: left
 
 .misvis__item:last-child
     margin-top: $global_spacing
@@ -23,6 +26,8 @@
 
 .principles
     +prdb
+    float: left
+    width: 100%
     overflow: hidden
     background-image: url(../img/principles-table--dt.jpg)
     background-size: cover
@@ -36,6 +41,8 @@
     .principles__header
         margin-top: 0
         color: white
+        em
+            color: white
 
 .principles--desktop
     +dn
