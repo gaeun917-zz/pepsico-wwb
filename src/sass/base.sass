@@ -19,8 +19,7 @@ h2, h3
         content: ""
         height: 3px
         background-color: $wwb_blue
-        margin: 1em auto 1em auto
-
+        margin: 20px auto 20px auto
 h3
     +title-font-bold
     font-size: 2rem
@@ -44,14 +43,16 @@ figure
 .colorido-container
     +prdb
     width: 84%
-    margin: 0 $global_spacing
+    margin: 0 auto
     +box-sizing
     padding-left: 0
     padding-right: 0
 
 .contained-copy h3
-    +title-font-regular
+    +title-font-bold
+    color: rgb(102, 102, 102)
     margin: 0
+    font-size: 30px
 
 .hero
     +prdb
@@ -246,10 +247,14 @@ figure
     overflow: hidden
     padding: $global_spacing 0
 
-.highlight__header
+.highlight__header, .pwp-breakdown__header
     font-family: "Oswald Light"
+    line-height: 2em
     em
-        font-size: 1.2em
+        font-size: 1.5em
+
+
+
 
 .highlight__desktop-copy
     +dn
@@ -358,11 +363,13 @@ figure
     outline: 0
     border: 0
 
+
+
 // :::::  MISCELLANEOUS :::::
 .download
     a
         //overflow: hidden
-        //width: 100%
+        width: 80%
         //top: -23px
         left: 0
         position: relative
@@ -374,9 +381,6 @@ figure
         text-decoration: none
         text-transform: uppercase
         color: #616161
-        //background: url('../img/icon-download.png') no-repeat 0 2px
-        //&:hover
-        //    background: url('../img/icon-dowload-blue.png') no-repeat 0 center
 
     span
         +title-font-regular

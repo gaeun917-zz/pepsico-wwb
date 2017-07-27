@@ -2,6 +2,13 @@
 //	background-image: url(../img/hero-nutrition--tb.jpg)
 
 .nutrition-breakdown-copy
+	h2
+		font-family: "Oswald Light"
+		//font-size: 24px
+	em
+		font-family: "Oswald Bold"
+		font-size: 1.6em
+		line-height: 1em
 	.copy
 		line-height: 150%
 
@@ -10,8 +17,9 @@
 	img
 		max-width: 100%
 	h3
+		+title-font-bold
 		line-height: 120%
-		font-size: 1.7rem
+		font-size: 3rem
 	h4
 		+title-font-bold
 		font-size: 18px
@@ -37,6 +45,18 @@
 			position: relative
 		img
 			width: 100%
+.copy.diet
+	color: white
+
+.underline.diet:after
+	background-color: white
+
+.farming_h2.underline
+	font-family: "Oswald Light"
+	em
+		font-family: "Oswald Bold"
+		font-size: 1.6em
+		line-height: 1em
 
 .contributors
 	.blue
@@ -53,6 +73,7 @@
 			border: 25px solid rgba(255, 255, 255, 1)
 			border-top-color: #fff
 			margin-left: -25px
+
 	.icons
 		background-image: url(../img/nutrition/nutrition-icon-bg.jpg)
 		background-size: cover
@@ -83,17 +104,20 @@
 				+margin_lr(auto, auto)
 				margin-top: 0
 				max-width: 263px
-		.rollover
-			display: none
-			figure
-				background: url(../img/nutrition/icon_rollover.png) center top no-repeat
-			figcaption
-				color: $wwb_darkblue
-			li:hover, .hover
-				.default
-					display: none
-				.rollover
-					display: block
+
+			.rollover
+				display: none
+				figure
+					background: url(../img/nutrition/icon_rollover.png) center top no-repeat
+				figcaption
+					color: $wwb_darkblue
+
+		li:hover, .hover
+			.default
+				display: none
+			.rollover
+				display: block
+
 
 .forward-brands
 	background-color: #d7d6d3
@@ -112,7 +136,7 @@
 
 .report
 	background-color: $extralight_grey
-	margin-bottom: 30px
+	//margin-bottom: 30px
 	text-align: center
 
 	.slider-report
@@ -126,3 +150,6 @@
 		p
 			max-width: 650px
 			+margin_lr(auto, auto)
+
+#download_nutrition
+	background: #e9e7e7 url(../img/icon-dowload.png) no-repeat 0 0

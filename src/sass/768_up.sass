@@ -12,10 +12,6 @@ $social-width: 20%
 
 
 // ::::: GLOBAL :::::
-.colorido-container
-	width: 100% - $global_spacing * 2
-	margin: 0 $global_spacing
-
 .contained-copy
 	+prdb
 	text-align: center
@@ -29,40 +25,37 @@ $social-width: 20%
 
 
 // ::::: Pillar tabs :::::
-.pwp-breakdown
-	background-size: contain
-	display: block
-	position: relative
-	font-size: 16px
+//.pwp-breakdown
+//	background-size: contain
+//	display: block
+//	position: relative
+//	font-size: 16px
 
 .pillar-tab__heading span
 	padding: $global_spacing 0
 
-
-
 // ::::: HERO :::::
-.hero--home
-	background-image: url(../img/hero-home--tb.jpg)
-	background-position: center bottom
-
-.hero--pwp
-	background-image: url(../img/hero-pwp--tb.jpg)
-
-.hero--commitments
-	background-image: url(../img/hero-commitments--tb.jpg)
-
-.hero--products
-	background-image: url(../img/hero-products--tb.jpg)
-
-.hero--planet
-	background-image: url(../img/hero-planet--tb.jpg)
-
-.hero--people
-	background-image: url(../img/hero-people--tb.jpg)
-
-.hero--reporting
-	background-image: url(../img/hero-reporting--tb.jpg)
-
+//.hero--home
+//	background-image: url(../img/hero-home--tb.jpg)
+//	background-position: center bottom
+//
+//.hero--pwp
+//	background-image: url(../img/hero-pwp--tb.jpg)
+//
+//.hero--commitments
+//	background-image: url(../img/hero-commitments--tb.jpg)
+//
+//.hero--products
+//	background-image: url(../img/hero-products--tb.jpg)
+//
+//.hero--planet
+//	background-image: url(../img/hero-planet--tb.jpg)
+//
+//.hero--people
+//	background-image: url(../img/hero-people--tb.jpg)
+//
+//.hero--reporting
+//	background-image: url(../img/hero-reporting--tb.jpg)
 
 
 // ::::: PAGE: HOME :::::
@@ -238,10 +231,13 @@ $social-width: 20%
 // ::::: PAGE: NUTRITION :::::
 .our-commitment-to-nutrition
 	.copy
-		max-width: 60%
+		max-width: 100%
+
 	figure
 		float: right
 		padding-top: 15px
+		padding-left: 30px
+		padding-bottom: 30px
 		width: 35%
 
 
@@ -325,7 +321,18 @@ $social-width: 20%
 		font-size: 2em
 		line-height: 1em
 
+.pillar-item__content_lang
+	float: left
+	display: inline-block
 
+.underline
+	font-size: 1.5em
+	em
+		font-size: 2.5em
+		line-height: 4rem
+
+.howwillwe-plug h2 em
+	font-size: 50px
 
 // ::::: PAGE: GOVERNANCE :::::
 .hero__social-item
@@ -345,9 +352,7 @@ $social-width: 20%
 .pillar-item__content.gov.right
 	+prdb
 	float: right
-	//padding: 0 0 0 20px
 	width: 100%
-	//background: transparent
 
 .pillar-item__content.download.gov
 	.download_title
@@ -381,6 +386,11 @@ $social-width: 20%
 	width: 100%
 	height: auto
 
+.pillar-item__content.download.gov
+	display: inline-block
+	float: left
+
+
 // ::::: Pillar Content Footer :::::
 .download a
 	font-size: 14px
@@ -394,7 +404,7 @@ $social-width: 20%
 	margin-right: 30px
 
 .related_topics_li:first-child
-	margin-right: 5%
+	margin-right: 3%
 	&:after
 		+prdb
 
@@ -431,7 +441,6 @@ $social-width: 20%
 .footer_container
 	+prdib
 	height: auto
-	//max-width: 1372px
 	padding: 20px
 	float: left
 	width: 95%
@@ -449,8 +458,6 @@ $social-width: 20%
 			padding: 0
 
 .footer_list
-	//margin-top: 15px
-	//margin-bottom: 15px
 	margin-right: 0
 	margin-top: 0
 	@media (max-width: 600px)

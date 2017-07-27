@@ -6,7 +6,7 @@
     width: 100%
     margin: 0 auto
     overflow: visible
-    padding: 6% 0
+    padding: 0
 
     &:before
         content: ""
@@ -15,6 +15,7 @@
         +width_height(100%, 120px)
         +top_left(0, 0)
         padding: 6% 0
+
 
 .pillar-tab__heading
     +prdb
@@ -62,19 +63,20 @@
 
     &:hover
         background-color: $wwb_blue
+
 .pillar-tab__content
     +prdn
     padding: $global_spacing 0
     img
         position: relative
         width: 100%
-        float: right
+        //float: right
         max-width: 400px
         height: auto
-        margin: auto
-        margin-left: 4%
-        margin-bottom: 4%
-        margin-top: 4%
+        margin: 0 auto
+        //margin-left: 4%
+        //margin-bottom: 4%
+        //margin-top: 4%
 
     h2
         margin-top: 0
@@ -97,8 +99,9 @@
         &:after
             display: block
 
-
     .pillar-tab__content
         +db
-        width: inherit
+        //width: inherit
+        padding: 5%
+        max-width: 1000px
 

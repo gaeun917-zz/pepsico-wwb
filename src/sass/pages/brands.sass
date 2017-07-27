@@ -36,8 +36,12 @@
 
 .list-brands-container
 	overflow: hidden
+	display: block
+	position: relative
+	float: left
+	width: 100%
 	background: $extralight_grey
-	margin-bottom: 30px
+	//margin-bottom: 30px
 	.categories
 		overflow: hidden
 		padding-top: 50px
@@ -79,26 +83,26 @@
 					img
 						transform: translate3d(0px,0px,0px)
 						backface-visibility: hidden // chrome over pixel move fix
-				.rollover
-					position: absolute
-					top: 0
-					bottom: 0
-					+left_right(0,0)
-					transition: all 100ms ease-in-out
-					opacity: 0
-
-				.mask
-					position: absolute
-					bottom: -1px
-					+left_right(0,0)
-					transition: all 100ms ease-in-out
-					transition-delay: 0ms
-					&.close
-						display: block
-						transform: translateY(0px)
-				&:hover
 					.rollover
-						opacity: 1
+						position: absolute
+						top: 0
+						bottom: 0
+						+left_right(0,0)
+						transition: all 100ms ease-in-out
+						opacity: 0
+
+					.mask
+						position: absolute
+						bottom: -1px
+						+left_right(0,0)
+						transition: all 100ms ease-in-out
+						transition-delay: 0ms
+						&.close
+							display: block
+							transform: translateY(0px)
+					&:hover
+						.rollover
+							opacity: 1
 
 			.expander
 				position: absolute
@@ -113,7 +117,7 @@
 					content: ""
 					display: block
 				&:before
-					//+prdb
+					position: absolute
 					+width_height(300%, 100%)
 					content: ""
 					margin-left: -150%
@@ -239,6 +243,7 @@
 	.tab-content
 		font-size: 14px
 		h3
+			font-family: 'Oswald Bold'
 			margin-top: 0
 			margin-bottom: 0
 			padding-top: 0
@@ -314,10 +319,10 @@
 		.related
 			position: relative
 			padding-top: 60px
-		.cta_container
-			position: absolute
-			top: 20px
-			right: 0
+		//.cta_container
+			//position: absolute
+			//top: 20px
+			//right: 0
 
 
 .cta_container

@@ -2,16 +2,31 @@
 .previous-reports,
 .our-partners
 	padding: $global_spacing 0
+	width: 100%
+	display: block
+	position: relative
+	float: left
 	p
 		line-height: 1.2em
 		font-size: 14px
 
+.underline
+	font-family: "Oswald Light"
+	line-height: 2em
+	font-size: 1.5em
+	em
+		font-family: "Oswald Bold"
+		font-size: 1.5em
+		color: rgb(102, 102, 102)
+
 .latest-reports
-	background-color: $extralight_grey
+	background-color: #f3f2ef
+
 	.sust-gov
 		width: 100%
 		display: inline-block
 		margin-bottom: 8%
+
 	.stakeholder-engagement
 		width: 100%
 		display: inline-block
@@ -35,12 +50,12 @@
 		background-color: white
 		color: $dark_grey
 		+title-font-bold
-		font-size: 0.9rem
+		font-size: 0.9em
 		margin-bottom: 3px
-		padding: 0.5rem 0
+		padding: 0.7rem 0
 		span
 			+prdtc
-			top: 0
+			top: 4px
 			height: 100%
 			vertical-align: middle
 			padding: 0.2rem
@@ -48,8 +63,7 @@
 			&.dwnld__title
 				color: #545454
 				font-family: "Oswald Bold"
-				padding-left: 1rem
-				padding-right: 1rem
+				padding: 1rem
 
 			&.dwnld__icon, &.dwnld__file-size
 				+title-font
@@ -72,8 +86,8 @@
 	margin: $global_spacing 0 0 0
 
 .report-slider__pagination
-	+prdb
-	bottom: 0 !important
+	//+prdb
+	//bottom: 0 !important
 
 	.swiper-pagination-bullet-active
 		background-color: $wwb_blue
@@ -94,6 +108,9 @@
 
 .previous-reports
 	background-color: white
+	//display: block
+	//position: relative
+	//float: left
 
 .downloads-accordian-header
 	+prdb
@@ -101,7 +118,7 @@
 	width: 100%
 	cursor: pointer
 	background-color: $wwb_blue
-	padding: 1rem 3rem 1rem 1rem
+	padding: 1em 3em 1em 1em
 
 	&:after
 		+padb
@@ -119,7 +136,7 @@
 		+title-font-bold
 		color: white
 		margin: 0
-		font-size: .8rem
+		font-size: .8em
 
 	&.open
 		h4
@@ -142,18 +159,44 @@
 	background-image: url(../img/reporting--howwillwe--mo.jpg)
 	background-size: cover
 	background-position: center
-	padding: $global_spacing 0
 	text-align: center
 	color: white
+	padding: 8% 0
+	width: 100%
+	display: block
+	position: relative
+	float: left
 	h2
 		margin-top: 0
+		em
+			color: white
+			font-size: 25px
 	p
 		font-size: 13px
 		line-height: 1.2em
 	a.btn
-		display: block
-		padding: 0
-		margin: 2rem 8rem
+		position: relative
+		display: inline-block
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		-ms-box-sizing: border-box
+		-o-box-sizing: border-box
+		box-sizing: border-box
+		font-family: "Oswald Light"
+		height: 30px
+		clear: both
+		text-transform: uppercase
+		padding: 0 22px
+		line-height: 28px
+		font-size: 1.5rem
+		vertical-align: top
+		color: white
+		border: 1px solid white
+		border-radius: 30px
+		margin-top: 2rem
+		text-align: center
+		background-color: rgba(0, 0, 0, 0.5)
+		transition: 0.1s ease background-color
 
 .our-partners
 	+prdb

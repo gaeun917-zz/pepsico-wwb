@@ -109,7 +109,8 @@ form#search_bar
                 color: white
                 vertical-align: middle
                 padding: 0 4rem 0 2rem
-                font-size: 1em
+                margin: 0
+                font-size: 1.2em
                 line-height: 3em
 
 +pillar-theme(A-E, $pill_tab_gray)
@@ -125,12 +126,12 @@ form#search_bar
     +padb
     +width_height(20px, 20px)
     top: calc(1.5rem - 3px)
+    //top: 1.5em
     right: 1rem
     content: ""
     background: url(../img/icon-open.png) center
     background-repeat: no-repeat
     background-size: contain
-
 
 .pillar-item__pill.open
     background-color: $wwb_blue
@@ -150,12 +151,13 @@ form#search_bar
     margin-bottom: 5px
     padding: 4% 7%
     width: 100%
-    border-bottom: 1px solid $light_grey
+    //border-bottom: 1px solid $light_grey
     background-color: #cdccc9
 
 .pillar-item__content.download
+    +width_height(100%, auto)
+    float: left
     display: none
-    +width_height(100%, 50px)
     overflow: hidden
     cursor: pointer
     margin: auto
@@ -273,15 +275,21 @@ img.btn-discover_img
 
 .pillar_content_h4
     width: 20%
+#download_policy, #download_report
+    background: #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
+    padding-left: 65px
+    &:hover
+        background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
 
 #download_policy span:first-child,
 #download_report span:first-child
     width: 100%
-    background: #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
+    //background: #e9e7e7 url('../img/icon-dowload.png') no-repeat 0 center
     padding-top: 5px
     padding-bottom: 5px
-    &:hover
-        background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
+    padding-left: 0
+    //&:hover
+    //    background: #e9e7e7 url('../img/icon-dowload-blue.png') no-repeat 0 center
 
 #pdf_block1, #pdf_block2
     display: block
@@ -300,7 +308,6 @@ img.btn-discover_img
     line-height: normal
     font-size: 12.5px
     background-color: #cdccc9
-
 
 .related_topics
     overflow: hidden
@@ -324,6 +331,7 @@ img.btn-discover_img
 
 .related_topics_li:first-child
     +title-font-bold
+    margin-left: 20px
 
 .related_topics_li span
     padding-left: 0
@@ -361,3 +369,7 @@ img.btn-discover_img
 .social-media-icons#az_social_icon_ul
     margin-top: 17px
     float: left
+
+.pillar-item__content_lang
+    float: none
+    display: block

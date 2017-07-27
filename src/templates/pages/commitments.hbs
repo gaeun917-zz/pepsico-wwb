@@ -5,6 +5,8 @@ page_id:        "commitments"
 ---
 
 <!-- START MAIN CONTENT -->
+
+
 <div class="page__content">
 
     <section class="pwp-breakdown topics">
@@ -19,8 +21,6 @@ page_id:        "commitments"
             </div>
         </div>
     </section>
-
-    {{>hero-static heros.commitments}}
 
     {{>media-highlight highlights.commitments}}
 
@@ -39,7 +39,6 @@ page_id:        "commitments"
                         <h4>{{this.pillar-name}}</h4>
                         <p>{{this.pillar-copy}}</p>
                     </div>
-                
                     {{#each this.items}}
                         <div class="pillar-item">
                             <div class="pillar-item__pill">
@@ -53,6 +52,7 @@ page_id:        "commitments"
                             </div>
                         </div>
                     {{~/each}}
+
                 </div>
             {{~/each}}
         </div>
